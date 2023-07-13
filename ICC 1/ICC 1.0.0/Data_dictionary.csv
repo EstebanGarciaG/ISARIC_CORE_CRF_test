@@ -233,7 +233,6 @@ treatments_intravenimunoglobul,daily,,radio,Intravenous Immunoglobulin?,"1, Yes 
 treatments_plasmapheresis,daily,,radio,Plasmapheresis/Plasma Exchange? ,"1, Yes | 0, No",,,,,,[inclusioncriteria_disease(4)] = '1' and [daily_datatype(2)]='1',y,RH,,,,
 treatments_antibiotics,daily,,radio,Antibiotics? ,"1, Yes | 0, No",,,,,,[daily_datatype(2)]='1',y,RH,,,,
 treatments_steroids,daily,,radio,Steroids? ,"1, Yes | 0, No",,,,,,[daily_datatype(2)]='1',y,RH,,,,
-treatments_neuromuscularblocking,daily,,radio,Neuromuscular blocking agents?,"1, Yes | 0, No",,,,,,[daily_datatype(2)]='1',y,RH,,,,
 labs_haemoglobin,daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)
 ",text,Haemoglobin,,,number,,,,[daily_datatype(3)]='1',y,,,,,
