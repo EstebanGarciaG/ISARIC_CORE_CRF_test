@@ -8,7 +8,7 @@ dates_enrolment,presentation,"ONSET & ADMISSION",text,"Date of enrolment /start 
 dates_onsetdate,presentation,,text,"Onset date of first/earliest symptom: ",,,date_dmy,,today,,,y,,,,,
 dates_admissiondate,presentation,,text,"Presentation/admission date at this facility (most recent): ",,,date_dmy,,today,,,y,,,,,
 readmission_previousadmission,presentation,"RE-ADMISSION AND PREVIOUS PIN",radio,"Was the patient admitted previously or transferred from any other facility during this illness episode?","1, YES-admitted previously to this facility | 2, YES-admitted to other facility, then transferred to this facility | 0, No",,,,,,,y,,,,,
-readmission_numberprevious,presentation,,text,"Total number of previous admissions for this infection",,,9_digit_integer,,,,"[readmission_previousadmission] = '2' or [readmission_previousadmission] = '1'",y,,,,,
+readmission_numberprevious,presentation,,text,"Total number of previous admissions for this infection",,,number,,,,"[readmission_previousadmission] = '2' or [readmission_previousadmission] = '1'",y,,,,,
 readmission_firstadmission,presentation,,text,"Date of earliest admission for this infection",,,date_dmy,,today,,"[readmission_previousadmission] = '2' or [readmission_previousadmission] = '1'",y,,,,,
 readmission_differentpin,presentation,,radio,"Has this patient's data been previously collected under a different patient number? ","1, Yes | 0, No",,,,,,,y,RH,,,,
 readmission_previouspin,presentation,,text,"Participant Identification number (PIN)",,,,,,,"[readmission_differentpin] = '1'",y,,,,,
