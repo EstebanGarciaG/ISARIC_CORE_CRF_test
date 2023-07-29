@@ -1,10 +1,10 @@
-conditions,Code,Library,Selected
-Hypertension,I10,ICD10,1
+﻿conditions,Code,Library,Selected
+Hypertension,I10,ICD10,
 Diabetes Mellitus,E10-E14,ICD10,
 Hyperlipidemia,E78,ICD10,
-Asthma,J45,ICD10,1
-Chronic Obstructive Pulmonary Disease (COPD),J44,ICD10,1
-Heart Disease,I00-I52,ICD10,1
+Asthma,J45,ICD10,
+Chronic Obstructive Pulmonary Disease (COPD),J44,ICD10,
+Heart Disease,I00-I52,ICD10,
 Kidney Disease,N17-N19,ICD10,
 Liver Disease,K70-K77,ICD10,
 Arthritis,M00-M25,ICD10,
