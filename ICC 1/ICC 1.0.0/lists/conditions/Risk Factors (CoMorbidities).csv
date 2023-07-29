@@ -1,8 +1,31 @@
-conditions,Code,Library,Selected,Reference URL
-A,C07,COND,1,https://athena.ohdsi.org/
-B,C15,COND,,https://athena.ohdsi.org/
-C,C25,COND,,https://athena.ohdsi.org/
-D,C37,COND,1,https://athena.ohdsi.org/
-E,C47,COND,1,https://athena.ohdsi.org/
-F,C56,COND,1,https://athena.ohdsi.org/
-G,C63,COND,,https://athena.ohdsi.org/
+conditions,Code,Library,Selected
+Hypertension,I10,ICD10,1
+Diabetes Mellitus,E10-E14,ICD10,
+Hyperlipidemia,E78,ICD10,
+Asthma,J45,ICD10,1
+Chronic Obstructive Pulmonary Disease (COPD),J44,ICD10,1
+Heart Disease,I00-I52,ICD10,1
+Kidney Disease,N17-N19,ICD10,
+Liver Disease,K70-K77,ICD10,
+Arthritis,M00-M25,ICD10,
+Obesity,E66,ICD10,
+"Cerebrovascular Diseases (e.g., Stroke)",I60-I69,ICD10,
+Neoplasms (Cancer),C00-D48,ICD10,
+Mental and Behavioural Disorders due to Psychoactive Substance Use,F10-F19,ICD10,
+Mood (Affective) Disorders,F30-F39,ICD10,
+"Anxiety, Dissociative, Stress-related, Somatoform and other nonpsychotic mental disorders",F40-F48,ICD10,
+"Schizophrenia, Schizotypal, Delusional, and Other Non-Mood Psychotic Disorders",F20-F29,ICD10,
+Neurodevelopmental Disorders,F80-F89,ICD10,
+Sleep Disorders,G47,ICD10,
+HIV Disease,B20-B24,ICD10,
+Episodic and Paroxysmal Disorders (includes Epilepsy),G40-G47,ICD10,
+Alzheimer's Disease,G30,ICD10,
+Osteoporosis,M80-M82,ICD10,
+"Diseases of Esophagus, Stomach and Duodenum (includes GERD)",K20-K31,ICD10,
+Noninfective Enteritis and Colitis (includes Ulcerative Colitis and Crohn's Disease),K50-K52,ICD10,
+Other Diseases of Intestines (includes IBS),K55-K64,ICD10,
+"Systemic Connective Tissue Disorders (includes Lupus, Sjogren's Syndrome, etc.)",M30-M36,ICD10,
+Parkinson's Disease,G20,ICD10,
+Other Soft Tissue Disorders (includes Fibromyalgia),M70-M79,ICD10,
+Diseases of Upper Respiratory Tract (includes Chronic Sinusitis),J30-J39,ICD10,
+Dermatitis and Eczema,L20-L30,ICD10,
