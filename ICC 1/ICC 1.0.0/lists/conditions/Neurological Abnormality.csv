@@ -1,8 +1,23 @@
-conditions,Code,Library,Selected,Reference URL
-A,C07,COND,1,https://athena.ohdsi.org/
-B,C15,COND,,https://athena.ohdsi.org/
-C,C25,COND,,https://athena.ohdsi.org/
-D,C37,COND,1,https://athena.ohdsi.org/
-E,C47,COND,1,https://athena.ohdsi.org/
-F,C56,COND,1,https://athena.ohdsi.org/
-G,C63,COND,,https://athena.ohdsi.org/
+conditions,Code,Library,Selected
+Headache,R51,ICD10,
+Migraine,G43.9,ICD10,
+Seizures,R56.9,ICD10,
+Tremor,R25.1,ICD10,
+Paralysis,G83.9,ICD10,
+Muscle weakness,M62.81,ICD10,
+Dysarthria (difficulty speaking),R47.1,ICD10,
+Dysphagia (difficulty swallowing),R13.10,ICD10,
+Memory loss,R41.3,ICD10,
+Dizziness and giddiness,R42,ICD10,
+Ataxia (lack of muscle control or coordination),R27.0,ICD10,
+"Paresthesia (abnormal sensation, tingling, or prickling)",R20.2,ICD10,
+Hemiplegia and hemiparesis (one-sided paralysis or weakness),G81.9,ICD10,
+Facial paresis (weakness),G51.9,ICD10,
+Disturbance of skin sensation,R20.8,ICD10,
+Diplopia (double vision),H53.2,ICD10,
+Vertigo,R42,ICD10,
+Syncope and collapse (fainting),R55,ICD10,
+Gait abnormality,R26.2,ICD10,
+Sensory loss,R20.1,ICD10,
+Cognitive communication deficit,R41.841,ICD10,
+Aphasia (loss of ability to understand or express speech),R47.01,ICD10,
