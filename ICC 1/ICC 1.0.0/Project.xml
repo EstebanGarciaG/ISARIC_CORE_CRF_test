@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="EG TEST_ISARIC CORE CRF" AsOfDateTime="2023-07-31T13:06:40" CreationDateTime="2023-07-31T13:06:40" SourceSystem="REDCap" SourceSystemVersion="13.7.7">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="EG TEST_ISARIC CORE CRF" AsOfDateTime="2023-07-31T13:11:10" CreationDateTime="2023-07-31T13:11:10" SourceSystem="REDCap" SourceSystemVersion="13.7.7">
 <Study OID="Project.EGTESTISARICCORECRF">
 <GlobalVariables>
 	<StudyName>EG TEST_ISARIC CORE CRF</StudyName>
@@ -39,7 +39,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-3754TPJ7KX" lock_record="0" lock_record_multiform="0" lock_record_customize="1" data_export_tool="" data_export_instruments="[presentation,1][daily,1][outcome_medication,1][outcome,1][outcome_pathogen_testing,1]" data_import_tool="1" data_comparison_tool="1" data_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="1" graphical="1" reports="1" design="1" alerts="1" calendar="1" data_entry="[presentation,1][daily,1][outcome_medication,1][outcome,1]" api_export="1" api_import="1" mobile_app="1" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.EGTESTISARICCORECRF_2023-07-31_1306" Name="EG TEST_ISARIC CORE CRF" redcap:RecordIdField="subjid">
+<MetaDataVersion OID="Metadata.EGTESTISARICCORECRF_2023-07-31_1311" Name="EG TEST_ISARIC CORE CRF" redcap:RecordIdField="subjid">
 	<Protocol>
 		<StudyEventRef StudyEventOID="Event.initial_assessment_arm_1" OrderNumber="1" Mandatory="No"/>
 		<StudyEventRef StudyEventOID="Event.daily_arm_1" OrderNumber="2" Mandatory="No"/>
@@ -437,7 +437,6 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<ItemRef ItemOID="treatments_plasmapheresis" Mandatory="Yes" redcap:Variable="treatments_plasmapheresis"/>
 		<ItemRef ItemOID="treatments_antibiotics" Mandatory="Yes" redcap:Variable="treatments_antibiotics"/>
 		<ItemRef ItemOID="treatments_steroids" Mandatory="Yes" redcap:Variable="treatments_steroids"/>
-		<ItemRef ItemOID="treatments_neuromuscularblocking" Mandatory="Yes" redcap:Variable="treatments_neuromuscularblocking"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="daily.labs_haemoglobin_gdl" Name="LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" Repeating="No">
@@ -2085,10 +2084,6 @@ NA, Not applicable</redcap:MissingDataCodes>
 	<ItemDef OID="treatments_steroids" Name="treatments_steroids" DataType="text" Length="1" redcap:Variable="treatments_steroids" redcap:FieldType="radio" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(2)]=&#039;1&#039;" redcap:CustomAlignment="RH">
 		<Question><TranslatedText>Steroids? </TranslatedText></Question>
 		<CodeListRef CodeListOID="treatments_steroids.choices"/>
-	</ItemDef>
-	<ItemDef OID="treatments_neuromuscularblocking" Name="treatments_neuromuscularblocking" DataType="text" Length="1" redcap:Variable="treatments_neuromuscularblocking" redcap:FieldType="radio" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(2)]=&#039;1&#039;" redcap:CustomAlignment="RH">
-		<Question><TranslatedText>Neuromuscular blocking agents?</TranslatedText></Question>
-		<CodeListRef CodeListOID="treatments_neuromuscularblocking.choices"/>
 	</ItemDef>
 	<ItemDef OID="labs_haemoglobin_gdl" Name="labs_haemoglobin_gdl" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobin_gdl" redcap:FieldType="text" redcap:TextValidationType="float" redcap:SectionHeader="LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
@@ -4745,10 +4740,6 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="treatments_steroids.choices" Name="treatments_steroids" DataType="text" redcap:Variable="treatments_steroids">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
-	</CodeList>
-	<CodeList OID="treatments_neuromuscularblocking.choices" Name="treatments_neuromuscularblocking" DataType="text" redcap:Variable="treatments_neuromuscularblocking">
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
 	</CodeList>
