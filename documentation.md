@@ -25,7 +25,8 @@ To use My Project, you need to install the following dependencies:
 
 ```
 bash
-npm install my-project```
+npm install my-project
+```
 
 ## Usage
 Once the dependencies are installed, you can use My Project like this:
@@ -35,7 +36,8 @@ javascript
 const myProject = require('my-project');
 
 // Use the functions provided by My Project
-const result = myProject.doSomething();```
+const result = myProject.doSomething();
+```
 
 ## Features
 Feature 1
