@@ -1,4 +1,3 @@
-markdown
 # My Project Documentation
 
 Welcome to the documentation for My Project! This document provides an overview of the project and how to use it.
