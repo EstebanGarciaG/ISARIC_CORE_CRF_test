@@ -23,6 +23,7 @@ gettion started text
 
 To use My Project, you need to install the following dependencies:
 
+Copy code
 bash
 npm install my-project
 
