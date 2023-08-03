@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="EG TEST_ISARIC CORE CRF" AsOfDateTime="2023-07-31T13:11:10" CreationDateTime="2023-07-31T13:11:10" SourceSystem="REDCap" SourceSystemVersion="13.7.7">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="EG TEST_ISARIC CORE CRF" AsOfDateTime="2023-08-03T11:52:20" CreationDateTime="2023-08-03T11:52:20" SourceSystem="REDCap" SourceSystemVersion="13.7.7">
 <Study OID="Project.EGTESTISARICCORECRF">
 <GlobalVariables>
 	<StudyName>EG TEST_ISARIC CORE CRF</StudyName>
@@ -39,7 +39,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-3754TPJ7KX" lock_record="0" lock_record_multiform="0" lock_record_customize="1" data_export_tool="" data_export_instruments="[presentation,1][daily,1][outcome_medication,1][outcome,1][outcome_pathogen_testing,1]" data_import_tool="1" data_comparison_tool="1" data_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="1" graphical="1" reports="1" design="1" alerts="1" calendar="1" data_entry="[presentation,1][daily,1][outcome_medication,1][outcome,1]" api_export="1" api_import="1" mobile_app="1" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.EGTESTISARICCORECRF_2023-07-31_1311" Name="EG TEST_ISARIC CORE CRF" redcap:RecordIdField="subjid">
+<MetaDataVersion OID="Metadata.EGTESTISARICCORECRF_2023-08-03_1152" Name="EG TEST_ISARIC CORE CRF" redcap:RecordIdField="subjid">
 	<Protocol>
 		<StudyEventRef StudyEventOID="Event.initial_assessment_arm_1" OrderNumber="1" Mandatory="No"/>
 		<StudyEventRef StudyEventOID="Event.daily_arm_1" OrderNumber="2" Mandatory="No"/>
@@ -87,7 +87,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<ItemGroupRef ItemGroupOID="daily.treatments_suppleo2" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="daily.treatments_o2supporttype" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="daily.labs_haemoglobin_gdl" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="daily.labs_haemoglobinotherunit" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="daily.labs_haemoglobin_gl" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="daily.imaging_xray" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="daily.imaging_xraydate" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="daily.daily_complete" Mandatory="No"/>
@@ -320,7 +320,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<ItemRef ItemOID="medicalhistpedhepatitis_startdate" Mandatory="Yes" redcap:Variable="medicalhistpedhepatitis_startdate"/>
 		<ItemRef ItemOID="medicalhistpedhepatitis_persiistentsymptom" Mandatory="Yes" redcap:Variable="medicalhistpedhepatitis_persiistentsymptom"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="presentation.medicalhistpedhepatitis_fever" Name="What persistent symptoms did your child have in the last three months?" Repeating="No">
+	<ItemGroupDef OID="presentation.medicalhistpedhepatitis_fever" Name="HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?)" Repeating="No">
 		<ItemRef ItemOID="medicalhistpedhepatitis_fever" Mandatory="Yes" redcap:Variable="medicalhistpedhepatitis_fever"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="presentation.medicalhistpedhepatitis_diarrhoea" Name="Presentation" Repeating="No">
@@ -441,11 +441,11 @@ NA, Not applicable</redcap:MissingDataCodes>
 	<ItemGroupDef OID="daily.labs_haemoglobin_gdl" Name="LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" Repeating="No">
 		<ItemRef ItemOID="labs_haemoglobin_gdl" Mandatory="Yes" redcap:Variable="labs_haemoglobin_gdl"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="daily.labs_haemoglobin_gl" Name="Daily" Repeating="No">
 		<ItemRef ItemOID="labs_haemoglobin_gl" Mandatory="Yes" redcap:Variable="labs_haemoglobin_gl"/>
 		<ItemRef ItemOID="labs_haemoglobin_mmoll" Mandatory="Yes" redcap:Variable="labs_haemoglobin_mmoll"/>
 		<ItemRef ItemOID="labs_haemoglobinother" Mandatory="Yes" redcap:Variable="labs_haemoglobinother"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="daily.labs_haemoglobinotherunit" Name="Daily" Repeating="No">
 		<ItemRef ItemOID="labs_haemoglobinotherunit" Mandatory="Yes" redcap:Variable="labs_haemoglobinotherunit"/>
 		<ItemRef ItemOID="labs_wbccount_109l" Mandatory="Yes" redcap:Variable="labs_wbccount_109l"/>
 		<ItemRef ItemOID="labs_wbccountother" Mandatory="Yes" redcap:Variable="labs_wbccountother"/>
@@ -836,7 +836,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<ItemRef ItemOID="diagnostics_unlisted" Mandatory="Yes" redcap:Variable="diagnostics_unlisted"/>
 		<ItemRef ItemOID="diagnostics_unlistedother" Mandatory="Yes" redcap:Variable="diagnostics_unlistedother"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="outcome.complications_viralpneumonia" Name="COMPLICATIONS: At any time during hospitalisation did the patient experience" Repeating="No">
+	<ItemGroupDef OID="outcome.complications_viralpneumonia" Name="COMPLICATIONS (At any time during hospitalisation did the patient experience)" Repeating="No">
 		<ItemRef ItemOID="complications_viralpneumonia" Mandatory="Yes" redcap:Variable="complications_viralpneumonia"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="outcome.complications_bacterialpneumonia" Name="Outcome" Repeating="No">
@@ -894,7 +894,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<ItemRef ItemOID="complications_unlisted" Mandatory="Yes" redcap:Variable="complications_unlisted"/>
 		<ItemRef ItemOID="complications_unlistedother" Mandatory="Yes" redcap:Variable="complications_unlistedother"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="outcome.interventions_suppleo2" Name="INTERVENTIONS While hospitalised, were any of the following administered/undertaken? " Repeating="No">
+	<ItemGroupDef OID="outcome.interventions_suppleo2" Name="INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )" Repeating="No">
 		<ItemRef ItemOID="interventions_suppleo2" Mandatory="Yes" redcap:Variable="interventions_suppleo2"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="outcome.interventions_o2supporttype" Name="Outcome" Repeating="No">
@@ -1698,7 +1698,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 		<Question><TranslatedText>Did these symptoms persist for more than a week? </TranslatedText></Question>
 		<CodeListRef CodeListOID="medicalhistpedhepatitis_persiistentsymptom.choices"/>
 	</ItemDef>
-	<ItemDef OID="medicalhistpedhepatitis_fever" Name="medicalhistpedhepatitis_fever" DataType="text" Length="1" redcap:Variable="medicalhistpedhepatitis_fever" redcap:FieldType="radio" redcap:SectionHeader="What persistent symptoms did your child have in the last three months?" redcap:RequiredField="y" redcap:BranchingLogic="[medicalhistpedhepatitis_persiistentsymptom] = &#039;1&#039;" redcap:CustomAlignment="RH">
+	<ItemDef OID="medicalhistpedhepatitis_fever" Name="medicalhistpedhepatitis_fever" DataType="text" Length="1" redcap:Variable="medicalhistpedhepatitis_fever" redcap:FieldType="radio" redcap:SectionHeader="HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?)" redcap:RequiredField="y" redcap:BranchingLogic="[medicalhistpedhepatitis_persiistentsymptom] = &#039;1&#039;" redcap:CustomAlignment="RH">
 		<Question><TranslatedText>History of fever</TranslatedText></Question>
 		<CodeListRef CodeListOID="medicalhistpedhepatitis_fever.choices"/>
 	</ItemDef>
@@ -2089,16 +2089,13 @@ NA, Not applicable</redcap:MissingDataCodes>
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
 		<Question><TranslatedText>Haemoglobin (g/dL)</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="labs_haemoglobin_gl" Name="labs_haemoglobin_gl" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobin_gl" redcap:FieldType="text" redcap:TextValidationType="float" redcap:SectionHeader="LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
+	<ItemDef OID="labs_haemoglobin_gl" Name="labs_haemoglobin_gl" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobin_gl" redcap:FieldType="text" redcap:TextValidationType="float" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
 		<Question><TranslatedText>Haemoglobin (g/L)</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="labs_haemoglobin_mmoll" Name="labs_haemoglobin_mmoll" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobin_mmoll" redcap:FieldType="text" redcap:TextValidationType="float" redcap:SectionHeader="LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
+	<ItemDef OID="labs_haemoglobin_mmoll" Name="labs_haemoglobin_mmoll" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobin_mmoll" redcap:FieldType="text" redcap:TextValidationType="float" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
 		<Question><TranslatedText>Haemoglobin (mmol/L)</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="labs_haemoglobinother" Name="labs_haemoglobinother" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobinother" redcap:FieldType="text" redcap:TextValidationType="float" redcap:SectionHeader="LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
+	<ItemDef OID="labs_haemoglobinother" Name="labs_haemoglobinother" DataType="float" Length="999" SignificantDigits="1" redcap:Variable="labs_haemoglobinother" redcap:FieldType="text" redcap:TextValidationType="float" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
 		<Question><TranslatedText>Haemoglobin </TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="labs_haemoglobinotherunit" Name="labs_haemoglobinotherunit" DataType="text" Length="999" redcap:Variable="labs_haemoglobinotherunit" redcap:FieldType="text" redcap:RequiredField="y" redcap:BranchingLogic="[daily_datatype(3)]=&#039;1&#039;">
@@ -3309,7 +3306,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 	<ItemDef OID="diagnostics_unlistedother" Name="diagnostics_unlistedother" DataType="text" Length="999" redcap:Variable="diagnostics_unlistedother" redcap:FieldType="textarea" redcap:RequiredField="y" redcap:BranchingLogic="[diagnostics_unlisted] = &#039;1&#039;">
 		<Question><TranslatedText>Specify other pathogens detected</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="complications_viralpneumonia" Name="complications_viralpneumonia" DataType="text" Length="1" redcap:Variable="complications_viralpneumonia" redcap:FieldType="radio" redcap:SectionHeader="COMPLICATIONS: At any time during hospitalisation did the patient experience" redcap:RequiredField="y" redcap:CustomAlignment="RH">
+	<ItemDef OID="complications_viralpneumonia" Name="complications_viralpneumonia" DataType="text" Length="1" redcap:Variable="complications_viralpneumonia" redcap:FieldType="radio" redcap:SectionHeader="COMPLICATIONS (At any time during hospitalisation did the patient experience)" redcap:RequiredField="y" redcap:CustomAlignment="RH">
 		<Question><TranslatedText>Viral pneumonia/pneumonitis</TranslatedText></Question>
 		<CodeListRef CodeListOID="complications_viralpneumonia.choices"/>
 	</ItemDef>
@@ -3523,7 +3520,7 @@ NA, Not applicable</redcap:MissingDataCodes>
 	<ItemDef OID="complications_unlistedother" Name="complications_unlistedother" DataType="text" Length="999" redcap:Variable="complications_unlistedother" redcap:FieldType="textarea" redcap:RequiredField="y" redcap:BranchingLogic="[complications_unlisted] = &#039;1&#039;" redcap:CustomAlignment="RH">
 		<Question><TranslatedText>Specify other complications</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="interventions_suppleo2" Name="interventions_suppleo2" DataType="text" Length="1" redcap:Variable="interventions_suppleo2" redcap:FieldType="radio" redcap:SectionHeader="INTERVENTIONS While hospitalised, were any of the following administered/undertaken? " redcap:RequiredField="y" redcap:CustomAlignment="RH">
+	<ItemDef OID="interventions_suppleo2" Name="interventions_suppleo2" DataType="text" Length="1" redcap:Variable="interventions_suppleo2" redcap:FieldType="radio" redcap:SectionHeader="INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )" redcap:RequiredField="y" redcap:CustomAlignment="RH">
 		<Question><TranslatedText>Any supplemental oxygen during the observation</TranslatedText></Question>
 		<CodeListRef CodeListOID="interventions_suppleo2.choices"/>
 	</ItemDef>
