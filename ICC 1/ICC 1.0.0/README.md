@@ -1,8 +1,8 @@
 # ISARIC Computationally Driven CRF Generation
 
-Case Report Forms (CRF) are essential tools used in clinical research to collect and record data about individual study patients. These standardized templates are pivotal in capturing information related to various aspects of a clinical trial or research study, including demographics, medical history, lab results, vital signs, adverse events, treatment interventions, and more. 
+Case Report Forms (CRF) are indispensable in clinical research for collecting and recording data about individual study patients, encompassing demographics, medical history, lab results, vital signs, and more. ISARIC Computationally Driven CRF Generation software, allows CRF customization to suit specific needs and requirements of various countries, institutions, or research settings. Such customization enables alignment with specific diseases, standard operating procedures, and country idiosyncrasies, enhancing data collection and streamlining workflows.
 
-ISARIC, a global network, is committed to utilizing CRFs in response to various outbreaks, allowing for customization to meet specific needs and requirements of individual countries, institutions, or research settings.
+ 
 
 ## Table of Contents
 
