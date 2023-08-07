@@ -1,6 +1,8 @@
-# My Project Documentation
+# ISARIC Computationally Driven CRF Generation
 
-Welcome to the documentation for My Project! This document provides an overview of the project and how to use it.
+Case Report Forms (CRF) are essential tools used in clinical research to collect and record data about individual study patients. These standardized templates are pivotal in capturing information related to various aspects of a clinical trial or research study, including demographics, medical history, lab results, vital signs, adverse events, treatment interventions, and more. 
+
+ISARIC, a global network, is committed to utilizing CRFs in response to various outbreaks, allowing for customization to meet specific needs and requirements of individual countries, institutions, or research settings.
 
 ## Table of Contents
 
@@ -8,8 +10,10 @@ Welcome to the documentation for My Project! This document provides an overview 
     - [Installation](#installation)
     - [Usage](#usage)
 2. [Features](#features)
-    - [Feature 1](#feature-1)
-    - [Feature 2](#feature-2)
+    - [Automation](#feature-1)
+    - [Adaptive Design](#feature-2)
+    - [Integration](#feature-3)
+    - [Standardized Data Fields](#feature-4)	
 3. [FAQ](#faq)
 4. [Contributing](#contributing)
 5. [License](#license)
@@ -40,10 +44,13 @@ const result = myProject.doSomething();
 
 ## Features
 Feature 1
-Description of feature 1 goes here.
-
+Automation: Eliminates the need for manual modifications, saving time and effort.
 Feature 2
-Description of feature 2 goes here.
+Adaptive Design: Enables easy incorporation of disease-specific variables and requirements.
+Feature 3
+Integration: Addresses compatibility issues and facilitates data sharing.
+Feature 4
+Standardized Data Fields: Ensures harmonization of outcomes and consistent, expert-defined data collection across multiple locations.
 
 ## FAQ
 FAQ
