@@ -10,10 +10,10 @@ ISARIC, a global network, is committed to utilizing CRFs in response to various 
     - [Installation](#installation)
     - [Usage](#usage)
 2. [Features](#features)
-    - [Automation](#feature-1)
-    - [Adaptive Design](#feature-2)
-    - [Integration](#feature-3)
-    - [Standardized Data Fields](#feature-4)	
+    - [Automation](#automation)
+    - [Adaptive Design](#adaptive-design)
+    - [Integration](#integration)
+    - [Standardized Data Fields](#standardized-data-fields)	
 3. [FAQ](#faq)
 4. [Contributing](#contributing)
 5. [License](#license)
@@ -43,14 +43,14 @@ const result = myProject.doSomething();
 ```
 
 ## Features
-Feature 1
-Automation: Eliminates the need for manual modifications, saving time and effort.
-Feature 2
-Adaptive Design: Enables easy incorporation of disease-specific variables and requirements.
-Feature 3
-Integration: Addresses compatibility issues and facilitates data sharing.
-Feature 4
-Standardized Data Fields: Ensures harmonization of outcomes and consistent, expert-defined data collection across multiple locations.
+#Automation:
+Eliminates the need for manual modifications, saving time and effort.
+#Adaptive Design:
+Enables easy incorporation of disease-specific variables and requirements.
+#Integration:
+Addresses compatibility issues and facilitates data sharing.
+#Standardized Data Fields:
+Ensures harmonization of outcomes and consistent, expert-defined data collection across multiple locations.
 
 ## FAQ
 FAQ
