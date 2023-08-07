@@ -43,13 +43,13 @@ const result = myProject.doSomething();
 ```
 
 ## Features
-## Automation:
+### Automation:
 Eliminates the need for manual modifications, saving time and effort.
-## Adaptive Design:
+### Adaptive Design:
 Enables easy incorporation of disease-specific variables and requirements.
-# Integration:
+### Integration:
 Addresses compatibility issues and facilitates data sharing.
-## Standardized Data Fields:
+### Standardized Data Fields:
 Ensures harmonization of outcomes and consistent, expert-defined data collection across multiple locations.
 
 ## FAQ
