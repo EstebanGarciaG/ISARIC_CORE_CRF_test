@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="EG Test Minimal Vars" AsOfDateTime="2023-08-21T11:01:48" CreationDateTime="2023-08-21T11:01:48" SourceSystem="REDCap" SourceSystemVersion="13.7.7">
+<Study OID="Project.EGTestMinimalVars">
+<GlobalVariables>
+	<StudyName>EG Test Minimal Vars</StudyName>
+	<StudyDescription>This file contains the metadata, events, and data for REDCap project "EG Test Minimal Vars".</StudyDescription>
+	<ProtocolName>EG Test Minimal Vars</ProtocolName>
+	<redcap:RecordAutonumberingEnabled>0</redcap:RecordAutonumberingEnabled>
+	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
+	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
+	<redcap:SurveysEnabled>1</redcap:SurveysEnabled>
+	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
+	<redcap:DisplayTodayNowButton>1</redcap:DisplayTodayNowButton>
+	<redcap:PreventBranchingEraseValues>0</redcap:PreventBranchingEraseValues>
+	<redcap:RequireChangeReason>0</redcap:RequireChangeReason>
+	<redcap:DataHistoryPopup>1</redcap:DataHistoryPopup>
+	<redcap:OrderRecordsByField></redcap:OrderRecordsByField>
+	<redcap:MyCapEnabled>0</redcap:MyCapEnabled>
+	<redcap:Purpose>0</redcap:Purpose>
+	<redcap:PurposeOther></redcap:PurposeOther>
+	<redcap:ProjectNotes></redcap:ProjectNotes>
+	<redcap:MissingDataCodes>NI, No information
+UNK, Unknown
+NASK, Not asked
+NA, Not applicable</redcap:MissingDataCodes>
+	<redcap:ProtectedEmailMode>0</redcap:ProtectedEmailMode>
+	<redcap:ProtectedEmailModeCustomText>REDCap Secure Messaging</redcap:ProtectedEmailModeCustomText>
+	<redcap:ProtectedEmailModeTrigger>ALL</redcap:ProtectedEmailModeTrigger>
+	<redcap:ProtectedEmailModeLogo></redcap:ProtectedEmailModeLogo>
+	<redcap:RepeatingInstrumentsAndEvents>
+		<redcap:RepeatingEvent redcap:UniqueEventName="daily_arm_1"/>
+		<redcap:RepeatingInstruments>
+			<redcap:RepeatingInstrument redcap:UniqueEventName="outcome__end_of_st_arm_1" redcap:RepeatInstrument="outcome_medication" redcap:CustomLabel="MEDICATION While hospitalised or at discharge. One  record per drug."/>
+		</redcap:RepeatingInstruments>
+	</redcap:RepeatingInstrumentsAndEvents>
+	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="project manager" unique_role_name="U-3754TPJ7KX" lock_record="0" lock_record_multiform="0" lock_record_customize="1" data_export_tool="" data_export_instruments="[presentation,1][daily,1][outcome_medication,1][outcome,1][outcome_pathogen_testing,1]" data_import_tool="1" data_comparison_tool="1" data_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="1" graphical="1" reports="1" design="1" alerts="1" calendar="1" data_entry="[presentation,1][daily,1][outcome_medication,1][outcome,1]" api_export="1" api_import="1" mobile_app="1" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+		<redcap:UserRoles role_name="Project Manager" unique_role_name="U-671KHWFWC9" lock_record="1" lock_record_multiform="1" lock_record_customize="1" data_export_tool="" data_export_instruments="[form_1,1][inclusion_criteria,1][pre_admission_medication,1][critical_care_module,1][follow_up_self_assessment_survey,1][follow_up_self_assessment_survey_long_term,1][data_platform_terms_of_submission,1][onset_and_admission,1][admission_signs_and_symptoms,1][vaccinations,1][daily_form,1][treatment,1][infectious_respiratory_disease_diagnosis,1][infectious_respiratory_disease_pathogen_testing,1][outcome,1][pregnancy_module,1][admission,1][daily,1][pathogen_testing,1][outcome_medication,1][outcome,1][presentation,1][outcome_pathogen_testing,1]" data_import_tool="1" data_comparison_tool="1" data_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="1" graphical="1" reports="1" design="1" alerts="1" calendar="1" data_entry="[form_1,1][inclusion_criteria,1][pre_admission_medication,1][critical_care_module,1][follow_up_self_assessment_survey,1][follow_up_self_assessment_survey_long_term,1][data_platform_terms_of_submission,1][onset_and_admission,1][admission_signs_and_symptoms,1][vaccinations,1][daily_form,1][treatment,1][infectious_respiratory_disease_diagnosis,1][infectious_respiratory_disease_pathogen_testing,1][outcome,1][pregnancy_module,1][admission,1][daily,1][pathogen_testing,1][outcome_medication,1][outcome,1][presentation,1][outcome_pathogen_testing,1]" api_export="1" api_import="1" mobile_app="1" mobile_app_download_data="1" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
+	</redcap:UserRolesGroup>
+</GlobalVariables>
+<MetaDataVersion OID="Metadata.EGTestMinimalVars_2023-08-21_1101" Name="EG Test Minimal Vars" redcap:RecordIdField="subjid">
+	<Protocol>
+		<StudyEventRef StudyEventOID="Event.initial_assessment_arm_1" OrderNumber="1" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.daily_arm_1" OrderNumber="2" Mandatory="No"/>
+		<StudyEventRef StudyEventOID="Event.outcome__end_of_st_arm_1" OrderNumber="3" Mandatory="No"/>
+	</Protocol>
+	<StudyEventDef OID="Event.initial_assessment_arm_1" Name="Initial Assessment / Admission" Type="Common" Repeating="No" redcap:EventName="Initial Assessment / Admission" redcap:CustomEventLabel="Initial" redcap:UniqueEventName="initial_assessment_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="2" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.presentation" OrderNumber="1" Mandatory="No" redcap:FormName="presentation"/>
+		<FormRef FormOID="Form.daily" OrderNumber="2" Mandatory="No" redcap:FormName="daily"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.daily_arm_1" Name="Daily" Type="Common" Repeating="No" redcap:EventName="Daily" redcap:CustomEventLabel="Daily" redcap:UniqueEventName="daily_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="3" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.daily" OrderNumber="1" Mandatory="No" redcap:FormName="daily"/>
+	</StudyEventDef>
+	<StudyEventDef OID="Event.outcome__end_of_st_arm_1" Name="Outcome / End of study" Type="Common" Repeating="No" redcap:EventName="Outcome / End of study" redcap:CustomEventLabel="Outcome" redcap:UniqueEventName="outcome__end_of_st_arm_1" redcap:ArmNum="1" redcap:ArmName="Arm 1" redcap:DayOffset="4" redcap:OffsetMin="0" redcap:OffsetMax="0">
+		<FormRef FormOID="Form.outcome_medication" OrderNumber="1" Mandatory="No" redcap:FormName="outcome_medication"/>
+		<FormRef FormOID="Form.outcome" OrderNumber="2" Mandatory="No" redcap:FormName="outcome"/>
+		<FormRef FormOID="Form.outcome_pathogen_testing" OrderNumber="3" Mandatory="No" redcap:FormName="outcome_pathogen_testing"/>
+	</StudyEventDef>
+	<FormDef OID="Form.presentation" Name="Presentation" Repeating="No" redcap:FormName="presentation">
+		<ItemGroupRef ItemGroupOID="presentation.subjid" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="presentation.presentation_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.daily" Name="Daily" Repeating="No" redcap:FormName="daily">
+		<ItemGroupRef ItemGroupOID="daily.daily_date" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="daily.daily_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.outcome_medication" Name="Outcome - Medication" Repeating="No" redcap:FormName="outcome_medication">
+		<ItemGroupRef ItemGroupOID="outcome_medication.medicationtype" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="outcome_medication.outcome_medication_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.outcome" Name="Outcome" Repeating="No" redcap:FormName="outcome">
+		<ItemGroupRef ItemGroupOID="outcome.diagn_covid" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="outcome.outcome_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.outcome_pathogen_testing" Name="Outcome Pathogen Testing" Repeating="No" redcap:FormName="outcome_pathogen_testing">
+		<ItemGroupRef ItemGroupOID="outcome_pathogen_testing.collectiondate" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="outcome_pathogen_testing.outcome_pathogen_testing_complete" Mandatory="No"/>
+	</FormDef>
+	<ItemGroupDef OID="presentation.subjid" Name="Presentation" Repeating="No">
+		<ItemRef ItemOID="subjid" Mandatory="No" redcap:Variable="subjid"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="presentation.presentation_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="presentation_complete" Mandatory="No" redcap:Variable="presentation_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="daily.daily_date" Name="Daily" Repeating="No">
+		<ItemRef ItemOID="daily_date" Mandatory="Yes" redcap:Variable="daily_date"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="daily.daily_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="daily_complete" Mandatory="No" redcap:Variable="daily_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome_medication.medicationtype" Name="Outcome - Medication" Repeating="No">
+		<ItemRef ItemOID="medicationtype" Mandatory="Yes" redcap:Variable="medicationtype"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome_medication.outcome_medication_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="outcome_medication_complete" Mandatory="No" redcap:Variable="outcome_medication_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome.diagn_covid" Name="Outcome" Repeating="No">
+		<ItemRef ItemOID="diagn_covid" Mandatory="Yes" redcap:Variable="diagn_covid"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome.outcome_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="outcome_complete" Mandatory="No" redcap:Variable="outcome_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome_pathogen_testing.collectiondate" Name="Outcome Pathogen Testing" Repeating="No">
+		<ItemRef ItemOID="collectiondate" Mandatory="Yes" redcap:Variable="collectiondate"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="outcome_pathogen_testing.outcome_pathogen_testing_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="outcome_pathogen_testing_complete" Mandatory="No" redcap:Variable="outcome_pathogen_testing_complete"/>
+	</ItemGroupDef>
+	<ItemDef OID="subjid" Name="subjid" DataType="text" Length="999" redcap:Variable="subjid" redcap:FieldType="text" redcap:TextValidationType="patient_id_5_alphanum-4to6_digits">
+		<Question><TranslatedText>Participant Identification Number (PIN):</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="presentation_complete" Name="presentation_complete" DataType="text" Length="1" redcap:Variable="presentation_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="presentation_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="daily_date" Name="daily_date" DataType="date" Length="999" redcap:Variable="daily_date" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y">
+		<Question><TranslatedText>DATE OF ASSESSMENT</TranslatedText></Question>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>today</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range (no limit - today). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="daily_complete" Name="daily_complete" DataType="text" Length="1" redcap:Variable="daily_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="daily_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="medicationtype" Name="medicationtype" DataType="text" Length="1" redcap:Variable="medicationtype" redcap:FieldType="radio" redcap:RequiredField="y">
+		<Question><TranslatedText>While hospitalised or at discharge, were any of the following medication administered? </TranslatedText></Question>
+		<CodeListRef CodeListOID="medicationtype.choices"/>
+	</ItemDef>
+	<ItemDef OID="outcome_medication_complete" Name="outcome_medication_complete" DataType="text" Length="1" redcap:Variable="outcome_medication_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="outcome_medication_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="diagn_covid" Name="diagn_covid" DataType="text" Length="1" redcap:Variable="diagn_covid" redcap:FieldType="radio" redcap:RequiredField="y">
+		<Question><TranslatedText>SARS-CoV-2 (COVID-19)</TranslatedText></Question>
+		<CodeListRef CodeListOID="diagn_covid.choices"/>
+	</ItemDef>
+	<ItemDef OID="outcome_complete" Name="outcome_complete" DataType="text" Length="1" redcap:Variable="outcome_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="outcome_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="collectiondate" Name="collectiondate" DataType="date" Length="999" redcap:Variable="collectiondate" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y">
+		<Question><TranslatedText>Collection Date</TranslatedText></Question>
+		<RangeCheck Comparator="LE" SoftHard="Soft">
+			<CheckValue>today</CheckValue>
+			<ErrorMessage><TranslatedText>The value you provided is outside the suggested range (no limit - today). This value is admissible, but you may wish to double check it.</TranslatedText></ErrorMessage>
+		</RangeCheck>
+	</ItemDef>
+	<ItemDef OID="outcome_pathogen_testing_complete" Name="outcome_pathogen_testing_complete" DataType="text" Length="1" redcap:Variable="outcome_pathogen_testing_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="outcome_pathogen_testing_complete.choices"/>
+	</ItemDef>
+	<CodeList OID="presentation_complete.choices" Name="presentation_complete" DataType="text" redcap:Variable="presentation_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="daily_complete.choices" Name="daily_complete" DataType="text" redcap:Variable="daily_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="medicationtype.choices" Name="medicationtype" DataType="text" redcap:Variable="medicationtype">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Antiviral agent</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Convalescent plasma</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Antibiotic</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>Corticosteroid</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>Anticoagulation</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>Antifungal agent</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="7"><Decode><TranslatedText>Inotropes/vasopressor</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>Other treatments for pathogen including experimental or compassionate use</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="outcome_medication_complete.choices" Name="outcome_medication_complete" DataType="text" redcap:Variable="outcome_medication_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="diagn_covid.choices" Name="diagn_covid" DataType="text" redcap:Variable="diagn_covid">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Clinically assessed positive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Lab positive</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Lab negative</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>Not done</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="outcome_complete.choices" Name="outcome_complete" DataType="text" redcap:Variable="outcome_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="outcome_pathogen_testing_complete.choices" Name="outcome_pathogen_testing_complete" DataType="text" redcap:Variable="outcome_pathogen_testing_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+</MetaDataVersion>
+</Study>
+</ODM>
