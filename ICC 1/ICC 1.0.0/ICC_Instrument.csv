@@ -1,5 +1,5 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,Skip Logic
-presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,
+presentation,IDENTIFICATION,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,
 presentation,INCLUSION CRITERIA,inclu_infection,radio,Suspected or confirmed infection with a pathogen of public health interest,"1, Yes | 0, No",,,,
 presentation,INCLUSION CRITERIA,inclu_exposure,radio,Exposure to a pathogen or health threat of public health interest,"1, Yes | 0, No",,,,
 presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual proven/suspected of having?,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, Severe Acute paediatric hepatitis | 3, Mpox | 4, Dengue | 5, COVID-19 (SARS-CoV-2) | 6, Other",,,,
@@ -162,8 +162,8 @@ presentation,MEDICAL HISTORY,medic_adm_type,radio,Where was latest dengue episod
 presentation,MEDICAL HISTORY,medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
 presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
 presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-daily,,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,
-daily,,daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,
+daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,
+daily,ASSESSMENT,daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_c,number,Highest temperature (°C),,number,,,[daily_datatype(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_f,number,Highest temperature (F),,number,,,[daily_datatype(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_hr,number,HR (beats/minute),,number,,,[daily_datatype(1)]='1'
@@ -1029,51 +1029,51 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,[imaging_ultrasou
 daily,IMAGING,imagi_gallbladde,number,Gallbladder wall (cm),,number,,,[imaging_ultrasound] = '1'
 daily,IMAGING,imagi_unlisted,radio,Other finding,"1, Yes | 0, No",,,,[imaging_ultrasound] = '1'
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,[imaging_unlisted] = '1'
-outcome_medication,IMAGING,medicationtype,radio,"While hospitalised or at discharge, were any of the following medication administered? ","1, Antiviral agent | 2, Convalescent plasma | 3, Antibiotic | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal agent | 7, Inotropes/vasopressor | 8, Other treatments for pathogen including experimental or compassionate use",,,,
-outcome_medication,IMAGING,antiviralagent,radio,Antiviral agent? ,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 15, Other",,,,[medicationtype] = '1'
-outcome_medication,IMAGING,convalescentplasma,radio,Convalescent plasma? ,"1, Convalescent plasma | 2, Other",,,,[medicationtype] = '2'
-outcome_medication,IMAGING,antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 8, Other",,,,[medicationtype] = '3'
-outcome_medication,IMAGING,corticosteroid_agent,radio,Corticosteroid agent,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 5, Other",,,,[medicationtype] = '4'
-outcome_medication,IMAGING,anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 6, Other",,,,[medicationtype] = '5'
-outcome_medication,IMAGING,anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,[medicationtype] = '5'
-outcome_medication,IMAGING,antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 9, Other",,,,[medicationtype] = '6'
-outcome_medication,IMAGING,inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 8, Other",,,,[medicationtype] = '7'
-outcome_medication,IMAGING,medicationother,text,Specify other medication,,,,,[medicationtype] = '8' or [convalescentplasma] = '2' or [antibioticagent] = '8' or [corticosteroid_agent] = '5' or [anticoagulationagent] = '6' or [antifungalagent] = '9' or [inotropesvasopressor] = '8' or [antiviralagent] = '15'
-outcome_medication,IMAGING,knownstardate,radio,Do you know the medication start date?,"1, Yes | 0, No",,,,
-outcome_medication,IMAGING,medicationdate,date_dmy,Date started / first dose,,date_dmy,,today,[knownstardate] = '1'
-outcome_medication,IMAGING,numberofdays,number,Total number of days treatment given,,number,,,
-outcome,IMAGING,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
-outcome,IMAGING,diagn_influenza,radio,Influenza,"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
-outcome,IMAGING,diagn_influenza_type,radio,Influenza type,"1, A-not typed | 2, A/H3N2 | 3, A/H1N1pdm09 | 4, A/H7N9 | 5, A/H5N1 | 6, B | 7, Other",,,,[diagnostics_influenza] = '2'
-outcome,IMAGING,diagn_influenza_other,text,Please specify influenza type,,,,,[diagnostics_influenzatype]='7'
-outcome,IMAGING,diagn_influenza_seq,radio,Was sequencing done?  ,"1, Yes | 0, No",,,,[diagnostics_influenza] = '2'
-outcome,IMAGING,diagn_influeza_result,text,Influenza sequencing  result,,,,,[diagnostics_influenzasequen] = '1'
-outcome,IMAGING,diagn_influenza_resist,radio,Was oseltamivir resistance identified? ,"1, Yes | 0, No",,,,[diagnostics_influenza] = '2'
-outcome,IMAGING,diagn_influenza_method,radio,what method was used to identify the influenza variant ?,"1, Genomic sequencing | 2, S-gene target failure (SGTF) testing | 3, PCR genotyping",,,,[diagnostics_influenzatype] = '1' and [diagnostics_influenzatype] = '2' and [diagnostics_influenzatype] = '3' and [diagnostics_influenzatype] = '4' and [diagnostics_influenzatype] = '5' and [diagnostics_influenzatype] = '6'
-outcome,IMAGING,diagn_rsv,radio,Respiratory Syncytial Virus (RSV),"1, Lab positive | 0, Lab negative | 2, Not done",,,,
-outcome,IMAGING,diagn_adenovirus,radio,Adenovirus,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
-outcome,IMAGING,diagn_mpox,radio,Monkeypox virus,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
-outcome,IMAGING,diagn_hepatitis,radio,Hepatitis viruses,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
-outcome,IMAGING,diagn_hepatitis_type,radio,Hepatitis type,"1, A | 2, B | 3, C | 4, D | 5, E | 6, Other",,,,[diagnostics_hepatitis] = '1'
-outcome,IMAGING,diagn_hepatitist_other,text,Specify other type of hepatitis,,,,,[diagnostics_hepatitistype] = '6'
-outcome,IMAGING,diagn_dengue,radio,Dengue infection,"1, Tested | 0, Not done",,,,
-outcome,IMAGING,diagn_dengue_nsi,radio,NSI RDT,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_ns1,radio,NS1/IgM/IgG combination test (RDT) - NS1,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_igm,radio,NS1/IgM/IgG combination test (RDT) - igM,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_igg,radio,NS1/IgM/IgG combination test (RDT) - igG,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_elisa,radio,NSI ELISA,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_datefs,date_dmy,Date of IgM/IgG ELISA first Sample,,date_dmy,,today,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_igmfs,radio,IgM ELISA first sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_iggfs,radio,IgG ELISA first sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_datess,date_dmy,Date of IgM/IgG ELISA second Sample,,date_dmy,,today,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_igmss,radio,igM ELISA second sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_iggss,radio,igG ELISA second sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_pcr,radio,Dengue PCR  ,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
-outcome,IMAGING,diagn_dengue_type,radio,Dengue virus type,"1, DENV1 | 2, DENV2 | 3, DENV3 | 4, DENV4",,,,[diagnosis_denguepcr] = '1'
-outcome,IMAGING,diagn_bacterial,radio,Bacterial testing,"1, Lab confirmed | 0, Lab negative | 2, Not done",,,,
-outcome,IMAGING,diagn_bacterials,notes,Specify bacterial pathogen(s) detected,,,,,[diagnostics_bacterial] = '1'
-outcome,IMAGING,diagn_unlisted,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,
-outcome,IMAGING,diagn_unlisted_other,notes,Specify other pathogens detected,,,,,[diagnostics_unlisted] = '1'
+outcome_medication,MEDICATION,medicationtype,radio,"While hospitalised or at discharge, were any of the following medication administered? ","1, Antiviral agent | 2, Convalescent plasma | 3, Antibiotic | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal agent | 7, Inotropes/vasopressor | 8, Other treatments for pathogen including experimental or compassionate use",,,,
+outcome_medication,MEDICATION,antiviralagent,radio,Antiviral agent? ,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 15, Other",,,,[medicationtype] = '1'
+outcome_medication,MEDICATION,convalescentplasma,radio,Convalescent plasma? ,"1, Convalescent plasma | 2, Other",,,,[medicationtype] = '2'
+outcome_medication,MEDICATION,antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 8, Other",,,,[medicationtype] = '3'
+outcome_medication,MEDICATION,corticosteroid_agent,radio,Corticosteroid agent,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 5, Other",,,,[medicationtype] = '4'
+outcome_medication,MEDICATION,anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 6, Other",,,,[medicationtype] = '5'
+outcome_medication,MEDICATION,anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,[medicationtype] = '5'
+outcome_medication,MEDICATION,antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 9, Other",,,,[medicationtype] = '6'
+outcome_medication,MEDICATION,inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 8, Other",,,,[medicationtype] = '7'
+outcome_medication,MEDICATION,medicationother,text,Specify other medication,,,,,[medicationtype] = '8' or [convalescentplasma] = '2' or [antibioticagent] = '8' or [corticosteroid_agent] = '5' or [anticoagulationagent] = '6' or [antifungalagent] = '9' or [inotropesvasopressor] = '8' or [antiviralagent] = '15'
+outcome_medication,MEDICATION,knownstardate,radio,Do you know the medication start date?,"1, Yes | 0, No",,,,
+outcome_medication,MEDICATION,medicationdate,date_dmy,Date started / first dose,,date_dmy,,today,[knownstardate] = '1'
+outcome_medication,MEDICATION,numberofdays,number,Total number of days treatment given,,number,,,
+outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
+outcome,DIAGNOSIS,diagn_influenza,radio,Influenza,"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
+outcome,DIAGNOSIS,diagn_influenza_type,radio,Influenza type,"1, A-not typed | 2, A/H3N2 | 3, A/H1N1pdm09 | 4, A/H7N9 | 5, A/H5N1 | 6, B | 7, Other",,,,[diagnostics_influenza] = '2'
+outcome,DIAGNOSIS,diagn_influenza_other,text,Please specify influenza type,,,,,[diagnostics_influenzatype]='7'
+outcome,DIAGNOSIS,diagn_influenza_seq,radio,Was sequencing done?  ,"1, Yes | 0, No",,,,[diagnostics_influenza] = '2'
+outcome,DIAGNOSIS,diagn_influeza_result,text,Influenza sequencing  result,,,,,[diagnostics_influenzasequen] = '1'
+outcome,DIAGNOSIS,diagn_influenza_resist,radio,Was oseltamivir resistance identified? ,"1, Yes | 0, No",,,,[diagnostics_influenza] = '2'
+outcome,DIAGNOSIS,diagn_influenza_method,radio,what method was used to identify the influenza variant ?,"1, Genomic sequencing | 2, S-gene target failure (SGTF) testing | 3, PCR genotyping",,,,[diagnostics_influenzatype] = '1' and [diagnostics_influenzatype] = '2' and [diagnostics_influenzatype] = '3' and [diagnostics_influenzatype] = '4' and [diagnostics_influenzatype] = '5' and [diagnostics_influenzatype] = '6'
+outcome,DIAGNOSIS,diagn_rsv,radio,Respiratory Syncytial Virus (RSV),"1, Lab positive | 0, Lab negative | 2, Not done",,,,
+outcome,DIAGNOSIS,diagn_adenovirus,radio,Adenovirus,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
+outcome,DIAGNOSIS,diagn_mpox,radio,Monkeypox virus,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
+outcome,DIAGNOSIS,diagn_hepatitis,radio,Hepatitis viruses,"1, Lab positive | 0, Lab negative | 2, Not done",,,,
+outcome,DIAGNOSIS,diagn_hepatitis_type,radio,Hepatitis type,"1, A | 2, B | 3, C | 4, D | 5, E | 6, Other",,,,[diagnostics_hepatitis] = '1'
+outcome,DIAGNOSIS,diagn_hepatitist_other,text,Specify other type of hepatitis,,,,,[diagnostics_hepatitistype] = '6'
+outcome,DIAGNOSIS,diagn_dengue,radio,Dengue infection,"1, Tested | 0, Not done",,,,
+outcome,DIAGNOSIS,diagn_dengue_nsi,radio,NSI RDT,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_ns1,radio,NS1/IgM/IgG combination test (RDT) - NS1,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_igm,radio,NS1/IgM/IgG combination test (RDT) - igM,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_igg,radio,NS1/IgM/IgG combination test (RDT) - igG,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_elisa,radio,NSI ELISA,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_datefs,date_dmy,Date of IgM/IgG ELISA first Sample,,date_dmy,,today,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_igmfs,radio,IgM ELISA first sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_iggfs,radio,IgG ELISA first sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_datess,date_dmy,Date of IgM/IgG ELISA second Sample,,date_dmy,,today,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_igmss,radio,igM ELISA second sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_iggss,radio,igG ELISA second sample,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_pcr,radio,Dengue PCR  ,"1, Positive | 0, Negative | 2, Not done",,,,[diagnostics_dengue] = '1'
+outcome,DIAGNOSIS,diagn_dengue_type,radio,Dengue virus type,"1, DENV1 | 2, DENV2 | 3, DENV3 | 4, DENV4",,,,[diagnosis_denguepcr] = '1'
+outcome,DIAGNOSIS,diagn_bacterial,radio,Bacterial testing,"1, Lab confirmed | 0, Lab negative | 2, Not done",,,,
+outcome,DIAGNOSIS,diagn_bacterials,notes,Specify bacterial pathogen(s) detected,,,,,[diagnostics_bacterial] = '1'
+outcome,DIAGNOSIS,diagn_unlisted,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,
+outcome,DIAGNOSIS,diagn_unlisted_other,notes,Specify other pathogens detected,,,,,[diagnostics_unlisted] = '1'
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_viralpneum,radio,Viral pneumonia/pneumonitis,"1, Yes | 0, No",,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_bacterialp,radio,Bacterial pneumonia,"1, Yes | 0, No",,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_acuterespi,radio,Acute Respiratory Distress Syndrome,"1, Yes | 0, No",,,,
@@ -1204,10 +1204,10 @@ outcome,OUTCOME,mpox_hostdat,date_dmy,Date of hospitalisation,,date_dmy,,today,[
 outcome,OUTCOME,mpox_death_dat,date_dmy,Date of death,,date_dmy,,today,[mpox_outcome]='4'
 outcome,OUTCOME,mpox_death_cause,text,Cause of death,,,,,[mpox_outcome]='4'
 outcome,OUTCOME,mpox_lfu_reason,text,Reason for loss to follow-up:,,,,,[mpox_outcome]='6'
-outcome_pathogen_testing,OUTCOME,collectiondate,date_dmy,Collection Date,,date_dmy,,today,
-outcome_pathogen_testing,OUTCOME,pathogentested,text,Pathogen Tested/Detected,,,,,
-outcome_pathogen_testing,OUTCOME,biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 11, Other",,,,
-outcome_pathogen_testing,OUTCOME,biospecimentypeother,text,Please specify biospecimen type,,,,,[biospecimentype] = '11'
-outcome_pathogen_testing,OUTCOME,labtestmethod,radio,Lab test method,"1, PCR | 2, IgG | 3, Culture | 4, IgM | 5, Antigen detection | 6, ELISA | 7, Other",,,,
-outcome_pathogen_testing,OUTCOME,labtestmethodother,text,Please specify other lab test method,,,,,[labtestmethod] = '7'
-outcome_pathogen_testing,OUTCOME,result,radio,Result,"1, Positive | 0, Negative | 2, Equivocal",,,,
+outcome_pathogen_testing,TEST,collectiondate,date_dmy,Collection Date,,date_dmy,,today,
+outcome_pathogen_testing,TEST,pathogentested,text,Pathogen Tested/Detected,,,,,
+outcome_pathogen_testing,TEST,biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 11, Other",,,,
+outcome_pathogen_testing,TEST,biospecimentypeother,text,Please specify biospecimen type,,,,,[biospecimentype] = '11'
+outcome_pathogen_testing,TEST,labtestmethod,radio,Lab test method,"1, PCR | 2, IgG | 3, Culture | 4, IgM | 5, Antigen detection | 6, ELISA | 7, Other",,,,
+outcome_pathogen_testing,TEST,labtestmethodother,text,Please specify other lab test method,,,,,[labtestmethod] = '7'
+outcome_pathogen_testing,TEST,result,radio,Result,"1, Positive | 0, Negative | 2, Equivocal",,,,
