@@ -4,9 +4,9 @@ presentation,INCLUSION CRITERIA,inclu_infection,radio,Suspected or confirmed inf
 presentation,INCLUSION CRITERIA,inclu_exposure,radio,Exposure to a pathogen or health threat of public health interest,"1, Yes | 0, No",,,,
 presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual proven/suspected of having?,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, Severe Acute paediatric hepatitis | 3, Mpox | 4, Dengue | 5, COVID-19 (SARS-CoV-2) | 6, Other",,,,
 presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected or confirmed infection:,,,,,[inclusioncriteria_disease(6)] = '1'
-presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment /start of data collection: ,,date_dmy,,today,
-presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first/earliest symptom: ,,date_dmy,,today,
-presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Presentation/admission date at this facility (most recent): ,,date_dmy,,today,
+presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment /start of data collection,,date_dmy,,today,
+presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first/earliest symptom,,date_dmy,,today,
+presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Presentation/admission date at this facility (most recent),,date_dmy,,today,
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility | 2, YES-admitted to other facility, then transferred to this facility | 0, No",,,,
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,[readmission_previousadmission] = '2' or [readmission_previousadmission] = '1'
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,[readmission_previousadmission] = '2' or [readmission_previousadmission] = '1'
@@ -111,25 +111,25 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_myalgia,radio,Muscle aches (myalgia),"1, Yes | 0, No",,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_arthralgia,radio,Joint pain (arthralgia),"1, Yes | 0, No",,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_inbilitywslk,radio,Inability to walk,"1, Yes | 0, No",,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_abdpainsev,radio,Abdominal pain severity,"1, + | 2, ++ | 3, +++",,,,[inclusioncriteria_disease(4)] = '1' and [symptoms_abdominalpain] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_abdpain_sev,radio,Abdominal pain severity,"1, + | 2, ++ | 3, +++",,,,[symptoms_abdpain] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_diarrhoeae,number,Diarrhoea episodes in previous 24 hours  ,,number,,,[inclusioncriteria_disease(4)] = '1' and [symptoms_diarrhoea] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_diarrhoea_ep,number,Diarrhoea episodes in previous 24 hours  ,,number,,,[sympt_diarrhoea] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_vomitinten,radio,Intensity of vomiting,"1, + | 2, ++ | 3, +++",,,,[inclusioncriteria_disease(4)] = '1' and [symptoms_nausea] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_nausea_inte,radio,Intensity of vomiting,"1, + | 2, ++ | 3, +++",,,,[sympt_nausea] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_anorexia,radio,Anorexia,"1, Yes | 0, No",,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_skinrash,radio,Skin rash,"1, Yes | 0, No",,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag,radio,Bleeding (Haemorrhage),"1, Yes | 0, No",,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag_site,checkbox,specify site(s) of bleeding,"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,[symptoms_haemorrhage] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag_other,text,Please specify other site:,,,,,[symptoms_haemorrhagesite(7)]='1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_restlessne,radio,Restlessness,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag_site,checkbox,specify site(s) of bleeding,"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,[sympt_haemorrhag] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag_other,text,Please specify other site:,,,,,[sympt_haemorrhag_site(7)]='1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_restlessne,radio,Restlessness,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted,radio,Other symptom(s),"1, Yes | 0, No",,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,text,Please specify,,,,,[symptoms_unlisted] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",dengu_neurologic_other,text,Please specify other neurological abnormality,,,,,[denguesymptoms_neurologicalunlisted] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic_other,text,Please specify other neurological abnormality,,,,,[denguesymptoms_neurologicalunlisted] = '1'
 presentation,VACCINATION,vacci_covid19,radio,Vaccinated for COVID-19?,"1, Yes | 0, No",,,,[inclusioncriteria_disease(5)] = '1'
 presentation,VACCINATION,vacci_covid19_date,date_dmy,Date of most recent COVID-19 vaccine,,date_dmy,,today,[vaccinationcovid19_vaccine] = '1'
 presentation,VACCINATION,vacci_influenza,radio,Vaccinated for influenza?  ,"1, Yes | 0, No",,,,[inclusioncriteria_disease(1)] = '1'
@@ -147,23 +147,23 @@ presentation,VACCINATION,vacci_dengue_type3,radio,Type of third dengue vaccine,"
 presentation,MEDICAL HISTORY,medic_gastroente,radio,"In the last 3 months, has your child had a gastroenteritis illness (including diarrhoea and/or vomiting)?","1, Yes | 0, No",,,,[inclusioncriteria_disease(2)] = '1'
 presentation,MEDICAL HISTORY,medic_startdate,date_dmy,Approximate start date of this illness,,date_dmy,,today,[inclusioncriteria_disease(2)] = '1' and [medicalhistpedhepatitis_gastroenteritis] = '1'
 presentation,MEDICAL HISTORY,medic_persiisten,radio,Did these symptoms persist for more than a week? ,"1, Yes | 0, No",,,,[inclusioncriteria_disease(2)] = '1' and [medicalhistpedhepatitis_gastroenteritis] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_fever,radio,History of fever,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_weightloss,radio,Weight loss,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_tiredness,radio,Tiredness,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_unlisted,radio,Other,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_unlisted_other,text,Please specify other medical history,,,,,[medicalhistpedhepatitis_unlisted] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_previnfect,radio,Is the patient known to have previous dengue infection(s)?,"1, Yes 1 time | 2, Yes 2 times | 3, Yes >2 times | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_lastinfect,date_dmy,When did the latest dengue episode occur?,,date_dmy,,today,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_confirmati_type,radio,How was the latest dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_adm_type,radio,Where was latest dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-presentation,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
-daily,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,
-daily,HEPATITIS MEDICAL HISTORY (What persistent symptoms did your child have in the last three months?),daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,
+presentation,MEDICAL HISTORY,medic_fever,radio,History of fever,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_weightloss,radio,Weight loss,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_tiredness,radio,Tiredness,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_unlisted,radio,Other,"1, Yes | 0, No",,,,[medicalhistpedhepatitis_persiistentsymptom] = '1'
+presentation,MEDICAL HISTORY,medic_unlisted_other,text,Please specify other medical history,,,,,[medicalhistpedhepatitis_unlisted] = '1'
+presentation,MEDICAL HISTORY,medic_previnfect,radio,Is the patient known to have previous dengue infection(s)?,"1, Yes 1 time | 2, Yes 2 times | 3, Yes >2 times | 0, No",,,,[inclusioncriteria_disease(4)] = '1'
+presentation,MEDICAL HISTORY,medic_lastinfect,date_dmy,When did the latest dengue episode occur?,,date_dmy,,today,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+presentation,MEDICAL HISTORY,medic_confirmati_type,radio,How was the latest dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+presentation,MEDICAL HISTORY,medic_adm_type,radio,Where was latest dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,[medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+presentation,MEDICAL HISTORY,medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,[medicalhistdengue_previousinfection] = '1' or [medicalhistdengue_previousinfection] = '2' or [medicalhistdengue_previousinfection] = '3'
+daily,,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,
+daily,,daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_c,number,Highest temperature (°C),,number,,,[daily_datatype(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_f,number,Highest temperature (F),,number,,,[daily_datatype(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_hr,number,HR (beats/minute),,number,,,[daily_datatype(1)]='1'
@@ -1008,13 +1008,13 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cortisol_unitso,text,Specify Cortisol Units,,,,,[labs_cortisol_units]='xx'
 daily,IMAGING,imagi_xray,radio,Was a chest X-Ray performed?,"1, Yes | 0, No",,,,[daily_datatype(4)]='1'
-daily,IMAGING,imagi_xraydate,date_dmy,X-Ray date ,,date_dmy,,today,[imaging_xray] = '1'
-daily,IMAGING,imagi_xrayresult,checkbox,X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 5, Other",,,,[imaging_xray] = '1'
-daily,IMAGING,imagi_xrayresult_other,text,Please specify x-ray result,,,,,[imaging_xrayresult(5)] = '1'
-daily,IMAGING,imagi_pleuraleff,checkbox,On which side was pleural effusion identified? ,"1, Right | 2, Left",,,,[imaging_xrayresult(4)] = '1'
+daily,IMAGING,imagi_xray_date,date_dmy,X-Ray date ,,date_dmy,,today,[imaging_xray] = '1'
+daily,IMAGING,imagi_xray_result,checkbox,X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 5, Other",,,,[imaging_xray] = '1'
+daily,IMAGING,imagi_xray_resultoth,text,Please specify x-ray result,,,,,[imaging_xrayresult(5)] = '1'
+daily,IMAGING,imagi_xray_resultpleu,checkbox,On which side was pleural effusion identified? ,"1, Right | 2, Left",,,,[imaging_xray_result(4)] = '1'
 daily,IMAGING,imagi_ct,radio,Was a CT performed?  ,"1, Yes | 0, No",,,,[daily_datatype(4)]='1'
-daily,IMAGING,imagi_ctdate,date_dmy,CT date ,,date_dmy,,today,[imaging_ct] = '1'
-daily,IMAGING,imagi_ctinfiltra,radio,Were lung infiltrates present?,"1, Yes | 0, No",,,,[imaging_ct] = '1'
+daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,[imaging_ct] = '1'
+daily,IMAGING,imagi_ct_infiltra,radio,Were lung infiltrates present?,"1, Yes | 0, No",,,,[imaging_ct] = '1'
 daily,IMAGING,imagi_ultrasound,radio,Was an ultrasound performed?,"1, Yes | 0, No",,,,[inclusioncriteria_disease(4)] = '1' and [daily_datatype(4)]='1'
 daily,IMAGING,imagi_ultrasound_date,date_dmy,Ultrasound date ,,date_dmy,,today,[imaging_ultrasound] = '1'
 daily,IMAGING,imagi_ultrasound_result,text,Ultrasound result:,,,,,[imaging_ultrasound] = '1'
