@@ -1029,19 +1029,19 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,[imaging_ultrasou
 daily,IMAGING,imagi_gallbladde,number,Gallbladder wall (cm),,number,,,[imaging_ultrasound] = '1'
 daily,IMAGING,imagi_unlisted,radio,Other finding,"1, Yes | 0, No",,,,[imaging_ultrasound] = '1'
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,[imaging_unlisted] = '1'
-outcome_medication,MEDICATION,medicationtype,radio,"While hospitalised or at discharge, were any of the following medication administered? ","1, Antiviral agent | 2, Convalescent plasma | 3, Antibiotic | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal agent | 7, Inotropes/vasopressor | 8, Other treatments for pathogen including experimental or compassionate use",,,,
-outcome_medication,MEDICATION,antiviralagent,radio,Antiviral agent? ,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 15, Other",,,,[medicationtype] = '1'
-outcome_medication,MEDICATION,convalescentplasma,radio,Convalescent plasma? ,"1, Convalescent plasma | 2, Other",,,,[medicationtype] = '2'
-outcome_medication,MEDICATION,antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 8, Other",,,,[medicationtype] = '3'
-outcome_medication,MEDICATION,corticosteroid_agent,radio,Corticosteroid agent,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 5, Other",,,,[medicationtype] = '4'
-outcome_medication,MEDICATION,anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 6, Other",,,,[medicationtype] = '5'
-outcome_medication,MEDICATION,anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,[medicationtype] = '5'
-outcome_medication,MEDICATION,antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 9, Other",,,,[medicationtype] = '6'
-outcome_medication,MEDICATION,inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 8, Other",,,,[medicationtype] = '7'
-outcome_medication,MEDICATION,medicationother,text,Specify other medication,,,,,[medicationtype] = '8' or [convalescentplasma] = '2' or [antibioticagent] = '8' or [corticosteroid_agent] = '5' or [anticoagulationagent] = '6' or [antifungalagent] = '9' or [inotropesvasopressor] = '8' or [antiviralagent] = '15'
-outcome_medication,MEDICATION,knownstardate,radio,Do you know the medication start date?,"1, Yes | 0, No",,,,
-outcome_medication,MEDICATION,medicationdate,date_dmy,Date started / first dose,,date_dmy,,today,[knownstardate] = '1'
-outcome_medication,MEDICATION,numberofdays,number,Total number of days treatment given,,number,,,
+outcome_medication,MEDICATION,medi_medicationtype,radio,"While hospitalised or at discharge, were any of the following medication administered? ","1, Antiviral agent | 2, Convalescent plasma | 3, Antibiotic | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal agent | 7, Inotropes/vasopressor | 8, Other treatments for pathogen including experimental or compassionate use",,,,
+outcome_medication,MEDICATION,medi_antiviralagent,radio,Antiviral agent? ,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 15, Other",,,,[medicationtype] = '1'
+outcome_medication,MEDICATION,medi_convalescentplasma,radio,Convalescent plasma? ,"1, Convalescent plasma | 2, Other",,,,[medicationtype] = '2'
+outcome_medication,MEDICATION,medi_antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 8, Other",,,,[medicationtype] = '3'
+outcome_medication,MEDICATION,medi_corticosteroid,radio,Corticosteroid agent,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 5, Other",,,,[medicationtype] = '4'
+outcome_medication,MEDICATION,medi_anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 6, Other",,,,[medicationtype] = '5'
+outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,[medicationtype] = '5'
+outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 9, Other",,,,[medicationtype] = '6'
+outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 8, Other",,,,[medicationtype] = '7'
+outcome_medication,MEDICATION,medi_medicationother,text,Specify other medication,,,,,[medicationtype] = '8' or [convalescentplasma] = '2' or [antibioticagent] = '8' or [corticosteroid_agent] = '5' or [anticoagulationagent] = '6' or [antifungalagent] = '9' or [inotropesvasopressor] = '8' or [antiviralagent] = '15'
+outcome_medication,MEDICATION,medi_knownstardate,radio,Do you know the medication start date?,"1, Yes | 0, No",,,,
+outcome_medication,MEDICATION,medi_medicationdate,date_dmy,Date started / first dose,,date_dmy,,today,[knownstardate] = '1'
+outcome_medication,MEDICATION,medi_numberofdays,number,Total number of days treatment given,,number,,,
 outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
 outcome,DIAGNOSIS,diagn_influenza,radio,Influenza,"1, Clinically assessed positive | 2, Lab positive | 3, Lab negative | 4, Not done",,,,
 outcome,DIAGNOSIS,diagn_influenza_type,radio,Influenza type,"1, A-not typed | 2, A/H3N2 | 3, A/H1N1pdm09 | 4, A/H7N9 | 5, A/H5N1 | 6, B | 7, Other",,,,[diagnostics_influenza] = '2'
