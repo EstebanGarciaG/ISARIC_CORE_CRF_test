@@ -1,5 +1,5 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,Skip Logic
-presentation,PARTICIPANT IDENTIFICATION NUMBER,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,
+presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,
 presentation,INCLUSION CRITERIA,inclu_infection,radio,Suspected or confirmed infection with a pathogen of public health interest,"1, Yes | 0, No",,,,
 presentation,INCLUSION CRITERIA,inclu_exposure,radio,Exposure to a pathogen or health threat of public health interest,"1, Yes | 0, No",,,,
 presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual proven/suspected of having?,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, Severe Acute paediatric hepatitis | 3, Mpox | 4, Dengue | 5, COVID-19 (SARS-CoV-2) | 6, Other",,,,
