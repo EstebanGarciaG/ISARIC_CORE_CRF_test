@@ -678,7 +678,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr_units,radio,Erythrocyte Sedimentation Rate Units,"1, mm/h | xx, Other",,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr_unitso,text,Specify Erythrocyte Sedimentation Rate Units,,,,,[labs_erythrocytedimentationrate_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr_unitso,text,Specify Erythrocyte Sedimentation Rate Units,,,,,[labs_erythrocytsr_units]='xx'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4_106l,number,CD4 (10^6/L),,number,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -1010,8 +1010,8 @@ daily,"LABORATORY RESULTS
 daily,IMAGING,imagi_xray,radio,Was a chest X-Ray performed?,"1, Yes | 0, No",,,,[daily_data_type(4)]='1'
 daily,IMAGING,imagi_xray_date,date_dmy,X-Ray date ,,date_dmy,,today,[imagi_xray] = '1'
 daily,IMAGING,imagi_xray_result,checkbox,X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 5, Other",,,,[imagi_xray] = '1'
-daily,IMAGING,imagi_xray_resultoth,text,Please specify x-ray result,,,,,[imaging_xraytest_result(5)] = '1'
-daily,IMAGING,imagi_xray_resultpleu,checkbox,On which side was pleural effusion identified? ,"1, Right | 2, Left",,,,[imaging_xraytest_result(4)] = '1'
+daily,IMAGING,imagi_xray_resultoth,text,Please specify x-ray result,,,,,[imagi_xray_result(5)] = '1'
+daily,IMAGING,imagi_xray_resultpleu,checkbox,On which side was pleural effusion identified? ,"1, Right | 2, Left",,,,[imagi_xray_result(4)] = '1'
 daily,IMAGING,imagi_ct,radio,Was a CT performed?  ,"1, Yes | 0, No",,,,[daily_data_type(4)]='1'
 daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,[imagi_ct] = '1'
 daily,IMAGING,imagi_ct_infiltra,radio,Were lung infiltrates present?,"1, Yes | 0, No",,,,[imagi_ct] = '1'
@@ -1189,21 +1189,13 @@ outcome,OUTCOME,outco_selfcaraft,radio,Ability to self-care at discharge versus 
 outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,[outco_outcome] = '1' or [outco_outcome] = '2'
 outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No",,,,[outco_outcome] = '1' or [outco_outcome] = '2'
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (For instance awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No",,,,[outco_outcome] = '2' and [outco_outcome] = '3'
-outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,[initial_assessment_arm_1][inclu_disease(4)] = '1'
-outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,[outco_denguediagno_maindengue] = '0'
+outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,[inclu_disease(4)] = '1'
+outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,[outco_denguediagno] = '0'
 outcome,OUTCOME,outco_denguediagno_class,radio,"What was the final classification of dengue?
-","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,[outco_denguediagno_maindengue] = '1'
+","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,[outco_denguediagno] = '1'
 outcome,OUTCOME,outco_denguediagno_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,[outco_denguediagno_class] = '3'
-outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,[initial_assessment_arm_1][inclu_disease(4)] = '1'
+outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,[inclu_disease(4)] = '1'
 outcome,OUTCOME,outco_secondiag_other,text,Specify secondary diagnosis,,,,,[outco_secondiag] = '1'
-outcome,OUTCOME,mpox_date,date_dmy,Date of evaluation,,date_dmy,,today,[initial_assessment_arm_1][inclu_disease(3)] = '1'
-outcome,OUTCOME,mpox_outcome,radio,Patient outcome,"1, All lesions are completely resolved and no serious complications | 7, All lesions are no longer active and no serious complications | 8, No lesions ever developed and no serious complications | 2, One or more lesion(s) are active and no serious complications | 3, Serious complication and/or hospitalisation due to monkeypox | 4, Death | 5, Early withdrawal | 6, Loss to follow-up",,,,[initial_assessment_arm_1][inclu_disease(3)] = '1'
-outcome,OUTCOME,mpox_resolvedat,date_dmy,First or earliest date on which the selected outcome was true,,date_dmy,,today,[mpox_outcome]='1' or [mpox_outcome]='7'
-outcome,OUTCOME,mpox_hospreason,text,Reason for hospitalisation,,,,,[mpox_outcome]='3'
-outcome,OUTCOME,mpox_hostdat,date_dmy,Date of hospitalisation,,date_dmy,,today,[mpox_outcome]='3'
-outcome,OUTCOME,mpox_death_dat,date_dmy,Date of death,,date_dmy,,today,[mpox_outcome]='4'
-outcome,OUTCOME,mpox_death_cause,text,Cause of death,,,,,[mpox_outcome]='4'
-outcome,OUTCOME,mpox_lfu_reason,text,Reason for loss to follow-up:,,,,,[mpox_outcome]='6'
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,
 outcome_pathogen_testing,TEST,test_pathogentested,text,Pathogen Tested/Detected,,,,,
 outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 11, Other",,,,
