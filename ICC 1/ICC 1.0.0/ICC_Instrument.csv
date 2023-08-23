@@ -19,12 +19,12 @@ presentation,DEMOGRAPHICS,demog_sex,radio,Sex at Birth,"1, Male | 2, Female | 3,
 presentation,DEMOGRAPHICS,demog_age,text,Age,,integer,,,,
 presentation,DEMOGRAPHICS,demog_age_units,radio,Select age units,"1, Years | 2, Months | 3, Days",,,,,
 presentation,DEMOGRAPHICS,demog_height,,Height (select units),,,,,,
-presentation,DEMOGRAPHICS,demog_height_cm,number,Height (cm),,number,,,,
-presentation,DEMOGRAPHICS,demog_height_ft,number,Height (ft),,number,,,,
-presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,,,,
+presentation,DEMOGRAPHICS,demog_height_cm,number,Height (cm),,number,0,250,,
+presentation,DEMOGRAPHICS,demog_height_ft,number,Height (ft),,number,0,820,,
+presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,
 presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,
-presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,,,,
-presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,,,,
+presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,
+presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,,1763,,
 presentation,DEMOGRAPHICS,demog_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
 presentation,DEMOGRAPHICS,demog_pregnant_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
 presentation,DEMOGRAPHICS,demog_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
