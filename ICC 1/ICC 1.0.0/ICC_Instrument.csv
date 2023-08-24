@@ -81,9 +81,10 @@ presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-500 | 3, More than 500",,,,,[comor_aids] = '1'
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO",,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_hba1c1,number,HbA1C results (within last 6 months) (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_hba1c2,number,HbA1C results (within last 6 months) (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_hba1c3,number,HbA1C results (within last 6 months) (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_mmoll,number,HbA1C results within last 6 months (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_porc,number,HbA1C results within last 6 months (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_dementia,radio,Dementia,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No",,,,,
