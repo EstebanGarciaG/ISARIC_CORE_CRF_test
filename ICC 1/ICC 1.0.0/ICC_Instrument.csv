@@ -25,7 +25,7 @@ presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,
 presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,
 presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,
-presentation,DEMOGRAPHICS,demog_pregnantcy,group,PREGNANCY,,,,,,
+presentation,DEMOGRAPHICS,demog_pregnancy,group,PREGNANCY,,,,,,
 presentation,DEMOGRAPHICS,demog_pregnancy_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
 presentation,DEMOGRAPHICS,demog_pregnancy_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
 presentation,DEMOGRAPHICS,demog_pregnantcy_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
