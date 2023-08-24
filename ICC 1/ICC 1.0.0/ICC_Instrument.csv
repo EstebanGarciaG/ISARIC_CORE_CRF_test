@@ -1097,8 +1097,8 @@ outcome,COMPLICATIONS (At any time during hospitalisation did the patient experi
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeneur,radio,Severe neurological disease,"1, Yes | 0, No",,,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No",,,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_bleeding_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,,[compl_severeblee] = '1'
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_bleedingot_site,text,Please specify site of bleeding:,,,,,,[compl_bleeding_site(7)]='1'
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,,[compl_severeblee] = '1'
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee_other,text,Please specify site of bleeding:,,,,,,[compl_severeblee_site(7)]='1'
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_seizure,radio,Seizure,"1, Yes | 0, No",,,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_meningitis,radio,Meningitis / Encephalitis,"1, Yes | 0, No",,,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_shock,radio,Shock ,"1, Yes | 0, No",,,,,
