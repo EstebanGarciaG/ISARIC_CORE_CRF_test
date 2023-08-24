@@ -24,16 +24,17 @@ presentation,DEMOGRAPHICS,demog_height_ft,number,Height (ft),,number,0,820,,
 presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,
 presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,
 presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,
-presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,,1763,,
-presentation,DEMOGRAPHICS,demog_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_pregnant_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
-presentation,DEMOGRAPHICS,demog_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_postpartum_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_postpartum_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_postpartum_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_postpartum_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
-presentation,DEMOGRAPHICS,demog_infant,radio,Infant (less than 12 months old)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_infant_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,[demog_infant] = '1'
+presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,
+presentation,DEMOGRAPHICS,demog_pregnantcy,group,,,,,,,
+presentation,DEMOGRAPHICS,demog_pregnancy_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
+presentation,DEMOGRAPHICS,demog_pregnancy_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
+presentation,DEMOGRAPHICS,demog_pregnantcy_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
+presentation,DEMOGRAPHICS,demog_pregnantcy_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnantcy_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnantcy_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnantcy_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
+presentation,DEMOGRAPHICS,demog_infant,group,,,,,,,
+presentation,DEMOGRAPHICS,demog_infant_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,DEMOGRAPHICS,demog_infant_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
 presentation,DEMOGRAPHICS,demog_infant_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA)",,,,,[demog_infant] = '1'
 presentation,DEMOGRAPHICS,demog_infant_brefed,radio,Breastfed?,"1, YES - currently breastfeeding | 2, YES - breastfeeding discontinued | 0, NO",,,,,[demog_infant] = '1'
