@@ -28,11 +28,11 @@ presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,
 presentation,DEMOGRAPHICS,demog_pregnancy,group,PREGNANCY,,,,,,
 presentation,DEMOGRAPHICS,demog_pregnancy_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
 presentation,DEMOGRAPHICS,demog_pregnancy_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
-presentation,DEMOGRAPHICS,demog_pregnantcy_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_pregnantcy_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnantcy_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnantcy_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnantcy_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
+presentation,DEMOGRAPHICS,demog_pregnancy_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
+presentation,DEMOGRAPHICS,demog_pregnancy_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnancy_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnancy_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
+presentation,DEMOGRAPHICS,demog_pregnancy_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
 presentation,DEMOGRAPHICS,demog_infant,group,INFANT (less than 12 months old),,,,,,
 presentation,DEMOGRAPHICS,demog_infant_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,DEMOGRAPHICS,demog_infant_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
