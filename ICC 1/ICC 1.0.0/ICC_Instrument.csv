@@ -25,20 +25,6 @@ presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,
 presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,
 presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,
-presentation,DEMOGRAPHICS,demog_pregnancy,group,PREGNANCY,,,,,,
-presentation,DEMOGRAPHICS,demog_pregnancy_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_pregnancy_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
-presentation,DEMOGRAPHICS,demog_pregnancy_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,DEMOGRAPHICS,demog_pregnancy_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnancy_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnancy_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
-presentation,DEMOGRAPHICS,demog_pregnancy_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
-presentation,DEMOGRAPHICS,demog_infant,group,INFANT (less than 12 months old),,,,,,
-presentation,DEMOGRAPHICS,demog_infant_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
-presentation,DEMOGRAPHICS,demog_infant_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
-presentation,DEMOGRAPHICS,demog_infant_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA)",,,,,[demog_infant] = '1'
-presentation,DEMOGRAPHICS,demog_infant_brefed,radio,Breastfed?,"1, YES - currently breastfeeding | 2, YES - breastfeeding discontinued | 0, NO",,,,,[demog_infant] = '1'
-presentation,DEMOGRAPHICS,demog_infant_aprvac,radio,Vaccinations appropriate for age/country? ,"1, Yes | 0, No",,,,,[demog_infant] = '1'
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation:  ,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,[inclu_disease(4)] = '1'
 presentation,DEMOGRAPHICS,demog_occupation_other,text,Please specify other primary location of occupation,,,,,,[demog_occupation] = '8'
 presentation,DEMOGRAPHICS,demog_regresiden,radio,Patient's region of residence:,"1, Same as health care facility | 2, Other region",,,,,[inclu_disease(4)] = '1'
@@ -46,6 +32,18 @@ presentation,DEMOGRAPHICS,demog_regresiden_other,text,Please specify patient's r
 presentation,DEMOGRAPHICS,demog_travel,radio,Did the patient travel outside of their home region in the past 14 days? ,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,DEMOGRAPHICS,demog_travel_destin,notes,Where did patient travel to? (list all city/cities or town(s) and region(s),,,,,,[demog_travel] = '1'
 presentation,DEMOGRAPHICS,demog_travel_dayspe,integer,how many days did the patient spend in this/these location(s)? ,,integer,,,,[demog_travel] = '1'
+presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
+presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
+presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
+presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
+presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
+presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
+presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
+presentation,INFANT (less than 12 months old),infa_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
+presentation,INFANT (less than 12 months old),infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA)",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_brefed,radio,Breastfed?,"1, YES - currently breastfeeding | 2, YES - breastfeeding discontinued | 0, NO",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_aprvac,radio,Vaccinations appropriate for age/country? ,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroids,radio,Steroids,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroids_agent,text,Steroid agent:,,,,,,[drugs_steroids] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroids_route,radio,Steroids administration route,"1, Oral | 2, Inhaled | 3, IV",,,,,[drugs_steroids] = '1'
