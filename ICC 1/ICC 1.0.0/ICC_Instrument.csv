@@ -130,11 +130,14 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,text,Please specify,,,,,,[sympt_unlisted] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic_other,text,Please specify other neurological abnormality,,,,,,[sympt_neurologic] = '1'
-presentation,VACCINATION,vacci_covid19,radio,Vaccinated for COVID-19?,"1, Yes | 0, No",,,,,[inclu_disease(5)] = '1'
+presentation,VACCINATION,vacci_covid19,group,COVID-19,,,,,,
+presentation,VACCINATION,vacci_covid19_vacci,radio,Vaccinated for COVID-19?,"1, Yes | 0, No",,,,,[inclu_disease(5)] = '1'
 presentation,VACCINATION,vacci_covid19_date,date_dmy,Date of most recent COVID-19 vaccine,,date_dmy,,today,,[vacci_covid19] = '1'
-presentation,VACCINATION,vacci_influenza,radio,Vaccinated for influenza?  ,"1, Yes | 0, No",,,,,[inclu_disease(1)] = '1'
+presentation,VACCINATION,vacci_influenza,group,INFLUENZA,,,,,,
+presentation,VACCINATION,vacci_influenza_vacci,radio,Vaccinated for influenza?  ,"1, Yes | 0, No",,,,,[inclu_disease(1)] = '1'
 presentation,VACCINATION,vacci_influenza_date,date_dmy,Date of most recent influenza vaccine,,date_dmy,,today,,[vacci_influenza] = '1'
-presentation,VACCINATION,vacci_dengue,radio,Vaccinated for dengue?,"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No",,,,,[inclu_disease(4)] = '1'
+presentation,VACCINATION,vacci_dengue,group,DENGUE,,,,,,
+presentation,VACCINATION,vacci_dengue_vacci,radio,Vaccinated for dengue?,"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,VACCINATION,vacci_dengue_date,date_dmy,Date of first dengue vaccine,,date_dmy,,today,,[inclu_disease(4)] = '1' and ([vacci_dengue] = '1' or [vacci_dengue] = '2' or [vacci_dengue] = '3')
 presentation,VACCINATION,vacci_dengue_type,radio,Type of first dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[inclu_disease(4)] = '1' and ([vacci_dengue] = '1' or [vacci_dengue] = '2' or [vacci_dengue] = '3')
 presentation,VACCINATION,vacci_dengue_date2,date_dmy,Date of second dengue vaccine,,date_dmy,,today,,[inclu_disease(4)] = '1' and ([vacci_dengue] = '2' or [vacci_dengue] = '3' )
