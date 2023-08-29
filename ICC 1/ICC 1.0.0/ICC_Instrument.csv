@@ -308,31 +308,21 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_tqinrunit_other,text,Specify TQ/INR Units,,,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_altsgpt,,ALT/SGPT (select units),,,,,,
+daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_altsgpt_ul,number,ALT/SGPT (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_altsgpt,number,ALT/SGPT,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_altsgpt_units,text,ALT/SGPT units,"1, U/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_altsgpt_unitso,text,Specify ALT/SGPT Units,,,,,,[labs_altsgpt_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin,,Bilirubin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin_umoll,number,Bilirubin (umol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin_mgdl,number,Bilirubin (mg/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin,number,Total bilirubin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin_units,radio,Total bilirubin Units,"1, umol/L | 2, mg/dL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bilirubin_unitso,text,Specify Bilirubin Units,,,,,,[labs_bilirubin_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_astsgot,,AST/SGOT (select units),,,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_astsgot_ul,number,AST/SGOT (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_astsgot,number,AST/SGOT ,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_astsgot_units,text,AST/SGOT units,"1, U/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_astsgot_unitso,text,Specify AST/SGOT  Units,,,,,,[labs_astsgot_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose,,Glucose (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose_mmoll,number,Glucose (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -340,27 +330,15 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose_gl,number,Glucose (g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose,number,Glucose,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose_units,radio,Glucose Units,"1, mmol/L | 2, mg/dL | 3, g/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glucose_untiso,text,Specify Glucose Units,,,,,,[labs_glucose_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_gammagluta,number,Gamma Glutamyl Transferase (select units),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_gammagluta_ul,number,Gamma Glutamyl Transferase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_gammagluta,number,Gamma Glutamyl Transferase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_gammagluta_units,text,Gamma Glutamyl Transferase units,"1, U/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_gammagluta_unitso,text,Specify Gamma Glutamyl Transferase Units,,,,,,[labs_gammagluta_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lactate,,Lactate (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lactate_mmoll,number,Lactate (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lactate,number,Lactate,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lactate_units,text,Lactate units,"1, mmol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lactate_unitso,text,Specify Lactate Units,,,,,,[labs_lactate_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine,,Creatinine (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine_umoll,number,Creatinine (umol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -368,71 +346,43 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine_umol,number,Creatinine (umol),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine,number,Creatinine,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine_units,radio,Creatinine Units,"1, umol/L | 2, mg/dL | 3, umol| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatinine_unitso,text,Specify Creatinine Units,,,,,,[labs_creatinine_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium,,Sodium (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium_mmoll,number,Sodium (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium_meql,number,Sodium (mEq/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium,number,Sodium,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium_units,radio,Sodium Units,"1, mmol/L | 2, mEq/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_sodium_unitso,text,Specify Sodium Units,,,,,,[labs_sodium_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium,,Potassium (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium_mmoll,number,Potassium (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium_meql,number,Potassium (mEq/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium,number,Potassium,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium_units,radio,Potassium Units,"1, mmol/L | 2, mEq/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_potassium_unitso,text,Specify Potassium Units,,,,,,[labs_potassium_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito,,Procalcitonin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito_ugl,number,Procalcitonin (ug/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito_ngml,number,Procalcitonin (ng/mL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito,number,Procalcitonin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito_units,radio,Procalcitonin Units,"1, ug/L | 2, ng/mL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_procalcito_unitso,text,Specify Procalcitonin Units,,,,,,[labs_procalcito_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp,,CRP (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp_mgl,number,CRP (mg/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp_mgdl,number,CRP (mg/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp,number,CRP,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp_units,radio,CRP units,"1, mg/L | 2, mg/dL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_crp_unitso,text,Specify CRP units,,,,,,[labs_crp_units] = 'xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh,,Lactate Dehydrogenase (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh_ul,number,Lactate Dehydrogenase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh_iul,number,Lactate Dehydrogenase (IU/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh,number,Lactate Dehydrogenase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh_units,radio,Lactate Dehydrogenase Units,"1, U/L | 2, IU/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ldh_unitso,text,Specify Lactate Dehydrogenase Units,,,,,,[labs_ldh_units] = 'xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki,,Creatine Kinase (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki_ul,number,Creatine Kinase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki_iul,number,Creatine Kinase (IU/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki,number,Creatine Kinase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki_units,radio,Creatine Kinase Units,"1, U/L | 2, IU/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_creatineki_unitso,text,Specify Creatine Kinase Units,,,,,,[labs_creatineki_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin,,Troponin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin_ngl,number,Troponin (ng/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -440,11 +390,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin_ugl,number,Troponin (ug/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin,number,Troponin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin_units,radio,Troponin Units,"1, ug/L | 2, ng/L | 3, ng/dL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponin_unitso,text,Specify Troponin Units,,,,,,[labs_troponin_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer,,D-Dimer (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer_mgl,number,D-Dimer (mg/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -452,41 +398,25 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer_ngml,number,D-Dimer (ng/mL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer,number,D-Dimer,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer_units,radio,D-Dimer Units,"1, mg/L | 2, ug/L | 3, ng/mL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ddimer_unitso,text,Specify D-Dimer Units,,,,,,[labs_ddimer_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin,,Ferritin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin_ugl,number,Ferritin (ug/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin_ngml,number,Ferritin (ng/mL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin,number,Ferritin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin_units,radio,Ferritin Units,"1, ug/L | 2, ng/mL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ferritin_unitso,text,Specify Ferritin Units,,,,,,[labs_ferritin_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6,,IL-6 (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6_ngl,number,IL-6 (ng/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6_ngml,number,IL-6 (ng/mL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6,number,IL-6,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6_units,radio,IL-6 Units,"1, ng/L | 2, ng/mL| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_il6_unitso,text,Specify IL-6 units,,,,,,[labs_il6_units] = 'xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen,,Fibrinogen (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen_gl,number,Fibrinogen (g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen_mgdl,number,Fibrinogen (mg/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen,number,Fibrinogen,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen_units,radio,Fibrinogen units,"1, mg/dL | 2, g/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_fibrinogen_unitso,text,Specify fibrinogen unit,,,,,,[labs_fibrinogen_units] = 'xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin,,Albumin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin_gdl,number,Albumin (g/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -494,49 +424,29 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin_gl,number,Albumin (g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin,number,Albumin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin_units,radio,Albumin Units,"1, g/dL | 2, mmol/L | 3, g/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_albumin_unitso,text,Specify Albumin Units,,,,,,[labs_albumin_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_protein,,Protein (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_protein_gl,number,Protein (g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_protein,number,Protein,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_protein_units,text,Protein Units,"1, g/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_protein_unitso,text,Specify Protein Units,,,,,,[labs_protein_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2,,PaCO2 (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2_mmhg,number,PaCO2 (mmHg),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2_kpa,number,PaCO2 (kPa),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2,number,PaCO2,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2_units,radio,PaCO2 Units,"1, mmHg | 2, kPa| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_paco2_unitso,text,Specify PaCO2 Units,,,,,,[labs_paco2_units] = 'xx'
-daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ph,number,pH,,number,,,,[daily_data_type(3)]='1'
+daily,"LABORATORY RESULTS 
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat,,Bicarbonate (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat_mmoll,number,Bicarbonate (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat_meql,number,Bicarbonate (mEq/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat,number,Bicarbonate,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat_units,radio,Bicarbonate Units,"1, mmol/L | 2, mEq/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_bicarbonat_unitso,text,Specify Bicarbonate Units,,,,,,[labs_bicarbonat_units]='3'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_baseexcess,,Base Excess (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_baseexcess_mmoll,number,Base Excess (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_baseexcess,number,Base Excess,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_baseexcess_units,radio,Base Excess Units,"1, mmol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_baseexcess_unitso,text,Specify Base Excess Units,,,,,,[labs_baseexcess_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes,,Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes_109l,number,Leukocytes (10^9/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -544,31 +454,19 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes_103l,number,Leukocytes (10^3/uL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes,number,Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes_units,radio,Leukocytes Units,"1, 10^9/L | 2, 10^6/L | 3, 10^3/uL | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_leukocytes_unitso,text,Specify Leukocytes Units,,,,,,[labs_leukocytes_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami,,Alanine Aminotransferase (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami_ul,number,Alanine Aminotransferase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami_iul,number,Alanine Aminotransferase (IU/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami,number,Alanine Aminotransferase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami_units,radio,Alanine Aminotransferase Units,"1, U/L | 2, IU/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alanineami_unitso,text,Specify Alanine Aminotransferase Units,,,,,,[labs_alanineami_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea,,Aspartate Aminotransferase (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea_ul,number,Aspartate Aminotransferase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea_iul,number,Aspartate Aminotransferase (IU/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea,number,Aspartate Aminotransferase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea_units,radio,Aspartate Aminotransferase Units,"1, U/L | 2, IU/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_aspartatea_unitso,text,Specify Aspartate Aminotransferase Units,,,,,,[labs_aspartatea_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid,,Lactic Acid (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid_mmoll,number,Lactic Acid (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -576,11 +474,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid_umoll,number,Lactic Acid (umol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid,number,Lactic Acid,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid_units,radio,Lactic Acid Units,"1, mmol/L | 2, mg/dL | 3, umol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lacticacid_unitso,text,Specify Lactic Acid Units,,,,,,[labs_lacticacid_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog,,Urea Nitrogen (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog_mmoll,number,Urea Nitrogen (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -588,155 +482,81 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog_gl,number,Urea Nitrogen(g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog,number,Urea Nitrogen,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog_units,radio,Urea Nitrogen units,"1, mmol/L | 2, mg/dL | 3, g/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_ureanitrog_unitso,text,Specify Urea Nitrogen units,,,,,,[labs_ureanitrog_units] = 'xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre,,Partial Pressure Oxygen (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre_mmhg,number,Partial Pressure Oxygen (mmHg),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre_kpa,number,Partial Pressure Oxygen (kPa),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre,number,Partial Pressure Oxygen,,number,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphleuk,,Lymphocytes/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre_units,radio,Partial Pressure Oxygen Units,"1, mmHg | 2, kPa | xx, Other",,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphleuk_pcnt,number,Lymphocytes/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_partialpre_unitso,text,Specify Partial Pressure Oxygen Units,,,,,,[labs_partialpre_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrleuk,,Neutrophils/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphocyte_pcnt,number,Lymphocytes/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrleuk_pcnt,number,Neutrophils/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphleuk,number,Lymphocytes/Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphleuk_units,radio,Lymphocytes/Leukocytes Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_lymphleuk_unitso,text,Specify Lymphocytes/Leukocytes Units,,,,,,[labs_lymphleuk_units]='xx'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrophil_pcnt,number,Neutrophils/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrleuk,number,Neutrophils/Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrleuk_units,radio,Neutrophils/Leukocytes Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_neutrleuk_unitso,text,Specify Neutrophils/Leukocytes Units,,,,,,[labs_neutrleuk_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_activatedp,,Activated PTT/Standard (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_activatedp_ratio,number,Activated PTT/Standard ratio,,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_activatedp,number,Activated PTT/Standard,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_activatedp_units,radio,Activated PTT/Standard Units,"1, RATIO | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_activatedp_unitso,text,Specify Activated PTT/Standard Units,,,,,,[labs_activatedp_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil,,Eosinophils (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_109l,number,Eosinophils (10^9/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil,number,Eosinophils,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_units,radio,Eosinophils Units,"1, 10^9/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_unitso,text,Specify Eosinophils Units,,,,,,[labs_eosinophil_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c,,Haemoglobin A1C (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_pcnt,number,Haemoglobin A1C (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_mmolmo,number,Haemoglobin A1C (mmol/mol),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c,number,Haemoglobin A1C,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_units,radio,Haemoglobin A1C Units,"1, % | 2, mmol/mol | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_unitso,text,Specify Haemoglobin A1C Units,,,,,,[labs_haemoga1c_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr,,Erythrocyte Sedimentation Rate (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocyt_mmh,number,Erythrocyte Sedimentation Rate (mm/h),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr,number,Erythrocyte Sedimentation Rate,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr_units,radio,Erythrocyte Sedimentation Rate Units,"1, mm/h | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr_unitso,text,Specify Erythrocyte Sedimentation Rate Units,,,,,,[labs_erythrocytsr_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4,,CD4 (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4_106l,number,CD4 (10^6/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4,number,CD4,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4_units,radio,CD4 Units,"1, 10^6/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cd4_unitso,text,Specify CD4 Units,,,,,,[labs_cd4_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_oxygensatu,,Oxygen Saturation (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_oxygensatu_pcnt,number,Oxygen Saturation (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_oxygensatu,number,Oxygen Saturation,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_oxygensatu_units,radio,Oxygen Saturation Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_oxygensatu_unitso,text,Specify Oxygen Saturation Units,,,,,,[labs_oxygensatu_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alkalineph,,Alkaline Phosphatase (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alkalineph_ul,number,Alkaline Phosphatase (U/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alkalineph,number,Alkaline Phosphatase,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alkalineph_units,radio,Alkaline Phosphatase Units,"1, U/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_alkalineph_unitso,text,Specify Alkaline Phosphatase Units,,,,,,[labs_alkalineph_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cholestero,,Cholesterol (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cholestero_mmoll,number,Cholesterol (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cholestero,number,Cholesterol,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cholestero_units,radio,Cholesterol Units,"1, mmol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_cholestero_unitso,text,Specify Cholesterol Units,,,,,,[labs_cholestero_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_magnesium,,Magnesium (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_magnesium_mmoll,number,Magnesium (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_magnesium,number,Magnesium,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_magnesium_units,radio,Magnesium Units,"1, mmol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_magnesium_unitso,text,Specify Magnesium Units,,,,,,[labs_magnesium_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes,,Monocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes_109l,number,Monocytes (10^9/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes_106l,number,Monocytes (10^6/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes,number,Monocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes_units,radio,Monocytes Units,"1, 10^9/L | 2, 10^6/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytes_unitso,text,Specify Monocytes Units,,,,,,[labs_monocytes_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl,,Monocytes/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl_pcnt,number,Monocytes/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl,number,Monocytes/Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl_units,radio,Monocytes/Leukocytes Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl_unitso,text,Specify Monocytes/Leukocytes Units,,,,,,[labs_monocytesl_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinoluk,,Eosinophils/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_pcnt,number,Eosinophils/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinoluk,number,Eosinophils/Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinoluk_units,radio,Eosinophils/Leukocytes Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinoluk_unitso,text,Specify Eosinophils/Leukocytes Units,,,,,,[labs_eosinoluk_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3,,HCO3- (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3_meql,number,HCO3- (mEq/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3_mmoll,number,HCO3- (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3,number,HCO3- ,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3_units,radio,HCO3-  Units,"1, mEq/L | 2, mmol/L | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_hco3_unitso,text,Specify HCO3-  Units,,,,,,[labs_hco3_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_basophilsl,,Basophils/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_basophilsl_pcnt,number,Basophils/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_basophilsl,number,Basophils/Leukocytes,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_basophilsl_units,radio,Basophils/Leukocytes Units,"1, % | xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_basophilsl_unitso,text,Specify Basophils/Leukocytes Units,,,,,,[labs_basophilsl_units]='xx'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erymeancor_vol_fl,number,Ery. Mean Corpuscular Volume (fL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
