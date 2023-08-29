@@ -169,7 +169,7 @@ presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengu
 presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,
 daily,ASSESSMENT,daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,,
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem,,Highest temperature (select units),,,,,,
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem,group,Highest temperature (select units),,,,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_c,number,Highest temperature (°C),,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_hr,number,HR (beats/minute),,number,,,,[daily_data_type(1)]='1'
@@ -241,6 +241,8 @@ daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_plasmapher,radio,Plasmapheresis/Plasma Exchange? ,"1, Yes | 0, No",,,,,[initial_assessment_arm_1][inclu_disease(4)] = '1' and [daily_data_type(2)]='1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_antibiotic,radio,Antibiotics? ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_steroids,radio,Steroids? ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
+daily,"LABORATORY RESULTS 
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi,group,Haemoglobin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_gdl,number,Haemoglobin (g/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -668,9 +670,9 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_unitso,text,Specify Eosinophils Units,,,,,,[labs_eosinophil_units]='xx'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_pcnt,number,Haemoglobin A1C (%),,number,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_pcnt,number,Haemoglobin A1C (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_mmolmo,number,Haemoglobin A1C (mmol/mol),,number,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_mmolmo,number,Haemoglobin A1C (mmol/mol),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c,number,Haemoglobin A1C,,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
