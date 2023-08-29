@@ -250,17 +250,9 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_mmoll,number,Haemoglobin (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi,number,Haemoglobin,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_units,radio,Haemoglobin Units,"1, g/dL | 2, g/L | 3, mmol/L| xx, Other",,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_unitso,text,Specify Haemoglobin Units,,,,,,[labs_haemoglobi_units]='xx'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_wbccount,,WBC count (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_wbccount_109l,number,WBC count (10^9/L),,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_wbccount,number,WBC count,,number,,,,[daily_data_type(3)]='1'
-daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_wbccount_units,text,WBC count units,"1, 10^9/L | xx, Other",,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_wbccount_unitso,text,Specify WBC count Units,,,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
