@@ -801,9 +801,9 @@ outcome,COMPLICATIONS (At any time during hospitalisation did the patient experi
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_unlisted,radio,Other complications,"1, Yes | 0, No",,,,,
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_unlisted_other,notes,Specify other complications,,,,,,[compl_unlisted] = '1'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No",,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support,,RESPIRATORY SUPPORT,,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support,group,RESPIRATORY SUPPORT,,,,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,radio,What is the most amount of respiratory support a patient received?,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1'
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,group,Highest FiO2 (select units),,,,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type] = '4' or [inter_o2support_type] = '5' or [inter_o2support_type] = '6'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type] = '4' or [inter_o2support_type] = '5' or [inter_o2support_type] = '6'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any of this oxygen therapy ,,number,,,,[inter_o2support_type] = '4' or [inter_o2support_type] = '5' or [inter_o2support_type] = '6'
