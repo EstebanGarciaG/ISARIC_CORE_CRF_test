@@ -83,10 +83,10 @@ presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-500 | 3, More than 500",,,,,[comor_aids] = '1'
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO",,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_mmoll,number,HbA1C results within last 6 months (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hba1c_porc,number,HbA1C results within last 6 months (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_u,group,HbA1C results within last 6 months (select units),,,,,,
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_mmoll,number,HbA1C results within last 6 months (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_diabetes_porc,number,HbA1C results within last 6 months (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes] = '2' or [comor_diabetes] = '3'
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_dementia,radio,Dementia,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No",,,,,
@@ -178,21 +178,26 @@ daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_systolicbp,number,Systolic BP (mmHg),,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_diastolicb,number,Diastolic BP (mmHg),,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_meanbp,number,Mean Arterial Blood Pressure  (mmHg),,number,,,,[daily_data_type(1)]='1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_sao2,number,Lowest Oxygen saturation SaO2 (%),,number,,,,[daily_data_type(1)]='1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_suplementa,radio,Supplemental oxygen at point of SaO2 measure,"1, Yes | 0, No",,,,,[daily_data_type(1)]='1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_suplementa_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_suplementa] = '1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_suplementa_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_suplementa] = '1'
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_sao2,,Lowest Oxygen saturation SaO2 (select units),,,,,,
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_sao2_pcnt,number,Lowest Oxygen saturation SaO2 (%),,number,,,,[daily_data_type(1)]='1'
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_sao2_supp,radio,Supplemental oxygen at point of SaO2 measure,"1, Yes | 0, No",,,,,[daily_data_type(1)]='1'
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_suplementa] = '1'
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_suplementa] = '1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_capillaryr,radio,Sternal capillary refill time >2seconds,"1, Yes | 0, No",,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_avpu,checkbox,AVPU,"1, Alert | 2, Verbal | 3, Pain | 4, Unresponsive",,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_gcs,number,Glasgow Coma Score (GCS / 15) ,,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_rass,number,Richmond Agitation-Sedation Scale (RASS) ,,number,,,,[daily_data_type(1)]='1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_urineflow,number,Urine flow rate (mL/24 hours),,number,,,,[daily_data_type(1)]='1'
-daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_estimatedu,checkbox,Urine flow rate,"1, Check if estimated",,,,,[daily_data_type(1)]='1'
-daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_suppleo2,radio,Any supplemental oxygen,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 ,,,,,,,,,,
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_urineflow,number,Urine flow rate (mL/24 hours),,number,,,,[daily_data_type(1)]='1'
+daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_urineflowest,checkbox,Urine flow rate estimated?,"1, Check if yes",,,,,[daily_data_type(1)]='1'
+daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_suppleo2,radio,Any supplemental oxygen,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
+daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_o2support,group,RESPIRATORY SUPPORT,,,,,,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_o2support_type,radio,What is the most amount of respiratory support a patient has received (from 00:00 to 24:00) on day of assessment?,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ECMO",,,,,[treat_suppleo2] = '1'
+daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_highestfio,,FiO2 at time of PaO2 (select units),,,,,,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_highestfio_02110,number,FiO2 at time of PaO2 (0.21-1.0),,number,,,,[treat_o2support_type] = '4' or [treat_o2support_type] = '5' or [treat_o2support_type] = '6'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_highestfio_pcnt,number,FiO2 at time of PaO2  (%),,number,,,,[treat_o2support_type] = '4' or [treat_o2support_type] = '5' or [treat_o2support_type] = '6'
+daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_pao2,,PaO2 (select units),,,,,,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_pao2_kpa,number,PaO2 (at time nearest to the FiO2 above) (kPa),,number,,,,[treat_o2support_type] = '4' or [treat_o2support_type] = '5' or [treat_o2support_type] = '6'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_pao2_mmhg,number,PaO2 (at time nearest to the FiO2 above) (mmHg),,number,,,,[treat_o2support_type] = '4' or [treat_o2support_type] = '5' or [treat_o2support_type] = '6'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_pao2sample_type,radio,PaO2 sample type,"1, Arterial | 2, Capillary | 3, Venous | 4, Unknown",,,,,[treat_o2support_type] = '4' or [treat_o2support_type] = '5' or [treat_o2support_type] = '6'
@@ -200,7 +205,7 @@ daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_typlenivot,text,Please specify type of non-invasive ventilation:,,,,,,[treat_typleniv]='3'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_ecmo_type,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 3, Central | 4, Unknown",,,,,[treat_o2support_type] = '6'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_prone,radio,Prone positioning?,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
-daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_pronewhen,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[treat_prone] = '1'
+daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_prone_when,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[treat_prone] = '1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_neuromuscu,radio,Neuromuscular blocking agents?,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_icu,radio,ICU/ITU/HDU/Intermediate Care Unit admission?      ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_rtt,radio,Renal replacement therapy (RRT) or dialysis / hemofiltration?  ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
@@ -512,7 +517,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoga1c_mmolmo,number,Haemoglobin A1C (mmol/mol),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocytsr,,Erythrocyte Sedimentation Rate (select units),,,,,,
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocyt,,Erythrocyte Sedimentation Rate (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocyt_mmh,number,Erythrocyte Sedimentation Rate (mm/h),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -546,7 +551,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_monocytesl_pcnt,number,Monocytes/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinoluk,,Eosinophils/Leukocytes (select units),,,,,,
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil,,Eosinophils/Leukocytes (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_eosinophil_pcnt,number,Eosinophils/Leukocytes (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -598,7 +603,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_troponini3_type_ngml,number,Troponin I Type 3 (ng/ml),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_prothromcnt,,Prothrombin Time Actual/Control (select units),,,,,,
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_prothrombi,,Prothrombin Time Actual/Control (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_prothrombi_pcnt,number,Prothrombin Time Actual/Control (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -618,7 +623,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_calcium_mmoll,number,Calcium (mmol/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_meanhgb,,Ery. Mean Corpuscular HGB Concentration (select units),,,,,,
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erymeancor,,Ery. Mean Corpuscular HGB Concentration (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erymeancor_gl,number,Ery. Mean Corpuscular HGB Concentration (g/L),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
@@ -640,7 +645,7 @@ daily,"LABORATORY RESULTS
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrodist,number,Erythrocytes Distribution Width (select units),,,,,,
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrocyt_pcnt,number,Erythrocytes Distribution Width (%),,number,,,,[daily_data_type(3)]='1'
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_erythrodist_pcnt,number,Erythrocytes Distribution Width (%),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_glomerular,number,"Glomerular Filtration Rate, Estimated (select units)",,,,,,
 daily,"LABORATORY RESULTS 
@@ -809,7 +814,8 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any of this oxygen therapy ,,number,,,,[inter_o2support_type] = '4' or [inter_o2support_type] = '5' or [inter_o2support_type] = '6'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent_type,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 3, Other",,,,,[inter_o2support_type] = '4'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo_type,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 3, Central",,,,,[inter_o2support_type] = '6'
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,radio,Prone positioning?,"1, Yes | 0, No",,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,group,PRONE POSITIONING,,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_occur,radio,Prone positioning?,"1, Yes | 0, No",,,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_pronewhen,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[inter_prone] = '1'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_neuromuscu,radio,Neuromuscular blocking agents?,"1, Yes | 0, No",,,,,[initial_assessment_arm_1][inclu_disease(4)] = '1'
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nitricoxid,radio,Inhaled Nitric Oxide?,"1, Yes | 0, No",,,,,
