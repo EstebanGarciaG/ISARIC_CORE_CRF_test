@@ -1,45 +1,43 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic
 presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,
-presentation,INCLUSION CRITERIA,inclu_infection,radio,Suspected or confirmed infection with a pathogen of public health interest,"1, Yes | 0, No",,,,,
-presentation,INCLUSION CRITERIA,inclu_exposure,radio,Exposure to a pathogen or health threat of public health interest,"1, Yes | 0, No",,,,,
-presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual proven/suspected of having?,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, Severe Acute paediatric hepatitis | 3, Mpox | 4, Dengue | 5, COVID-19 (SARS-CoV-2) | 6, Other",,,,,
-presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected or confirmed infection:,,,,,,[inclu_disease(6)] = '1'
+presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual suspected/confirmed to have?,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, COVID-19 (SARS-CoV-2) | 3, Dengue | 4, Mpox | 5, Severe Acute paediatric hepatitis | 6, Other | 7, Unknown",,,,,
+presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected / confirmed condition:,,,,,,[inclu_disease(6)] = '1'
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment /start of data collection,,date_dmy,,today,,
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first/earliest symptom,,date_dmy,,today,,
-presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Presentation/admission date at this facility (most recent),,date_dmy,,today,,
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility | 2, YES-admitted to other facility, then transferred to this facility | 0, No",,,,,
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,,[readm_prevadm] = '2' or [readm_prevadm] = '1'
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm] = '2' or [readm_prevadm] = '1'
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has this patient's data been previously collected under a different patient number? ,"1, Yes | 0, No",,,,,
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevpin,text,Participant Identification number (PIN),,,,,,[readm_difpin] = '1'
-presentation,DEMOGRAPHICS,demog_race,checkbox,Race (check all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South-East Asian | 5, West Asian | 6, Latin American | 7, White | 8, Aboriginal/First Nations/Indigenous | 9, Other",,,,,
-presentation,DEMOGRAPHICS,demog_race_other,text,Please specify,,,,,,[demog_race(9)] = '1'
-presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a Healthcare Worker?,"1, YES - Patient facing | 2, YES - Laboratory | 3, YES - No patients/laboratory | 0, NO",,,,,
+presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,
+presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm(1)] = '1'
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No",,,,,
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,,[readm_prevadm] = '1' or [readm_prevadm] = '2' or [readm_prevadm] = '3' 
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm] = '1' or [readm_prevadm] = '2' or [readm_prevadm] = '3' 
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has the patient's data been previously collected under a different participant identification number? ,"1, Yes | 0, No",,,,,
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevpin,text,Previous participant identification number (PIN),,,,,,[readm_difpin] = '1'
 presentation,DEMOGRAPHICS,demog_sex,radio,Sex at Birth,"1, Male | 2, Female | 3, Not specified/Unknown",,,,,
 presentation,DEMOGRAPHICS,demog_age,text,Age,,integer,,,,
 presentation,DEMOGRAPHICS,demog_age_units,radio,Select age units,"1, Years | 2, Months | 3, Days",,,,,
 presentation,DEMOGRAPHICS,demog_height,,Height (select units),,,,,,
 presentation,DEMOGRAPHICS,demog_height_cm,number,Height (cm),,number,0,250,,
-presentation,DEMOGRAPHICS,demog_height_ft,number,Height (ft),,number,0,820,,
 presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,
 presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,
 presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,
-presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation:  ,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,[inclu_disease(4)] = '1'
-presentation,DEMOGRAPHICS,demog_occupation_other,text,Please specify other primary location of occupation,,,,,,[demog_occupation] = '8'
-presentation,DEMOGRAPHICS,demog_regresiden,radio,Patient's region of residence:,"1, Same as health care facility | 2, Other region",,,,,[inclu_disease(4)] = '1'
-presentation,DEMOGRAPHICS,demog_regresiden_other,text,Please specify patient's region of residence:,,,,,,[demog_regresiden] = '2'
-presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outside of their home region in the past 14 days? ,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
-presentation,TRAVEL HISTORY,travel_destinies,notes,Where did patient travel to? (list all city/cities or town(s) and region(s),,,,,,[demog_travel] = '1'
-presentation,TRAVEL HISTORY,travel_dayspent,integer,how many days did the patient spend in this/these location(s)? ,,integer,,,,[demog_travel] = '1'
+presentation,DEMOGRAPHICS,demog_race,checkbox,Race (check all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South Asian | 5, South-East Asian | 6, West Asian | 7, Latin American | 8, White | 9, Aboriginal/First Nations/Indigenous | 10, Other",,,,,
+presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race(10)] = '1'
+presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a Healthcare Worker?,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No",,,,,
+presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,
+presentation,DEMOGRAPHICS,demog_occupation_other,text,Specify other primary location of occupation,,,,,,[demog_occupation] = '8'
+presentation,DEMOGRAPHICS,demog_regresiden,radio,Region of residence,"1, Same as health care facility | 2, Other region",,,,,
+presentation,DEMOGRAPHICS,demog_regresiden_other,text,Specify other region of residence,,,,,,[demog_regresiden] = '2'
+presentation,TRAVEL HISTORY,travel_travel14d,radio,Travel outside of their region of residence in the past 14 days? ,"1, Yes | 0, No",,,,,
+presentation,TRAVEL HISTORY,travel_destinies,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[demog_travel] = '1'
 presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex] = '2'
-presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment,,number,,,,[demog_pregnant] = '1'
+presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment (weeks),,number,,,,[demog_pregnant] = '1'
 presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery)? ,"1, Yes | 0, No",,,,,[demog_sex] = '2'
 presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum] = '1'
 presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
-presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
-presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Yes | 0, No",,,,,[demog_postpartum_bbtest] = '1'
-presentation,INFANT (less than 12 months old),infa_remwei,radio,Remember the infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
+presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative",,,,,[demog_postpartum_bbtest] = '1'
+,,,group,Infant,,,,,,
+presentation,INFANT (less than 12 months old),infa_remwei,radio,Infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,INFANT (less than 12 months old),infa_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
 presentation,INFANT (less than 12 months old),infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA)",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,INFANT (less than 12 months old),infa_brefed,radio,Breastfed?,"1, YES - currently breastfeeding | 2, YES - breastfeeding discontinued | 0, NO",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
@@ -90,7 +88,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_dementia,radio,Dementia,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No",,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_smoking,radio,Smoking,"1, Current smoker | 0, Never smoked | 3, Former smoker",,,,,
+presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_smoking,radio,Smoking tobacco,"1, Current smoker | 0, Never smoked | 3, Former smoker",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hepatiticb,radio,Chronic hepatitis B/C infection,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_liverdises,radio,Liver disease,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_unlisted,radio,Other relevant risk factor(s)                       ,"1, Yes | 0, No",,,,,
@@ -104,8 +102,8 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_chestpain,radio,Chest pain,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No",,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_anosmia,radio,Loss of smell (Anosmia),"1, Yes | 0, No",,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_ageusia,radio,Loss of taste (Ageusia),"1, Yes | 0, No",,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_anosmia,radio,Loss of smell (anosmia),"1, Yes | 0, No",,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_ageusia,radio,Loss of taste (ageusia),"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_lymphadeno,radio,Lymphadenopathy,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_headache,radio,Headache,"1, Yes | 0, No",,,,,
@@ -115,11 +113,9 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_arthralgia,radio,Joint pain (arthralgia),"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_inbilitywslk,radio,Inability to walk,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_abdpain_sev,radio,Abdominal pain severity,"1, + | 2, ++ | 3, +++",,,,,[inclu_disease(4)] = '1' and [sympt_abdpain] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_diarrhoea_ep,number,Diarrhoea episodes in previous 24 hours  ,,number,,,,[inclu_disease(4)] = '1' and [sympt_diarrhoea] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_nausea_inte,radio,Intensity of vomiting,"1, + | 2, ++ | 3, +++",,,,,[inclu_disease(4)] = '1' and [sympt_nausea] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_anorexia,radio,Anorexia,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_skinrash,radio,Skin rash,"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_haemorrhag,radio,Bleeding (Haemorrhage),"1, Yes | 0, No",,,,,
@@ -130,7 +126,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted,radio,Other symptom(s),"1, Yes | 0, No",,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,text,Please specify,,,,,,[sympt_unlisted] = '1'
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,list,Please specify,,,,,,[sympt_unlisted] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic_other,text,Please specify other neurological abnormality,,,,,,[sympt_neurologic] = '1'
 presentation,VACCINATION,vacci_covid19,group,COVID-19,,,,,,
