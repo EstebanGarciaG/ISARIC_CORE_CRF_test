@@ -248,7 +248,7 @@ daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_antibiotic,radio,Antibiotics? ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_steroids,radio,Steroids? ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1'
 daily,"LABORATORY RESULTS 
-(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi,group,Haemoglobin (select units),,,,,,
+(Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi,,Haemoglobin (select units),,,,,,
 daily,"LABORATORY RESULTS 
 (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment)",labs_haemoglobi_gdl,number,Haemoglobin (g/dL),,number,,,,[daily_data_type(3)]='1'
 daily,"LABORATORY RESULTS 
