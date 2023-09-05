@@ -36,11 +36,11 @@ presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[dem
 presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum] = '1'
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition?,"1, Yes | 0, No",,,,,[demog_postpartum] = '1'
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative",,,,,[demog_postpartum_bbtest] = '1'
-,,,group,Infant,,,,,,
-presentation,INFANT (less than 12 months old),infa_remwei,radio,Infant weight at birth,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
-presentation,INFANT (less than 12 months old),infa_brtwei,number,Birth weight (kg),,number,,,,[demog_infant_remwei] = '1'
+presentation,INFANT (less than 12 months old),infa_brtwei,radio,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,INFANT (less than 12 months old),infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA)",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
-presentation,INFANT (less than 12 months old),infa_brefed,radio,Breastfed?,"1, YES - currently breastfeeding | 2, YES - breastfeeding discontinued | 0, NO",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
+presentation,INFANT (less than 12 months old),infa_brefed,radio,Breastfed?,"1, Yes, currently breastfeeding | 2, Yes, breastfeeding discontinued | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,INFANT (less than 12 months old),infa_aprvac,radio,Vaccinations appropriate for age/country? ,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroids,group,STEROIDS,,,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroids_occur,radio,Steroids,"1, Yes | 0, No",,,,,
