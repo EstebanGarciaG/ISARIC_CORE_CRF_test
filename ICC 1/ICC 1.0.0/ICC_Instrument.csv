@@ -76,8 +76,7 @@ presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antivirals_agent,list,Antivirals agent,,,,,,[drugs_antivirals] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul,radio,Anticoagulants,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul_agent,list,Anticoagulants agent,,,,,,[drugs_anticoagul] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids,group,INTRAVENOUS FLUIDS,,,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids_occur,radio,Intravenous fluid,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids,radio,Intravenous fluid,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids_type,list,Intravenous fluid type,"1, Isotonic | 2, Hypotonic | 3, Hypertonic",,,,,[drugs_ivfluids] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids_vol,number,Intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluids] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_unlisted,radio,Other pathogen-targeted medications,"1, Yes | 0, No",,,,,
