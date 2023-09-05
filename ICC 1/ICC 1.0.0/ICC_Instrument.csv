@@ -53,34 +53,62 @@ presentation,VACCINATION,vacci_dengue_vacci,radio,Vaccinated for dengue (ever),"
 presentation,VACCINATION,vacci_dengue_date,date_dmy,Date of first dengue vaccine,,date_dmy,,today,,[vacci_dengue] = '1' or [vacci_dengue] = '2' or [vacci_dengue] = '3'
 presentation,VACCINATION,vacci_dengue_type,radio,Type of first dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue] = '1' or [vacci_dengue] = '2' or [vacci_dengue] = '3'
 presentation,VACCINATION,vacci_dengue_date2,date_dmy,Date of second dengue vaccine,,date_dmy,,today,,[vacci_dengue] = '2' or [vacci_dengue] = '3'
-presentation,VACCINATION,vacci_dengue_warn1,descriptive,"<center><div class=""red""><b>SECOND VACCINE DATE MUST BE AFTER THE FIRST</div class=""red""></center>",,,,,,"datediff ([vacci_dengue_date], [vacci_dengue_date2], ""d"",""dmy"", true)<0"
 presentation,VACCINATION,vacci_dengue_type2,radio,Type of second dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue] = '2' or [vacci_dengue] = '3'
 presentation,VACCINATION,vacci_dengue_date3,date_dmy,Date of third dengue vaccine,,date_dmy,,today,,[vacci_dengue] = '3'
-presentation,VACCINATION,vacci_dengue_warn2,descriptive,"<center><div class=""red""><b>THIRD VACCINE DATE MUST BE AFTER THE FIRST</div class=""red""></center>",,,,,,"datediff ([vacci_dengue_date], [vacci_dengue_date3], ""d"",""dmy"", true)<0"
-presentation,VACCINATION,vacci_dengue_warn3,descriptive,"<center><div class=""red""><b>THIRD VACCINE DATE MUST BE AFTER THE SECOND</div class=""red""></center>",,,,,,"datediff ([vacci_dengue_date2], [vacci_dengue_date3], ""d"",""dmy"", true)<0"
 presentation,VACCINATION,vacci_dengue_type3,radio,Type of third dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue] = '3'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid,radio,Steroid,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_agent,list,Steroid agent,,,,,,[drugs_steroid] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_route,radio,Steroid administration route,"1, Oral | 2, Inhaled | 3, IV",,,,,[drugs_steroid] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_add,radio,Additional steroid,"1, Yes | 0, No",,,,,[drugs_steroid] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_agent2,list,Steroid agent,,,,,,[drugs_steroid_add] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_route2,radio,Steroid administration route,"1, Oral | 2, Inhaled | 3, IV",,,,,[drugs_steroid_add] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp,radio,Immunosuppressant agents (not steroids),"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp_agent,list,Immunosuppressant agents,,,,,,[drugs_immunusupp] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_agent2,list,Additional steroid agent,,,,,,[drugs_steroid_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_steroid_route2,radio,Additional steroid administration route,"1, Oral | 2, Inhaled | 3, IV",,,,,[drugs_steroid_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp,radio,Immunosuppressant (not steroids),"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp_agent,list,Immunosuppressant agent,,,,,,[drugs_immunusupp] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp_add,radio,Additional immunosuppressant,"1, Yes | 0, No",,,,,[drugs_immunusupp] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_immunusupp_agent2,list,Additional immunosuppressant agent,,,,,,[drugs_immunusupp_add] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_aspirin,radio,Aspirin,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antibiotic,radio,Antibiotics,"1, Yes | 0, No",,,,,
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antibiotic_agent,list,Antibiotic agent,,,,,,[drugs_antibiotic] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaids,radio,NSAIDs,"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaids_agent,list,NSAIDs agent,,,,,,[drugs_nsaids] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antivirals,radio,Antivirals,"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antivirals_agent,list,Antivirals agent,,,,,,[drugs_antivirals] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul,radio,Anticoagulants,"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul_agent,list,Anticoagulants agent,,,,,,[drugs_anticoagul] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids,radio,Intravenous fluid,"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids_type,list,Intravenous fluid type,"1, Isotonic | 2, Hypotonic | 3, Hypertonic",,,,,[drugs_ivfluids] = '1'
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluids_vol,number,Intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluids] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antibiotic_add,radio,Additional antibiotic,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antibiotic_agent2,list,Additional antibiotic agent,,,,,,[drugs_antibiotic_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaid,radio,NSAIDs,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaid_agent,list,NSAIDs agent,,,,,,[drugs_nsaid] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaid_add,radio,Additional NSAID,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_nsaid_agent2,list,Additional NSAID agent,,,,,,[drugs_nsaid_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antiviral,radio,Antiviral,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antiviral_agent,list,Antiviral agent,,,,,,[drugs_antiviral] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antiviral_add,radio,Additional antiviral,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_antiviral_agent2,list,Additional antiviral agent,,,,,,[drugs_antiviral_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul,radio,Anticoagulant,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul_agent,list,Anticoagulant agent,,,,,,[drugs_anticoagul] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul_add,radio,Additional anticoagulant,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_anticoagul_agent2,list,Additional anticoagulant agent,,,,,,[drugs_anticoagul_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluid,radio,Intravenous fluid,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluid_type,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 6, Other fluid",,,,,[drugs_ivfluid] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluid_add,radio,Additional intravenous fluid,"1, Yes | 0, No",,,,,
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluid_agent2,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 6, Other fluid",,,,,[drugs_ivfluid_add] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_ivfluid_vol,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluid] = '1'
 presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_unlisted,radio,Other pathogen-targeted medications,"1, Yes | 0, No",,,,,
-presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_unlisted_other,list,Other agent,,,,,,[drugs_unlisted] = '1'
+presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior to this most recent admission/presentation),drugs_unlisted_other,text,Other agent,,,,,,[drugs_unlisted] = '1'
+presentation,MEDICAL HISTORY,medic_gastro,group,GASTROENTERITIS,,,,,,
+presentation,MEDICAL HISTORY,medic_gastro_occur,radio,"Gastroenteritis illness, diarrhoea or vomiting in the past 3 months","1, Yes | 0, No",,,,,
+presentation,MEDICAL HISTORY,medic_gastro_start,date_dmy,Approximate start date of this illness,,date_dmy,,today,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_fever,radio,Did the illness include the following symptoms: Fever,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_weightloss,radio,Weight loss,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_tiredness,radio,Tiredness,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_other,radio,Other symptom(s),"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_otherdetail,text,Specify other symptom(s),,,,,,[medic_unlisted] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_persist,radio,Did any symptoms persist for more than one week,"1, Yes | 0, No",,,,,[medic_gastroente] = '1'
+presentation,MEDICAL HISTORY,medic_previnfect,radio,Is the patient known to have previous dengue infection(s)?,"1, Yes 1 time | 2, Yes 2 times | 3, Yes >2 times | 0, No",,,,,[inclu_disease(4)] = '1'
+presentation,MEDICAL HISTORY,medic_lastinfect,date_dmy,When did the latest dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
+presentation,MEDICAL HISTORY,medic_confirmati_type,radio,How was the latest dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
+presentation,MEDICAL HISTORY,medic_adm_type,radio,Where was latest dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
+presentation,MEDICAL HISTORY,medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
+presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
+presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
 ,,,,,,,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_chrcardiac,radio,Chronic cardiac disease (not hypertension),"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hypertensi,radio,Hypertension  ,"1, Yes | 0, No",,,,,
@@ -146,24 +174,6 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,list,Please specify,,,,,,[sympt_unlisted] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1'
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_neurologic_other,text,Please specify other neurological abnormality,,,,,,[sympt_neurologic] = '1'
-presentation,MEDICAL HISTORY,medic_gastroente,radio,"In the last 3 months, has your child had a gastroenteritis illness (including diarrhoea and/or vomiting)?","1, Yes | 0, No",,,,,[inclu_disease(2)] = '1'
-presentation,MEDICAL HISTORY,medic_startdate,date_dmy,Approximate start date of this illness,,date_dmy,,today,,[inclu_disease(2)] = '1' and [medic_gastroente] = '1'
-presentation,MEDICAL HISTORY,medic_persiisten,radio,Did these symptoms persist for more than a week? ,"1, Yes | 0, No",,,,,[inclu_disease(2)] = '1' and [medic_gastroente] = '1'
-presentation,MEDICAL HISTORY,medic_fever,radio,History of fever,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_weightloss,radio,Weight loss,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_tiredness,radio,Tiredness,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_unlisted,radio,Other,"1, Yes | 0, No",,,,,[medic_persiisten] = '1'
-presentation,MEDICAL HISTORY,medic_unlisted_other,text,Please specify other medical history,,,,,,[medic_unlisted] = '1'
-presentation,MEDICAL HISTORY,medic_previnfect,radio,Is the patient known to have previous dengue infection(s)?,"1, Yes 1 time | 2, Yes 2 times | 3, Yes >2 times | 0, No",,,,,[inclu_disease(4)] = '1'
-presentation,MEDICAL HISTORY,medic_lastinfect,date_dmy,When did the latest dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_confirmati_type,radio,How was the latest dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_adm_type,radio,Where was latest dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,
 daily,ASSESSMENT,daily_data_type,checkbox,What type of patient data will you enter?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem,group,Highest temperature (select units),,,,,,
