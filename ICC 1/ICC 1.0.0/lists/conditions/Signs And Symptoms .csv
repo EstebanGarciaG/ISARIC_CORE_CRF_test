@@ -1,24 +1,24 @@
-conditions,Code,Library,Selected
-Fever,R50.9,ICD10,
-Chills,R68.83,ICD10,
-Fatigue,R53.83,ICD10,
-Headache,R51,ICD10,
-Muscle or body aches,M79.1,ICD10,
-Loss of appetite,R63.0,ICD10,
-Nausea or vomiting,R11,ICD10,
-Diarrhea,R19.7,ICD10,
-Abdominal pain,R10.9,ICD10,
-Cough,R05,ICD10,
-Shortness of breath,R06.02,ICD10,
-Chest pain or discomfort,R07.9,ICD10,
-Sore throat,R07.0,ICD10,
-Swollen lymph nodes,R59.9,ICD10,
-Rashes or skin lesions,R21,ICD10,
-Conjunctivitis,H10.9,ICD10,
-Sweating or night sweats,R61,ICD10,
-Unexplained weight loss,R63.4,ICD10,
-Joint pain or stiffness,M25.5,ICD10,
-Confusion or change in mental function,R41.0,ICD10,
-Increased urination or pain during urination,"R30.0, R35.8",ICD10,
-Bleeding or bruising,"R58, R23.3",ICD10,
-Seizures,R56.9,ICD10,
+conditions,Code,Library
+Fever,R50.9,ICD10
+Chills,R68.83,ICD10
+Fatigue,R53.83,ICD10
+Headache,R51,ICD10
+Muscle or body aches,M79.1,ICD10
+Loss of appetite,R63.0,ICD10
+Nausea or vomiting,R11,ICD10
+Diarrhea,R19.7,ICD10
+Abdominal pain,R10.9,ICD10
+Cough,R05,ICD10
+Shortness of breath,R06.02,ICD10
+Chest pain or discomfort,R07.9,ICD10
+Sore throat,R07.0,ICD10
+Swollen lymph nodes,R59.9,ICD10
+Rashes or skin lesions,R21,ICD10
+Conjunctivitis,H10.9,ICD10
+Sweating or night sweats,R61,ICD10
+Unexplained weight loss,R63.4,ICD10
+Joint pain or stiffness,M25.5,ICD10
+Confusion or change in mental function,R41.0,ICD10
+Increased urination or pain during urination,"R30.0, R35.8",ICD10
+Bleeding or bruising,"R58, R23.3",ICD10
+Seizures,R56.9,ICD10
