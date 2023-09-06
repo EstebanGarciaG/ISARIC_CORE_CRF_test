@@ -93,23 +93,18 @@ presentation,MEDICATION PREVIOUS 14-DAYS (include all taken within 14 days prior
 presentation,MEDICAL HISTORY,medic_gastro,group,GASTROENTERITIS,,,,,,
 presentation,MEDICAL HISTORY,medic_gastro_occur,radio,"Gastroenteritis illness, diarrhoea or vomiting in the past 3 months","1, Yes | 0, No",,,,,
 presentation,MEDICAL HISTORY,medic_gastro_start,date_dmy,Approximate start date of this illness,,date_dmy,,today,,[medic_gastro_occur] = '1'
-presentation,MEDICAL HISTORY,medic_gastro_fever,radio,Did the illness include the following symptoms: Fever,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
-presentation,MEDICAL HISTORY,medic_gastro_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_diarrhoea,radio,Did the illness include the following symptoms: Diarrhoea,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_weightloss,radio,Weight loss,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_abdominalp,radio,Abdominal pain,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
+presentation,MEDICAL HISTORY,medic_gastro_fever,radio,Fever,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_tiredness,radio,Tiredness,"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_other,radio,Other symptom(s),"1, Yes | 0, No",,,,,[medic_gastro_occur] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_otherdetail,text,Specify other symptom(s),,,,,,[medic_unlisted] = '1'
 presentation,MEDICAL HISTORY,medic_gastro_persist,radio,Did any symptoms persist for more than one week,"1, Yes | 0, No",,,,,[medic_gastroente] = '1'
-presentation,MEDICAL HISTORY,medic_previnfect,radio,Is the patient known to have previous dengue infection(s)?,"1, Yes 1 time | 2, Yes 2 times | 3, Yes >2 times | 0, No",,,,,[inclu_disease(4)] = '1'
-presentation,MEDICAL HISTORY,medic_lastinfect,date_dmy,When did the latest dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_confirmati_type,radio,How was the latest dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_adm_type,radio,Where was latest dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstinfec,date_dmy,When did the first dengue episode occur?,,date_dmy,,today,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstconfi_type,radio,How was the first dengue episode diagnosed?,"1, Lab confirmed | 2, Clinically diagnosed",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
-presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed?,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
-,,,,,,,,,,
+presentation,MEDICAL HISTORY,medic_dengue,group,DENGUE,,,,,,
+presentation,MEDICAL HISTORY,medic_dengue_occur,radio,Is the patient known to have had previous dengue infection(s),"1, Yes | 0, No",,,,,
+presentation,MEDICAL HISTORY,medic_firstadm_type,radio,Where was first dengue episode managed,"1, No hospital admission | 2, Hospital admission | 3, Hospital +ICU admission",,,,,[medic_previnfect] = '1' or [medic_previnfect] = '2' or [medic_previnfect] = '3'
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_chrcardiac,radio,Chronic cardiac disease (not hypertension),"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_hypertensi,radio,Hypertension  ,"1, Yes | 0, No",,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS (existing prior to admission and ongoing),comor_chrpulmona,radio,Chronic pulmonary disease (not asthma),"1, Yes | 0, No",,,,,
