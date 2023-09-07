@@ -166,7 +166,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of p
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION  (first data, within 24 hours of presentation/admission)",sympt_unlisted_other,list,Specify other sign(s) or symptom(s),,,,,,[sympt_unlisted] = '1'
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,
-daily,ASSESSMENT,daily_data_type,checkbox,What type of data will be included on this form?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,,
+daily,ASSESSMENT,daily_datatype,checkbox,What type of data will be included on this form?,"1, Vital Signs & Assessments | 2, Treatments & Interventions | 3, Laboratory Results | 4, Imaging",,,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem,group,Highest temperature (select units),,,,,,
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_data_type(1)]='1'
 daily,VITAL SIGNS & ASSESSMENTS (Record the value furthest from normal range between 00:00 to 24:00 on day of assessment),vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_data_type(1)]='1'
