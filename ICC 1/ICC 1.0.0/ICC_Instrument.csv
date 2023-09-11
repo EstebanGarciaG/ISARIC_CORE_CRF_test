@@ -568,19 +568,19 @@ outcome,COMPLICATIONS (At any time during hospitalisation did the patient experi
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,,[compl_severeblee] = '1',1,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee_other,text,Specify other site of bleeding:,,,,,,[compl_severeblee_site(7)]='1',1,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severeblee_other,text,Specify other site of bleeding,,,,,,[compl_severeblee_site(7)]='1',1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_seizure,radio,Seizure,"1, Yes | 0, No",,,,,,1,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_meningitis,radio,Meningitis / Encephalitis,"1, Yes | 0, No",,,,,,1,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_meningitis,radio,Meningitis / encephalitis,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_shock,radio,Shock ,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_bacteraemi,radio,Bacteraemia,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_sepsis,radio,Sepsis,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_thrombemb,radio,Thromboembolism,"1, Yes | 0, No",,,,,,1,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_pulmonarye,radio,Pulmonary Embolism (PE),"1, Yes | 0, No",,,,,[compl_thrombemb]=1,,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_deepveinth,radio,Deep Vein Thrombosis (DVT),"1, Yes | 0, No",,,,,[compl_thrombemb]=1,,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_pulmonarye,radio,Pulmonary embolism (PE),"1, Yes | 0, No",,,,,[compl_thrombemb]=1,,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_deepveinth,radio,Deep vein thrombosis (DVT),"1, Yes | 0, No",,,,,[compl_thrombemb]=1,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_thromboemb,radio,Other thromboembolism (not PE or DVT),"1, Yes | 0, No",,,,,[compl_thrombemb]=1,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_anaemia,radio,Anaemia,"1, Yes | 0, No",,,,,,,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_rhabdomyol,radio,Rhabdomyolysis / Myositis,"1, Yes | 0, No",,,,,,,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_rhabdomyol,radio,Rhabdomyolysis / myositis,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_severelive,radio,Severe liver disease,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No",,,,,[compl_severelive] = '1',1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No",,,,,[compl_severelive] = '1',1,
@@ -588,16 +588,16 @@ outcome,COMPLICATIONS (At any time during hospitalisation did the patient experi
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No",,,,,[compl_severelive] = '1',1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_ascites,radio,Ascites,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_pancreatit,radio,Pancreatitis,"1, Yes | 0, No",,,,,,,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_acuterenal,radio,Acute renal injury / Acute renal failure,"1, Yes | 0, No",,,,,,1,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_cellulitis,radio,Cellulitis,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_cellulitis_site,checkbox,Site of cellulitis,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vagina | 7, Other",,,,,[compl_cellulitis] = '1',1,1
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_cellulitis_other,text,Specify site of cellulitis:,,,,,,[compl_cellulitis(7)]='1',1,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_cellulitis_other,text,Specify other site of cellulitis,,,,,,[compl_cellulitis(7)]='1',1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_eschar,radio,Skin tissue loss or eschar,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_hyperglyce,radio,Hyperglycemia,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_hypoglycem,radio,Hypoglycemia,"1, Yes | 0, No",,,,,,,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_liverdysfu,radio,Liver dysfunction,"1, Yes | 0, No",,,,,,,
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_inr,radio,"INR >= 1,5","1, Yes | 0, No",,,,,[compl_severelive] = '1',,
-outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_unlisted,radio,Other complications,"1, Yes | 0, No",,,,,,1,1
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_inr,radio,INR >= 1.5,"1, Yes | 0, No",,,,,[compl_severelive] = '1',,
+outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_unlisted,radio,Other complication(s),"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (At any time during hospitalisation did the patient experience),compl_unlisted_other,notes,Specify other complications,,,,,,[compl_unlisted] = '1',1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No",,,,,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',1,
