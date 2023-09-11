@@ -204,7 +204,6 @@ daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_blood_wholevol,text,Whole blood/packed RBC volume  (units/24 hours),,,,,,[treat_blood_type(3)] = '1',,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_blood_plasmavol,text,Frozen fresh plasma  (units/24 hours),,,,,,[treat_blood_type(4)] = '1',,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_blood_fibrinvol,text,Fibrinogen concentrate  (units/24 hours),,,,,,[treat_blood_type(5)] = '1',,
-,,,,,,,,,,,,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_icu,radio,ICU/ITU/HDU/Intermediate Care Unit admission ,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1',,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_o2supp,group,RESPIRATORY SUPPORT,,,,,,[daily_data_type(2)]='1',,
 daily,TREATMENTS & INTERVENTIONS (Record all interventions received or true between 00:00 to 24:00 on day of assessment),treat_o2supp_suppleo2,radio,Any supplemental oxygen,"1, Yes | 0, No",,,,,[daily_data_type(2)]='1',,
