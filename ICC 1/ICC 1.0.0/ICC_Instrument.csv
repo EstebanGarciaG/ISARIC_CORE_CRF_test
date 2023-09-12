@@ -1,5 +1,5 @@
-﻿Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic,Disease_Dengue,Disease_Mpox
-presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,,,
+Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic,preset_Disease_Dengue,preset_Disease_Mpox
+presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,,1,1
 presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual suspected/confirmed to have,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, COVID-19 (SARS-CoV-2) | 3, Dengue | 4, Mpox | 5, Severe Acute paediatric hepatitis | 6, Other | 7, Unknown",,,,,,,
 presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected / confirmed condition:,,,,,,[inclu_disease(6)] = '1',,
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,,
@@ -225,10 +225,10 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_rtt,radio,Renal replacement therapy (RRT) or dialysis / hemofiltration,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_rtt_typ,radio,Type of renal replacement therapy (RRT) or dialysis / hemofiltration,"1, Intermittent | 2, Continuous",,,,,[treat_rtt(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress,radio,Vasopressor/inotropic support,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress1,radio,Dopamine < 5µg/kg/min   OR   dobutamine   OR   milrinone   OR   levosimendan,"1, Yes | 0, No",,,,,[treat_vasopresso] = '1',,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress2,radio,"Dopamine 5-15µg/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) < 0.1µg/kg/min OR  vasopressin   OR phenylephrine
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress1,radio,Dopamine < 5ug/kg/min   OR   dobutamine   OR   milrinone   OR   levosimendan,"1, Yes | 0, No",,,,,[treat_vasopresso] = '1',,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress2,radio,"Dopamine 5-15ug/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) < 0.1ug/kg/min OR  vasopressin   OR phenylephrine
 ","1, Yes | 0, No",,,,,[treat_vasopresso] = '1',,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress3,radio,Dopamine >15µg/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) > 0.1µg/kg/min,"1, Yes | 0, No",,,,,[treat_vasopresso] = '1',,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress3,radio,Dopamine >15ug/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) > 0.1ug/kg/min,"1, Yes | 0, No",,,,,[treat_vasopresso] = '1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_nitricoxid,radio,Inhaled nitric oxide,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_intravenim,radio,Intravenous Immunoglobulin,"1, Yes | 0, No",,,,,[initial_assessment_arm_1][inclu_disease(4)] = '1' and [daily_data_type(2)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_plasmapher,radio,Plasmapheresis/Plasma Exchange,"1, Yes | 0, No",,,,,[initial_assessment_arm_1][inclu_disease(4)] = '1' and [daily_data_type(2)]='1',,
