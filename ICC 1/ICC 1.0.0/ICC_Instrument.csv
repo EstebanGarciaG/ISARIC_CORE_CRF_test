@@ -484,19 +484,30 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasoun
 daily,IMAGING,imagi_gallbladde,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_occur(1)] = '1',1,
 daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_occur(1)] = '1',1,
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[imagi_unlisted] = '1',1,
-outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 99, Other treatments for pathogen including experimental or compassionate use",,,,,,,
-outcome_medication,MEDICATION,medi_medicationtype1,radio,Select all agents administered while hospitalised or at discharge,"3, Antibiotic | 4, Corticosteroid | 99, Other treatments for pathogen including experimental or compassionate use",,,,,,1,
-outcome_medication,MEDICATION,medi_antiviralagent,radio,Antiviral,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 99, Other",,,,,[medi_medicationtype] = '1',,
-outcome_medication,MEDICATION,medi_antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 99, Other",,,,,[medi_medicationtype] = '3',,
-outcome_medication,MEDICATION,medi_corticosteroid,radio,Corticosteroid,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 99, Other",,,,,[medi_medicationtype] = '4',,
-outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, Inhaled | 3, IV",,,,,[medi_medicationtype] = '4',,
-outcome_medication,MEDICATION,medi_anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 99, Other",,,,,[medi_medicationtype] = '5',,
-outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype] = '5',,
-outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 99, Other",,,,,[medi_medicationtype] = '6',,
-outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 99, Other",,,,,[medi_medicationtype] = '7',,
-outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype] = '99' or [medi_antibioticagent] = '99' or [medi_corticosteroid] = '99' or [medi_anticoagulationagent] = '99' or [medi_antifungalagent] = '99' or [medi_inotropesvasopressor] = '99' or [medi_antiviralagent] = '99',,
-outcome_medication,MEDICATION,medi_medicationdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,,,
-outcome_medication,MEDICATION,medi_numberofdays,number,Total number of days treatment given,,number,,,,,,
+outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 99, Other treatments for pathogen including experimental or compassionate use",,,,,,,
+outcome_medication,MEDICATION,medi_antiviralagent,radio,Antiviral,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 99, Other",,,,,[medi_medicationtype(1)] = '1',,1
+outcome_medication,MEDICATION,medi_antibioticagent,radio,Antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 99, Other",,,,,[medi_medicationtype(3)] = '1',1,1
+outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 99, Other",,,,,[medi_medicationtype(8)] = '1',,1
+outcome_medication,MEDICATION,medi_corticosteroid,radio,Corticosteroid,"1, Dexamethasone | 2, Prednisolone | 3, Hydrocortisone | 4, Methylprednisolone | 99, Other",,,,,[medi_medicationtype(4)] = '1',1,
+outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, Inhaled | 3, IV",,,,,[medi_medicationtype(4)] = '1',1,
+outcome_medication,MEDICATION,medi_anticoagulationagent,radio,Anticoagulation,"1, Apixaban | 2, Dabigatran | 3, Edoxaban | 4, Rivaroxaban | 5, Warfarin | 99, Other",,,,,[medi_medicationtype(5)] = '1',,
+outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype(5)] = '1',,
+outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 99, Other",,,,,[medi_medicationtype(6)] = '1',,
+outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 99, Other",,,,,[medi_medicationtype(7)] = '1',1,1
+outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetaminophen | 2, Ibuprofen  | 3, Naproxen  | 4, Diclofenac | 5, Tramadol | 99, Other",,,,,[medi_medicationtype(9)] = '1',,1
+outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype(9)] = '1',,1
+outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 99, Other",,,,,[medi_medicationtype(10)] = '1',,1
+outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medicationtype(10)] = '1',,1
+outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype(99)] = '1' or [medi_antibioticagent(99)] = '1' or [medi_corticosteroid(99)] = '1' or [medi_anticoagulationagent(99)] = '1' or [medi_antifungalagent(99)] = '1' or [medi_inotropesvasopressor(99)] = '1' or [medi_antiviralagent(99)] = '1' or   [medi_topicantibiotgent(99)] = '1' or [medi_analgesic(99)]='1' or [medi_antipruritic(99)]='1',1,1
+outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,,1,1
+outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
+outcome_medication,MEDICATION,medi_numdaystot,number,Total number of days treatment given,,number,,,,,1,1
+outcome_medication,MEDICATION,medi_frequency,text,Frequency,,,,,,[medi_medicationtype(9)] = '1' or [medi_medicationtype(10)] = '1',,1
+outcome_medication,MEDICATION,medi_dose,text,Dose,,,,,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
+outcome_medication,MEDICATION,medi_units,number,Units,,number,,,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
+outcome_medication,MEDICATION,medi_numdosestot,number,"Total number of doses (# of times the drug was injected/ swallowed/infused/inserted/applied, inhaled) ",,number,,,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
+outcome_medication,MEDICATION,medi_standreg,radio,Was the standard regimen given,"1, Yes | 0, No",,,,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
+outcome_medication,MEDICATION,medi_whynotstandreg,text,Reason why standard regimen was not given ,,,,,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1
 outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,
 outcome,DIAGNOSIS,diagn_influenza,group,INFLUENZA,,,,,,,,
 outcome,DIAGNOSIS,diagn_influenza_test,radio,Influenza,"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,
@@ -658,19 +669,20 @@ outcome,INTERVENTIONS (administered / undertaken at any time during hospitalisat
 outcome,INTERVENTIONS (administered / undertaken at any time during hospitalisation),inter_mpoxsurg2,radio,Was a second surgical intervention for mpox or complications of mpox,"1, Yes | 0, No",,,,,[inter_mpoxsurg(1)]='1',,1
 outcome,INTERVENTIONS (administered / undertaken at any time during hospitalisation),inter_mpoxsurg2_type,text,"What was the second surgery (e.g., debridement of infected tissue)",,,,,,[inter_mpoxsurg2(1)]='1',,1
 outcome,INTERVENTIONS (administered / undertaken at any time during hospitalisation),inter_mpoxsurg2_date,date_dmy,Date of second surgery,,date_dmy,,today,,[inter_mpoxsurg2(1)]='1',,1
-outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,,
-outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge",,,,,,,
-outcome,OUTCOME,outco_selfcaraft,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better",,,,,[outco_outcome] = '1',,
-outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',,
-outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',,
-outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (For instance awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No",,,,,[outco_outcome] = '2' and [outco_outcome] = '3',,
-outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,
-outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,,[outco_denguediagno] = '0',,
+outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1
+outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,1
+outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge",,,,,,1,1
+outcome,OUTCOME,outco_selfcaraft,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better",,,,,[outco_outcome] = '1',,1
+outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
+outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
+outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (For instance awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No",,,,,[outco_outcome] = '2' and [outco_outcome] = '3',1,1
+outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',1,
+outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,,[outco_denguediagno] = '0',1,
 outcome,OUTCOME,outco_denguediagno_class,radio,"What was the final classification of dengue?
-","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediagno] = '1',,
-outcome,OUTCOME,outco_denguediagno_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediagno_class] = '3',,
-outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,
-outcome,OUTCOME,outco_secondiag_other,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,
+","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediagno] = '1',1,
+outcome,OUTCOME,outco_denguediagno_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediagno_class] = '3',1,
+outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',1,
+outcome,OUTCOME,outco_secondiag_other,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',1,
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,,1
 outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 11, Other",,,,,,,1
 outcome_pathogen_testing,TEST,test_biospecimentypeother,text,Please specify biospecimen type,,,,,,[test_biospecimentype] = '11',,1
@@ -679,3 +691,18 @@ outcome_pathogen_testing,TEST,test_labtestmethodother,text,Please specify other 
 outcome_pathogen_testing,TEST,test_result,radio,Result,"1, Detected | 0, Not detected | 2, Equivocal",,,,,,,1
 outcome_pathogen_testing,TEST,test_pathogentested,text,Pathogen Tested/Detected,,,,,,,,1
 outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [Lab test method]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_date,date_dmy,Assessment Date,,date_dmy,,today,,,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_method,radio,Evaluation method,"1, In person | 2, Telephone",,,,,,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_mpoxpatoutco,radio,Assessment patient outcome,"1, All lesions are completely resolved and no serious complications | 2, All lesions are no longer active and no serious complications | 3, No lesions ever developed and no serious complications | 4, One or more lesion(s) are active and no serious complications | 5, Serious complication and/or hospitalisation due to monkeypox | 6, Death | 7, Early withdrawal | 8, Loss to follow-up",,,,,,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_outcomedate,date_dmy,First / earliest date on which the selected outcome was true,,,,,,[asse_mpoxpatoutco(1)]='1' or [asse_mpoxpatoutco(2)]='1' ,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_hospreason,text,Reason for hospitalisation,,,,,,[asse_mpoxpatoutco(5)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_hospdate,date_dmy,Date of hospitalisation,,date_dmy,,,,[asse_mpoxpatoutco(5)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_deathdate,date_dmy,Date of death,,date_dmy,,,,[asse_mpoxpatoutco(6)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_deathcause,text,Cause of death,,,,,,[asse_mpoxpatoutco(6)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_folllostreason,text,  Reason for loss to follow-up,,,,,,[asse_mpoxpatoutco(8)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_skindamage,radio,Is the patient’s skin damaged following resolution of acute mpox illness,"1, Yes | 0, No",,,,,,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_skindamage_type,checkbox,Select all that apply,"1, Atrophic scars | 2, Hypertrophic scars | 3, Deformities | 4, Hypopigmentation | 5, Hyperpigmentation | 6, Contractures | 99, Other ",,,,,[asse_skindamage(1)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_skindamage_other,notes,Specify other type of skin damage,,,,,,[asse_skindamage_type(99)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_mpoxseque,radio,Does the patient have any other complications or sequelae of mpox,"1, Yes | 0, No",,,,,,,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_mpoxseque_type,checkbox,Select all that apply,"1, Decreased vision | 2, Blindness | 3, Urethral stricture | 4, vaginal stricture | 5, rectal stricture |6, Dyspareunia | 7, Depression | 99, Other ",,,,,[asse_mpoxseque(1)]='1',,1
+outcome_assessment ,"ASSESSMENT (Complete this section in full for each outcome assessment performed e.g., Day 28; Day 56)",asse_skindamage_other,notes,Specify other complications or sequelae,,,,,,,,1
