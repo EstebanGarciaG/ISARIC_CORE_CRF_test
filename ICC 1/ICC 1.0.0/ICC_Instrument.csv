@@ -185,7 +185,6 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_gcs,number,Glasgow Coma Score (GCS / 15) ,,number,3,15,,[daily_datavital(1)]='1',,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_rass,number,Richmond Agitation-Sedation Scale (RASS) ,,number,,,,[daily_datavital(1)]='1',,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_urineflow,number,Urine flow rate (mL/24 hours),,number,,,,[daily_datavital(1)]='1',,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,daily_datatreat,radio,Enter treatments or interventions data for this date,,,,,,,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid,group,FLUIDS,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oral,radio,Oral rehydration? ,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oralvol,text,Oral rehydration volume (mL/24 hours),,,,,,[treat_fluid_oral] = '1',,
