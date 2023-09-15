@@ -236,7 +236,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted,radio,Other intervention(s) or procedure(s),"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted_other,text,Please specify other intervention(s) or procedure(s),,,,,,[treat_unlisted] = '1',,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter lab data for this date ,"1, Yes | 0, No",,,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoglobi,,Haemoglobin (select units),,date_dmy,,today,,[daily_datalab(1)]='1',,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoglobi,,Haemoglobin (select units),,,,,,[daily_datalab(1)]='1',,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoglobi_gdl,number,Haemoglobin (g/dL),,number,,,,[daily_datalab(1)]='1',,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoglobi_gl,number,Haemoglobin (g/L),,number,,,,[daily_datalab(1)]='1',,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoglobi_mmoll,number,Haemoglobin (mmol/L),,number,,,,[daily_datalab(1)]='1',,
