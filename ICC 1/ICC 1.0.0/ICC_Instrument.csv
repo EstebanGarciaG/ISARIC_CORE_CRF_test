@@ -610,15 +610,6 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverd
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_inr,radio,INR >= 1.5,"1, Yes | 0, No",,,,,[compl_severelive] = '1',,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted,radio,Other complication(s),"1, Yes | 0, No",,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted_other,notes,Specify other complications,,,,,,[compl_unlisted] = '1',1,1
-outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1
-outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,1
-outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge",,,,,,1,1
-outcome,OUTCOME,outco_selfcaraft,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better",,,,,[outco_outcome] = '1',,1
-outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
-outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
-outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (For instance awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No",,,,,[outco_outcome] = '2' and [outco_outcome] = '3',1,1
-outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',1,
-outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,,[outco_denguediagno] = '0',1,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No",,,,,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',1,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type(4)] = '1' or [inter_o2support_type(5)] = '1' or [inter_o2support_type(6)] = '1',1,
@@ -678,6 +669,15 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2,radio,Was a second surgical intervention for mpox or complications of mpox,"1, Yes | 0, No",,,,,[inter_mpoxsurg(1)]='1',,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_type,text,"What was the second surgery (e.g., debridement of infected tissue)",,,,,,[inter_mpoxsurg2(1)]='1',,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_date,date_dmy,Date of second surgery,,date_dmy,,today,,[inter_mpoxsurg2(1)]='1',,1
+outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1
+outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,1
+outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge",,,,,,1,1
+outcome,OUTCOME,outco_selfcaraft,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better",,,,,[outco_outcome] = '1',,1
+outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
+outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No",,,,,[outco_outcome] = '1' or [outco_outcome] = '2',1,1
+outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (For instance awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No",,,,,[outco_outcome] = '2' and [outco_outcome] = '3',1,1
+outcome,OUTCOME,outco_denguediagno,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',1,
+outcome,OUTCOME,outco_denguediagno_main,text,What was the main diagnosis?,,,,,,[outco_denguediagno] = '0',1,
 outcome,OUTCOME,outco_denguediagno_class,radio,"What was the final classification of dengue?
 ","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediagno] = '1',1,
 outcome,OUTCOME,outco_denguediagno_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediagno_class] = '3',1,
@@ -690,7 +690,7 @@ outcome_pathogen_testing,TEST,test_labtestmethod,radio,Lab test method,"1, PCR |
 outcome_pathogen_testing,TEST,test_labtestmethodother,text,Please specify other lab test method,,,,,,[test_labtestmethod] = '7',,1
 outcome_pathogen_testing,TEST,test_result,radio,Result,"1, Detected | 0, Not detected | 2, Equivocal",,,,,,,1
 outcome_pathogen_testing,TEST,test_pathogentested,text,Pathogen Tested/Detected,,,,,,,,1
-outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [Lab test method]='1',,1
+outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [test_labtestmethod]='1',,1
 outcome_assessment ,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_date,date_dmy,Assessment Date,,date_dmy,,today,,,,1
 outcome_assessment ,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_method,radio,Evaluation method,"1, In person | 2, Telephone",,,,,,,1
 outcome_assessment ,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxpatoutco,radio,Assessment patient outcome,"1, All lesions are completely resolved and no serious complications | 2, All lesions are no longer active and no serious complications | 3, No lesions ever developed and no serious complications | 4, One or more lesion(s) are active and no serious complications | 5, Serious complication and/or hospitalisation due to monkeypox | 6, Death | 7, Early withdrawal | 8, Loss to follow-up",,,,,,,1
