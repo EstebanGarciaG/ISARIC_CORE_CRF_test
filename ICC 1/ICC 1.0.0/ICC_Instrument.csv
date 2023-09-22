@@ -158,41 +158,105 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_smoking,radio,Smoking tobacco,"1, Current smoker | 0, Never smoked | 3, Former smoker",,,,,,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_unlisted,radio,Other relevant comorbidity(s)             ,"1, Yes | 0, No",,,,,,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_unlisted_other,text,Specify other relevant comorbidity(s),,,,,,[comor_unlisted(1)] = '1',1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_fever,radio,Fever / chills / rigors,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_cough,radio,Cough      ,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_sorethroat,radio,Sore throat,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_wheezing,radio,Wheezing,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_chestpain,radio,Chest pain,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_lymphadeno,radio,Lymphadenopathy,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_headache,radio,Headache,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_seizures,radio,Seizures,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_arthralgia,radio,Joint pain / arthralgia,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_anorexia,radio,Anorexia,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_skinrash,radio,Skin rash,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_haemorrhag,radio,Bleeding / haemorrhage,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 7, Other",,,,,[sympt_haemorrhag(1)] = '1',1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[sympt_haemorrhag_site(7)]='1',1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_restlessne,radio,Restlessness,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_neurologic_other,text,Specify other neurological abnormality,,,,,,[sympt_neurologic(1)] = '1',1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,,1,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_unlisted_other,list,Specify other sign(s) or symptom(s),,,,,conditions_Symptoms,[sympt_unlisted(1)] = '1',1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fever,radio,Fever / chills / rigors,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cough,radio,Cough      ,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sorethroat,radio,Sore throat,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_catarrh,radio,Catarrh,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_wheezing,radio,Wheezing,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestpain,radio,Chest pain,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymph,radio,Lymphadenopathy,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 5, Other",,,,,[adsym_lymph(1)]='1',,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphoth,text,Specify other site:,,,,,,[adsym_lymphspec(5)]='1',,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_headache,radio,Headache,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_seizures,radio,Seizures,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_arthralgia,radio,Joint pain / arthralgia,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_weight,radio,Weight loss,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_consti,radio,Constipation,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_urine,radio,Urinary retention,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_jaund,radio,Jaundice,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ocular,radio,Ocular complications,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_phary,radio,Pharyngitis/tonsillitis,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anorexia,radio,Anorexia,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinrash,radio,Skin rash,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_pruritis,radio,Pruritis,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,radio,Bleeding / haemorrhage,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 7, Other",,,,,[adsym_haemorrhag(1)] = '1',1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site(7)]='1',1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_restlessne,radio,Restlessness,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi,checkbox,Bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 7, Other",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi(7)]='1',,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",,,,,,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurodist,radio,Psychological disturbance,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic_other,text,Specify other neurological abnormality,,,,,,[sympt_neurologic(1)] = '1',1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_other,list,Specify other sign(s) or symptom(s),,,,,conditions_Symptoms,[sympt_unlisted(1)] = '1',1,,1
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,,1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datasympt,radio,Enter signs and symptoms data for this date?,"1, Yes | 0, No",,,,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fever,radio,Fever / chills / rigors,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_cough,radio,Cough      ,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sorethroat,radio,Sore throat,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_catarrh,radio,Catarrh,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_wheezing,radio,Wheezing,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_chestpain,radio,Chest pain,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymph,radio,Lymphadenopathy,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 5, Other",,,,,[sympt_lymph(1)]='1' and [daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphoth,text,Specify other site:,,,,,,[sympt_lymphspec(5)]='1' and [daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_headache,radio,Headache,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_seizures,radio,Seizures,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_arthralgia,radio,Joint pain / arthralgia,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_weight,radio,Weight loss,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_consti,radio,Constipation,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_urine,radio,Urinary retention,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_jaund,radio,Jaundice,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ocular,radio,Ocular complications,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_phary,radio,Pharyngitis/tonsillitis,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anorexia,radio,Anorexia,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_skinrash,radio,Skin rash,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_pruritis,radio,Pruritis,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag,radio,Bleeding / haemorrhage,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 7, Other",,,,,[sympt_haemorrhag(1)] = '1' and [daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[sympt_haemorrhag_site(7)]='1' and [daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_restlessne,radio,Restlessness,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_convulsion,radio,Convulsions,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi,checkbox,Bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 7, Other",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi(7)]='1' and [daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurodist,radio,Psychological disturbance,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurologic_other,text,Specify other neurological abnormality,,,,,,[sympt_neurologic(1)] = '1' and [daily_datasympt(1)]='1',1,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_unlisted_other,list,Specify other sign(s) or symptom(s),,,,,conditions_Symptoms,[sympt_unlisted(1)] = '1' and [daily_datasympt(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datavital,radio,Enter vital signs data for this date?,"1, Yes | 0, No",,,,,,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem,group,Highest temperature (select units),,,,,,[daily_datavital(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital(1)]='1',,,
