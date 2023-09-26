@@ -662,8 +662,8 @@ outcome_medication,MEDICATION,medi_standreg_reas,text,Reason why standard regime
 outcome_medication,MEDICATION,medi_mpox,group,MPOX,,,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_freq,radio,Lesion cleaning frequency,"1, None | 2, Daily | 3, Twice weekly | 4, Once weekly | 5, other",,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_freqoth,text,Specify frequency:,,,,,,[medi_mpox_freq(5)]='1',,,1
-outcome_medication,MEDICATION,medi_mpox_agent,radio,Lesion cleaning agent,"1, None | 2, Saline | 3, Antiseptic solution | 4, Honey | 99, other",,,,,,,,1
-outcome_medication,MEDICATION,medi_mpox_agento,text,Specify other agent:,,,,,,[medi_mpox_agent(99)]='1',,,1
+outcome_medication,MEDICATION,medi_mpox_lesiclean,radio,Lesion cleaning agent,"1, None | 2, Saline | 3, Antiseptic solution | 4, Honey | 99, other",,,,,,,,1
+outcome_medication,MEDICATION,medi_mpox_lesicleanot,text,Specify other cleaning agent:,,,,,,[medi_mpox_lesiclean(99)]='1',,,1
 outcome_medication,MEDICATION,medi_mpox_oth,text,"Other lesion care, including use of dressings (describe)",,,,,,,,,1
 outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,,
 outcome,DIAGNOSIS,diagn_influenza,group,INFLUENZA,,,,,,,,,
