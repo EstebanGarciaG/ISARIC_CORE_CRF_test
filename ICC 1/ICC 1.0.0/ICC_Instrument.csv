@@ -205,7 +205,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic_other,text,Specify other neurological abnormality,,,,,,[adsym_neurologic(1)] = '1',1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_other,list,Specify other sign(s) or symptom(s),,,,,conditions_Symptoms,[sympt_unlisted(1)] = '1',1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_other,list,Specify other Admission sign(s) or symptom(s),,,,,conditions_Symptoms,[sympt_unlisted(1)] = '1',1,,1
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,,1,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datasympt,radio,Enter signs and symptoms data for this date?,"1, Yes | 0, No",,,,,,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fever,radio,Fever / chills / rigors,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
