@@ -468,7 +468,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin_ugl,number,Ferritin (ug/L),,number,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin_ngml,number,Ferritin (ng/mL),,number,,,,[daily_datalab(1)]='1',1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6,,IL-6 (select units),,,,,,[daily_datalab(1)]='1',,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_pgml,number,IL-6 (pg/mL),,numbre,,,,[daily_datalab(1)]='1',1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_pgml,number,IL-6 (pg/mL),,number,,,,[daily_datalab(1)]='1',1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_ngl,number,IL-6 (ng/L),,number,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_ngml,number,IL-6 (ng/mL),,number,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen,,Fibrinogen (select units),,,,,,[daily_datalab(1)]='1',,,
