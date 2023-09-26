@@ -715,8 +715,8 @@ outcome,DIAGNOSIS,diagn_bacte_sampunlis3,test,Other sample type,,,,,,[diagn_bact
 outcome,DIAGNOSIS,diagn_bacte_typ4,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp4,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_sampunlis4,test,Other sample type,,,,,,[diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_pathog_other,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,,,1,1,1
-outcome,DIAGNOSIS,diagn_pathog_unlist,list,Select other pathogen(s) detected,,,,,,[diagn_pathog_other(1)] = '1',1,1,1
+outcome,DIAGNOSIS,diagn_pathounlist,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,,,1,1,1
+outcome,DIAGNOSIS,diagn_pathounlist_other,list,Select other pathogen(s) detected,,,,,,[diagn_pathounlist(1)] = '1',1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No",,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No",,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No",,,,,,1,1,1
