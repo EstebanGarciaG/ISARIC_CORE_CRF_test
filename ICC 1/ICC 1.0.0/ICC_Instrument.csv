@@ -25,8 +25,8 @@ presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,,1,,
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,,,,
 presentation,DEMOGRAPHICS,demog_race,checkbox,Race (select all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South Asian | 5, South-East Asian | 6, West Asian | 7, Latin American | 8, White | 9, Aboriginal/First Nations/Indigenous | 10, Other",,,,,,1,,1
 presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race(10)] = '1',1,,1
-presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 4, Other",,,,,,,,1
-presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethinic(4)]='1',,,1
+presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 99, Other",,,,,,,,1
+presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethnic(99)]='1',,,1
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No",,,,,,,,1
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,,1,,
 presentation,DEMOGRAPHICS,demog_occupation_other,text,Specify other primary location of occupation,,,,,,[demog_occupation(8)] = '1',1,,
