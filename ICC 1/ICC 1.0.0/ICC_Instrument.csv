@@ -7,8 +7,8 @@ presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / ea
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,,1
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm(1)] = '1',1,,1
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,,1
-presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist(1)='1',,,1
-presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 4, Other",,,,,[dates_mpoxhist(1)='1',,,1
+presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist(1)]='1',,,1
+presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 4, Other",,,,,[dates_mpoxhist(1)]='1',,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No",,,,,,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,,[readm_prevadm(1)] = '1' or [readm_prevadm(2)] = '1' or [readm_prevadm(3)] = '1' ,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm(1)] = '1' or [readm_prevadm(2)] = '1' or [readm_prevadm(3)] = '1' ,1,,1
@@ -334,7 +334,7 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_slpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,,,,,[vital_mpox_slpainyn(1)]='1',,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpainyn,raio,Pain at any mucosal lesion site:,"1, Yes | 2, No",,,,,[daily_datavital(1)]='1',,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,,,,,[vital_mpox_slpainyn(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_desc,text,Describe any other lesion complications:,,,,,,[daily_datavial(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_desc,text,Describe any other lesion complications:,,,,,,[daily_datavital(1)]='1',,,1
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,daily_datatreat,radio,Enter Treatments & Interventions data for this date?,"1, Yes | 0, No",,,,,,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid,group,FLUIDS,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oral,radio,Oral rehydration? ,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',1,,
@@ -622,18 +622,18 @@ daily,IMAGING,imagi_ct_occur,radio,CT performed,"1, Yes | 0, No",,,,,[daily_data
 daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct_occur(1)] = '1',,1,1
 daily,IMAGING,imagi_ct_infiltra,radio,Lung infiltrates present,"1, Yes | 0, No",,,,,[imagi_ct_occur(1)] = '1',,1,1
 daily,IMAGING,imagi_ultrasound,group,ULTRASOUND,,,,,,,1,,
-daily,IMAGING,imagi_ultrasound_yn,radio,Was an ultrasound performed,"1, Yes | 0, No",,,,,[daily_dataimagi(1)]='1',1,,
-daily,IMAGING,imagi_ultrasound_date,date_dmy,Ultrasound date ,,date_dmy,,today,,[imagi_ultrasound_yn(1)] = '1',1,,
-daily,IMAGING,imagi_ultrasound_asc,radio,Ascites,"1, Yes | 0, No",,,,,[imagi_ultrasound_yn(1)] = '1',1,,
+daily,IMAGING,imagi_ultrasound_occur,radio,Was an ultrasound performed,"1, Yes | 0, No",,,,,[daily_dataimagi(1)]='1',1,,
+daily,IMAGING,imagi_ultrasound_date,date_dmy,Ultrasound date ,,date_dmy,,today,,[imagi_ultrasound_occur(1)] = '1',1,,
+daily,IMAGING,imagi_ultrasound_asc,radio,Ascites,"1, Yes | 0, No",,,,,[imagi_ultrasound_occur(1)] = '1',1,,
 daily,IMAGING,imagi_ultrasound_ascsit,radio,Ascites grading,"1, Small | 2, Moderate | 3, Severe",,,,,[imagi_ultrasound_asc(1)] = '1',1,,
-daily,IMAGING,imagi_ultrasound_pleff,radio,Pleural effusion,"1, Yes | 0, No",,,,,[imagi_ultrasound_yn(1)] = '1',1,,
+daily,IMAGING,imagi_ultrasound_pleff,radio,Pleural effusion,"1, Yes | 0, No",,,,,[imagi_ultrasound_occur(1)] = '1',1,,
 daily,IMAGING,imagi_ultrasound_plefr,number,Pleural effusion right size (cm),,number,,,,[imagi_ultrasound_pleff(1)] = '1',1,,
 daily,IMAGING,imagi_ultrasound_plefl,number,Pleural effusion left size (cm),,number,,,,[imagi_ultrasound_pleff(1)] = '1',1,,
-daily,IMAGING,imagi_ultrasound_peric,radio,Pericardial effusion,"1, Yes | 0, No",,,,,[imagi_ultrasound_yn(1)] = '1',1,,
+daily,IMAGING,imagi_ultrasound_peric,radio,Pericardial effusion,"1, Yes | 0, No",,,,,[imagi_ultrasound_occur(1)] = '1',1,,
 daily,IMAGING,imagi_ultrasound_perics,number,Pericardial effusion size (cm),,number,,,,[imagi_ultrasound_peric(1)] = '1',1,,
-daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasound_yn(1)] = '1',1,,
-daily,IMAGING,imagi_gallbladder,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_yn(1)] = '1',1,,
-daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_yn(1)] = '1',1,,
+daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasound_occur(1)] = '1',1,,
+daily,IMAGING,imagi_gallbladder,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_occur(1)] = '1',1,,
+daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_occur(1)] = '1',1,,
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[imagi_unlisted(1)] = '1',1,,
 outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 99, Other treatments for pathogen including experimental or compassionate use",,,,,,1,,1
 outcome_medication,MEDICATION,medi_antiviralagent,radio,Antiviral,"1, Brincidofovir | 2, Chloroquine/hydroxychloroquine | 3, Cidofovir | 4, Interferon alpha | 5, Interferon beta | 6, Interleukin-6 (IL-6) inhibitor | 7, Lopinavir/Ritonavir | 8, Oseltamivir (Tamiflu) | 9, Remdesivir (Veklury) | 10, Ribavirin | 11, Sarilumab | 12, Tecovirimat | 13, Tocilizumab | 14, Zanamivir | 99, Other",,,,,[medi_medicationtype(1)] = '1',,1,1
@@ -649,7 +649,7 @@ outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetamino
 outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype(9)] = '1',,1,1
 outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 99, Other",,,,,[medi_medicationtype(10)] = '1',,1,1
 outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medicationtype(10)] = '1',,1,1
-outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype(99)] = '1' or [medi_antibioticagent(99)] = '1' or [medi_corticosteroid(99)] = '1' or [medi_anticoagulationagent(99)] = '1' or [medi_antifungalagent(99)] = '1' or [medi_inotropesvasopressor(99)] = '1' or [medi_antiviralagent(99)] = '1' or   [medi_topicantibiotgent(99)] = '1' or [medi_analgesic(99)]='1' or [medi_antipruritic(99)]='1',,1,1
+outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype(99)] = '1',,1,1
 outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1,1
 outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,[medi_medicationtype(1)] = '1' or [medi_medicationtype(3)] = '1',,1,1
 outcome_medication,MEDICATION,medi_numdays,number,Total number of days treatment given,,number,,,,,,1,1
