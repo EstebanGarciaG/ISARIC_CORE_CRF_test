@@ -35,12 +35,12 @@ presentation,DEMOGRAPHICS,demog_residence_oth,text,Specify other region of resid
 presentation,TRAVEL HISTORY,travel_travel14d,radio,Travel outside of their region of residence in the past 14 days,"1, Yes | 0, No",,,,,,1,,
 presentation,TRAVEL HISTORY,travel_destinies,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[demog_travel14d(1)] = '1',1,,
 presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex(2)] = '1',1,,1
-presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment (weeks),,number,,,,[demog_pregnant(1)] = '1',1,,1
+presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment (weeks),,number,,,,[preg_pregnant(1)] = '1',1,,1
 presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No",,,,,[demog_sex(2)] = '1',,,1
-presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[demog_postpartum(1)] = '1',,,1
-presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[demog_postpartum(1)] = '1',,,1
-presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No",,,,,[demog_postpartum(1)] = '1',,,1
-presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative",,,,,[demog_bbtest(1)] = '1',,,1
+presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[preg_postpartum(1)] = '1',,,1
+presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[preg_postpartum(1)] = '1',,,1
+presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No",,,,,[preg_postpartum(1)] = '1',,,1
+presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative",,,,,[preg_bbtest(1)] = '1',,,1
 presentation,INFANT: less than 12 months old,infa_brtwei_units,radio,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,
 presentation,INFANT: less than 12 months old,infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,1
 presentation,INFANT: less than 12 months old,infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,
@@ -327,13 +327,13 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rectum,radio,Rectum,"1, Yes | 2, No",,,,,[daily_datavital(1)]='1' and ([vital_mpox_mucos(1)]=1 or [vital_mpox_skinles(1)]='1'),,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_locoth,radio,Other site,"1, Yes | 2, No",,,,,[daily_datavital(1)]='1' and ([vital_mpox_mucos(1)]=1 or [vital_mpox_skinles(1)]='1'),,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_specify,text,Specify other site:,,,,,,[vital_mpox_locoth(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_24hr,radio,Have new skin or mucosal lesions appeared in the previous 24 hours? (may be best assed by patients),"1, Yes | 2, No",,,,,[daily_datavial(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_sl,radio,Estimated total number of skin lesions on the body,"1, None | 2, <10 | 3, 10-24 | 4, 25-49 | 5, 50-99 | 6, 100-250 | 7, 251-1000 | 8, >1000",,,,,[daily_datavial(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_ml,radio,Estimated total number of mucosal lesions on the body,"1, None | 2, <10 | 3, 10-24 | 4, 25-49 | 5, 50-99 | 6, 100-250 | 7, 251-1000 | 8, >1000",,,,,[daily_datavial(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_slpainyn,radio,Pain at any skin lesion site:,"1, Yes | 2, No",,,,,[daily_datavial(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_24hr,radio,Have new skin or mucosal lesions appeared in the previous 24 hours? (may be best assed by patients),"1, Yes | 2, No",,,,,[daily_datavital(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_sl,radio,Estimated total number of skin lesions on the body,"1, None | 2, <10 | 3, 10-24 | 4, 25-49 | 5, 50-99 | 6, 100-250 | 7, 251-1000 | 8, >1000",,,,,[daily_datavital(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_ml,radio,Estimated total number of mucosal lesions on the body,"1, None | 2, <10 | 3, 10-24 | 4, 25-49 | 5, 50-99 | 6, 100-250 | 7, 251-1000 | 8, >1000",,,,,[daily_datavital(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_slpainyn,radio,Pain at any skin lesion site:,"1, Yes | 2, No",,,,,[daily_datavital(1)]='1',,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_slpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,,,,,[vital_mpox_slpainyn(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpainyn,raio,Pain at any mucosal lesion site:,"1, Yes | 2, No",,,,,[daily_datavial(1)]='1',,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,,,,,[vital_mpox_mlpainyn(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpainyn,raio,Pain at any mucosal lesion site:,"1, Yes | 2, No",,,,,[daily_datavital(1)]='1',,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_mlpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,,,,,[vital_mpox_slpainyn(1)]='1',,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_desc,text,Describe any other lesion complications:,,,,,,[daily_datavial(1)]='1',,,1
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,daily_datatreat,radio,Enter Treatments & Interventions data for this date?,"1, Yes | 0, No",,,,,,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid,group,FLUIDS,"1, Yes | 0, No",,,,,[daily_datatreat(1)]='1',1,,
@@ -613,14 +613,14 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,IMAGING,daily_dataimagi,radio,Enter imaging data for this date,"1, Yes | 0, No",,,,,,1,,1
 daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi(1)]='1',1,,1
 daily,IMAGING,imagi_xray_yn,radio,Chest X-Ray done,"1, Yes | 0, No",,,,,[daily_dataimagi(1)]='1',1,1,1
-daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imagi_xray(1)] = '1',1,1,1
-daily,IMAGING,imagi_xray_result,checkbox,Chest X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 5, Other",,,,,[imagi_xray(1)] = '1',1,1,1
+daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imagi_xray_yn(1)] = '1',1,1,1
+daily,IMAGING,imagi_xray_result,checkbox,Chest X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 5, Other",,,,,[imagi_xray_yn(1)] = '1',1,1,1
 daily,IMAGING,imagi_xray_resultoth,text,Describe other chest x-ray result,,,,,,[imagi_xray_result(5)] = '1',1,1,1
 daily,IMAGING,imagi_xray_resultpleu,checkbox,Side(s) where pleural effusion identified ,"1, Right | 2, Left",,,,,[imagi_xray_result(4)] = '1',1,1,1
 daily,IMAGING,imagi_ct,group,CT,,,,,,,,1,1
 daily,IMAGING,imagi_ct_occur,radio,CT performed,"1, Yes | 0, No",,,,,[daily_dataimagi(1)]='1',,1,1
-daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct(1)] = '1',,1,1
-daily,IMAGING,imagi_ct_infiltra,radio,Lung infiltrates present,"1, Yes | 0, No",,,,,[imagi_ct(1)] = '1',,1,1
+daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct_occur(1)] = '1',,1,1
+daily,IMAGING,imagi_ct_infiltra,radio,Lung infiltrates present,"1, Yes | 0, No",,,,,[imagi_ct_occur(1)] = '1',,1,1
 daily,IMAGING,imagi_ultrasound,group,ULTRASOUND,,,,,,,1,,
 daily,IMAGING,imagi_ultrasound_yn,radio,Was an ultrasound performed,"1, Yes | 0, No",,,,,[daily_dataimagi(1)]='1',1,,
 daily,IMAGING,imagi_ultrasound_date,date_dmy,Ultrasound date ,,date_dmy,,today,,[imagi_ultrasound_yn(1)] = '1',1,,
@@ -662,8 +662,8 @@ outcome_medication,MEDICATION,medi_standreg_reas,text,Reason why standard regime
 outcome_medication,MEDICATION,medi_mpox,group,MPOX,,,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_freq,radio,Lesion cleaning frequency,"1, None | 2, Daily | 3, Twice weekly | 4, Once weekly | 5, other",,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_freqoth,text,Specify frequency:,,,,,,[medi_mpox_freq(5)]='1',,,1
-outcome_medication,MEDICATION,medi_mpox_agent,radio,Lesion cleaning agent,"1, None | 2, Saline | 3, Antiseptic solution | 4, Honey | 5, other",,,,,,,,1
-outcome_medication,MEDICATION,medi_mpox_agento,text,Specify other agent:,,,,,,[medi_mpox_agent(5)]='1',,,1
+outcome_medication,MEDICATION,medi_mpox_agent,radio,Lesion cleaning agent,"1, None | 2, Saline | 3, Antiseptic solution | 4, Honey | 99, other",,,,,,,,1
+outcome_medication,MEDICATION,medi_mpox_agento,text,Specify other agent:,,,,,,[medi_mpox_agent(99)]='1',,,1
 outcome_medication,MEDICATION,medi_mpox_oth,text,"Other lesion care, including use of dressings (describe)",,,,,,,,,1
 outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,,
 outcome,DIAGNOSIS,diagn_influenza,group,INFLUENZA,,,,,,,,,
