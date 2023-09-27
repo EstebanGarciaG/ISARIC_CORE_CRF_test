@@ -202,6 +202,19 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi(7)]='1',,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No",,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurodist,radio,Psychological disturbance,"1, Yes | 0, No",,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_nystagm,radio,a,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myoclon,radio,b,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cerebesig,radio,c,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_tremor,radio,d,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia,radio,e,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia_site,checkbox,f,"1, Yes | 0, No",,,,,[adsym_dystonia(1)]='1',,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia_other,text,g,,,,,,[adsym_dystonia_site(99)]='1',,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ptosis,radio,h,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_facepalsy,radio,i,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dysarthria ,radio,j,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dysphasia,radio,k,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_plantreflex,radio,l,"1, Yes | 0, No",,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_tendreflex,radio,m,"1, Yes | 0, No",,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic_other,text,Specify other neurological abnormality,,,,,,[adsym_neurologic(1)] = '1',1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted,radio,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,,,1,,1
