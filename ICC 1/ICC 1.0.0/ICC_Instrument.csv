@@ -1,6 +1,7 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic,preset_Disease_Dengue,preset_Disease_Mpox,preset_Disease_Nigeria_Mpox
 presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,,1,1,1
 presentation,INCLUSION CRITERIA,inclu_disease,checkbox,Which of the following is the individual suspected/confirmed to have,"1, Avian influenza A H7N9/ H5N1/ H5N6/ H7N7 | 2, COVID-19 (SARS-CoV-2) | 3, Dengue | 4, Mpox | 5, Severe Acute paediatric hepatitis | 6, Other | 7, Unknown",,,,,,1,,1
+presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 7, Unknown                                                             ",,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected / confirmed condition:,,,,,,[inclu_disease(6)] = '1',1,,1
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,1,,1
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,,1
