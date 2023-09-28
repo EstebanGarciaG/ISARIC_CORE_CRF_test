@@ -743,6 +743,8 @@ outcome,DIAGNOSIS,diagn_bacte_sampunlis3,test,Other sample type,,,,,,[diagn_bact
 outcome,DIAGNOSIS,diagn_bacte_typ4,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp4,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_sampunlis4,test,Other sample type,,,,,,[diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_encephali,radio,Select pathogen detected (_Under revision),"1, Nipah | 2, JE | 3, HSV",,,,,,,,
+outcome,DIAGNOSIS,diagn_encephali_type,radio,Diagnostic method (_Under revision),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,,
 outcome,DIAGNOSIS,diagn_pathounlist,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,,,1,1,1
 outcome,DIAGNOSIS,diagn_pathounlist_other,list,Select other pathogen(s) detected,,,,,,[diagn_pathounlist(1)] = '1',1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No",,,,,,,1,1
