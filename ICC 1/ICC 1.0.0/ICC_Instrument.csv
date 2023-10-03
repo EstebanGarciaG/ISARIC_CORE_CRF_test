@@ -14,7 +14,7 @@ presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Comm
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No",,,,,,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,,[readm_prevadm(1)] = '1' or [readm_prevadm(2)] = '1' or [readm_prevadm(3)] = '1' ,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm(1)] = '1' or [readm_prevadm(2)] = '1' or [readm_prevadm(3)] = '1' ,1,,1
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has the patient's data been previously collected under a different participant identification number? ,"1, Yes | 0, No",,,,,,1,,1
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has the patient's data been previously collected under a different patient number? ,"1, Yes | 0, No",,,,,,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevpin,text,Previous participant identification number (PIN),,,,,,[readm_difpin(1)] = '1',1,,1
 presentation,DEMOGRAPHICS,demog_sex,radio,Sex at Birth,"1, Male | 2, Female | 3, Not specified/Unknown",,,,,,1,,1
 presentation,DEMOGRAPHICS,demog_age,text,Age,,integer,,,,,1,,1
@@ -32,15 +32,16 @@ presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No",,,,,,,,1
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,,1,,
 presentation,DEMOGRAPHICS,demog_occupation_oth,text,Specify other primary location of occupation,,,,,,[demog_occupation(8)] = '1',1,,
-presentation,DEMOGRAPHICS,demog_residence,radio,Region of residence,"1, Same as health care facility | 2, Other region",,,,,,1,,
+presentation,DEMOGRAPHICS,demog_residence,radio,Patient’s city of residence,"1, Same as health care facility | 2, Other region",,,,,,1,,
 presentation,DEMOGRAPHICS,demog_residence_oth,text,Specify other region of residence,,,,,,[demog_residence(2)] = '1',1,,
-presentation,TRAVEL HISTORY,travel_travel14d,radio,Travel outside of their region of residence in the past 14 days,"1, Yes | 0, No",,,,,,1,,
+presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outside of their home region in the past 14 days?,"1, Yes | 0, No",,,,,,1,,
 presentation,TRAVEL HISTORY,travel_loc,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[demog_travel14d(1)] = '1',1,,
 presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No",,,,,[demog_sex(2)] = '1',1,,1
-presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment (weeks),,number,,,,[preg_pregnant(1)] = '1',1,,1
+presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment at presentation (weeks),,number,,,,[preg_pregnant(1)] = '1',1,,1
 presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No",,,,,[demog_sex(2)] = '1',,,1
 presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[preg_postpartum(1)] = '1',,,1
-presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth",,,,,[preg_postpartum(1)] = '1',,,1
+presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth | 3, Termination",,,,,[preg_postpartum(1)] = '1',1,,1
+presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_pregnant(1)] = '1',1,,
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No",,,,,[preg_postpartum(1)] = '1',,,1
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative",,,,,[preg_bbtest(1)] = '1',,,1
 presentation,INFANT: less than 12 months old,infa_brtwei_units,radio,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,
@@ -56,7 +57,7 @@ presentation,VACCINATION,vacci_influenza,group,INFLUENZA,,,,,,,,,
 presentation,VACCINATION,vacci_influenza_yn,radio,Vaccinated for influenza (ever),"1, Yes | 0, No",,,,,,,,
 presentation,VACCINATION,vacci_influenza_date,date_dmy,Date of most recent influenza vaccine,,date_dmy,,today,,[vacci_influenza_yn(1)] = '1',,,
 presentation,VACCINATION,vacci_dengue,group,DENGUE,,,,,,,1,,
-presentation,VACCINATION,vacci_dengue_yn,radio,Vaccinated for dengue (ever),"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No",,,,,,1,,
+presentation,VACCINATION,vacci_dengue_yn,radio,Vaccinated for dengue?,"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No",,,,,,1,,
 presentation,VACCINATION,vacci_dengue_date,date_dmy,Date of first dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn(1)]='1' or [vacci_dengue_yn(2)]='1' or [vacci_dengue_yn(3)]='1',1,,
 presentation,VACCINATION,vacci_dengue_type,radio,Type of first dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue_yn(1)]='1' or [vacci_dengue_yn(2)]='1' or [vacci_dengue_yn(3)]='1',1,,
 presentation,VACCINATION,vacci_dengue_date2,date_dmy,Date of second dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn(2)]='1' or [vacci_dengue_yn(3)]='1',1,,
@@ -82,9 +83,9 @@ presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid_add,radio,Additional steroid,"1, Yes | 0, No",,,,,[drugs_steroid(1)] = '1',1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid_agent2,list,Additional steroid agent,,,,,,[drugs_steroid_add(1)] = '1',1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid_route2,radio,Additional steroid administration route,"1, Oral | 2, Inhaled | 3, IV",,,,,[drugs_steroid_add(1)] = '1',1,,1
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp,radio,Immunosuppressant (not steroids),"1, Yes | 0, No",,,,,,1,,1
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp,radio,Immunosuppressant  agents (not steroids),"1, Yes | 0, No",,,,,,1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp_agent,list,Immunosuppressant agent,,,,,,[drugs_immunusupp(1)] = '1',1,,1
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp_add,radio,Additional immunosuppressant,"1, Yes | 0, No",,,,,[drugs_immunusupp(1)] = '1',1,,1
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp_add,radio,Additional immunosuppressant agent,"1, Yes | 0, No",,,,,[drugs_immunusupp(1)] = '1',1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp_agent2,list,Additional immunosuppressant agent,,,,,,[drugs_immunusupp_add(1)] = '1',1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_aspirin,radio,Aspirin,"1, Yes | 0, No",,,,,,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_antibiotic,radio,Antibiotics,"1, Yes | 0, No",,,,,,1,,1
@@ -184,7 +185,8 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_weight,radio,Weight loss,"1, Yes | 0, No",,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_vomit,radio,Vomiting,"1, Yes | 0, No",,,,,,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_vomit2d,radio,"If yes, persistant vomiting? (2+/day)","1, Yes | 0, No",,,,,[adsym_vomit(1)]='1',1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_consti,radio,Constipation,"1, Yes | 0, No",,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_urine,radio,Urinary retention,"1, Yes | 0, No",,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_jaund,radio,Jaundice,"1, Yes | 0, No",,,,,,,,1
@@ -247,7 +249,8 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_weight,radio,Weight loss,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_abdpain,radio,Abdominal pain,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_diarrhoea,radio,Diarrhoea,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_nausea,radio,Vomiting / Nausea,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_vomit,radio,Vomiting,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",sympt_vomit2d,radio,"If yes, persistant vomiting? (2+/day)","1, Yes | 0, No",,,,,[sympt_vomit(1)]='1',1,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_consti,radio,Constipation,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_urine,radio,Urinary retention,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_jaund,radio,Jaundice,"1, Yes | 0, No",,,,,[daily_datasympt(1)]='1',,,1
@@ -293,11 +296,14 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_systolicbp,number,Systolic BP (mmHg),,number,,,,[daily_datavital(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_diastolicbp,number,Diastolic BP (mmHg),,number,,,,[daily_datavital(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_meanbp,number,Mean Arterial Blood Pressure  (mmHg),,number,,,,[daily_datavital(1)]='1',,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_sao2,number,Lowest Oxygen saturation SaO2 (%),,number,,,,[daily_datavital(1)]='1',1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_sao2_supp,radio,FiO2 measured at time of lowest SaO2 ,"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_sao2_supp(1)] = '1',1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_sao2_supp(1)] = '1',,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_sao2_supp(1)] = '1',,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2,number,Lowest Oxygen saturation SpO2 (%),,number,,,,[daily_datavital(1)]='1',1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2_supp,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_spo2_supp(1)] = '1',1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_spo2_supp(1)] = '1',,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_spo2_supp(1)] = '1',,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbld,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloc,checkbox,"If yes, specify severe bleeding sites:","1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 7, Other",,,,,[vital_svrbld(1)]='1',1,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc(7)]='1',1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_capillaryr,radio,Capillary refill time >2seconds,"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_avpu,radio,AVPU,"1, Alert | 2, Verbal | 3, Pain | 4, Unresponsive",,,,,[daily_datavital(1)]='1',1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_gcs,number,Glasgow Coma Score (GCS / 15) ,,number,3,15,,[daily_datavital(1)]='1',1,,1
@@ -691,19 +697,19 @@ outcome,DIAGNOSIS,diagn_bacte_occur,radio,Bacterial infection,"1, Lab confirmed 
 outcome,DIAGNOSIS,diagn_bacte_num,radio,Number of confirmed samples,"1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,[diagn_bacte_occur(1)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(1)] = '1' or [diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(1)] = '1' or [diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_bacte_sampunlis,test,Other sample type,,,,,,[diagn_bacte_num(1)] = '1' or [diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_bacte_sampunlis,text,Other sample type,,,,,,[diagn_bacte_num(1)] = '1' or [diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ1,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp1,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_bacte_sampunlis1,test,Other sample type,,,,,,[diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_bacte_sampunlis1,text,Other sample type,,,,,,[diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ2,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp2,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_bacte_sampunlis2,test,Other sample type,,,,,,[diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_bacte_sampunlis2,text,Other sample type,,,,,,[diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ3,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp3,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_bacte_sampunlis3,test,Other sample type,,,,,,[diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_bacte_sampunlis3,text,Other sample type,,,,,,[diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ4,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,1,1
 outcome,DIAGNOSIS,diagn_bacte_samp4,list,Sample type of bacterial pathogen detected,,,,,,[diagn_bacte_num(5)] = '1',1,,1
-outcome,DIAGNOSIS,diagn_bacte_sampunlis4,test,Other sample type,,,,,,[diagn_bacte_num(5)] = '1',1,,1
+outcome,DIAGNOSIS,diagn_bacte_sampunlis4,text,Other sample type,,,,,,[diagn_bacte_num(5)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_encephali,radio,Select pathogen detected (_Under revision),"1, Nipah | 2, JE | 3, HSV",,,,,,,,
 outcome,DIAGNOSIS,diagn_encephali_type,radio,Diagnostic method (_Under revision),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,,,
 outcome,DIAGNOSIS,diagn_pathounlist,radio,Other pathogen(s) detected,"1, Yes | 0, No",,,,,,1,1,1
