@@ -32,7 +32,7 @@ presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No",,,,,,,,1
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 8, Other",,,,,,1,,
 presentation,DEMOGRAPHICS,demog_occupation_oth,text,Specify other primary location of occupation,,,,,,[demog_occupation(8)] = '1',1,,
-presentation,DEMOGRAPHICS,demog_residence,radio,Patient’s city of residence,"1, Same as health care facility | 2, Other region",,,,,,1,,
+presentation,DEMOGRAPHICS,demog_residence,radio,Patient's city of residence,"1, Same city as health care facility | 2, Different city from health care facility",,,,,,1,,
 presentation,DEMOGRAPHICS,demog_residence_oth,text,Specify other region of residence,,,,,,[demog_residence(2)] = '1',1,,
 presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outside of their home region in the past 14 days?,"1, Yes | 0, No",,,,,,1,,
 presentation,TRAVEL HISTORY,travel_loc,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[demog_travel14d(1)] = '1',1,,
