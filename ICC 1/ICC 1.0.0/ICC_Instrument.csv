@@ -7,6 +7,7 @@ presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / star
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,,1
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,,1
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm(1)] = '1',1,,1
+presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,,,,,[dates_adm(1)] = '1',1,,
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist(1)]='1',,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 4, Other",,,,,[dates_mpoxhist(1)]='1',,,1
