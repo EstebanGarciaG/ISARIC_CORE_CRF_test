@@ -1,31 +1,55 @@
-conditions	Code	Library	Selected
-Hypertension	I10	ICD10	
-Diabetes Mellitus	E10-E14	ICD10	
-Hyperlipidemia	E78	ICD10	
-Asthma	J45	ICD10	
-Chronic Obstructive Pulmonary Disease (COPD)	J44	ICD10	
-Heart Disease	I00-I52	ICD10	
-Kidney Disease	N17-N19	ICD10	
-Liver Disease	K70-K77	ICD10	
-Arthritis	M00-M25	ICD10	
-Obesity	E66	ICD10	
-"Cerebrovascular Diseases (e.g., Stroke)"	I60-I69	ICD10	
-Neoplasms (Cancer)	C00-D48	ICD10	
-Mental and Behavioural Disorders due to Psychoactive Substance Use	F10-F19	ICD10	
-Mood (Affective) Disorders	F30-F39	ICD10	
-"Anxiety, Dissociative, Stress-related, Somatoform and other nonpsychotic mental disorders"	F40-F48	ICD10	
-"Schizophrenia, Schizotypal, Delusional, and Other Non-Mood Psychotic Disorders"	F20-F29	ICD10	
-Neurodevelopmental Disorders	F80-F89	ICD10	
-Sleep Disorders	G47	ICD10	
-HIV Disease	B20-B24	ICD10	
-Episodic and Paroxysmal Disorders (includes Epilepsy)	G40-G47	ICD10	
-Alzheimer's Disease	G30	ICD10	
-Osteoporosis	M80-M82	ICD10	
-"Diseases of Esophagus, Stomach and Duodenum (includes GERD)"	K20-K31	ICD10	
-Noninfective Enteritis and Colitis (includes Ulcerative Colitis and Crohn's Disease)	K50-K52	ICD10	
-Other Diseases of Intestines (includes IBS)	K55-K64	ICD10	
-"Systemic Connective Tissue Disorders (includes Lupus, Sjogren's Syndrome, etc.)"	M30-M36	ICD10	
-Parkinson's Disease	G20	ICD10	
-Other Soft Tissue Disorders (includes Fibromyalgia)	M70-M79	ICD10	
-Diseases of Upper Respiratory Tract (includes Chronic Sinusitis)	J30-J39	ICD10	
-Dermatitis and Eczema	L20-L30	ICD10	
+Condition,Code,Library,Charlson,Elixhauser
+Human immunodeficiency virus [HIV] disease,,SNOMED,1,1
+Autoimmune Disease,85828009,SNOMED,,
+Chronic Haematological Disease,,SNOMED,,
+Blood coagulation disorder,64779008,SNOMED,,
+Stroke,,SNOMED,1,1
+Cerebrovascular Disease,62914000,SNOMED,1,1
+Hemiplegia,50582007,SNOMED,1,1
+Paraplegia,60389000,SNOMED,1,1
+Chronic heart disease,128238001,SNOMED,,1
+Ischaemic Heart Disease,414545008,SNOMED,1,1
+Atrial Fibrillation,49436004,SNOMED,,1
+Myocardial Infarction,22298006,SNOMED,1,1
+Congestive Heart Failure,42343007,SNOMED,1,1
+Congenital Heart Disease,13213009,SNOMED,,1
+Cardiomyopathy,85898001,SNOMED,,1
+Heart valve disorder,368009,SNOMED,,1
+Chronic inflammatory disorder,128294001,SNOMED,,
+Chronic metabolic disorder,128289001,SNOMED,,1
+Neurological disorder confirmed,407626008,SNOMED,,1
+Chronic lung disease,413839001,SNOMED,,1
+Undifferentiated connective tissue disease,239918008,SNOMED,,1
+Dementia,52448006,SNOMED,1,1
+Diabetes Mellitus (all types),73211009,SNOMED,1,1
+Essential hypertension,59621000,SNOMED,,1
+Immunosuppression,38013005,SNOMED,,1
+Disorder of lipid metabolism,267431006,SNOMED,,1
+Disease of liver,235856003,SNOMED,,1
+Moderate or Severe Liver Disease,,SNOMED,1,1
+Chronic Viral Hepatitis,10295004,SNOMED,,1
+Primary malignant neoplasm,372087000,SNOMED,1,1
+Leukemia,93143009,SNOMED,1,1
+Malignant lymphoma,118600007,SNOMED,1,1
+Multiple Myeloma,109989006,SNOMED,1,1
+Metastatic carcinoid tumor Cancer,705176003,SNOMED,1,1
+Solid tumor configuration,369757002,SNOMED,1,1
+Neurodegenerative Disorders,,SNOMED,,1
+Obesity,414916001,SNOMED,,1
+Peripheral Vascular Disease,400047006,SNOMED,1,1
+Reactive psychoses,231437006,SNOMED,,1
+Disorder of pulmonary circulation,39785005,SNOMED,,1
+Chronic Infection,,SNOMED,,
+Rare Diseases and Inborn Errors of Metabolism,,SNOMED,,
+Chronic Kidney Disease,709044004,SNOMED,1,1
+Moderate or Severe Renal Disease,,SNOMED,1,1
+Acute-on-chronic renal failure,236433006,SNOMED,1,1
+Rheumatoid Disorders,,SNOMED,1,1
+Transplant present,737294004,SNOMED,1,1
+Asplenia,707147002,SNOMED,,1
+Smoking,,SNOMED,,1
+Psychoactive substance use disorder,11061003,SNOMED,,1
+Recurrent deep vein thrombosis,710167004,SNOMED,,1
+Hypothyroidism,40930008,SNOMED,,1
+Hyperthyroidism,34486009,SNOMED,,1
+Tuberculosis,56717001,SNOMED,1,1

@@ -1,0 +1,73 @@
+Microorganism,Code,Library
+A. baumannii,91288006,SNOMED
+A. calcoaceticus,413398000,SNOMED
+A. johnsonii,252000,SNOMED
+A. xylosoxidans,413424009,SNOMED
+Acinetobactersp. ,7757008,SNOMED
+Streptococcusanginosus,44304009,SNOMED
+B. cenocepacia,416941006,SNOMED
+B. fragilis,55247009,SNOMED
+Burkholderia,414324002,SNOMED
+C. braakii,114262000,SNOMED
+C. freundii,6265002,SNOMED
+C. koseri,114264004,SNOMED
+Chlamydia,16241000,SNOMED
+Citrobacter,75972000,SNOMED
+D. acidovorans,20432002,SNOMED
+E. bugandesis,113611000146106,SNOMED
+E. cloacae,14385002,SNOMED
+Escherichia coli,112283007,SNOMED
+E. faecalis,78065002,SNOMED
+E. faecium,90272000,SNOMED
+E. hormaechei,114454006,SNOMED
+E. kobei,114456008,SNOMED
+E. raffinosus,103437000,SNOMED
+Enterobacter ,58683007,SNOMED
+Enterobacteriaceae ,106544002,SNOMED
+Genus Enterococcus,2785000,SNOMED
+H. alvei,76694001,SNOMED
+H. influenzae,44470000,SNOMED
+Haemophilus parainfluenzae,51593004,SNOMED
+Haemophilus ,71268004,SNOMED
+K. aerogenes,62592009,SNOMED
+K. oxytoca,40886007,SNOMED
+Klebsiella pneumoniae,56415008,SNOMED
+K. variicola,431976004,SNOMED
+Klebsiella,75032006,SNOMED
+L. rhamnosus,113798001,SNOMED
+M. catarrhalis,24226003,SNOMED
+M. morganii,243301005,SNOMED
+Mycoplasma pneumoniae,58720004,SNOMED
+M. tuberculosis,113861009,SNOMED
+Moraxella,36361003,SNOMED
+Morganella,50713005,SNOMED
+Proteus vulgaris,45834001,SNOMED
+P. aeruginosa,62891008,SNOMED
+Proteus mirabilis,73457008,SNOMED
+Pseudomonas putida,68608003,SNOMED
+P. stuartii,1445008,SNOMED
+Proteus ,50517009,SNOMED
+Pseudomonas,57032008,SNOMED
+Mirabilis,79589007,SNOMED
+R. ornithinolytica,416832000,SNOMED
+R. planticola,416264004,SNOMED
+P. rettgeri,14196002,SNOMED
+Raoultella,417468005,SNOMED
+Mycoplasma agalactiae,16377009,SNOMED
+Staphylococcus aureus,3092008,SNOMED
+S. epidermidis,60875001,SNOMED
+S. gallolyticus,113985000,SNOMED
+S. haemolyticus,83452006,SNOMED
+Staphylococcus hominis hominis,432505008,SNOMED
+S. intermedius,62170002,SNOMED
+S. maltophilia,113697002,SNOMED
+S. marcescens,33522002,SNOMED
+S. pneumoniae,9861002,SNOMED
+S. pyogenes,80166006,SNOMED
+S. saprophyticus,19743000,SNOMED
+S. ureilytica,450416004,SNOMED
+S. warneri,63550006,SNOMED
+Serratia ,42025004,SNOMED
+Staphylococcus,65119002,SNOMED
+Streptococcus,58800005,SNOMED
+"Streptococcus, viridans group",31703004,SNOMED

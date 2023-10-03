@@ -1,55 +1,130 @@
-drugs,Code,Library,Selected,Reference URL
-Amikacin (Amikin),J01GB06,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602999
-Amoxicillin,J01CA04,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602823
-Amphotericin ( Amphocin),J02AA01,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21603074
-Ampicillin / Sulbactam (Unasyn),"J01CR01,J01CA51,J01CA01",ATC 5th,,https://athena.ohdsi.org/search-terms/terms?domain=Drug&vocabulary=ATC&page=1&pageSize=500&query=Ampicillin&boosts
-Azithromycin ( Zithromax),J01FA10,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602978
-Caspofugin ( Cancidas),J02AX04,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21603086
-Cefepime ( Maxipime),J01DE01,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602915
-Cefoperazone ( Cefobid),J01DD12,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602906
-Cefotaxime ( Claforan),J01DD01,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602895
-Ceftazidime (Fortaz),J01DD02,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602896
-Ceftizoxime ( Cefizox),J01DD07,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602901
-Ceftriaxone ( Rocphine),J01DD04,ATC 5th,1,https://athena.ohdsi.org/search-terms/terms/21602898
-Chloramphenicol,J01BA01,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602815
-Ciprofloxacin,J01MA02,ATC 5th,1,https://athena.ohdsi.org/search-terms/terms/21603009
-clairthromycin,J01FA09,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602977
-Clindamycin ( Cleocin),J01FF01,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602985
-Cloxacillin,J01CF02,ATC 5th,,https://athena.ohdsi.org/search-terms/terms/21602854
-Colistimethate,"OMOP476888,OMOP476900,OMOP3112392,OMOP3125173,OMOP988762,OMOP476908,OMOP476891",RxNorm Extension,1,https://athena.ohdsi.org/search-terms/terms?domain=Drug&invalidReason=Valid&standardConcept=Standard&page=1&pageSize=500&query=Colistimethate
-Deptomycin ( Cubicin),daptomycin???,,,https://athena.ohdsi.org/search-terms/terms?domain=Drug&invalidReason=Valid&standardConcept=Standard&page=1&pageSize=500&query=Deptomycin&boosts
-Ertrapenem ( Invanz),325642,RxNorm,,https://athena.ohdsi.org/search-terms/terms/1717963
-Erythromycin,,,,
-Fluconazole ( Diflucan),,,,
-Gatifloxacin ( Tequin),,,,
-Gentamicin ( Garamycin),,,,
-Imipenim/ Cilastin ( Primaxin),,,,
-Kanamycin ( KAntrex),,,,
-Levofloxacin ( Levaquin),,,1,
-Linezolid ( Zyvox),,,1,
-Meropenem ( Merrem),,,1,
-Metronidazole ( Flagyl),,,,
-Moxifloxacin ( Avelox),,,,
-Newmycin,,,,
-Other antibiotics,,,,
-Penicillin,,,,
-Piperacillin/ Tazobactam ( Zosyn),,,1,
-Polymyxin B,,,1,
-Teicoplanin,,,1,
-Ticarcillin / Clavulanate ( Timentin),,,,
-Tobramycin ( Nebcin),,,,
-Trovafloxacin ( Trovan),,,,
-Vancomycin ( Vancocin),,,1,
-Voriconizole ( Vfend),,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Drugs                                         , Code    , Library , Selected
+"Amikacin (Amikin, Biodacin, Miacin)           ", J01GB06 , ATC     ,1
+"Amoxicillin (Amoxil, Trimox, Moxatag)         ", J01CA04 , ATC     ,1
+Amoxicillin/Beta-lactamase inhibitor, J01CR02 , ATC     , 
+"Amphotericin (Amphocin, Fungizone, Fungilin)  ", J02AA01 , ATC     , 
+Ampicillin/Sulbactam (Unasyn)                 , J01CR01 , ATC     ,1
+Atovaquone                                    ,J01XX07  ,ATC,2
+"Azithromycin (Zithromax, Zmax, Sumamed)       ", J01FA10 , ATC     ,1
+Aztreonam                                      ,J01DF01  ,ATC,2
+Bacampicillin                                  ,J01CA03  ,ATC,2
+Bacitracin                                     ,D06AA01  ,ATC,2
+Benzylpenicillin (Penicillin G)                    , J01CE01  , ATC     ,1
+Capreomycin                                    ,J04AK02  ,ATC,2
+Carbenicillin indanyl sodium                   ,J01CA06  ,ATC,2
+Caspofungin (Cancidas)                        , J02AX04 , ATC     , 
+Cefaclor                                       ,J01DC04  ,ATC,2
+Cefadroxil                                     ,J01DB05  ,ATC,2
+"Cefalexin (Keflex, Daxbia)                        ", J01DB01  , ATC     ,1
+Cefamandole                                    ,J01DC02  ,ATC,2
+"Cefazolin (Ancef, Kefzol)                          ", J01DB04  , ATC     ,1
+Cefdinir                                       ,J01DD14  ,ATC,2
+Cefditoren                                     ,J01DD15  ,ATC,2
+Cefepime (Maxipime)                           , J01DE01 , ATC     ,1
+Cefixime                                       ,J01DD08  ,ATC,2
+Cefmetazole                                    ,J01DB06  ,ATC,2
+Cefonicid                                      ,J01DB07  ,ATC,2
+Cefoperazone (Cefobid)                        ,J01DD12 , ATC     , 
+Cefotaxime (Claforan)                         ,J01DD01 , ATC     ,1
+Cefotetan                                      ,J01CC04  ,ATC,2
+Cefoxitin                                      ,J01DC03  ,ATC,2
+Cefpodoxime Proxetil                           ,J01DD13  ,ATC,2
+Cefprozil                                      ,J01DB09  ,ATC,2
+Ceftaroline Fosamil (Teflaro), J01DI02  , ATC     ,1
+"Ceftazidime (Fortaz, Tazicef)                 ", J01DD02 , ATC     ,1
+Ceftibuten                                     ,J01DD09  ,ATC,2
+Ceftizoxime (Cefizox)                         ,J01DD07 , ATC     , 
+Ceftobiprole Medocaril (Zeftera)                             , J01DI01 , ATC     ,1
+Ceftriaxone (Rocephin)                        , J01DD04 , ATC     ,1
+"Cefuroxime (Ceftin, Zinacef)                       ", J01DC02  , ATC     ,1
+Cephalexin                                     ,J01DB01  ,ATC,2
+Cephalothin                                    ,J01DB03  ,ATC,2
+Cephapirin                                     ,J01DB02  ,ATC,2
+Cephradine                                     ,J01DB04  ,ATC,2
+Chloramphenicol (Chloromycetin)               , J01BA01 , ATC     , 
+Cinoxacin                                      ,J01MB04  ,ATC,2
+"Ciprofloxacin (Cipro, Ciloxan)                ", J01MA02 , ATC     ,1
+"Clarithromycin (Biaxin, Klacid)               ", J01FA09 , ATC     ,1
+"Clindamycin (Cleocin, Dalacin)                ", J01FF01 , ATC     ,1
+"Cloxacillin (Tegopen, Cloxapen)               ", J01CF02 , ATC     , 
+Colistimethate                                 ,J01XB03  ,ATC,2
+Colistin , J01XB01 , ATC     , 
+Cycloserine                                    ,J04AB01  ,ATC,2
+Daptomycin (Cubicin)                          , J01XX09 , ATC     , 
+Demeclocycline                                 ,J01AA01  ,ATC,2
+Dicloxacillin                                  ,J01CF04  ,ATC,2
+Dirithromycin                                  ,J01FA13  ,ATC,2
+Doripenem                                      ,J01DH04  ,ATC,2
+"Doxycycline (Vibramycin, Oracea, Monodox)          ", J01AA02  , ATC     ,1
+Enoxacin                                       ,J01MB02  ,ATC,2
+Ertapenem (Invanz)                            , J01DH03 , ATC     ,1
+"Erythromycin (Eryc, Erythrocin)               ", J01FA01 , ATC     ,1
+"Flucloxacillin (Floxapen, Fluclox)                 ", J01CF05  , ATC     ,1
+Fluconazole (Diflucan)                        , J02AC01 , ATC     ,1
+Fosfomycin (Monurol)                               , J01XX01 , ATC     ,1
+Gatifloxacin (Tequin)                         , J01MA16 , ATC     , 
+Gemifloxacin                                   ,J01MA15  ,ATC,2
+"Gentamicin (Garamycin, Gentak, Genoptic)      ", J01GB03 , ATC     ,1
+Grepafloxacin                                  ,J01MA11  ,ATC,2
+Imipenem/Cilastatin (Primaxin)                , J01DH51 , ATC     ,1
+Imiquimod                                      ,D06BB10  ,ATC,2
+"Isoniazid (Nydrazid, Laniazid)                     ", J04AC01 , ATC     ,1
+Kanamycin (Kantrex)                           , J01GB04 , ATC     , 
+"Levofloxacin (Levaquin, Levxin, Tavanic)      ", J01MA12 , ATC     ,1
+Lincomycin                                     ,J01FF02  ,ATC,2
+Linezolid (Zyvox)                             , J01XX08 , ATC     ,1
+Lomefloxacin                                   ,J01MA07  ,ATC,2
+Loracarbef                                     ,J01DC10  ,ATC,2
+Mafenide                                      ,D10AF03  ,ATC,2
+"Meropenem (Merrem, Meronem)                   ", J01DH02 , ATC     ,1
+Methenamine hippurate                          ,J01XX05  ,ATC,2
+Methicillin                                    ,J01CF01  ,ATC,2
+"Metronidazole (Flagyl, Metrogel, Metrocream)  ", J01XD01 , ATC     ,1
+Mezlocillin                                    ,J01CA05  ,ATC,2
+Minocycline                                    ,J01AA08  ,ATC,2
+"Moxifloxacin (Avelox, Vigamox)                ", J01MA14 , ATC     ,1
+Mupirocin                                      ,D06AX09  ,ATC,2
+Nafcillin                                      ,J01CF03  ,ATC,2
+Nalidixic Acid                                 ,J01MB01  ,ATC,2
+Neomycin                                       ,J01GB05  ,ATC,2
+Netilmicin, J01GB07 , ATC     , 
+"Nitrofurantoin (Macrobid, Macrodantin)             ", J01XE01  , ATC     ,1
+Nitrofurazone                                  ,D06AX02  ,ATC,2
+Norfloxacin                                    ,J01MA06  ,ATC,2
+Novobiocin                                     ,J01FG01  ,ATC,2
+Ofloxacin                                      ,J01MA01  ,ATC,2
+Oxacillin                                      ,J01CF05  ,ATC,2
+Oxytetracycline                                ,J01AA06  ,ATC,2
+Penicillin                                    , Varied  , ATC     ,1
+"Piperacillin/Beta-lactamase inhibitor  (Zosyn, Tazocin)      ", J01CR05 , ATC     ,1
+Pivmecillinam (Selexid)                            , J01CA08 , ATC     ,1
+Podofilox                                      ,D06BB04  ,ATC,2
+"Polymyxin B (Poly-Rx, Polysporin)             ", J01XB02 , ATC     , 
+Quinupristin + Dalfopristin                    ,J01FG02  ,ATC,2
+Retapamulin                                    ,D10AF07  ,ATC,2
+"Rifampicin (Rifadin, Rimactane)                    ", J04AB02  , ATC     ,1
+Rifapentine                                    ,J04AB05  ,ATC,2
+Rifaximin (Xifaxan)                                , A07AA11 , ATC     ,1
+Saturated Solution of Potassium Iodide (SSKI)  ,V04CJ01  ,ATC,2
+Sparfloxacin                                   ,J01MA09  ,ATC,2
+Spectinomycin                                  ,J01GB07  ,ATC,2
+Streptomycin                                   ,J01GA01  ,ATC,2
+Sulfadiazine                                   ,J01EC02  ,ATC,2
+Sulfamethoxazole (Gantanol)                        , J01EC01 , ATC     ,1
+"Sulfamethoxazole/Trimethoprim (Bactrim, Septra)    ", J01EE01  , ATC     ,1
+Sulfisoxazole                                  ,J01EC03  ,ATC,2
+"Sulphur, precipitated in petrolatum            ",D10AB02  ,ATC,2
+"TCA (trichloroacetic acid), BCA (bichloroacetic acid). J01XX07 ATC",,,2
+Teicoplanin (Targocid)                        , J01XA02 , ATC     , 
+Telavancin                                     ,J01XA03  ,ATC,2
+Telithromycin                                  ,J01FA15  ,ATC,2
+Terbinafine                                    ,J02AC03  ,ATC,2
+Tetracycline                                   ,J01AA07  ,ATC,2
+Ticarcillin                                    ,J01CA02  ,ATC,2
+Ticarcillin + Clavulanic Acid                  ,J01CR03  ,ATC,2
+Tigecycline (Tygacil)                              , J01AA12 , ATC     ,1
+"Tobramycin (Nebcin, Tobrex, Tobi)             ", J01GB01 , ATC     ,1
+Trimethoprim (Primsol)                             , J01EA01  , ATC     ,1
+Trovafloxacin (Trovan)                        , J01MA13 , ATC     , 
+"Vancomycin (Vancocin, Vancocin HCl, Firvanq)  ", J01XA01 , ATC     ,1
+Voriconazole (Vfend)                          , J02AC03 , ATC     , 
