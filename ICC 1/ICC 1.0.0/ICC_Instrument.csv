@@ -8,6 +8,8 @@ presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / ea
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,,1
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm(1)] = '1',1,,1
 presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,,,,,[dates_adm(1)] = '1',1,,
+presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 4, Other systemic symptoms",,,,,[inclu_disease(4)] = '1',,,1
+presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(4)]='1',,,1
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist(1)]='1',,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 4, Other",,,,,[dates_mpoxhist(1)]='1',,,1
@@ -490,7 +492,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_iul,number,Creatine Kinase (IU/L),,number,0,10000,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin,,Troponin (select units),,,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngl,number,Troponin (ng/L),,number,0,726,,[daily_datalab(1)]='1',,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngml,number,Troponin (ng/mL),,number,0,836,,[daily_datalab(1)]='1',,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngml,number,Troponin (ng/mL),,number,0,836,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ugl,number,Troponin (ug/L),,number,0,1,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer,,D-Dimer (select units),,,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer_mgl,number,D-Dimer (mg/L),,number,0,67,,[daily_datalab(1)]='1',1,,1
@@ -552,7 +554,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_erythrosed,number,Erythrocyte Sedimentation Rate (mm/h),,number,0,120,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4,,CD4 (select units),,,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_106l,number,CD4 (10^6/L),,number,0,2000,,[daily_datalab(1)]='1',,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_mm3,number,CD4 (mm^3),,number,,,,[daily_datalab(1)]='1',,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_mm3,number,CD4 (mm^3),,number,,,,[daily_datalab(1)]='1',,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_oxygensat,number,Oxygen Saturation (%),,number,20,100,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_alkalineph,number,Alkaline Phosphatase (U/L),,number,0,2940,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cholest,number,Cholesterol (mmol/L),,number,0,15,,[daily_datalab(1)]='1',,,
@@ -579,7 +581,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi,,Troponin I (select units),,,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ugl,number,Troponin I (ug/L),,number,0,536,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngl,number,Troponin I (ng/L),,number,0,1113,,[daily_datalab(1)]='1',1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab(1)]='1',1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab(1)]='1',1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngdl,number,Troponin I (ng/dL),,number,0,340,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropit3,,Troponin I Type 3 (select units),,,,,,[daily_datalab(1)]='1',,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropit3_ngl,number,Troponin I Type 3 (ng/L),,number,0,110,,[daily_datalab(1)]='1',,,
@@ -698,7 +700,7 @@ outcome,DIAGNOSIS,diagn_dengue_igmss,radio,IgM ELISA second sample,"1, Positive 
 outcome,DIAGNOSIS,diagn_dengue_iggss,radio,IgG ELISA second sample,"1, Positive | 0, Negative | 2, Not done",,,,,[diagn_dengue(1)] = '1',1,,
 outcome,DIAGNOSIS,diagn_dengue_pcr,radio,Dengue PCR  ,"1, Positive | 0, Negative | 2, Not done",,,,,[diagn_dengue(1)] = '1',1,,
 outcome,DIAGNOSIS,diagn_dengue_pcrtyp,radio,Dengue virus type,"1, DENV1 | 2, DENV2 | 3, DENV3 | 4, DENV4",,,,,[diagn_dengue_pcr(1)] = '1',1,,
-outcome,DIAGNOSIS,diagn_bacte,group,BACTERIA,,,,,,,1,,
+outcome,DIAGNOSIS,diagn_bacte,group,BACTERIA,,,,,,,1,,1
 outcome,DIAGNOSIS,diagn_bacte_occur,radio,Bacterial infection,"1, Lab confirmed | 0, Lab negative | 2, Not done",,,,,,1,1,1
 outcome,DIAGNOSIS,diagn_bacte_num,radio,Number of confirmed samples,"1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,[diagn_bacte_occur(1)] = '1',1,,1
 outcome,DIAGNOSIS,diagn_bacte_typ,list,Select bacterial pathogen detected,,,,,,[diagn_bacte_num(1)] = '1' or [diagn_bacte_num(2)] = '1' or [diagn_bacte_num(3)] = '1' or [diagn_bacte_num(4)] = '1' or [diagn_bacte_num(5)] = '1',1,1,1
@@ -836,6 +838,7 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_date,date_dmy,Date of second surgery,,date_dmy,,today,,[inter_mpoxsurg2(1)]='1',,1,1
 outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1,1
 outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,1,1
+outcome,OUTCOME,outco_community,radio,Outcome (community),"1, Remains in community | 2, Currently in hospital | 3, Was admitted to hospital but now in community again | 4, Death | 5, Palliative care",,,,,[outco_recruitype(2)]='1',,,1
 outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge",,,,,,1,1,1
 outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better",,,,,[outco_outcome(1)] = '1',,1,1
 outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No",,,,,[outco_outcome(1)] = '1' or [outco_outcome(2)] = '1',1,1,1
