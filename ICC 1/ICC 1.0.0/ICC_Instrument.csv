@@ -201,8 +201,9 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anorexia,radio,Anorexia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinrash,radio,Skin rash,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_pruritis,radio,Pruritis,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag(1)] = '1',1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag_yn(1)] = '1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_oth,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site(88)]='1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
