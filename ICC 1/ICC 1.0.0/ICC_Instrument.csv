@@ -46,7 +46,7 @@ presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, S
 presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_pregnant(1)] = '1',1,1,,
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No | 99, Unknown",,,,,[preg_postpartum(1)] = '1',1,,,1
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[preg_bbtest(1)] = '1',1,,,1
-presentation,INFANT: less than 12 months old,infa_brtwei_units,radio,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,,
+presentation,INFANT: less than 12 months old,infa_brtwei,,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,,
 presentation,INFANT: less than 12 months old,infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',1,,,1
 presentation,INFANT: less than 12 months old,infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',,,,
 presentation,INFANT: less than 12 months old,infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA) | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units(2)]='1') or   [demog_age_units(3)]='1',1,,,1
@@ -143,6 +143,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_asthma,radio,Asthma (physician diagnosed),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrkidney,radio,Chronic kidney disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_obesity,radio,Obesity (as defined by clinical staff),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea,group,Liver disease,,,,,,,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_mild,radio,Mild liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_severe,radio,Moderate or severe liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hepbc,radio,Chronic hepatitis B/C infection,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
@@ -306,7 +307,7 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_diastolicbp,number,Diastolic BP (mmHg),,number,,,,[daily_datavital(1)]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_meanbp,number,Mean Arterial Blood Pressure  (mmHg),,number,,,,[daily_datavital(1)]='1',,,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2,number,Lowest Oxygen saturation SpO2 (%),,number,,,,[daily_datavital(1)]='1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2_supp,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2low,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No",,,,,[daily_datavital(1)]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_spo2_supp(1)] = '1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_spo2_supp(1)] = '1',,,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_spo2_supp(1)] = '1',,,,
@@ -847,8 +848,8 @@ outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospi
 outcome,OUTCOME,outco_community,radio,Outcome (community),"1, Remains in community | 2, Currently in hospital | 3, Was admitted to hospital but now in community again | 4, Death | 5, Palliative care | 99, Unknown",,,,,[outco_recruitype(2)]='1',,,,1
 outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge | 99, Unknown",,,,,,1,1,1,1
 outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_outcome(1)] = '1',1,,1,1
-outcome,OUTCOME,outco_ongingcare,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome(1)] = '1' or [outco_outcome(2)] = '1',1,1,1,1
-outcome,OUTCOME,outco_ongingcare_notrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome(1)] = '1' or [outco_outcome(2)] = '1',1,1,1,1
+outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome(1)] = '1' or [outco_outcome(2)] = '1',1,1,1,1
+outcome,OUTCOME,outco_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome(1)] = '1' or [outco_outcome(2)] = '1',1,1,1,1
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (e.g. awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome(2)] = '1' or [outco_outcome(3)] = '1',1,1,1,1
 outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease(4)] = '1',,1,,
 outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag(0)] = '1',,1,,
