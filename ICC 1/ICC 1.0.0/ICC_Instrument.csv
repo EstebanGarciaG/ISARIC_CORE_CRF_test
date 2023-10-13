@@ -2,7 +2,6 @@ Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,Li
 presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,,1,1,1,1
 presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following is the individual suspected/confirmed to have,,,,,inclusion_Diseases,,1,1,,1
 presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,
-presentation,INCLUSION CRITERIA,inclu_disease_other,text,Specify other suspected / confirmed condition:,,,,,,[inclu_disease(6)] = '1',1,1,,1
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,1,,1
