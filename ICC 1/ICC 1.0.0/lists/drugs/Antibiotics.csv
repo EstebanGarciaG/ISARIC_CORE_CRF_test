@@ -24,8 +24,8 @@ Cefepime (Maxipime)                           , J01DE01 , ATC     ,1
 Cefixime                                       ,J01DD08  ,ATC,2
 Cefmetazole                                    ,J01DB06  ,ATC,2
 Cefonicid                                      ,J01DB07  ,ATC,2
-Cefoperazone (Cefobid)                        ,J01DD12 , ATC     , 
-Cefotaxime (Claforan)                         ,J01DD01 , ATC     ,1
+Cefoperazone (Cefobid)                        ,J01DD12, ATC     , 
+Cefotaxime (Claforan)                         ,J01DD01, ATC     ,1
 Cefotetan                                      ,J01CC04  ,ATC,2
 Cefoxitin                                      ,J01DC03  ,ATC,2
 Cefpodoxime Proxetil                           ,J01DD13  ,ATC,2
@@ -33,7 +33,7 @@ Cefprozil                                      ,J01DB09  ,ATC,2
 Ceftaroline Fosamil (Teflaro), J01DI02  , ATC     ,1
 "Ceftazidime (Fortaz, Tazicef)                 ", J01DD02 , ATC     ,1
 Ceftibuten                                     ,J01DD09  ,ATC,2
-Ceftizoxime (Cefizox)                         ,J01DD07 , ATC     , 
+Ceftizoxime (Cefizox)                         ,J01DD07, ATC     , 
 Ceftobiprole Medocaril (Zeftera)                             , J01DI01 , ATC     ,1
 Ceftriaxone (Rocephin)                        , J01DD04 , ATC     ,1
 "Cefuroxime (Ceftin, Zinacef)                       ", J01DC02  , ATC     ,1
