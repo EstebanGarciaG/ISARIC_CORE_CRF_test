@@ -1,11 +1,11 @@
 Drugs                                               , Code    , Library , Selected
-"Betamethasone (Celestone, Betnelan)                 ", H02AB01 , ATC     , 
-"Clobetasol (Temovate, Olux, Impoyz)                 ", D07AD01 , ATC     , 
+"Betamethasone (Celestone, Betnelan)                 ",H02AB01, ATC     , 
+"Clobetasol (Temovate, Olux, Impoyz)                 ",D07AD01, ATC     , 
 Cortisone (Cortone)                                 , H02AB10 , ATC     , 
-"Dexamethasone (Decadron, Dexasone, Diodex)          ", H02AB02 , ATC     ,1
+"Dexamethasone (Decadron, Dexasone, Diodex)          ", H02AB02, ATC     ,1
 Fludrocortisone (Florinef)                          , H02AA02 , ATC     , 
-"Fluticasone (Flovent, Flonase)                      ", R01AD08 , ATC     ,1
-"Hydrocortisone (Cortef, Solu-Cortef)                ", H02AB09 , ATC     ,1
+"Fluticasone (Flovent, Flonase)                      ",R01AD08, ATC     ,1
+"Hydrocortisone (Cortef, Solu-Cortef)                ", H02AB09, ATC     ,1
 "Methotrexate (Rheumatrex, Trexall)                  ", L01BA01  , ATC     ,1
 "Methylprednisolone (Medrol, Solu-Medrol)            ", H02AB04 , ATC     ,1
 "Mometasone (Asmanex, Elocon, Nasonex)               ", R01AD09 , ATC     ,1
