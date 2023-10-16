@@ -735,7 +735,7 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pancre
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis,radio,Cellulitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_site,checkbox,Site of cellulitis,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[compl_cellulitis] = '1',,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_other,text,Specify other site of cellulitis,,,,,,[compl_cellulitis(88)]='1',,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_other,text,Specify other site of cellulitis,,,,,,[compl_cellulitis_site(88)]='1',,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_eschar,radio,Skin tissue loss or eschar,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hyperglyce,radio,Hyperglycemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hypoglycem,radio,Hypoglycemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
