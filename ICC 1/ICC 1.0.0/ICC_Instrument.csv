@@ -45,12 +45,12 @@ presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, S
 presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_pregnant] = '1',1,1,,
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No | 99, Unknown",,,,,[preg_postpartum] = '1',1,,,1
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[preg_bbtest] = '1',1,,,1
-presentation,INFANT: less than 12 months old,infa_brtwei,,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',,,,
-presentation,INFANT: less than 12 months old,infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',1,,,1
-presentation,INFANT: less than 12 months old,infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',,,,
-presentation,INFANT: less than 12 months old,infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA) | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',1,,,1
-presentation,INFANT: less than 12 months old,infa_brefed,radio,Breastfed,"1, Yes, currently breastfeeding | 2, Yes, breastfeeding discontinued | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',1,,,1
-presentation,INFANT: less than 12 months old,infa_aprvac,radio,Vaccinations appropriate for age/country,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or   [demog_age_units]='3',1,,,
+presentation,INFANT: less than 12 months old,infa_brtwei,,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,,,
+presentation,INFANT: less than 12 months old,infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,1
+presentation,INFANT: less than 12 months old,infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,,,
+presentation,INFANT: less than 12 months old,infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA) | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,1
+presentation,INFANT: less than 12 months old,infa_brefed,radio,Breastfed,"1, Yes, currently breastfeeding | 2, Yes, breastfeeding discontinued | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,1
+presentation,INFANT: less than 12 months old,infa_aprvac,radio,Vaccinations appropriate for age/country,"1, Yes | 0, No",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,
 presentation,VACCINATION,vacci_covid19,group,COVID-19,,,,,,,,,,
 presentation,VACCINATION,vacci_covid19_yn,radio,Vaccinated for COVID-19 (ever),"1, Yes | 0, No",,,,,,,,,
 presentation,VACCINATION,vacci_covid19_date,date_dmy,Date of most recent COVID-19 vaccine,,date_dmy,,today,,[vacci_covid19_yn] = '1',,,,
@@ -93,7 +93,7 @@ presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_oth,text,Specify other reason:,,,,,,[drugs_ivfluid_reas]='88',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_add,radio,Additional intravenous fluid,"1, Yes | 0, No",,,,,,,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_agent2,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 88, Other fluid",,,,,[drugs_ivfluid_add] = '1',,1,,
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol2,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluidadd] = '1',,1,,
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol2,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluid_add] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_hivprep,radio,HIV PREP/PEP,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_unlisted,list,Other pathogen-targeted medications,"1, Yes | 0, No",,,,drugs_Other,,1,1,,1
 presentation,MEDICAL HISTORY,medic_gastro,group,GASTROENTERITIS,,,,,,,,,,
@@ -623,13 +623,13 @@ daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[ima
 outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,,,1,1,,1
 outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '1',1,,1,1
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype(8)] = '1',1,,1,1
+outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '8',1,,1,1
 outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='4',1,1,,1
 outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, Inhaled | 3, IV",,,,,[medi_medicationtype]='4',1,1,,1
 outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='5',1,,,1
 outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='5',1,,,1
 outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='6',1,,,1
-outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype(7)] = '1',1,,1,1
+outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype] = '7',1,,1,1
 outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetaminophen | 2, Ibuprofen  | 3, Naproxen  | 4, Diclofenac | 5, Tramadol | 88, Other",,,,,[medi_medicationtype]='9',1,,1,1
 outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype]='9',1,,1,1
 outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 88, Other",,,,,[medi_medicationtype]='10',1,,1,1
