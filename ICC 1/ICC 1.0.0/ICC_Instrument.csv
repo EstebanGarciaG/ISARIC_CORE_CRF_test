@@ -27,7 +27,7 @@ presentation,DEMOGRAPHICS,demog_weight,,Weight (select units),,,,,,,,,,
 presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,,,,,
 presentation,DEMOGRAPHICS,demog_race,checkbox,Race (select all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South Asian | 5, South-East Asian | 6, West Asian | 7, Latin American | 8, White | 9, Aboriginal/First Nations/Indigenous | 88, Other | 99, Unknown",,,,,,1,1,,1
-presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race]='88',1,1,,1
+presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race(88)]='1',1,1,,1
 presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 88, Other",,,,,,,,,1
 presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethnic(88)]='1',,,,1
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No | 99, Unknown",,,,,,1,,,1
@@ -367,7 +367,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_gelat,text,Gelatin volume (mL/24 hours),,,,,,[treat_fluid_parentyp(3)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_starch,text,Starches volume (mL/24 hours),,,,,,[treat_fluid_parentyp(4)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_unlisted,text,Other fluid type,,,,,,[treat_fluid_parentyp(88)]='1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oth,text,Other fluid volume (mL/24 hours),,,,,,[treat_fluid_parentyp]='88',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oth,text,Other fluid volume (mL/24 hours),,,,,,[treat_fluid_parentyp(88)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood,group,BLOOD PRODUCTS,,,,,,,,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_occur,radio,Blood / blood products transfusion,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_type,checkbox,Select all blood products that were administered,"1, Platelets | 2, Cryoprecipitate | 3, Whole blood/packed RBC | 4, Frozen fresh plasma | 5, Fibrinogen concentrate",,,,,[treat_blood_occur] = '1',,1,,
