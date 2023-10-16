@@ -7,8 +7,8 @@ presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / ea
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,1
 presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,,,,,[dates_adm] = '1',,1,,
-presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,[inclu_disease]='4',,,,1
-presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym]='88',,,,1
+presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,,,,,1
+presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(88)]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No | 99, Unknown",,,,,[inclu_disease]='4',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
@@ -29,7 +29,7 @@ presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,,,,
 presentation,DEMOGRAPHICS,demog_race,checkbox,Race (select all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South Asian | 5, South-East Asian | 6, West Asian | 7, Latin American | 8, White | 9, Aboriginal/First Nations/Indigenous | 88, Other | 99, Unknown",,,,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race]='88',1,1,,1
 presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 88, Other",,,,,,,,,1
-presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethnic]='88',,,,1
+presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethnic(88)]='1',,,,1
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 88, Other",,,,,,,1,,
 presentation,DEMOGRAPHICS,demog_occupation_oth,text,Specify other primary location of occupation,,,,,,[demog_occupation]='88',,1,,
@@ -75,7 +75,7 @@ presentation,VACCINATION,vacci_mpox_agealt,radio,"If age or year not known, stat
 presentation,VACCINATION,vacci_mpox_scar,radio,Is a smallpox vaccination scar visible (usually on the upper arm if present)?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1',,,,1
 presentation,VACCINATION,vacci_mpox_recent,radio,Received vaccination more recently to protect against mpox (or smallpox)?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,VACCINATION,vacci_mpox_type,checkbox,Vaccine type:,"1, Imvanex/Imvamune/Jyneos (MVA-BN) | 2, ACAM2000 | 3, LC16m8 | 88, Other",,,,,[vacci_mpox_recent]='1',,,,1
-presentation,VACCINATION,vacci_mpox_other,text,Please specify other vaccine:,,,,,,[vacci_mpox_type]='88',,,,1
+presentation,VACCINATION,vacci_mpox_other,text,Please specify other vaccine:,,,,,,[vacci_mpox_type(88)]='1',,,,1
 presentation,VACCINATION,vacci_mpox_d1,date_dmy,Date of first vaccine,,date_dmy,,today,,[vacci_mpox_1980]='1' or [vacci_mpox_recent]='1',,,,1
 presentation,VACCINATION,vacci_mpox_d2,date_dmy,Date of second vaccine,,date_dmy,,today,,[vacci_mpox_1980]='1' and [vacci_mpox_recent]='1',,,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid,list,Steroid,"1, Yes | 0, No | 99, Unknown",,,,drugs_Steroids,,1,1,,1
@@ -90,7 +90,7 @@ presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_type,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 88, Other fluid",,,,,[drugs_ivfluid] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluid] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_reas,checkbox,Indication/reason,"1, Shock | 88, Other | 99, Unknown",,,,,[drugs_ivfluid] = '1',,1,,
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_oth,text,Specify other reason:,,,,,,[drugs_ivfluid_reas]='88',,1,,
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_oth,text,Specify other reason:,,,,,,[drugs_ivfluid_reas(88)]='1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_add,radio,Additional intravenous fluid,"1, Yes | 0, No",,,,,,,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_agent2,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 88, Other fluid",,,,,[drugs_ivfluid_add] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol2,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluid_add] = '1',,1,,
@@ -159,7 +159,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymph,radio,Lymphadenopathy,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 88, Other | 99, Unknown",,,,,[adsym_lymph]='1',,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphoth,text,Specify other site:,,,,,,[adsym_lymphspec]='88',,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphoth,text,Specify other site:,,,,,,[adsym_lymphspec(88)]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_seizures,radio,Seizures,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -183,14 +183,14 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag_yn] = '1',1,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_oth,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site]='88',1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_oth,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site(88)]='1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_convulsion,radio,Convulsions,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_yn,radio,Bacterial super-infection,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi,checkbox,Specify bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 88, Other",,,,,[adsym_bacsi_yn]='1',,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi]='88',,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi(88)]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurodist,radio,Psychological disturbance,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_nystagm,radio,Nystagmus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -199,7 +199,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_tremor,radio,Tremor (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia,radio,Dystonia (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia_site,checkbox,Specify distonia site (_Under Revision),"1, Right Upper Extremity | 2, Right Lower Extremity | 3, Left Upper Extremity | 4, Left Lower Extremity | 5, Face | 88, Other",,,,,[adsym_dystonia]='1',,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia_other,text,Specify other distonia site (_Under Revision),,,,,,[adsym_dystonia_site]='88',,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dystonia_other,text,Specify other distonia site (_Under Revision),,,,,,[adsym_dystonia_site(88)]='1',,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ptosis,radio,Ptosis (_Under Revision),"1, Yes, unilateral | 2, Yes, bilateral | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_facepalsy,radio,Facial palsy (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dysarthria,radio,Dysarthria (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -225,7 +225,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymph,radio,Lymphadenopathy,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 88, Other | 99, Unknown",,,,,[sympt_lymph]='1' and [daily_datasympt]='1',,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphoth,text,Specify other site:,,,,,,[sympt_lymphspec]='88',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphoth,text,Specify other site:,,,,,,[sympt_lymphspec(88)]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_seizures,radio,Seizures,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -248,14 +248,14 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other | 99, Unknown",,,,,[sympt_haemorrhag_yn] = '1',,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[sympt_haemorrhag_site]='88',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[sympt_haemorrhag_site(88)]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_convulsion,radio,Convulsions,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_yn,radio,Bacterial super-infection,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi,checkbox,Specify bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 88, Other",,,,,[sympt_bacsi_yn]='1',,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[sympt_bacsi]='88' ,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[sympt_bacsi(88)]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurodist,radio,Psychological disturbance,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_nystagm,radio,Nystagmus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -264,7 +264,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_tremor,radio,Tremor (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dystonia,radio,Dystonia (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dystonia_site,checkbox,Specify distonia site (_Under Revision),"1, Right Upper Extremity | 2, Right Lower Extremity | 3, Left Upper Extremity | 4, Left Lower Extremity | 5, Face | 88, Other",,,,,[sympt_dystonia]='1',,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dystonia_other,text,Specify other distonia site (_Under Revision),,,,,,[sympt_dystonia_site]='88',,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dystonia_other,text,Specify other distonia site (_Under Revision),,,,,,[sympt_dystonia_site(88)]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ptosis,radio,Ptosis (_Under Revision),"1, Yes, unilateral | 2, Yes, bilateral | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_facepalsy,radio,Facial palsy (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dysarthria,radio,Dysarthria (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -290,7 +290,7 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_fio2low] = '1',,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbld,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,[daily_datavital]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloc,checkbox,"If yes, specify severe bleeding sites:","1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[vital_svrbld]='1',,1,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc]='88',,1,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc(88)]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_capillaryr,radio,Capillary refill time >2seconds,"1, Yes | 0, No",,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_avpu,radio,AVPU,"1, Alert | 2, Verbal | 3, Pain | 4, Unresponsive",,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_gcs,number,Glasgow Coma Score (GCS / 15) ,,number,3,15,,[daily_datavital]='1',1,1,,1
@@ -362,32 +362,32 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oralvol,text,Oral rehydration volume (mL/24 hours),,,,,,[treat_fluid_oral] = '1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_parent,radio,Parenteral IV fluid?  ,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_parentyp,checkbox,Select all parenteral fluid  administered,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 88, Other",,,,,[treat_fluid_parent] = '1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_cryst,text,Crystalloid volume (mL/24 hours),,,,,,[treat_fluid_parentyp] = '1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_album,text,Albumin volume (mL/24 hours),,,,,,[treat_fluid_parentyp]='2',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_gelat,text,Gelatin volume (mL/24 hours),,,,,,[treat_fluid_parentyp]='3',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_starch,text,Starches volume (mL/24 hours),,,,,,[treat_fluid_parentyp]='4',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_unlisted,text,Other fluid type,,,,,,[treat_fluid_parentyp]='88',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_cryst,text,Crystalloid volume (mL/24 hours),,,,,,[treat_fluid_parentyp(1)] = '1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_album,text,Albumin volume (mL/24 hours),,,,,,[treat_fluid_parentyp(2)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_gelat,text,Gelatin volume (mL/24 hours),,,,,,[treat_fluid_parentyp(3)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_starch,text,Starches volume (mL/24 hours),,,,,,[treat_fluid_parentyp(4)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_unlisted,text,Other fluid type,,,,,,[treat_fluid_parentyp(88)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oth,text,Other fluid volume (mL/24 hours),,,,,,[treat_fluid_parentyp]='88',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood,group,BLOOD PRODUCTS,,,,,,,,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_occur,radio,Blood / blood products transfusion,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_type,checkbox,Select all blood products that were administered,"1, Platelets | 2, Cryoprecipitate | 3, Whole blood/packed RBC | 4, Frozen fresh plasma | 5, Fibrinogen concentrate",,,,,[treat_blood_occur] = '1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_plate,text,Platelets (units/24 hours),,,,,,[treat_blood_type] = '1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_cryo,text,Cryoprecipitate   (units/24 hours),,,,,,[treat_blood_type]='2',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_whole,text,Whole blood/packed RBC volume  (units/24 hours),,,,,,[treat_blood_type]='3',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_plasma,text,Frozen fresh plasma  (units/24 hours),,,,,,[treat_blood_type]='4',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_fibrin,text,Fibrinogen concentrate  (units/24 hours),,,,,,[treat_blood_type]='5',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_plate,text,Platelets (units/24 hours),,,,,,[treat_blood_type(1)] = '1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_cryo,text,Cryoprecipitate   (units/24 hours),,,,,,[treat_blood_type(2)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_whole,text,Whole blood/packed RBC volume  (units/24 hours),,,,,,[treat_blood_type(3)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_plasma,text,Frozen fresh plasma  (units/24 hours),,,,,,[treat_blood_type(4)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_fibrin,text,Fibrinogen concentrate  (units/24 hours),,,,,,[treat_blood_type(5)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_icu,radio,ICU/ITU/HDU/Intermediate Care Unit admission ,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp,group,RESPIRATORY SUPPORT,,,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_suppleo2,radio,Supplemental oxygen,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_type,checkbox,Select all types of respiratory support the patient received (from 00:00 to 24:00) on the day of assessment,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive respiratory support | 5, Invasive ventilation | 6, ECLS/ECMO",,,,,[treat_o2supp_suppleo2] = '1',1,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2yn,radio,PaO2 sample type,"1, Arterial | 0, Not done",,,,,[treat_o2supp_type]='4' or [treat_o2supp_type]='5' or [treat_o2supp_type]='6' ,1,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2,,PaO2 (select units),,,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2_kpa,number,PaO2 (kPa),,number,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2_mmhg,number,PaO2 (mmHg),,number,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio,,FiO2 at time of PaO2 (select units),,,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',1,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio_02110,number,FiO2 at time of PaO2 (0.21-1.0),,number,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio_pcnt,number,FiO2 at time of PaO2  (%),,number,,,,[treat_o2supp_pao2yn] = '1' or [treat_o2supp_pao2yn]='2' or [treat_o2supp_pao2yn]='3' or [treat_o2supp_pao2yn]='4',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivtyp,radio,Type of non-invasive ventilation,"1, CPAP | 2, BIPAP | 88, Other",,,,,[treat_o2supp_type]='4',1,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2yn,radio,PaO2 sample type,"1, Arterial | 0, Not done",,,,,[treat_o2supp_type(4)]='1' or [treat_o2supp_type(5)]='1' or [treat_o2supp_type(6)]='1' ,1,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2,,PaO2 (select units),,,,,,[treat_o2supp_pao2yn] = '1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2_kpa,number,PaO2 (kPa),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_pao2_mmhg,number,PaO2 (mmHg),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio,,FiO2 at time of PaO2 (select units),,,,,,[treat_o2supp_pao2yn] = '1',1,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio_02110,number,FiO2 at time of PaO2 (0.21-1.0),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_highfio_pcnt,number,FiO2 at time of PaO2  (%),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivtyp,radio,Type of non-invasive ventilation,"1, CPAP | 2, BIPAP | 88, Other",,,,,[treat_o2supp_type(4)]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivunlist,text,Specify other type of non-invasive ventilation,,,,,,[treat_o2supp_nivtyp]='88',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_ecmotyp,radio,Type of ECLS / ECMO,"1, Venous-venus | 2, Venous-arterial",,,,,[treat_o2support_type]='6',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_prone,radio,Prone positioning,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,,,
@@ -600,8 +600,8 @@ daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_yn,radio,Was a chest X-Ray performed?,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imagi_xray_yn] = '1',1,1,1,1
 daily,IMAGING,imagi_xray_result,checkbox,Chest X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 88, Other",,,,,[imagi_xray_yn] = '1',1,1,1,1
-daily,IMAGING,imagi_xray_resultoth,text,Describe other chest X-Ray result,,,,,,[imagi_xray_result]='88',1,1,1,1
-daily,IMAGING,imagi_xray_resultpleu,checkbox,Side(s) where pleural effusion identified ,"1, Right | 2, Left",,,,,[imagi_xray_result]='4',1,1,1,1
+daily,IMAGING,imagi_xray_resultoth,text,Describe other chest X-Ray result,,,,,,[imagi_xray_result(88)]='1',1,1,1,1
+daily,IMAGING,imagi_xray_resultpleu,checkbox,Side(s) where pleural effusion identified ,"1, Right | 2, Left",,,,,[imagi_xray_result(4)]='1',1,1,1,1
 daily,IMAGING,imagi_ct,group,CT,,,,,,,1,,1,1
 daily,IMAGING,imagi_ct_yn,radio,CT performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,,1,1
 daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct_yn] = '1',1,,1,1
@@ -707,7 +707,7 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focaln
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed,group,Severe bleeding (requiring intervention),,,,,,,,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_yn,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[compl_severebleed_yn] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site]='88',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizure,radio,Seizure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Meningitis / encephalitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_shock,radio,Shock ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
@@ -735,7 +735,7 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pancre
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis,radio,Cellulitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_site,checkbox,Site of cellulitis,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[compl_cellulitis] = '1',,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_other,text,Specify other site of cellulitis,,,,,,[compl_cellulitis]='88',,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_other,text,Specify other site of cellulitis,,,,,,[compl_cellulitis(88)]='1',,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_eschar,radio,Skin tissue loss or eschar,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hyperglyce,radio,Hyperglycemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hypoglycem,radio,Hypoglycemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
@@ -744,12 +744,12 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_inr,ra
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted,list,Other complication(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Complications,,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type]='4' or [inter_o2support_type]='5' or [inter_o2support_type]='6',1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type]='4' or [inter_o2support_type]='5' or [inter_o2support_type]='6',,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type]='4' or [inter_o2support_type]='5' or [inter_o2support_type]='6',,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any respiratory support ,,number,,,,[inter_o2support_type]='4' or [inter_o2support_type]='5' or [inter_o2support_type]='6',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent_type,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type]='4',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo_type,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type]='6',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any respiratory support ,,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent_type,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type(4)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo_type,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type(6)]='1',1,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,group,PRONE POSITIONING,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_yn,radio,Prone positioning?,"1, Yes | 0, No",,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_when,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[inter_prone_yn] = '1',1,,,
@@ -770,25 +770,25 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid,group,PARENTERAL / IV FLUID ,,,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_occur,radio,Parenteral / IV fluid? ,"1, Yes | 0, No",,,,,[inclu_disease]='4',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_type,checkbox,Select all Parenteral / IV fluid that were administered,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 5, Colloid | 88, Other",,,,,[inter_ivfluid_occur]='1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_cryst,text,Total Crystalloid volume given during admission (mL),,,,,,[inter_fluid_type] = '1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_albu,text,Total Albumin volume given during admission (mL),,,,,,[inter_fluid_type]='2',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_gelat,text,Total Gelatin volume given during admission (mL),,,,,,[inter_fluid_type]='3',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_star,text,Total Starches volume given during admission (mL),,,,,,[inter_fluid_type]='4',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_coll,text,Total Colloid volume given during admission (mL),,,,,,[inter_fluid_type]='5',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_oth,text,Specify other fluid,,,,,,[inter_fluid_type]='88',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_othv,text,Total volume given during admission (mL),,,,,,[inter_fluid_type]='6',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_cryst,text,Total Crystalloid volume given during admission (mL),,,,,,[inter_fluid_type(1)] = '1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_albu,text,Total Albumin volume given during admission (mL),,,,,,[inter_fluid_type(2)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_gelat,text,Total Gelatin volume given during admission (mL),,,,,,[inter_fluid_type(3)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_star,text,Total Starches volume given during admission (mL),,,,,,[inter_fluid_type(4)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_coll,text,Total Colloid volume given during admission (mL),,,,,,[inter_fluid_type(5)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_oth,text,Specify other fluid,,,,,,[inter_fluid_type(88)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_othv,text,Total volume given during admission (mL),,,,,,[inter_fluid_type(88)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reas,checkbox,Reason(s) for IV fluid (check all that apply),"1, Shock | 2, High/rising haematocrit | 3, Anorexia | 4, Persistent vomiting | 88, Other",,,,,[inter_ivfluid_occur] ='1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reasoth,text,Specify other reason for IV fluid,,,,,,[inter_ivfluid_reas]='88',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reasoth,text,Specify other reason for IV fluid,,,,,,[inter_ivfluid_reas(88)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_start,datetime_dmy,Date first IV fluid started,,datetime_dmy,,today,,[inter_ivfluid_occur] ='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_end,datetime_dmy,Date last IV fluid ended,,datetime_dmy,,,,[inter_ivfluid_occur] ='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt,group,BLOOD PRODUCT TRANSFUSION,,,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_yn,radio,Blood product tranfusion?,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_type,checkbox,Select all  blood product transfusion that were administered,"1, Platelets | 2, Cryoprecipitate | 3, Whole blood/packed RBC | 4, Frozen fresh plasma | 5, Fibrinogen concentrate",,,,,[inter_bpt_yn] ='1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_plate,number,Total number of Platelets (mL/24 hours),,number,,,,[inter_bpt_type] = '1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_cryo,number,Total number of Cryoprecipitate (mL/24 hours),,number,,,,[inter_bpt_type]='2',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_rbc,number,Total number of Whole blood/packed RBC (mL/24 hours),,number,,,,[inter_bpt_type]='3',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_ffp,number,Total number of Fresh Frozen Plasma (FFP) (mL/24 hours),,number,,,,[inter_bpt_type]='4',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_fibrin,number,Total number of Fibrinogen concentrate (mL/24 hours),,number,,,,[inter_bpt_type]='5',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_plate,number,Total number of Platelets (mL/24 hours),,number,,,,[inter_bpt_type(1)] = '1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_cryo,number,Total number of Cryoprecipitate (mL/24 hours),,number,,,,[inter_bpt_type(2)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_rbc,number,Total number of Whole blood/packed RBC (mL/24 hours),,number,,,,[inter_bpt_type(3)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_ffp,number,Total number of Fresh Frozen Plasma (FFP) (mL/24 hours),,number,,,,[inter_bpt_type(4)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_fibrin,number,Total number of Fibrinogen concentrate (mL/24 hours),,number,,,,[inter_bpt_type(5)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_diuretics,radio,Diuretics? ,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nacetylcys,radio,N-acetyl cysteine? ,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_fluiddrain,radio,Fluid drainage?,"1, Yes | 0, No",,,,,,,1,,
@@ -814,7 +814,7 @@ outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[ou
 outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
 ","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
 outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
-outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,[inclu_disease]='4',,1,,
+outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,,,1,,
 outcome,OUTCOME,outco_secondiag_oth,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,1,,
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,1,,1,1
 outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 88, Other",,,,,,1,,1,1
@@ -837,7 +837,7 @@ outcome_assessment,ASSESSMENT (Complete this section in full for each outcome as
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage,group,,,,,,,,,,,
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_yn,radio,Is the patient's skin damaged following resolution of acute mpox illness,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_type,checkbox,Select all that apply,"1, Atrophic scars | 2, Hypertrophic scars | 3, Deformities | 4, Hypopigmentation | 5, Hyperpigmentation | 6, Contractures | 88, Other ",,,,,[asse_skindamage_yn]='1',,,1,1
-outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other type of skin damage,,,,,,[asse_skindamage_type]='88',,,1,1
+outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other type of skin damage,,,,,,[asse_skindamage_type(88)]='1',,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque,radio,Does the patient have any other complications or sequelae of mpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque_type,checkbox,Select all that apply,"1, Decreased vision | 2, Blindness | 3, Urethral stricture | 4, vaginal stricture | 5, rectal stricture |6, Dyspareunia | 7, Depression | 88, Other ",,,,,[asse_mpoxseque]='1',,,1,1
-outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other complications or sequelae,,,,,,[asse_mpoxseque_type]='88',,,1,1
+outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other complications or sequelae,,,,,,[asse_mpoxseque_type(88)]='1',,,1,1
