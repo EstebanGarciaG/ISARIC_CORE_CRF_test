@@ -6,20 +6,20 @@ presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / star
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No",,,,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,1
-presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,,,,,[dates_adm] = '1',,1,,
+presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,time,,,,[dates_adm] = '1',,1,,
 presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(88)]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No | 99, Unknown",,,,,[inclu_disease]='4',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxhist]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,,,,[readm_prevadm] = '1' or [readm_prevadm]='2' or [readm_prevadm]='3' ,1,1,,1
+presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,1,,,[readm_prevadm] = '1' or [readm_prevadm]='2' or [readm_prevadm]='3' ,1,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm] = '1' or [readm_prevadm]='2' or [readm_prevadm]='3' ,1,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has the patient's data been previously collected under a different patient number? ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevpin,text,Previous participant identification number (PIN),,,,,,[readm_difpin] = '1',1,1,,1
 presentation,DEMOGRAPHICS,demog_sex,radio,Sex at Birth,"1, Male | 2, Female | 99, Not specified/Unknown",,,,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_age,text,Age,,integer,,,,,1,1,,1
-presentation,DEMOGRAPHICS,demog_age_units,radio,Select age units,"1, Years | 2, Months | 3, Days",,,,,,1,1,,1
+presentation,DEMOGRAPHICS,demog_age_units,radio,Age units,"1, Years | 2, Months | 3, Days",,,,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_height,,Height (select units),,,,,,,,,,
 presentation,DEMOGRAPHICS,demog_height_cm,number,Height (cm),,number,0,250,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_height_in,number,Height (in),,number,0,98,,,,,,
@@ -136,10 +136,10 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-500 | 3, More than 500",,,,,[comor_aids] = '1',1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmoll,number,HbA1C results within last 6 months (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_porc,number,HbA1C results within last 6 months (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',,1,,
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmoll,number,HbA1C results within last 6 months (mmol/L),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_porc,number,HbA1C results within last 6 months (%),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_dementia,radio,Dementia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -408,7 +408,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_steroids,radio,Steroids,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted,radio,Other intervention(s) or procedure(s),"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted_oth,text,Please specify other intervention(s) or procedure(s),,,,,,[treat_unlisted] = '1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter lab data for this date ,"1, Yes | 0, No",,,,,,1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter lab data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo,,Haemoglobin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gdl,number,Haemoglobin (g/dL),,number,0,200,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gl,number,Haemoglobin (g/L),,number,0,20,,[daily_datalab]='1',1,1,,1
