@@ -134,7 +134,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cpox,radio,Active chickenpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_rheumatolo,radio,Rheumatologic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-500 | 3, More than 500",,,,,[comor_aids] = '1',1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-500 | 3, More than 500 | 99, Unknown",,,,,[comor_aids] = '1',1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',,1,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,,,1
@@ -276,8 +276,8 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_unlisted,list,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,conditions_Symptoms,[daily_datasympt]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datavital,radio,Enter vital signs data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem,group,Highest temperature (select units),,,,,,[daily_datavital]='1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital]='1',,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_datavital]='1',,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_datavital]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_hr,number,HR (beats/minute),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_rr,number,RR (bpm),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_systolicbp,number,Systolic BP (mmHg),,number,,,,[daily_datavital]='1',1,1,,1
@@ -286,8 +286,8 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2,number,Lowest Oxygen saturation SpO2 (%),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2low,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No",,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_fio2low] = '1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_fio2low] = '1',,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_fio2low] = '1',,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_fio2low] = '1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_fio2low] = '1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbld,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,[daily_datavital]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloc,checkbox,"If yes, specify severe bleeding sites:","1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[vital_svrbld]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc(88)]='1',,1,,
@@ -595,7 +595,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_ugdl,number,Cortisol (ug/dL),,number,0,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_nmoll,number,Cortisol (nmol/L),,number,0,2500,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c,number,HbA1C,,number,,,,[daily_datalab]='1',1,,,1
-daily,IMAGING,daily_dataimagi,radio,Enter imaging data for this date,"1, Yes | 0, No",,,,,,1,1,1,1
+daily,IMAGING,daily_dataimagi,radio,Enter imaging data for this date?,"1, Yes | 0, No",,,,,,1,1,1,1
 daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_yn,radio,Was a chest X-Ray performed?,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imagi_xray_yn] = '1',1,1,1,1
@@ -688,16 +688,12 @@ outcome,DIAGNOSIS,diagn_encephali_type,radio,Diagnostic method (_Under revision)
 outcome,DIAGNOSIS,diagn_pathounlist,list,Other pathogen(s) detected,"1, Yes | 0, No",,,,pathogens_other,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_copneumoni,radio,Cryptogenic organising pneumonia (COP),"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bronchioli,radio,Bronchiolitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocardial,radio,Myocardial infarction,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiacisc,radio,Cardiac ischaemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_endocardit,radio,Endocarditis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiomyop,radio,Cardiomyopathy,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_chf,radio,Congestive heart failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
@@ -712,11 +708,21 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizur
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Meningitis / encephalitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_shock,radio,Shock ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshock,radio,Re-shock episodes,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshockep,radio,Number of re-shock episodes,"1, 1 | 2, 2 | 3, 3 | 4, 4+",,,,,,,1,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshockep,radio,Number of re-shock episodes,"1, 1 | 2, 2 | 3, 3 | 4, 4+",,,,,[compl_reshock]='1',,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacteraemi,radio,Bacteraemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_sepsis,radio,Sepsis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorganspec,text,Specify other organ complications,,,,,,[compl_othorgan]='1',,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thrombemb,radio,Thromboembolism,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pe,radio,Pulmonary embolism (PE),"1, Yes | 0, No | 99, Unknown",,,,,[compl_thrombemb]=1,1,,1,1
@@ -725,14 +731,8 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thromb
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thrombemboth_spec,text,Specify other thromboembolism,,,,,,[compl_thrombemboth]='1',1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_anaemia,radio,Anaemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_rhabdomyol,radio,Rhabdomyolysis / myositis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pancreatit,radio,Pancreatitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis,group,Cellulitis,,,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_yn,radio,Cellulitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_site,checkbox,Site of cellulitis,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[compl_cellulitis_yn] = '1',,,1,1
@@ -814,7 +814,7 @@ outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,
 outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag]='0',,1,,
 outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
 ","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
-outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue Complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
+outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
 outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,,,1,,
 outcome,OUTCOME,outco_secondiag_oth,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,1,,
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,1,,1,1
