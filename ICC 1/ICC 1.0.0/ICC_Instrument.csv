@@ -110,7 +110,7 @@ presentation,MEDICAL HISTORY,medic_gastro_unlisted,radio,Other symptom(s) persis
 presentation,MEDICAL HISTORY,medic_gastro_unlistedoth,text,Specify other symptom(s) persisted for >1 week,,,,,,[medic_gastro_unlisted] = '1',,,,
 presentation,MEDICAL HISTORY,medic_dengue,group,DENGUE,,,,,,,,1,,
 presentation,MEDICAL HISTORY,medic_dengue_occur,radio,Is the patient known to have had previous dengue infection(s),"1, Yes | 0, No",,,,,,,1,,
-presentation,MEDICAL HISTORY,medic_firstadm_loc,radio,Was the patient ever hospitalised for a previous dengue infection,"1, Yes, admitted to hospital or ICU | 0, No",,,,,[medic_dengue_occur] = '1',,1,,
+presentation,MEDICAL HISTORY,medic_firstadm,radio,Was the patient ever hospitalised for a previous dengue infection,"1, Yes, admitted to hospital or ICU | 0, No",,,,,[medic_dengue_occur] = '1',,1,,
 presentation,MEDICAL HISTORY,medic_mpox,group,MPOX,,,,,,,,,,1
 presentation,MEDICAL HISTORY,medic_mpox_previnf,radio,"Before the current episode of mpox, has the participant ever been infected with the Mpox virus?","1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,MEDICAL HISTORY,medic_mpox_infstart,date_dmy,When did the previous episode of mpox begin?,,date_dmy,,today,,[medic_mpox_previnf]='1',,,,1
@@ -749,8 +749,8 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any respiratory support ,,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent_sort,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type(4)]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo_sort,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type(6)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type(4)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type(6)]='1',1,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,group,PRONE POSITIONING,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_yn,radio,Prone positioning?,"1, Yes | 0, No",,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_when,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[inter_prone_yn] = '1',1,,,
