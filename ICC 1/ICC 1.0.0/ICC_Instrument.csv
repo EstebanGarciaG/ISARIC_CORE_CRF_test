@@ -59,8 +59,8 @@ presentation,VACCINATION,vacci_influenza_yn,radio,Vaccinated for influenza (ever
 presentation,VACCINATION,vacci_influenza_date,date_dmy,Date of most recent influenza vaccine,,date_dmy,,today,,[vacci_influenza_yn] = '1',,,,
 presentation,VACCINATION,vacci_dengue,group,DENGUE,,,,,,,,1,,
 presentation,VACCINATION,vacci_dengue_yn,radio,Vaccinated for dengue?,"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No",,,,,,,1,,
-presentation,VACCINATION,vacci_dengue_date,date_dmy,Date of first dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn]='1' or [vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
-presentation,VACCINATION,vacci_dengue_type,radio,Type of first dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue_yn]='1' or [vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
+presentation,VACCINATION,vacci_dengue_date1,date_dmy,Date of first dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn]='1' or [vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
+presentation,VACCINATION,vacci_dengue_type1,radio,Type of first dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue_yn]='1' or [vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
 presentation,VACCINATION,vacci_dengue_date2,date_dmy,Date of second dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
 presentation,VACCINATION,vacci_dengue_type2,radio,Type of second dengue vaccine,"1, CYD-TVD (Dengvaxia) | 2, TAK-003 (QDENGA)",,,,,[vacci_dengue_yn]='2' or [vacci_dengue_yn]='3',,1,,
 presentation,VACCINATION,vacci_dengue_date3,date_dmy,Date of third dengue vaccine,,date_dmy,,today,,[vacci_dengue_yn]='3',,1,,
@@ -285,9 +285,9 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_meanbp,number,Mean Arterial Blood Pressure  (mmHg),,number,,,,[daily_datavital]='1',,,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2,number,Lowest Oxygen saturation SpO2 (%),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2low,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No",,,,,[daily_datavital]='1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_fio2low] = '1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_fio2low] = '1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_fio2low] = '1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_fio2low] = '1',1,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_02110,number,FiO2 at time of lowest SpO2 (0.21-1.0),,number,,,,[vital_fio2low] = '1',,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2_pcnt,number,FiO2 at time of lowest SpO2 (%),,number,,,,[vital_fio2low] = '1',,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbld,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No",,,,,[daily_datavital]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloc,checkbox,"If yes, specify severe bleeding sites:","1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[vital_svrbld]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc(88)]='1',,1,,
@@ -387,7 +387,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_highfio,,FiO2 at time of PaO2 (select units),,,,,,[treat_o2supp_pao2yn] = '1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_highfio_02110,number,FiO2 at time of PaO2 (0.21-1.0),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_highfio_pcnt,number,FiO2 at time of PaO2  (%),,number,,,,[treat_o2supp_pao2yn] = '1',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivtyp,radio,Type of non-invasive ventilation,"1, CPAP | 2, BIPAP | 88, Other",,,,,[treat_o2supp_type(4)]='1',1,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivtyp,radio,FiO2 at time of PaO2  (%),"1, CPAP | 2, BIPAP | 88, Other",,,,,[treat_o2supp_type(4)]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_nivunlist,text,Specify other type of non-invasive ventilation,,,,,,[treat_o2supp_nivtyp]='88',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_ecmotyp,radio,Type of ECLS / ECMO,"1, Venous-venus | 2, Venous-arterial",,,,,[treat_o2supp_type(6)]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_prone,radio,Prone positioning,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,,,
@@ -810,7 +810,7 @@ outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus be
 outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
 outcome,OUTCOME,outco_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (e.g. awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='2' or [outco_outcome]='3',1,1,1,1
-outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,[inclu_disease]='4',,1,,
+outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,,,1,,
 outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag]='0',,1,,
 outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
 ","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
