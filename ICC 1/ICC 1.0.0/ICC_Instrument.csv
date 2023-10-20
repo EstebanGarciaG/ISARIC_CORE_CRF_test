@@ -39,7 +39,7 @@ presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outsid
 presentation,TRAVEL HISTORY,travel_loc,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[travel_travel14d] = '1',,1,,
 presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2',1,1,,1
 presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment at presentation (weeks),,number,,,,[preg_pregnant] = '1',1,1,,1
-presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2',1,,,1
+presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2' and [preg_pregnant]<>1,1,,,1
 presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[preg_postpartum] = '1',1,,,1
 presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth | 3, Termination",,,,,[preg_postpartum] = '1',1,1,,1
 presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_pregnant] = '1',1,1,,
@@ -87,8 +87,8 @@ presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_antiviral,list,Antiviral,"1, Yes | 0, No | 99, Unknown",,,,drugs_Antiviral,,1,,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_anticoagul,list,Anticoagulant,"1, Yes | 0, No | 99, Unknown",,,,drugs_Anticoagulant,,,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid,radio,Intravenous fluid,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_type,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches, | 5, Fibrinogen concentrate | 88, Other fluid",,,,,[drugs_ivfluid] = '1',,1,,
-presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol,number,Total intravenous fluid volume in the previous 24 hours,,number,,,,[drugs_ivfluid] = '1',,1,,
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_type,dropdown,Intravenous fluid type,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 5, Fibrinogen concentrate | 88, Other fluid",,,,,[drugs_ivfluid] = '1',,1,,
+presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_vol,number,Total intravenous fluid volume in the previous 24 hours (mL),,number,,,,[drugs_ivfluid] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_reas,checkbox,Indication/reason,"1, Shock | 88, Other | 99, Unknown",,,,,[drugs_ivfluid] = '1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_oth,text,Specify other reason:,,,,,,[drugs_ivfluid_reas(88)]='1',,1,,
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_ivfluid_add,radio,Additional intravenous fluid,"1, Yes | 0, No",,,,,,,1,,
@@ -275,9 +275,9 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurologic_other,text,Specify other neurological abnormality,,,,,,[sympt_neurologic] = '1' and [daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_unlisted,list,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,conditions_Symptoms,[daily_datasympt]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datavital,radio,Enter vital signs data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem,group,Highest temperature (select units),,,,,,[daily_datavital]='1',1,1,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem,group,Highest temperature (select units),,,,,,[daily_datavital]='1',1,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital]='1',,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_datavital]='1',,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_hr,number,HR (beats/minute),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_rr,number,RR (bpm),,number,,,,[daily_datavital]='1',1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_systolicbp,number,Systolic BP (mmHg),,number,,,,[daily_datavital]='1',1,1,,1
@@ -376,6 +376,11 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_whole,text,Whole blood/packed RBC volume (units/24 hours),,,,,,[treat_blood_type(3)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_plasma,text,Frozen fresh plasma (units/24 hours),,,,,,[treat_blood_type(4)]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_blood_fibrin,text,Fibrinogen concentrate (units/24 hours),,,,,,[treat_blood_type(5)]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_intravenim,radio,Intravenous Immunoglobulin,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_plasmapher,radio,Plasmapheresis/Plasma Exchange,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_antibiotic,radio,Antibiotics,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_antivirals,radio,Antivirals,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_steroids,radio,Steroids,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_icu,radio,ICU/ITU/HDU/Intermediate Care Unit admission,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp,group,RESPIRATORY SUPPORT,,,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_o2supp_suppleo2,radio,Supplemental oxygen,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
@@ -393,6 +398,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_prone,radio,Prone positioning,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_prone_when,radio,When was the prone positioning,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[treat_prone] = '1',1,,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_neuromusc,radio,Neuromuscular blocking agents,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
+daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_nitricoxide,radio,Inhaled nitric oxide,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_rtt,radio,Renal replacement therapy (RRT) or dialysis / hemofiltration,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_rtt_typ,radio,Type of renal replacement therapy (RRT) or dialysis / hemofiltration,"1, Intermittent | 2, Continuous",,,,,[treat_rtt]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress,radio,Any vasopressor/inotropic support,"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
@@ -400,15 +406,9 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress2,radio,"Dopamine 5-15ug/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) < 0.1ug/kg/min OR  vasopressin   OR phenylephrine
 ","1, Yes | 0, No",,,,,[treat_vasopress] = '1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress3,radio,Dopamine >15ug/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) > 0.1ug/kg/min,"1, Yes | 0, No",,,,,[treat_vasopress] = '1',1,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_nitricoxide,radio,Inhaled nitric oxide,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_intravenim,radio,Intravenous Immunoglobulin,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_plasmapher,radio,Plasmapheresis/Plasma Exchange,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_antibiotic,radio,Antibiotics,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_antivirals,radio,Antivirals,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,,,
-daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_steroids,radio,Steroids,"1, Yes | 0, No",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted,radio,Other intervention(s) or procedure(s),"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted_oth,text,Please specify other intervention(s) or procedure(s),,,,,,[treat_unlisted] = '1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter lab data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter Laboratory Results for this date?,"1, Yes | 0, No",,,,,,1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo,,Haemoglobin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gdl,number,Haemoglobin (g/dL),,number,0,200,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gl,number,Haemoglobin (g/L),,number,0,20,,[daily_datalab]='1',1,1,,1
@@ -432,22 +432,26 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_109l,number,Platelets (10^9/L),,number,0,1659,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_106l,number,Platelets (10^6/L),,number,0,1659000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_103ul,number,Platelets (10^3/uL),,number,0,1659,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time (sec),,number,20,300,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time (APTT) (sec),,number,20,300,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptr,number,APTR,,number,,,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin,,Prothrombin Time (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_sec,number,Prothrombin Time (sec),,number,0,100,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin,,Prothrombin Time (PT) (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_sec,number,Prothrombin Time (PT) (sec),,number,0,100,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_ratio,number,Prothrombin Intl. Normalized Ratio,,number,0,14,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tqinr,number,TQ/INR,,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_altsgpt,number,ALT/SGPT (U/L),,number,,,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin,,Bilirubin (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_umoll,number,Bilirubin (umol/L),,number,0,718,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_mgdl,number,Bilirubin (mg/dL),,number,0,42,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin,,Total Bilirubin (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_umoll,number,Total Bilirubin (umol/L),,number,0,718,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_mgdl,number,Total Bilirubin (mg/dL),,number,0,42,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_astsgot,number,AST/SGOT (U/L),,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose,,Glucose (random) (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mmoll,number,Glucose (random) (mmol/L),,number,0,148,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mgdl,number,Glucose (random) (mg/dL),,number,0,2656,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_gl,number,Glucose (random) (g/L),,number,0,26.56,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase (GGT) (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea (BUN) (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea (BUN) (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea (BUN) (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_gl,number,Urea (BUN) (g/L),,number,0,10,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate,number,Lactate (select units),,number,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate_mmoll,number,Lactate (mmol/L),,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate_mg,number,Lactate (mg),,number,,,,[daily_datalab]='1',,1,,
@@ -466,12 +470,17 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp,,CRP (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgl,number,CRP (mg/L),,number,0,1000,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgdl,number,CRP (mg/dL),,number,0,225,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh,,Lactate Dehydrogenase (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_iul,number,Lactate Dehydrogenase (IU/L),,number,0,16650,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki,,Creatine Kinase (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_ul,number,Creatine Kinase (U/L),,number,0,10000,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_iul,number,Creatine Kinase (IU/L),,number,0,10000,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh,,Lactate Dehydrogenase (LDH) (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase (LDH) (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_iul,number,Lactate Dehydrogenase (LDH) (IU/L),,number,0,16650,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki,,Creatine kinase (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_ul,number,Creatine kinase (U/L),,number,0,10000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_iul,number,Creatine kinase (IU/L),,number,0,10000,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi,,Troponin I (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ugl,number,Troponin I (ug/L),,number,0,536,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngl,number,Troponin I (ng/L),,number,0,1113,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngdl,number,Troponin I (ng/dL),,number,0,340,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin,,Troponin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngl,number,Troponin (ng/L),,number,0,726,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngml,number,Troponin (ng/mL),,number,0,836,,[daily_datalab]='1',,,,
@@ -497,13 +506,13 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein,,Protein (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gdl,number,Protein (g/dL),,number,5,15,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gl,number,Protein (g/L),,number,50,150,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2,,PaCO2 (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO2 (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO2 (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2,,PaCO? (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO? (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO? (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ph,number,pH,,number,6.8,7.8,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate,,Bicarbonate (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate_mmoll,number,Bicarbonate (mmol/L),,number,0,50,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate_meql,number,Bicarbonate (mEq/L),,number,0,50,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate,,Bicarbonate (HCO3-) (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate_mmoll,number,Bicarbonate (HCO3-) (mmol/L),,number,0,50,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate_meql,number,Bicarbonate (HCO3-) (mEq/L),,number,0,50,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_baseexcess,number,Base Excess (mmol/L),,number,-9,16,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_leukocytes,,Leukocytes (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_leukocytes_109l,number,Leukocytes (10^9/L),,number,0,1115000,,[daily_datalab]='1',,,,
@@ -519,10 +528,6 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lacticacid_mmoll,number,Lactic Acid (mmol/L),,number,0,10,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lacticacid_mgdl,number,Lactic Acid (mg/dL),,number,0,50,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lacticacid_umoll,number,Lactic Acid (umol/L),,number,0,5,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea Nitrogen (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea Nitrogen (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea Nitrogen (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_gl,number,Urea Nitrogen(g/L),,number,0,10,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ppo2,,Partial Pressure Oxygen (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ppo2_mmhg,number,Partial Pressure Oxygen (mmHg),,number,19,214,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ppo2_kpa,number,Partial Pressure Oxygen (kPa),,number,2,26,,[daily_datalab]='1',,,,
@@ -560,11 +565,6 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_urate,,Urate (select units),,number,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_urate_umoll,number,Urate (umol/L),,number,0,1200,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_urate_mgdl,number,Urate (mg/Dl),,number,0,20,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi,,Troponin I (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ugl,number,Troponin I (ug/L),,number,0,536,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngl,number,Troponin I (ng/L),,number,0,1113,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngdl,number,Troponin I (ng/dL),,number,0,340,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropit3,,Troponin I Type 3 (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropit3_ngl,number,Troponin I Type 3 (ng/L),,number,0,110,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropit3_ngml,number,Troponin I Type 3 (ng/ml),,number,0,276,,[daily_datalab]='1',,,,
@@ -625,7 +625,7 @@ outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='3',1,1,1,1
 outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '8',1,,1,1
 outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='4',1,1,,1
-outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, Inhaled | 3, IV",,,,,[medi_medicationtype]='4',1,1,,1
+outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV",,,,,[medi_medicationtype]='4',1,1,,1
 outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='5',1,,,1
 outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='5',1,,,1
 outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='6',1,,,1
@@ -686,30 +686,18 @@ outcome,DIAGNOSIS,diagn_bacte_occur,list,Bacterial infection,"1, Lab confirmed |
 outcome,DIAGNOSIS,diagn_encephali,radio,Select pathogen detected (_Under revision),"1, Nipah | 2, JE | 3, HSV",,,,,,,,,
 outcome,DIAGNOSIS,diagn_encephali_type,radio,Diagnostic method (_Under revision),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 99, Not tested",,,,,,,,,
 outcome,DIAGNOSIS,diagn_pathounlist,list,Other pathogen(s) detected,"1, Yes | 0, No",,,,pathogens_other,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_copneumoni,radio,Cryptogenic organising pneumonia (COP),"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bronchioli,radio,Bronchiolitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocardial,radio,Myocardial infarction,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiacisc,radio,Cardiac ischaemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_endocardit,radio,Endocarditis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiomyop,radio,Cardiomyopathy,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_chf,radio,Congestive heart failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_strokecva,radio,Stroke / cerebrovascular accident,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeneuro,radio,Severe neurological disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_shock,radio,Shock ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshock,radio,Re-shock episodes,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshockep,radio,Number of re-shock episodes,"1, 1 | 2, 2 | 3, 3 | 4, 4+",,,,,[compl_reshock]='1',,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed,group,Severe bleeding (requiring intervention),,,,,,,,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_yn,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[compl_severebleed_yn] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizure,radio,Seizure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Meningitis / encephalitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_shock,radio,Shock ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshock,radio,Re-shock episodes,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshockep,radio,Number of re-shock episodes,"1, 1 | 2, 2 | 3, 3 | 4, 4+",,,,,[compl_reshock]='1',,1,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacteraemi,radio,Bacteraemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Encephalitis / meningitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_sepsis,radio,Sepsis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
@@ -724,6 +712,19 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverf
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorganspec,text,Specify other organ complications,,,,,,[compl_othorgan]='1',,1,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_copneumoni,radio,Cryptogenic organising pneumonia (COP),"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bronchioli,radio,Bronchiolitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocardial,radio,Myocardial infarction,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiacisc,radio,Cardiac ischaemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_endocardit,radio,Endocarditis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiomyop,radio,Cardiomyopathy,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_chf,radio,Congestive heart failure,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_strokecva,radio,Stroke / cerebrovascular accident,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeneuro,radio,Severe neurological disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacteraemi,radio,Bacteraemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thrombemb,radio,Thromboembolism,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pe,radio,Pulmonary embolism (PE),"1, Yes | 0, No | 99, Unknown",,,,,[compl_thrombemb]=1,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_dvt,radio,Deep vein thrombosis (DVT),"1, Yes | 0, No | 99, Unknown",,,,,[compl_thrombemb]=1,1,,1,1
@@ -731,7 +732,6 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thromb
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_thrombemboth_spec,text,Specify other thromboembolism,,,,,,[compl_thrombemboth]='1',1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_anaemia,radio,Anaemia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_rhabdomyol,radio,Rhabdomyolysis / myositis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pancreatit,radio,Pancreatitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis,group,Cellulitis,,,,,,,,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cellulitis_yn,radio,Cellulitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
@@ -743,31 +743,6 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hypogl
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverdysfu,radio,Liver dysfunction,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_inr,radio,INR >= 1.5,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted,list,Other complication(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Complications,,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any respiratory support ,,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type(4)]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type(6)]='1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,group,PRONE POSITIONING,,,,,,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_yn,radio,Prone positioning?,"1, Yes | 0, No",,,,,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_when,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[inter_prone_yn] = '1',1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_neuromuscu,radio,Neuromuscular blocking agents?,"1, Yes | 0, No",,,,,,1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nitricoxid,radio,Inhaled Nitric Oxide?,"1, Yes | 0, No",,,,,,1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_tracheosto,radio,Tracheostomy inserted? ,"1, Yes | 0, No",,,,,,1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt,radio,Renal replacement therapy (RRT) or dialysis?,"1, Yes | 0, No",,,,,,1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rttdur,text,Total RRT or dialysis duration during observation (days),,number,,,,[inter_rtt] = '1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv,radio,Inotropes/vasopressors?,"1, Yes | 0, No",,,,,,1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv_durat,text,Total Inotropes/vasopressor duration during observation (days),,,,,,[inter_inotropesv] = '1',1,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu,radio,ICU/ITU/High Dependency Unit/Intermediate Care Unit admission ?,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_date,date_dmy,Date of first ICU admission,,date_dmy,,today,,[inter_icu] = '1',1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_dur,number,Duration of first ICU admission (days),,number,,,,[inter_icu] = '1',1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icureadm,radio,Was the patient admitted to ICU more than once? ,"1, Yes | 0, No | 99, Unknown",,,,,[inter_icu] = '1',1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuadminda,date_dmy,Date of final ICU admission,,date_dmy,,today,,[inter_icureadm] = '1',1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icudur,number,Duration of final ICU admission (days),,number,,,,[inter_icureadm] = '1',1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivimmunogl,radio,Intravenous Immunoglobulin?,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid,group,PARENTERAL / IV FLUID ,,,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_occur,radio,Parenteral / IV fluid? ,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_type,checkbox,Select all Parenteral / IV fluid that were administered,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 5, Colloid | 88, Other",,,,,[inter_ivfluid_occur]='1',,1,,
@@ -790,18 +765,50 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_rbc,number,Total number of Whole blood/packed RBC (mL/24 hours),,number,,,,[inter_bpt_type(3)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_ffp,number,Total number of Fresh Frozen Plasma (FFP) (mL/24 hours),,number,,,,[inter_bpt_type(4)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_fibrin,number,Total number of Fibrinogen concentrate (mL/24 hours),,number,,,,[inter_bpt_type(5)]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivimmunogl,radio,Intravenous Immunoglobulin?,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_diuretics,radio,Diuretics? ,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nacetylcys,radio,N-acetyl cysteine? ,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_fluiddrain,radio,Fluid drainage?,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_fluiddrain_reas,radio,Reason for this drainage,"1, Ascites | 2, Pleural effusion",,,,,[inter_fluiddrain] = '1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_plasmaex,radio,Plasmapheresis/Plasma Exchange?,"1, Yes | 0, No",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_plasmadur,number,Days on plasma exchange support ,,number,,,,[inter_plasmaex] = '1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,Highest FiO2 (0.21-1.0),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,Highest FiO2 (%),,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2therapyd,number,Number of calendar days the patient received any respiratory support ,,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nivent,radio,What type of Non-invasive ventilation? ,"1, CPAP | 2, BIPAP | 88, Other",,,,,[inter_o2support_type(4)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmo,radio,What type of ECLS/ ECMO? ,"1, Veno-venus | 2, Arterio-venous | 99, Unknown",,,,,[inter_o2support_type(6)]='1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone,group,PRONE POSITIONING,,,,,,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_yn,radio,Prone positioning?,"1, Yes | 0, No",,,,,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_prone_when,radio,When was the prone positioning?,"1, During invasive ventilation | 2, Whilst self-ventilating",,,,,[inter_prone_yn] = '1',1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_neuromuscu,radio,Neuromuscular blocking agents?,"1, Yes | 0, No",,,,,,1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nitricoxid,radio,Inhaled Nitric Oxide?,"1, Yes | 0, No",,,,,,1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_tracheosto,radio,Tracheostomy inserted? ,"1, Yes | 0, No",,,,,,1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt,radio,Renal replacement therapy (RRT) or dialysis?,"1, Yes | 0, No",,,,,,1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt_dur,text,Total RRT or dialysis duration during observation (days),,number,,,,[inter_rtt] = '1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv,radio,Inotropes/vasopressors?,"1, Yes | 0, No",,,,,,1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv_dur,text,Total Inotropes/vasopressor duration during observation (days),,,,,,[inter_inotropesv] = '1',1,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu,radio,ICU/ITU/High Dependency Unit/Intermediate Care Unit admission ?,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_date,date_dmy,Date of first ICU admission,,date_dmy,,today,,[inter_icu] = '1',1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_dur,number,Duration of first ICU admission (days),,number,,,,[inter_icu] = '1',1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icureadm,radio,Was the patient admitted to ICU more than once? ,"1, Yes | 0, No | 99, Unknown",,,,,[inter_icu] = '1',1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuadminda,date_dmy,Date of final ICU admission,,date_dmy,,today,,[inter_icureadm] = '1',1,1,1,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icudur,number,Duration of final ICU admission (days),,number,,,,[inter_icureadm] = '1',1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg,radio,Any surgical intervention for mpox or complications of mpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg_type,text,"What was the surgery (e.g., debridement of infected tissue)",,,,,,[inter_mpoxsurg]='1',,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg_date,date_dmy,Date of first surgery,,date_dmy,,today,,[inter_mpoxsurg]='1',,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2,radio,Was a second surgical intervention for mpox or complications of mpox,"1, Yes | 0, No | 99, Unknown",,,,,[inter_mpoxsurg]='1',,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_type,text,"What was the second surgery (e.g., debridement of infected tissue)",,,,,,[inter_mpoxsurg2]='1',,,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_date,date_dmy,Date of second surgery,,date_dmy,,today,,[inter_mpoxsurg2]='1',,,1,1
+outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,,,1,,
+outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag]='0',,1,,
+outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
+","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
+outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
+outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,,,1,,
+outcome,OUTCOME,outco_secondiag_oth,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,1,,
 outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1,1,1
 outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,,1,1
 outcome,OUTCOME,outco_community,radio,Outcome (community),"1, Remains in community | 2, Currently in hospital | 3, Was admitted to hospital but now in community again | 4, Death | 5, Palliative care | 99, Unknown",,,,,[outco_recruitype]='2',,,,1
@@ -810,13 +817,6 @@ outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus be
 outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
 outcome,OUTCOME,outco_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (e.g. awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='2' or [outco_outcome]='3',1,1,1,1
-outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No",,,,,,,1,,
-outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag]='0',,1,,
-outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
-","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
-outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
-outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No",,,,,,,1,,
-outcome,OUTCOME,outco_secondiag_oth,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,1,,
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,1,,1,1
 outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 88, Other",,,,,,1,,1,1
 outcome_pathogen_testing,TEST,test_biospecimentypeoth,text,Please specify biospecimen type,,,,,,[test_biospecimentype]='88',1,,1,1
