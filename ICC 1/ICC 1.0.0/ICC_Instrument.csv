@@ -123,8 +123,9 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrkidney,radio,Chronic kidney disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_obesity,radio,Obesity (as defined by clinical staff),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea,group,Liver disease,,,,,,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_mild,radio,Mild liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_severe,radio,Moderate or severe liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_gnrl,radio,Liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_mild,radio,Mild liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_severe,radio,Moderate or severe liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hepbc,radio,Chronic hepatitis B/C infection,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_asplenia,radio,Asplenia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrneurolo,radio,Chronic neurological disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
