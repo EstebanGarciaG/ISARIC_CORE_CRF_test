@@ -450,10 +450,10 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mgdl,number,Glucose (random) (mg/dL),,number,0,2656,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_gl,number,Glucose (random) (g/L),,number,0,26.56,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase (GGT) (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea (BUN) (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea (BUN) (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea (BUN) (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_gl,number,Urea (BUN) (g/L),,number,0,10,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea/BUN (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea/BUN (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea/BUN (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_gl,number,Urea/BUN (g/L),,number,0,10,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate,number,Lactate (select units),,number,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate_mmoll,number,Lactate (mmol/L),,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate_mg,number,Lactate (mg),,number,,,,[daily_datalab]='1',,1,,
