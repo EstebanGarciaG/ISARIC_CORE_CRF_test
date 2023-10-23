@@ -635,14 +635,14 @@ outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"
 outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 88, Other",,,,,[medi_medicationtype]='5',1,,1,1
 outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medicationtype]='5',1,,1,1
 outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype]='88',1,1,1,1
-outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
+outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,,1,1,1,1
+outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,,1,1,1,1
 outcome_medication,MEDICATION,medi_numdays,number,Total number of days treatment given,,number,,,,,1,1,1,1
-outcome_medication,MEDICATION,medi_frequency,text,Frequency,,,,,,[medi_medicationtype]='9' or [medi_medicationtype]='10',1,1,1,1
-outcome_medication,MEDICATION,medi_dose,text,Dose,,,,,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_units,number,Units,,number,,,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_numdoses,number,"Total number of doses (# of times the drug was injected/ swallowed/infused/inserted/applied, inhaled) ",,number,,,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_standreg,radio,Was the standard regimen given,"1, Yes | 0, No",,,,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,,1,1
+outcome_medication,MEDICATION,medi_frequency,text,Frequency,,,,,,[medi_medicationtype]='1',1,,1,1
+outcome_medication,MEDICATION,medi_dose,text,Dose,,,,,,[medi_medicationtype] = '2' or [medi_medicationtype]='6',1,,1,1
+outcome_medication,MEDICATION,medi_units,number,Units,,number,,,,[medi_medicationtype] = '2' or [medi_medicationtype]='6',1,,1,1
+outcome_medication,MEDICATION,medi_numdoses,number,"Total number of doses (# of times the drug was injected/ swallowed/infused/inserted/applied, inhaled) ",,number,,,,[medi_medicationtype] = '2' or [medi_medicationtype]='6',1,,1,1
+outcome_medication,MEDICATION,medi_standreg,radio,Was the standard regimen given,"1, Yes | 0, No",,,,,[medi_medicationtype] = '2' or [medi_medicationtype]='6',1,,1,1
 outcome_medication,MEDICATION,medi_standreg_reas,text,Reason why standard regimen was not given ,,,,,,[medi_standreg]='0',1,,1,1
 outcome_medication,MEDICATION,medi_mpox,group,MPOX,,,,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_freq,radio,Lesion cleaning frequency,"0, None | 99, Unknown | 2, Daily | 3, Twice weekly | 4, Once weekly | 88, other",,,,,,,,,1
