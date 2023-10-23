@@ -620,20 +620,20 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasoun
 daily,IMAGING,imagi_gallbladder,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[imagi_unlisted] = '1',,1,,
-outcome_medication,MEDICATION,medi_medicationtype,user_list,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,drugs_Type,,1,1,,1
-outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '1',1,,1,1
-outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='3',1,1,1,1
-outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '8',1,,1,1
-outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='4',1,1,,1
-outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV",,,,,[medi_medicationtype]='4',1,1,,1
-outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='5',1,,,1
-outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='5',1,,,1
-outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='6',1,,,1
-outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype] = '7',1,,1,1
-outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetaminophen | 2, Ibuprofen  | 3, Naproxen  | 4, Diclofenac | 5, Tramadol | 88, Other",,,,,[medi_medicationtype]='9',1,,1,1
-outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype]='9',1,,1,1
-outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 88, Other",,,,,[medi_medicationtype]='10',1,,1,1
-outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medicationtype]='10',1,,1,1
+outcome_medication,MEDICATION,medi_medicationtype,user_list,Select all agents administered while hospitalised or at discharge,,,,,drugs_Type,,1,1,,1
+outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '6',1,,1,1
+outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='2',1,1,1,1
+outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '10',1,,1,1
+outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='8',1,1,,1
+outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV",,,,,[medi_medicationtype]='8',1,1,,1
+outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='3',1,,,1
+outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='3',1,,,1
+outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='4',1,,,1
+outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype] = '9',1,,1,1
+outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetaminophen | 2, Ibuprofen  | 3, Naproxen  | 4, Diclofenac | 5, Tramadol | 88, Other",,,,,[medi_medicationtype]='1',1,,1,1
+outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype]='1',1,,1,1
+outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 88, Other",,,,,[medi_medicationtype]='5',1,,1,1
+outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medicationtype]='5',1,,1,1
 outcome_medication,MEDICATION,medi_medicationother,text,Specify other agent,,,,,,[medi_medicationtype]='88',1,1,1,1
 outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
 outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,[medi_medicationtype] = '1' or [medi_medicationtype]='3',1,1,1,1
