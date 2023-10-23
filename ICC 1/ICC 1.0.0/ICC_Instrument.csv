@@ -620,7 +620,7 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasoun
 daily,IMAGING,imagi_gallbladder,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[imagi_unlisted] = '1',,1,,
-outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,,,1,1,,1
+outcome_medication,MEDICATION,medi_medicationtype,user_list,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,drugs_Type,,1,1,,1
 outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '1',1,,1,1
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='3',1,1,1,1
 outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '8',1,,1,1
@@ -693,8 +693,9 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severe
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_yn,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[compl_severebleed_yn] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_aorp,radio,Pleural effusion or ascites,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizure,radio,Seizure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Encephalitis / meningitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
@@ -745,12 +746,11 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_inr,ra
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted,list,Other complication(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Complications,,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid,group,PARENTERAL / IV FLUID ,,,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_occur,radio,Parenteral / IV fluid? ,"1, Yes | 0, No",,,,,,,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_type,checkbox,Select all Parenteral / IV fluid that were administered,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 5, Colloid | 88, Other",,,,,[inter_ivfluid_occur]='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_type,checkbox,Select all Parenteral / IV fluid that were administered,"1, Crystalloid | 2, Albumin | 3, Gelatin | 4, Starches | 88, Other",,,,,[inter_ivfluid_occur]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_cryst,text,Total Crystalloid volume given during admission (mL),,,,,,[inter_ivfluid_type(1)] = '1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_albu,text,Total Albumin volume given during admission (mL),,,,,,[inter_ivfluid_type(2)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_gelat,text,Total Gelatin volume given during admission (mL),,,,,,[inter_ivfluid_type(3)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_star,text,Total Starches volume given during admission (mL),,,,,,[inter_ivfluid_type(4)]='1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_coll,text,Total Colloid volume given during admission (mL),,,,,,[inter_ivfluid_type(5)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_oth,text,Specify other fluid,,,,,,[inter_ivfluid_type(88)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_othv,text,Total volume given during admission (mL),,,,,,[inter_ivfluid_type(88)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reas,checkbox,Reason(s) for IV fluid (check all that apply),"1, Shock | 2, High/rising haematocrit | 3, Anorexia | 4, Persistent vomiting | 88, Other",,,,,[inter_ivfluid_occur] ='1',,1,,
