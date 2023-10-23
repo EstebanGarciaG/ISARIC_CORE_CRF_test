@@ -506,9 +506,9 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein,,Protein (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gdl,number,Protein (g/dL),,number,5,15,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gl,number,Protein (g/L),,number,50,150,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2,,PaCO? (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO? (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO? (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2,,PaCO2 (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO2 (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO2 (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ph,number,pH,,number,6.8,7.8,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate,,Bicarbonate (HCO3-) (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bicarbonate_mmoll,number,Bicarbonate (HCO3-) (mmol/L),,number,0,50,,[daily_datalab]='1',1,1,,1
