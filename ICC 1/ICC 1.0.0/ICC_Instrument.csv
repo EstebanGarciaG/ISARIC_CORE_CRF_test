@@ -625,7 +625,7 @@ outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='2',1,1,1,1
 outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '10',1,,1,1
 outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='8',1,1,,1
-outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV",,,,,[medi_medicationtype]='8',1,1,,1
+outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV | 3, Topical | 4, Inhaled",,,,,[medi_medicationtype]='8',1,1,,1
 outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='3',1,,,1
 outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='3',1,,,1
 outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='4',1,,,1
@@ -695,7 +695,6 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severe
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleuraleff,radio,Pleural effusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_aorp,radio,Pleural effusion or ascites,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizure,radio,Seizure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Encephalitis / meningitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
