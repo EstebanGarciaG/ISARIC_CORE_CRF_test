@@ -620,7 +620,7 @@ daily,IMAGING,imagi_liversize,number,Liver size (cm),,number,,,,[imagi_ultrasoun
 daily,IMAGING,imagi_gallbladder,number,Gallbladder wall (cm),,number,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted,radio,Other finding(s),"1, Yes | 0, No",,,,,[imagi_ultrasound_yn] = '1',,1,,
 daily,IMAGING,imagi_unlisted_other,text,Please specify other findings:,,,,,,[imagi_unlisted] = '1',,1,,
-outcome_medication,MEDICATION,medi_medicationtype,radio,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,,,1,1,,1
+outcome_medication,MEDICATION,medi_medicationtype,user_list,Select all agents administered while hospitalised or at discharge,"1, Antiviral | 2, Convalescent plasma | 3, Antibiotic | 8, Topical antibiotic  | 4, Corticosteroid | 5, Anticoagulation | 6, Antifungal | 7, Inotropes / vasopressor | 9, Analgesic | 10, Antipruritic | 88, Other treatments for pathogen including experimental or compassionate use",,,,drugs_Type,,1,1,,1
 outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '1',1,,1,1
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='3',1,1,1,1
 outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '8',1,,1,1
