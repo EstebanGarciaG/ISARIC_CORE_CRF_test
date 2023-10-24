@@ -42,7 +42,7 @@ presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment at presen
 presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2' and [preg_pregnant]<>1,1,1,,1
 presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[preg_postpartum] = '1',1,,,1
 presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth | 3, Termination",,,,,[preg_postpartum]='1',1,1,,1
-presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_pregnant] = '1',1,1,,
+presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_postpartum] = '1',1,1,,
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No | 99, Unknown",,,,,[preg_postpartum] = '1',1,,,1
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[preg_bbtest] = '1',1,,,1
 presentation,INFANT: less than 12 months old,infa_brtwei,,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,,,
@@ -76,8 +76,12 @@ presentation,VACCINATION,vacci_mpox_scar,radio,Is a smallpox vaccination scar vi
 presentation,VACCINATION,vacci_mpox_recent,radio,Received vaccination more recently to protect against mpox (or smallpox)?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,VACCINATION,vacci_mpox_type,checkbox,Vaccine type:,"1, Imvanex/Imvamune/Jyneos (MVA-BN) | 2, ACAM2000 | 3, LC16m8 | 88, Other",,,,,[vacci_mpox_recent]='1',,,,1
 presentation,VACCINATION,vacci_mpox_other,text,Please specify other vaccine:,,,,,,[vacci_mpox_type(88)]='1',,,,1
-presentation,VACCINATION,vacci_mpox_d1,date_dmy,Date of first vaccine,,date_dmy,,today,,[vacci_mpox_1980]='1' or [vacci_mpox_recent]='1',,,,1
-presentation,VACCINATION,vacci_mpox_d2,date_dmy,Date of second vaccine,,date_dmy,,today,,[vacci_mpox_1980]='1' and [vacci_mpox_recent]='1',,,,1
+presentation,VACCINATION,vacci_mpox_d1,radio,Is first vaccine date known?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1' or [vacci_mpox_recent]='1',,,,1
+presentation,VACCINATION,vacci_mpox_d1dat,date_dmy,Date of first vaccine,,date_dmy,,today,,[vacci_mpox_d1]='1',,,,1
+presentation,VACCINATION,vacci_mpox_d1apr,text,"Approximate date of first vaccine (MM:YYYY, if known)",,,,,,[vacci_mpox_d1]='0',,,,1
+presentation,VACCINATION,vacci_mpox_d2,radio,Is second vaccine date known?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1' and [vacci_mpox_recent]='1',,,,1
+presentation,VACCINATION,vacci_mpox_d2dat,date_dmy,Date of second vaccine,,date_dmy,,today,,[vacci_mpox_d2]='1',,,,1
+presentation,VACCINATION,vacci_mpox_d2apr,text,"Approximate date of second vaccine (MM:YYYY, if known)",,,,,,[vacci_mpox_d2]='0',,,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid,list,Steroid,"1, Yes | 0, No | 99, Unknown",,,,drugs_Steroids,,1,1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_steroid_route,radio,Steroid administration route,"1, Oral | 2, Inhaled | 3, IV | 99, Unknown",,,,,[drugs_steroid] = '1',1,1,,1
 presentation,MEDICATION PREVIOUS 14-DAYS: include all taken within 14 days prior to this most recent admission / presentation,drugs_immunusupp,list,Immunosuppressant agents (not steroids),"1, Yes | 0, No | 99, Unknown",,,,drugs_Immunosuppressants,,1,1,,1
@@ -275,7 +279,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurologic_other,text,Specify other neurological abnormality,,,,,,[sympt_neurologic] = '1' and [daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_unlisted,list,Other sign(s) or symptom(s),"1, Yes | 0, No",,,,conditions_Symptoms,[daily_datasympt]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datavital,radio,Enter vital signs data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datavital,radio,Enter Vital Signs data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem,group,Highest temperature (select units),,,,,,[daily_datavital]='1',,,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_c,number,Highest temperature (C),,number,,,,[daily_datavital]='1',,1,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_highesttem_f,number,Highest temperature (F),,number,,,,[daily_datavital]='1',1,1,,1
@@ -409,7 +413,7 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_vasopress3,radio,Dopamine >15ug/kg/min OR epinephrine(adrenaline)/norepinephrine(noradrenaline) > 0.1ug/kg/min,"1, Yes | 0, No",,,,,[treat_vasopress] = '1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted,radio,Other intervention(s) or procedure(s),"1, Yes | 0, No",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted_oth,text,Please specify other intervention(s) or procedure(s),,,,,,[treat_unlisted] = '1',1,1,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter Laboratory Results for this date?,"1, Yes | 0, No",,,,,,1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter Laboratory Results data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo,,Haemoglobin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gdl,number,Haemoglobin (g/dL),,number,0,200,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gl,number,Haemoglobin (g/L),,number,0,20,,[daily_datalab]='1',1,1,,1
@@ -435,7 +439,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_109l,number,Platelets (10^9/L),,number,0,1659,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_106l,number,Platelets (10^6/L),,number,0,1659000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_103ul,number,Platelets (10^3/uL),,number,0,1659,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time (APTT) (sec),,number,20,300,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time/APTT (sec),,number,20,300,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptr,number,APTR,,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin,,Prothrombin Time/PT (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_sec,number,Prothrombin Time/PT (sec),,number,0,100,,[daily_datalab]='1',1,1,,1
@@ -446,11 +450,11 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_umoll,number,Total Bilirubin (umol/L),,number,0,718,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_mgdl,number,Total Bilirubin (mg/dL),,number,0,42,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_astsgot,number,AST/SGOT (U/L),,number,,,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose,,Glucose (random) (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mmoll,number,Glucose (random) (mmol/L),,number,0,148,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mgdl,number,Glucose (random) (mg/dL),,number,0,2656,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_gl,number,Glucose (random) (g/L),,number,0,26.56,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase (GGT) (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose,,Random glucose (select units),,,,,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mmoll,number,Random glucose (mmol/L),,number,0,148,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mgdl,number,Random glucose (mg/dL),,number,0,2656,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_gl,number,Random glucose (g/L),,number,0,26.56,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase/GGT (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea/BUN (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea/BUN (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea/BUN (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
@@ -595,7 +599,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_ugdl,number,Cortisol (ug/dL),,number,0,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_nmoll,number,Cortisol (nmol/L),,number,0,2500,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c,number,HbA1C,,number,,,,[daily_datalab]='1',1,,,1
-daily,IMAGING,daily_dataimagi,radio,Enter imaging data for this date?,"1, Yes | 0, No",,,,,,1,1,1,1
+daily,IMAGING,daily_dataimagi,radio,Enter Imaging data for this date?,"1, Yes | 0, No",,,,,,1,1,1,1
 daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_yn,radio,Was a chest X-Ray performed?,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imagi_xray_yn] = '1',1,1,1,1
@@ -701,16 +705,16 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_mening
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_sepsis,radio,Sepsis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,     Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,     Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,     Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,     Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,     Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,     Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,     Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,     Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,     Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,     Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
