@@ -824,8 +824,8 @@ outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Na
 outcome_pathogen_testing,TEST,test_biospecimentypeoth,text,Please specify biospecimen type,,,,,,[test_biospecimentype]='88',1,,1,1
 outcome_pathogen_testing,TEST,test_labtestmethod,radio,Lab test method,"1, PCR | 2, IgG | 3, Culture | 4, IgM | 5, Antigen detection | 88, Other",,,,,,1,,1,1
 outcome_pathogen_testing,TEST,test_labtestmethodoth,text,Please specify other lab test method,,,,,,[test_labtestmethod]='88',1,,1,1
-outcome_pathogen_testing,TEST,test_result,radio,Result,"1, Detected | 0, Not detected | 2, Equivocal | 99, Unknown",,,,,,1,,1,1
-outcome_pathogen_testing,TEST,test_pathogentested,text,Pathogen Tested/Detected,,,,,pathogens_Bacteria,,1,,1,1
+outcome_pathogen_testing,TEST,test_result,list,Result,"1, Detected | 0, Not detected | 2, Equivocal | 99, Unknown",,,,pathogens_Bacteria,,1,,1,1
+outcome_pathogen_testing,TEST,test_pathogentested,text,Pathogen Tested/Detected,,,,,,,1,,1,1
 outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [test_labtestmethod]='1',1,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_date,date_dmy,Assessment Date,,date_dmy,,today,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_method,radio,Evaluation method,"1, In person | 2, Telephone",,,,,,,,1,1
