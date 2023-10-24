@@ -701,16 +701,16 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_mening
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_sepsis,radio,Sepsis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,     Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,     Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,     Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocarditi,radio,     Myocarditis / pericarditis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,     Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,     Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,     Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,     Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,     Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,     Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
