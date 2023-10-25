@@ -153,7 +153,8 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_smoking,radio,Smoking tobacco,"1, Current smoker | 0, Never smoked | 3, Former smoker | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_unlisted,list,Other relevant comorbidity(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Comorbidities,,1,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fever,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_feverplus,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fever,radio,Fever,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sorethroat,radio,Sore throat,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_catarrh,radio,Catarrh,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
@@ -163,11 +164,13 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_seizures,radio,Seizures,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_keratitis,radio,Keratitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_convulsion,radio,Convulsions,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lrt,radio,Lower Respiratory Tract symptoms,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestpain,radio,Chest pain,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
@@ -197,12 +200,16 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag_yn] = '1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_oth,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site(88)]='1',1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dta,radio,Deep tissue abscess,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anorec,radio,Ano-rectitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_yn,radio,Bacterial super-infection,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi,checkbox,Specify bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 88, Other",,,,,[adsym_bacsi_yn]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[adsym_bacsi(88)]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurodist,radio,Psychological disturbance,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sti,radio,Concurrent Sexually transmitted infection (STI):   ,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sti_spec,text,State diagnosis of current STI,,,,,,[adsym_sti]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_nystagm,radio,Nystagmus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myoclon,radio,Myoclonus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cerebesig,radio,Cerebellar signs (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -221,6 +228,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_yn,list,Other sign(s) or abnormality,"1, Yes | 0, No | 99, Unknown",,,,conditions_Symptoms,,1,1,,1
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,,,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datasympt,radio,Enter signs and symptoms data for this date?,"1, Yes | 0, No",,,,,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_feverplus,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fever,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sorethroat,radio,Sore throat,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -228,7 +236,8 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_wheezing,radio,Wheezing,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lrt,radio,Lower Respiratory Tract symptoms,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_chestpain,radio,Chest pain,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_conjunctiv,radio,Conjunctivitis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
@@ -239,6 +248,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_seizures,radio,Seizures,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_keratitis,radio,Keratitis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_arthralgia,radio,Joint pain / arthralgia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -264,12 +274,16 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_retroorbit,radio,Retro-orbital pain,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_convulsion,radio,Convulsions,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dta,radio,Deep tissue abscess,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anorec,radio,Ano-rectitis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_mobile,radio,Mobility status,"1, Fully ambulant | 2, Ambulant, but with some assistance | 3, Bedridden",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_yn,radio,Bacterial super-infection,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi,checkbox,Specify bacterial super-infection,"1, Folliculitis/cellulitis | 2, Pneumonia | 3, Gastroenteritis | 4, CNS | 5, Bacteraemia | 6, Urinary tract | 88, Other",,,,,[sympt_bacsi_yn]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_bacsi_oth,text,Specify other bacterial super-infection,,,,,,[sympt_bacsi(88)]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_dizzy,radio,Feeling dizzy / faint,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_neurodist,radio,Psychological disturbance,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sti,radio,Concurrent Sexually transmitted infection (STI):   ,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sti_spec,text,State diagnosis of current STI,,,,,,[sympt_sti]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_nystagm,radio,Nystagmus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_myoclon,radio,Myoclonus (_Under Revision),"1, Yes | 0, No",,,,,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_cerebesig,radio,Cerebellar signs (_Under Revision),"1, Yes | 0, No",,,,,,,,,
@@ -635,12 +649,12 @@ outcome_medication,MEDICATION,medi_medicationtype,user_list,Select all agents ad
 outcome_medication,MEDICATION,medi_antiviralagent,user_list,Antiviral,,,,,drugs_Antiviral,[medi_medicationtype] = '6',1,,1,1
 outcome_medication,MEDICATION,medi_antibioticagent,user_list,Antibiotic,,,,,drugs_Antibiotics,[medi_medicationtype]='2',1,1,1,1
 outcome_medication,MEDICATION,medi_topicantibiotgent,radio,Topical antibiotic,"1, Penicillins | 2, Cephalosporins | 3, Tetracyclines | 4, Aminoglycosides | 5, Macrolides | 6, Sulfonamides and trimethoprim | 7, Quinolones | 88, Other",,,,,[medi_medicationtype] = '10',1,,1,1
-outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='8',1,1,,1
-outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV | 3, Topical | 4, Inhaled",,,,,[medi_medicationtype]='8',1,1,,1
-outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='3',1,,,1
-outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='3',1,,,1
-outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='4',1,,,1
-outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype] = '9',1,,1,1
+outcome_medication,MEDICATION,medi_corticosteroid,user_list,Corticosteroid,,,,,drugs_Steroids,[medi_medicationtype]='8',1,1,,
+outcome_medication,MEDICATION,medi_corticosteroid_route,radio,Corticosteroid route,"1, Oral | 2, IV | 3, Topical | 4, Inhaled",,,,,[medi_medicationtype]='8',1,1,,
+outcome_medication,MEDICATION,medi_anticoagulationagent,user_list,Anticoagulation,,,,,drugs_Anticoagulant,[medi_medicationtype]='3',1,,,
+outcome_medication,MEDICATION,medi_anticoagulationroute,radio,Anticoagulation route,"1, Oral | 2, Subcutaneous | 3, IV",,,,,[medi_medicationtype]='3',1,,,
+outcome_medication,MEDICATION,medi_antifungalagent,radio,Antifungal agent,"1, Clotrimazole | 2, Econazole | 3, Miconazole | 4, Terbinafine | 5, Fluconazole | 6, Ketoconazole | 7, Nystatin | 8, Amphotericin | 88, Other",,,,,[medi_medicationtype]='4',1,,,
+outcome_medication,MEDICATION,medi_inotropesvasopressor,radio,Inotropes/vasopressor,"1, Vasopressin | 2, Phenylephrine | 3, Epinephrine | 4, Norepinephrine | 5, Dopamine | 6, Angiotensin-II | 7, Terlipressin | 88, Other",,,,,[medi_medicationtype] = '9',1,,1,
 outcome_medication,MEDICATION,medi_analgesic,radio,Analgesic agent,"1, Acetaminophen | 2, Ibuprofen  | 3, Naproxen  | 4, Diclofenac | 5, Tramadol | 88, Other",,,,,[medi_medicationtype]='1',1,,1,1
 outcome_medication,MEDICATION,medi_analgesic_route,radio,Analgesic agent route,"1, Oral | 2, Subcutaneous | 3, IV | 4, IM | 5, Rectal | 6, Topical | 7, Sublingual",,,,,[medi_medicationtype]='1',1,,1,1
 outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hydrocortisone | 2, Calamine   | 3, Antihistamines | 4, Hydroxyzine | 88, Other",,,,,[medi_medicationtype]='5',1,,1,1
@@ -719,7 +733,7 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_myocar
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acuterenal,radio,Acute renal injury / acute renal failure,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severeliver,radio,Severe liver disease (new onset),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_acutehepat,radio,Acute hepatitis,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverfailure,radio,Liver failure ,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_jaundice,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepaticenc,radio,Hepatic encephalopathy (any grade),"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,1,1
