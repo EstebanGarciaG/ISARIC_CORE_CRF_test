@@ -5,59 +5,59 @@ Ancylostoma duodenale,,,"parasite, helminth"
 Andes orthohantavirus,442001008,SNOMED,virus
 Arenaviridae,,,virus
 Ascaris lumbricoides,,,"parasite, helminth"
-ASPERGILLUS,2429008,SNOMED,fungi
-ASPERGILLUS FLAVUS,,,fungi
-ASPERGILLUS FUMIGATUS,32684000,SNOMED,fungi
-ASPERGILLUS FUMIGATUS COMPLEX,719029007,SNOMED,fungi
-ASPERGILLUS NIGER,89354002,SNOMED,fungi
-ASPERGILLUS TERREUS,,,fungi
-ASPERGILLUS VERSICOLOR,,,fungi
-ASTROVIRIDAE,,,virus
-Avian influenza A H7N9 & H5N1 ,,,virus
-BLASTOCYSTIS HOMINIS,,,"parasite, Stramenopiles"
+Aspergillus,2429008,SNOMED,fungi
+Aspergillus flavus,,,fungi
+Aspergillus fumigatus,32684000,SNOMED,fungi
+Aspergillus fumigatus complex,719029007,SNOMED,fungi
+Aspergillus niger,89354002,SNOMED,fungi
+Aspergillus terreus,,,fungi
+Aspergillus versicolor,,,fungi
+Astroviridae,,,virus
+Avian influenza A H7N9 & H5N1,,,virus
+Blastocystis hominis,,,"parasite, Stramenopiles"
 Blastomyces dermatitidis,,,fungi
-BOCAPARVOVIRUS,,,virus
+Bocaparvovirus,,,virus
 Brugia malayi,,,"parasite, helminth"
 Bunyaviridae,,,virus
 Caliciviridae,,,virus
-CANDIDA,3265006,SNOMED,fungi
-CANDIDA ALBICANS,53326005,SNOMED,fungi
-CANDIDA AURIS,3.49E+12,SNOMED,fungi
-CANDIDA DUBLINIENSIS,115952006,SNOMED,fungi
-CANDIDA GLABRATA,444877006,SNOMED,fungi
-CANDIDA INCONSPICUA,,,fungi
-CANDIDA ORTHOPSILOSIS,,,fungi
-CANDIDA PARAPSILOSIS,61302002,SNOMED,fungi
-CANDIDA TROPICALIS,47885008,SNOMED,fungi
-CLAVISPORA LUSITANIAE,,,fungi
+Candida,3265006,SNOMED,fungi
+Candida albicans,53326005,SNOMED,fungi
+Candida auris,3.49E+12,SNOMED,fungi
+Candida dubliniensis,115952006,SNOMED,fungi
+Candida glabrata,444877006,SNOMED,fungi
+Candida inconspicua,,,fungi
+Candida orthopsilosis,,,fungi
+Candida parapsilosis,61302002,SNOMED,fungi
+Candida tropicalis,47885008,SNOMED,fungi
+Clavispora lusitaniae,,,fungi
 Clonorchis sinensis,,,"parasite, helminth"
 Coccidioides,,,fungi
 Coccidioides immitis,,,fungi
-Coronavirus ALPHA - B.1.1.7,,,virus
-Coronavirus BETA - B.1.351,,,virus
-Coronavirus DELTA - B.1.617.2,,,virus
-Coronavirus ETA - B.1.525,,,virus
-Coronavirus GAMMA - P.1,,,virus
-Coronavirus IOTA - B.1.526,,,virus
-Coronavirus KAPPA - B.1.617.1,,,virus
-Coronavirus OMICRON,,,virus
-Coronavirus OMICRON - B.1.1.529,,,virus
-Coronavirus OMICRON - B.1.1.529.2 BA.2,,,virus
-Coronavirus OMICRON - B.1.1.529.5 BA.5,,,virus
-Coronavirus THETA- P.3,,,virus
-Coronavirus ZETA - P.2,,,virus
-Crimean-Congo hemorrhagic fever virus,79875007,SNOMED,virus
+Coronavirus Alpha - B.1.1.7,,,virus
+Coronavirus Beta - B.1.351,,,virus
+Coronavirus Delta - B.1.617.2,,,virus
+Coronavirus Eta - B.1.525,,,virus
+Coronavirus Gamma - P.1,,,virus
+Coronavirus Iota - B.1.526,,,virus
+Coronavirus Kappa - B.1.617.1,,,virus
+Coronavirus Omicron ,,,virus
+Coronavirus Omicron - B.1.1.529,,,virus
+Coronavirus Omicron - B.1.1.529.2 BA.2,,,virus
+Coronavirus Omicron - B.1.1.529.5 BA.5,,,virus
+Coronavirus Theta- P.3,,,virus
+Coronavirus Zeta - P.2,,,virus
+Crimean-Congo Hemorrhagic Fever virus,79875007,SNOMED,virus
 Cryptococcus gattii,,,fungi
 Cryptococcus neoformans,,,fungi
-CRYPTOSPORIDIUM,83821001,SNOMED,"parasite, protozoa"
+Cryptosporidium,83821001,SNOMED,"parasite, protozoa"
 Cryptosporidium hominis,,,"parasite, protozoa"
 Cryptosporidium parvum,,,"parasite, protozoa"
 Curvularia lunata,,,fungi
 Cyclospora,,,"parasite, protozoa"
 Cyclospora cayetanensis,,,"parasite, protozoa"
-CYTOMEGALOVIRUS,407444007,SNOMED,virus
+Cytomegalovirus,407444007,SNOMED,virus
 Deltavirus,,,virus
-DENGUE VIRUS,34348001,SNOMED,virus
+Dengue virus,34348001,SNOMED,virus
 Diphyllobothrium latum,,,"parasite, helminth"
 Dracunculus medinensis,,,"parasite, helminth"
 Ebola virus,424206003,SNOMED,virus
@@ -66,57 +66,57 @@ Entamoeba,,,"parasite, protozoa"
 Entamoeba dispar,,,"parasite, protozoa"
 Entamoeba histolytica,,,"parasite, protozoa"
 Enterobius vermicularis,,,"parasite, helminth"
-ENTEROVIRUS (Genus Enterovirus),243633006,SNOMED,virus
+Enterovirus (genus Enterovirus),243633006,SNOMED,virus
 Epidermophyton,,,fungi
-EXOPHIALA DERMATITIDIS,,,fungi
+Exophiala dermatitidis,,,fungi
 Falciformispora senegalensis,,,fungi
 Family Coronaviridae,243607003,SNOMED,virus
 Filoviridae,,,virus
 Flaviridae,,,virus
-FUNGI,414561005,SNOMED,fungi
-FUSARIUM,,,fungi
+Fungi,414561005,SNOMED,fungi
+Fusarium,,,fungi
 Genus Marburgvirus,424421007,SNOMED,virus
-GIARDIA,,,"parasite, protozoa"
+Giardia,,,"parasite, protozoa"
 Giardia intestinalis,,,"parasite, protozoa"
-GIARDIA LAMBLIA,78181009,SNOMED,"parasite, protozoa"
+Giardia lamblia,78181009,SNOMED,"parasite, protozoa"
 Hantavirus,,,virus
 Hendra virus,,,virus
 Hepadnaviridae,,,virus
-HEPATITIS A VIRUS,32452004,SNOMED,virus
-HEPATITIS B VIRUS,81665004,SNOMED,virus
-HEPATITIS C VIRUS,62944002,SNOMED,virus
+Hepatitis A virus,32452004,SNOMED,virus
+Hepatitis B virus,81665004,SNOMED,virus
+Hepatitis C virus,62944002,SNOMED,virus
 Hepatitis D,,,virus
-HEPATITIS E VIRUS,,,virus
+Hepatitis E virus,,,virus
 Herpesviridae,,,virus
 Histoplasma,,,fungi
 Histoplasma capsulatum,,,fungi
 Human bocavirus,,,virus
 Human coronavirus,84101006,SNOMED,virus
-HUMAN HERPESVIRUS 1,,,virus
-HUMAN HERPESVIRUS 3,,,virus
-HUMAN HERPESVIRUS 4,40168006,SNOMED,virus
-HUMAN HERPESVIRUS 5,,,virus
-HUMAN HERPESVIRUS 6,103528003,SNOMED,virus
+Human Herpesvirus 1,,,virus
+Human Herpesvirus 3,,,virus
+Human Herpesvirus 4,40168006,SNOMED,virus
+Human Herpesvirus 5,,,virus
+Human Herpesvirus 6,103528003,SNOMED,virus
 Human Immunodeficiency Virus,19030005,SNOMED,virus
-HUMAN IMMUNODEFICIENCY VIRUS 1,,,virus
-HUMAN METAPNEUMOVIRUS,416730002,SNOMED,virus
-HUMAN PARAINFLUENZA VIRUS,,,virus
-HUMAN PARAINFLUENZA VIRUS 1,407489008,SNOMED,virus
-HUMAN PARAINFLUENZA VIRUS 2,,,virus
-HUMAN PARAINFLUENZA VIRUS 3,407493002,SNOMED,virus
-HUMAN PARAINFLUENZA VIRUS 4,89117003,SNOMED,virus
-HUMAN PARVOVIRUS B19,,,virus
-HUMAN RESPIRATORY SYNCYTIAL VIRUS,6415009,SNOMED,virus
+Human Immunodeficiency virus 1,,,virus
+Human Metapneumovirus,416730002,SNOMED,virus
+Human Parainfluenza virus,,,virus
+Human Parainfluenza virus 1,407489008,SNOMED,virus
+Human Parainfluenza virus 2,,,virus
+Human Parainfluenza virus 3,407493002,SNOMED,virus
+Human Parainfluenza virus 4,89117003,SNOMED,virus
+Human Parvovirus b19,,,virus
+Human Respiratory Syncytial virus,6415009,SNOMED,virus
 Hymenolepis diminuta,,,"parasite, helminth"
 Hymenolepis nana,,,"parasite, helminth"
 Influenza A subtype H5N6,,,virus
-Influenza A suptype H7N7 ,715346008,SNOMED,virus
-INFLUENZA A VIRUS,407479009,SNOMED,virus
-INFLUENZA A VIRUS SUBTYPE H1N1,442352004,SNOMED,virus
-INFLUENZA A VIRUS SUBTYPE H5N1,,,virus
+Influenza A suptype H7N7,715346008,SNOMED,virus
+Influenza A virus,407479009,SNOMED,virus
+Influenza A virus subtype H1N1,442352004,SNOMED,virus
+Influenza A virus subtype H5N1,,,virus
 Influenza A virus subtype H7N9,609444009,SNOMED,virus
-INFLUENZA B VIRUS,407480007,SNOMED,virus
-Influenza Virus,725894000,SNOMED,virus
+Influenza B virus,407480007,SNOMED,virus
+Influenza virus,725894000,SNOMED,virus
 Isospora belli,,,"parasite, protozoa"
 Japanese encephalitis,,,virus
 Junin virus ,26352009,SNOMED,virus
@@ -132,21 +132,21 @@ Lujo virus,450622000,SNOMED,virus
 Lymphocytic choriomeningitis virus (LCMV),,,virus
 Machupo virus,71489006,SNOMED,virus
 Madurella,,,fungi
-MALASSEZIA PACHYDERMATIS,,,fungi
-MEASLES MORBILLIVIRUS,,,virus
+Malassezia pachydermatis,,,fungi
+Measles morbillivirus,,,virus
 MERS-CoV ,697932005,SNOMED,virus
-METAPNEUMOVIRUS,407501006,SNOMED,virus
-MEYEROZYMA GUILLIERMONDII,,,fungi
+Metapneumovirus,407501006,SNOMED,virus
+Meyerozyma guilliermondii,,,fungi
 Microsporidia,,,"parasite, protozoa"
 Microsporum,,,fungi
-MIDDLE EAST RESPIRATORY SYNDROME CORONAVIRUS,697932005,SNOMED,virus
+Middle East Respiratory Syndrome Coronavirus,697932005,SNOMED,virus
 Monkeypox virus,59774002,SNOMED,virus
 Mucor,,,fungi
 Mumps virus,50384007,SNOMED,virus
 Necator americanus,,,"parasite, helminth"
 Nipah virus,115511007,SNOMED,virus
-NOROVIRUS,407359000,SNOMED,virus
-OMICRON,,,virus
+Norovirus,407359000,SNOMED,virus
+Omicron,,,virus
 Onchocerca volvulus,,,"parasite, helminth"
 Orthomyxoviridae (influenza viruses),55014007,SNOMED,virus
 Papillomavirus,,,virus
@@ -155,7 +155,7 @@ Paracoccidioides,,,fungi
 Paragonimus westermani,,,"parasite, helminth"
 Paramyxoviridae,,,virus
 Parvoviridae,,,virus
-PENICILLIUM,,,fungi
+Penicillium,,,fungi
 Pichia kudriavzeveii,,,fungi
 Picornaviridae,,,virus
 Plasmodium,34706006,SNOMED,"parasite, protozoa"
@@ -163,20 +163,20 @@ Plasmodium falciparum,30020004,SNOMED,"parasite, protozoa"
 Plasmodium malariae,,,"parasite, protozoa"
 Plasmodium ovale,,,"parasite, protozoa"
 Plasmodium vivax,,,"parasite, protozoa"
-PNEUMOCYSTIS,115987006,SNOMED,fungi
-PNEUMOCYSTIS JIROVECII,79909001,SNOMED,fungi
+Pneumocystis,115987006,SNOMED,fungi
+Pneumocystis jirovecii,79909001,SNOMED,fungi
 Prion diseases,,,Prions
 Rabies virus,59881000,SNOMED,virus
 Respiratory Syncytial Virus,,,virus
 Retroviridae,,,virus
 Rhabdoviridae,,,virus
-RHIZOMUCOR,,,fungi
+Rhizomucor,,,fungi
 Rhizopus,,,fungi
 Rift Valley fever virus,28335002,SNOMED,virus
-ROTAVIRUS,417542000,SNOMED,virus
+Rotavirus,417542000,SNOMED,virus
 Rubella virus,5210005,SNOMED,virus
-SACCHAROMYCES CEREVISIAE,,,fungi
-SAPOVIRUS,,,virus
+Saccharomyces cerevisiae,,,fungi
+Sapovirus,,,virus
 SARS-CoV-2 Antigen,,,virus
 SARS-CoV-2 IgG Antibody,,,virus
 SARS-CoV-2 IgG/IgM Antibody,,,virus
@@ -190,12 +190,12 @@ Schistosoma japonicum,,,"parasite, helminth"
 Schistosoma mansoni,,,"parasite, helminth"
 Schistosoma mekongi,,,"parasite, helminth"
 Severe Acute Resp Syndrome Coronavirus 2,,,virus
-SEVERE ACUTE RESPIRATORY SYNDROME CORONAVIRUS 2,,,virus
-SEVERE ACUTE RESPIRATORY SYNDROME-RELATED CORONAVIRUS,415360003,SNOMED,virus
+Severe Acute Respiratory Syndrome Coronavirus 2,,,virus
+Severe Acute Respiratory Syndrome-Related Coronavirus,415360003,SNOMED,virus
 Severe fever with thrombocytopaenia syndrome (SFTS) ,,,virus
-SIMPLEXVIRUS,314797000,SNOMED,virus
+Simplexvirus,314797000,SNOMED,virus
 Sporothrix schenckii,,,fungi
-STRONGYLOIDES STERCORALIS,,,"parasite, helminth"
+Strongyloides stercoralis,,,"parasite, helminth"
 Taenia saginata,,,"parasite, helminth"
 Taenia solium,,,"parasite, helminth"
 Talaromyces marneffei,,,fungi
@@ -207,7 +207,7 @@ Trichinella spiralis,,,"parasite, helminth"
 Trichomonas,,,"parasite, protozoa"
 Trichomonas vaginalis,,,"parasite, protozoa"
 Trichophyton,,,fungi
-TRICHOSPORON ASAHII,,,fungi
+Trichosporon asahii,,,fungi
 Trichuris trichiura,,,"parasite, helminth"
 Trypanosoma,,,"parasite, protozoa"
 Trypanosoma brucei gambiense,,,"parasite, protozoa"
@@ -215,6 +215,6 @@ Trypanosoma brucei rhodesiense,,,"parasite, protozoa"
 Trypanosoma cruzi,,,"parasite, protozoa"
 West Nile virus,57311007,SNOMED,virus
 Wuchereria bancrofti,,,"parasite, helminth"
-YEAST,62093005,SNOMED,fungi
+Yeast,62093005,SNOMED,fungi
 Zika virus,,,virus
 Zopfia rosatii,,,fungi
