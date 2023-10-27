@@ -211,7 +211,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_seizconv,radio,Seizures / Convulsions,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_restlessne,radio,Restlessness,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fatigue,radio,Fatigue / Malaise / Lethargy,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myalgia,radio,Muscle aches / myalgia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_myalgia,radio,Muscle aches / Myalgia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestindrw,radio,Lower chest wall indrawing,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lrt,radio,Lower Respiratory Tract symptoms,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_chestpain,radio,Chest pain,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
@@ -222,7 +222,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 88, Other | 99, Unknown",,,,,[adsym_lymph]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_lymphoth,text,Specify other site:,,,,,,[adsym_lymphspec(88)]='1',,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_arthralgia,radio,Joint pain / arthralgia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_arthralgia,radio,Joint pain / Arthralgia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_walk,radio,Inability to walk,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_weight,radio,Weight loss,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_abdpain,radio,Abdominal pain,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -239,8 +239,8 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinrash,radio,Skin rash,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_encephalitis,radio,Encephalitis,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_pruritus,radio,Pruritus,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,group,Bleeding / Haemorrhage,,,,,,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / Haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag_yn] = '1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_oth,text,Specify other bleeding / haemorrhage site(s),,,,,,[adsym_haemorrhag_site(88)]='1',1,1,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_dta,radio,Deep tissue abscess,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
@@ -824,7 +824,7 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reas,checkbox,Reason(s) for IV fluid (check all that apply),"1, Shock | 2, High/rising haematocrit | 3, Anorexia | 4, Persistent vomiting | 88, Other",,,,,[inter_ivfluid_occur] ='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_reasoth,text,Specify other reason for IV fluid,,,,,,[inter_ivfluid_reas(88)]='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_start,datetime_dmy,Date first IV fluid started,,datetime_dmy,,today,,[inter_ivfluid_occur] ='1',,1,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_end,datetime_dmy,Date last IV fluid ended,,datetime_dmy,[inter_ivfluid_start],,,[inter_ivfluid_occur] ='1',,1,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_end,datetime_dmy,Date last IV fluid ended,,datetime_dmy,,,,[inter_ivfluid_occur] ='1',,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt,group,BLOOD PRODUCT TRANSFUSION,,,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_yn,radio,Blood product tranfusion?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_type,checkbox,Select all blood product transfusion that were administered,"1, Platelets | 2, Cryoprecipitate | 3, Whole blood/packed RBC | 4, Frozen fresh plasma | 5, Fibrinogen concentrate",,,,,[inter_bpt_yn] ='1',,1,,
