@@ -1,7 +1,7 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic,preset_Disease_Core,preset_Disease_Dengue,preset_Disease_Mpox,preset_Disease_Nigeria_Mpox
 presentation,,subjid,text,Participant Identification Number (PIN):,,patient_id_5_alphanum-4to6_digits,,,,,1,1,1,1
 presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following is the individual suspected/confirmed to have,,,,,inclusion_Diseases,,1,1,,1
-presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,1
+presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_mpox,radio,Suspected of confirmed mpox,"1, Yes | 0, No",,,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_consent,radio,Participant has provided consent to participate in this study,"1, Yes | 0, No",,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,1,1,,1
