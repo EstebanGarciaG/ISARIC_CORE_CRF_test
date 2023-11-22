@@ -911,7 +911,7 @@ outcome_assessment,ASSESSMENT (Complete this section in full for each outcome as
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_deathdate,date_dmy,Date of death,,date_dmy,,,,[asse_mpoxpatoutco]='6',,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_deathcause,text,Cause of death,,,,,,[asse_mpoxpatoutco]='6',,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_fulostreas,text,Reason for loss to follow-up,,,,,,[asse_mpoxpatoutco]='8',,,1,1
-outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage,group,,,,,,,,,,,
+outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage,group,Skin damage,,,,,,,,,,
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_yn,radio,Is the patient's skin damaged following resolution of acute mpox illness,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_type,checkbox,Select all that apply,"1, Atrophic scars | 2, Hypertrophic scars | 3, Deformities | 4, Hypopigmentation | 5, Hyperpigmentation | 6, Contractures | 88, Other ",,,,,[asse_skindamage_yn]='1',,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other type of skin damage,,,,,,[asse_skindamage_type(88)]='1',,,1,1
