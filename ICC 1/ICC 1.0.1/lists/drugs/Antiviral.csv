@@ -1,28 +1,28 @@
 Drugs                                                , Code     , Library , Selected
-Aciclovir (Zovirax)                                   , J05AB01  , ATC     ,1
-Atazanavir                                           , J05AE08, ATC     ,1
+Aciclovir (Zovirax)                                   , J05AB01  , ATC     ,
+Atazanavir                                           , J05AE08, ATC     ,
 Bulevirtide, J05AX28, ATC     ,
-Cidofovir (Vistide)                                   , J05AB12, ATC     , 
-Darunavir (Prezista)                                  , J05AE10, ATC     , 
-Dolutegravir (Tivicay)                                , J05AJ03, ATC     , 
-Efavirenz (Sustiva)                                   , J05AG03, ATC     , 
-Emtricitabine (Emtriva)                               , J05AF09, ATC     , 
-Famciclovir (Famvir)                                  , J05AB09, ATC     , 
-Favipiravir (Avigan)                                  , J05AX27, ATC     , 
-Ganciclovir (Cytovene)                                , J05AB06, ATC     , 
-"Lamivudine (Epivir, 3TC)                              ", J05AF05, ATC     ,1
-Lopinavir/Ritonavir (Kaletra)                         , J05AR10  , ATC     ,1
-Molnupiravir (Lagevrio)                               , J05AB18 , ATC     , 
-Oseltamivir (Tamiflu)                                 , J05AH02  , ATC     ,1
+Cidofovir (Vistide)                                   , J05AB12, ATC     ,
+Darunavir (Prezista)                                  , J05AE10, ATC     ,
+Dolutegravir (Tivicay)                                , J05AJ03, ATC     ,
+Efavirenz (Sustiva)                                   , J05AG03, ATC     ,
+Emtricitabine (Emtriva)                               , J05AF09, ATC     ,
+Famciclovir (Famvir)                                  , J05AB09, ATC     ,
+Favipiravir (Avigan)                                  , J05AX27, ATC     ,
+Ganciclovir (Cytovene)                                , J05AB06, ATC     ,
+"Lamivudine (Epivir, 3TC)                              ", J05AF05, ATC     ,
+Lopinavir/Ritonavir (Kaletra)                         , J05AR10  , ATC     ,
+Molnupiravir (Lagevrio)                               , J05AB18 , ATC     ,
+Oseltamivir (Tamiflu)                                 , J05AH02  , ATC     ,
 Penciclovir, J05AB13  , ATC     ,
-Raltegravir (Isentress)                               , J05AJ01, ATC     , 
-Remdesivir (Veklury)                                  , J05AB16, ATC     ,1
-"Ribavirin (Rebetol, Copegus)                          ", J05AP01, ATC     , 
-Rimantadine (Flumadine)                               , J05AC02, ATC     , 
-Tenofovir Disoproxil (Viread)                , J05AF07, ATC     ,1
-Umifenovir                                           , J05AX13, ATC     ,1
-Valaciclovir (Valtrex)                                , J05AB11, ATC     ,1
-Valganciclovir                                       , J05AB14, ATC     ,1
+Raltegravir (Isentress)                               , J05AJ01, ATC     ,
+Remdesivir (Veklury)                                  , J05AB16, ATC     ,
+"Ribavirin (Rebetol, Copegus)                          ", J05AP01, ATC     ,
+Rimantadine (Flumadine)                               , J05AC02, ATC     ,
+Tenofovir Disoproxil (Viread)                , J05AF07, ATC     ,
+Umifenovir                                           , J05AX13, ATC     ,
+Valaciclovir (Valtrex)                                , J05AB11, ATC     ,
+Valganciclovir                                       , J05AB14, ATC     ,
 Zalcitabine, J05AF03, ATC     ,
-Zanamivir (Relenza)                                   , J05AH01, ATC     , 
-"Zidovudine (Retrovir, AZT)                            ", J05AF01, ATC     ,1
+Zanamivir (Relenza)                                   , J05AH01, ATC     ,
+"Zidovudine (Retrovir, AZT)                            ", J05AF01, ATC     ,
