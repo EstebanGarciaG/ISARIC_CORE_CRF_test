@@ -1,38 +1,38 @@
 Microorganism,Code,Library,Type
-Acremonium,,,fungi
+Acremonium,63996006,SNOMED,fungi
 Adenoviridae,424470006,SNOMED,virus
-Ancylostoma duodenale,,,"parasite, helminth"
+Ancylostoma duodenale,81559006,SNOMED,"parasite, helminth"
 Andes orthohantavirus,442001008,SNOMED,virus
-Arenaviridae,,,virus
-Ascaris lumbricoides,,,"parasite, helminth"
+Arenaviridae,243624009,SNOMED,virus
+Ascaris lumbricoides,19061001,SNOMED,"parasite, helminth"
 Aspergillus,2429008,SNOMED,fungi
-Aspergillus flavus,,,fungi
+Aspergillus flavus,66821001,SNOMED,fungi
 Aspergillus fumigatus,32684000,SNOMED,fungi
 Aspergillus fumigatus complex,719029007,SNOMED,fungi
 Aspergillus niger,89354002,SNOMED,fungi
-Aspergillus terreus,,,fungi
-Aspergillus versicolor,,,fungi
-Astroviridae,,,virus
+Aspergillus terreus,26406003,SNOMED,fungi
+Aspergillus versicolor,48315007,SNOMED,fungi
+Astroviridae,424055004,SNOMED,virus
 Avian influenza A H7N9 & H5N1,,,virus
-Blastocystis hominis,,,"parasite, Stramenopiles"
-Blastomyces dermatitidis,,,fungi
+Blastocystis hominis,28923009,SNOMED,"parasite, Stramenopiles"
+Blastomyces dermatitidis,65615007,SNOMED,fungi
 Bocaparvovirus,,,virus
-Brugia malayi,,,"parasite, helminth"
+Brugia malayi,112443002,SNOMED,"parasite, helminth"
 Bunyaviridae,,,virus
-Caliciviridae,,,virus
+Caliciviridae,243627002,SNOMED,virus
 Candida,3265006,SNOMED,fungi
 Candida albicans,53326005,SNOMED,fungi
 Candida auris,3.49E+12,SNOMED,fungi
 Candida dubliniensis,115952006,SNOMED,fungi
 Candida glabrata,444877006,SNOMED,fungi
-Candida inconspicua,,,fungi
-Candida orthopsilosis,,,fungi
+Candida inconspicua,283871001,SNOMED,fungi
+Candida orthopsilosis,3.691E+12,SNOMED,fungi
 Candida parapsilosis,61302002,SNOMED,fungi
 Candida tropicalis,47885008,SNOMED,fungi
-Clavispora lusitaniae,,,fungi
-Clonorchis sinensis,,,"parasite, helminth"
-Coccidioides,,,fungi
-Coccidioides immitis,,,fungi
+Clavispora lusitaniae,50164000,SNOMED,fungi
+Clonorchis sinensis,36559008,SNOMED,"parasite, helminth"
+Coccidioides,8672004,SNOMED,fungi
+Coccidioides immitis,23439005,SNOMED,fungi
 Coronavirus Alpha - B.1.1.7,,,virus
 Coronavirus Beta - B.1.351,,,virus
 Coronavirus Delta - B.1.617.2,,,virus
@@ -47,11 +47,11 @@ Coronavirus Omicron - B.1.1.529.5 BA.5,,,virus
 Coronavirus Theta- P.3,,,virus
 Coronavirus Zeta - P.2,,,virus
 Crimean-Congo Hemorrhagic Fever virus,79875007,SNOMED,virus
-Cryptococcus gattii,,,fungi
-Cryptococcus neoformans,,,fungi
+Cryptococcus gattii,450862004,SNOMED,fungi
+Cryptococcus neoformans,67168003,SNOMED,fungi
 Cryptosporidium,83821001,SNOMED,"parasite, protozoa"
-Cryptosporidium hominis,,,"parasite, protozoa"
-Cryptosporidium parvum,,,"parasite, protozoa"
+Cryptosporidium hominis,417722006,SNOMED,"parasite, protozoa"
+Cryptosporidium parvum,51504002,SNOMED,"parasite, protozoa"
 Curvularia lunata,,,fungi
 Cyclospora,,,"parasite, protozoa"
 Cyclospora cayetanensis,,,"parasite, protozoa"
