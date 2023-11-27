@@ -1,5 +1,5 @@
 Condition,Code,Library,Charlson,Elixhauser
-Human immunodeficiency virus [HIV] disease,,SNOMED,1,1
+Human immunodeficiency virus [HIV] disease,19030005,SNOMED,1,1
 Autoimmune Disease,85828009,SNOMED,,
 Chronic Haematological Disease,,SNOMED,,
 Blood coagulation disorder,64779008,SNOMED,,
@@ -40,14 +40,14 @@ Peripheral Vascular Disease,400047006,SNOMED,1,1
 Reactive psychoses,231437006,SNOMED,,1
 Disorder of pulmonary circulation,39785005,SNOMED,,1
 Chronic Infection,,SNOMED,,
-Rare Diseases and Inborn Errors of Metabolism,,SNOMED,,
+Rare Diseases and Inborn Errors of Metabolism,4121882,SNOMED,,
 Chronic Kidney Disease,709044004,SNOMED,1,1
 Moderate or Severe Renal Disease,,SNOMED,1,1
 Acute-on-chronic renal failure,236433006,SNOMED,1,1
 Rheumatoid Disorders,,SNOMED,1,1
 Transplant present,737294004,SNOMED,1,1
 Asplenia,707147002,SNOMED,,1
-Smoking,,SNOMED,,1
+Smoking,77176002,SNOMED,,1
 Psychoactive substance use disorder,11061003,SNOMED,,1
 Recurrent deep vein thrombosis,710167004,SNOMED,,1
 Hypothyroidism,40930008,SNOMED,,1

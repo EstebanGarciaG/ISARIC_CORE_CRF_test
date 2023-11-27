@@ -4,14 +4,14 @@ Drugs                                         , Code    , Library , Selected
 Amoxicillin/Beta-lactamase inhibitor, J01CR02 , ATC     , 
 "Amphotericin (Amphocin, Fungizone, Fungilin)  ", J02AA01 , ATC     , 
 Ampicillin/Sulbactam (Unasyn)                 , J01CR01 , ATC     ,1
-Atovaquone                                    ,J01XX07  ,ATC,2
+Atovaquone                                    ,P01AX06,ATC,2
 "Azithromycin (Zithromax, Zmax, Sumamed)       ", J01FA10 , ATC     ,1
-Aztreonam                                      ,J01DF01  ,ATC,2
-Bacampicillin                                  ,J01CA03  ,ATC,2
-Bacitracin                                     ,D06AA01  ,ATC,2
-Benzylpenicillin (Penicillin G)                    , J01CE01  , ATC     ,1
-Capreomycin                                    ,J04AK02  ,ATC,2
-Carbenicillin indanyl sodium                   ,J01CA06  ,ATC,2
+Aztreonam,J01DF01,ATC,2
+Bacampicillin,J01CA06,ATC,2
+Bacitracin,D06AX05,ATC,2
+Benzylpenicillin (Penicillin G), J01CE01  , ATC     ,1
+Capreomycin,J04AB30,ATC,2
+Carbenicillin indanyl sodium,J01CA06  ,ATC,2
 Caspofungin (Cancidas)                        , J02AX04 , ATC     , 
 Cefaclor                                       ,J01DC04  ,ATC,2
 Cefadroxil                                     ,J01DB05  ,ATC,2
