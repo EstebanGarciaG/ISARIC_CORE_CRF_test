@@ -14,7 +14,7 @@ presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,1
 presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,time,,,,[dates_adm] = '1',,1,,
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No | 99, Unknown",,,,,[inclu_disease]='4',,,,1
-presentation,ONSET & ADMISSION,dates_mpoxknown,radio,Does participant know date of contact with suspected or confirmed case?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,ONSET & ADMISSION,dates_mpoxknown,radio,Does participant know date of contact with suspected or confirmed case?,"1, Yes | 0, No | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxknown]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -64,8 +64,8 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_obesity,radio,Obesity (as defined by clinical staff),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea,group,Liver disease,,,,,,,,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_gnrl,radio,Liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_mild,radio,Mild liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_severe,radio,Moderate or severe liver disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_mild,radio,Mild liver disease,"1, Yes | 0, No | 99, Unknown",,,,,[comor_liverdisea_gnrl]='1',1,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_liverdisea_severe,radio,Moderate or severe liver disease,"1, Yes | 0, No | 99, Unknown",,,,,[comor_liverdisea_gnrl]='1',1,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hepbc,radio,Chronic hepatitis B/C infection,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_asplenia,radio,Asplenia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrneurolo,radio,Chronic neurological disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -274,7 +274,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic_other,text,Specify other neurological abnormality,,,,,,[adsym_neurologic] = '1',,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_yn,list,Other sign(s) or abnormality,"1, Yes | 0, No | 99, Unknown",,,,conditions_Symptoms,,1,1,,
-daily,ASSESSMENT,daily_day,text,Clinical Visit Day:,,,,,,,,,,1
+daily,ASSESSMENT,daily_day,text,Clinical Visit Day:,,number,,,,,,,,1
 daily,ASSESSMENT,daily_visityn,radio,Has this visit taken place?,"1, Yes | 0, No",,,,,,,,,1
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,,,1,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datasympt,radio,Enter signs and symptoms data for this date?,"1, Yes | 0, No",,,,,,,,,1
@@ -375,16 +375,16 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloc,checkbox,"If yes, specify severe bleeding sites:","1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[vital_svrbld]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_svrbldloco,text,Specify other site:,,,,,,[vital_svrbldloc(88)]='1',,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_urineflow,number,Urine flow rate (mL/24 hours),,number,,,,[daily_datavital]='1',1,1,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox,group,MPOX,,,,,,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_care,radio,Current level of care:,"1, Outpatient | 2, Admitted to normal ward for isolation only | 3, Admitted to normal ward for clinical care | 4, Intensive care admission",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rash,radio,Site where mpox rash first occurred,"1, Genital skin | 2, Non-genital skin | 3, Mouth | 4, Unknown| 88, Other",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rashoth,text,Specify first rash other location,,,,,,[vital_mpox_rash]='88',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rashdate,date_dmy,Date first rash was observed by patient,,date_dmy,,today,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_dist,radio,Rash distribution,"1, Generalised | 2, Localised around the genitals | 3, Centrifugal- more on the extremities | 4, Centripetal- more on the trunk | 5, Unknown distribution | 88, Other distribution",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_distoth,text,Specify other rash distribution:,,,,,,[vital_mpox_dist]='88',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_morph,radio,Rash morphology,"1, Mostly discrete lesions | 2, Semi-confluent lesions | 3, Confluent lesions | 4, Mixed morphology | 99, Unknown",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_morphsize,radio,Rash size (skin) - widest diameter of any lesion,"1, Less than 0.5cm | 2, 0.5-0.99cm | 3, 1-1.99cm | 4, 2+ cm",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_skinles,radio,Current mpox skin lesion status:,"1, There are active skin lesions | 2, There are skin lesions and none of them are active (lesions in the process of healing & resolving, including scabbed lesions) | 3, All skin lesions have completely resolved (all scabs have fallen off with intact skin) | 4, No skin lesions have developed to date",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox,group,MPOX,,,,,,,,,,
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_care,radio,Current level of care:,"1, Outpatient | 2, Admitted to normal ward for isolation only | 3, Admitted to normal ward for clinical care | 4, Intensive care admission",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_rash,radio,Site where mpox rash first occurred,"1, Genital skin | 2, Non-genital skin | 3, Mouth | 4, Unknown| 88, Other",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_rashoth,text,Specify first rash other location,,,,,,[vital_mpox_rash]='88',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_rashdate,date_dmy,Date first rash was observed by patient,,date_dmy,,today,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_dist,radio,Rash distribution,"1, Generalised | 2, Localised around the genitals | 3, Centrifugal- more on the extremities | 4, Centripetal- more on the trunk | 5, Unknown distribution | 88, Other distribution",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_distoth,text,Specify other rash distribution:,,,,,,[vital_mpox_dist]='88',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_morph,radio,Rash morphology,"1, Mostly discrete lesions | 2, Semi-confluent lesions | 3, Confluent lesions | 4, Mixed morphology | 99, Unknown",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_morphsize,radio,Rash size (skin) - widest diameter of any lesion,"1, Less than 0.5cm | 2, 0.5-0.99cm | 3, 1-1.99cm | 4, 2+ cm",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS - MPOX,vital_mpox_skinles,radio,Current mpox skin lesion status:,"1, There are active skin lesions | 2, There are skin lesions and none of them are active (lesions in the process of healing & resolving, including scabbed lesions) | 3, All skin lesions have completely resolved (all scabs have fallen off with intact skin) | 4, No skin lesions have developed to date",,,,,[daily_datavital]='1',,,,1
 daily,Are the following types of active skin lesions currently present?,vital_mpox_vesi,radio,Vesicle,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',,,,1
 daily,Are the following types of active skin lesions currently present?,vital_mpox_vesi_loc,text,Location of lesions of this type,,,,,,[vital_mpox_vesi]='1',,,,1
 daily,Are the following types of active skin lesions currently present?,vital_mpox_vesi_num,text,Number of lesions of this type,,number,,,,[vital_mpox_vesi]='1',,,,1
@@ -406,15 +406,15 @@ daily,Are the following types of active skin lesions currently present?,vital_mp
 daily,Are the following types of active skin lesions currently present?,vital_mpox_othtyp,radio,Other active lesions type,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',,,,1
 daily,Are the following types of active skin lesions currently present?,vital_mpox_othtyp_loc,text,Location of lesions of this type,,,,,,[vital_mpox_othtyp]='1',,,,1
 daily,Are the following types of active skin lesions currently present?,vital_mpox_othtyp_num,text,Number of lesions of this type,,number,,,,[vital_mpox_othtyp]='1',,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_res,radio,Is there residual evidence of resolved skin lesions (scar/discolouration)?,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='2' or [vital_mpox_skinles]='3' or [vital_mpox_skinles]='4',,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_mucos,radio,Current mpox mucosal lesion status:,"1, There are mucosal lesions | 2, There are no mucosal lesions (any have resolved and mucosa is healed) | 3, No mucosal lesions have developed to date",,,,,[daily_datavital]='1',,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_rectitis,radio,Persistant symptoms of rectitis?,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_recpainyn,radio,Anal or rectal pain,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_recblddis,radio,Rectal bleeding or discharge,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_tenes,radio,Sensation of needing to pass stool when bowels are empty (tenesmus),"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_orophar,radio,Persistant symptoms or signs of mucosal oropharyngeal lesions,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_pharyn,radio,Pharyngitis,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_orophar]=1,,,,1
-daily,Are the following types of active skin lesions currently present?,vital_mpox_oropharles,radio,Oro-pharyngeal ulcerated lesion (active),"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_orophar]=1,,,,1
+daily,,vital_mpox_res,radio,Is there residual evidence of resolved skin lesions (scar/discolouration)?,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='2' or [vital_mpox_skinles]='3' or [vital_mpox_skinles]='4',,,,1
+daily,,vital_mpox_mucos,radio,Current mpox mucosal lesion status:,"1, There are mucosal lesions | 2, There are no mucosal lesions (any have resolved and mucosa is healed) | 3, No mucosal lesions have developed to date",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_rectitis,radio,Persistant symptoms of rectitis?,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1,,,,1
+daily,,vital_mpox_recpainyn,radio,Anal or rectal pain,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
+daily,,vital_mpox_recblddis,radio,Rectal bleeding or discharge,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
+daily,,vital_mpox_tenes,radio,Sensation of needing to pass stool when bowels are empty (tenesmus),"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_rectitis]=1,,,,1
+daily,,vital_mpox_orophar,radio,Persistant symptoms or signs of mucosal oropharyngeal lesions,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1,,,,1
+daily,,vital_mpox_pharyn,radio,Pharyngitis,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_orophar]=1,,,,1
+daily,,vital_mpox_oropharles,radio,Oro-pharyngeal ulcerated lesion (active),"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_orophar]=1,,,,1
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_head,radio,"Head, face, neck","1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1 or [vital_mpox_skinles]='1',,,,1
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_mouth,radio,Inside of mouth,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1 or [vital_mpox_skinles]='1',,,,1
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_torso,radio,Torso/trunk,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1 or [vital_mpox_skinles]='1',,,,1
@@ -428,14 +428,14 @@ daily,Are there active skin or mucosal lesions in the following areas,vital_mpox
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_rectum,radio,Rectum,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1 or [vital_mpox_skinles]='1',,,,1
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_locoth,radio,Other site,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_mucos]=1 or [vital_mpox_skinles]='1',,,,1
 daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_spec,text,Specify other site:,,,,,,[vital_mpox_locoth]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_24hr,radio,Have new skin or mucosal lesions appeared in the previous 24 hours? (may be best assed by patients),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_sl,radio,Estimated total number of skin lesions on the body,"0, None | 1, <10 | 2, 10-24 | 3, 25-49 | 4, 50-99 | 5, 100-250 | 6, 251-1000 | 7, >1000",,,,,[daily_datavital]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_ml,radio,Estimated total number of mucosal lesions on the body,"0, None | 1, <10 | 2, 10-24 | 3, 25-49 | 4, 50-99 | 5, 100-250 | 6, 251-1000 | 7, >1000",,,,,[daily_datavital]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_slpainyn,radio,Pain at any skin lesion site:,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_slpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,number,,,,[vital_mpox_slpainyn]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_mlpainyn,radio,Pain at any mucosal lesion site:,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_mlpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,number,,,,[vital_mpox_mlpainyn]='1',,,,1
-daily,Are there active skin or mucosal lesions in the following areas,vital_mpox_desc,text,Describe any other lesion complications:,,,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_24hr,radio,Have new skin or mucosal lesions appeared in the previous 24 hours? (may be best assed by patients),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_sl,radio,Estimated total number of skin lesions on the body,"0, None | 1, <10 | 2, 10-24 | 3, 25-49 | 4, 50-99 | 5, 100-250 | 6, 251-1000 | 7, >1000",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_ml,radio,Estimated total number of mucosal lesions on the body,"0, None | 1, <10 | 2, 10-24 | 3, 25-49 | 4, 50-99 | 5, 100-250 | 6, 251-1000 | 7, >1000",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_slpainyn,radio,Pain at any skin lesion site:,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_slpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,number,,,,[vital_mpox_slpainyn]='1',,,,1
+daily,,vital_mpox_mlpainyn,radio,Pain at any mucosal lesion site:,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,,,1
+daily,,vital_mpox_mlpain,text,"If yes, maximal pain score, where 0 means ""no pain"", and 10 means ""the worst possible pain.""",,number,,,,[vital_mpox_mlpainyn]='1',,,,1
+daily,,vital_mpox_desc,text,Describe any other lesion complications:,,,,,,[daily_datavital]='1',,,,1
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,daily_datatreat,radio,Enter Treatments & Interventions data for this date?,"1, Yes | 0, No",,,,,,1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid,group,FLUIDS,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datatreat]='1',,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_fluid_oral,radio,Oral rehydration? ,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datatreat]='1',,1,,
@@ -571,7 +571,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgl,number,CRP (mg/L),,number,0,1000,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgdl,number,CRP (mg/dL),,number,0,225,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh,,Lactate Dehydrogenase/LDH (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase/LDH (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase/LDH (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_iul,number,Lactate Dehydrogenase/LDH (IU/L),,number,0,16650,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki,,Creatine kinase (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_ul,number,Creatine kinase (U/L),,number,0,10000,,[daily_datalab]='1',1,1,,1
@@ -841,8 +841,8 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshoc
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_reshockep,radio,Number of re-shock episodes,"1, 1 | 2, 2 | 3, 3 | 4, 4+ | 99, Unknown",,,,,[compl_reshock]='1',,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed,group,Severe bleeding (requiring intervention),,,,,,,,,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_yn,radio,Severe bleeding (requiring intervention),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[compl_severebleed_yn] = '1',1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_site,checkbox,Site of bleeding,"1, Skin | 2, Nose | 3, Gums | 4, GI tract | 5, Urinary tract | 6, Vaginal | 88, Other",,,,,[compl_severebleed_yn] = '1',1,1,1,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_severebleed_oth,text,Specify other site of bleeding,,,,,,[compl_severebleed_site(88)]='1',1,1,1,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pleurascite,radio,Pleural effusion / Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_seizure,radio,Seizure,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focalneuro,radio,Focal neurological signs,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
@@ -933,9 +933,9 @@ outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1,1,1
 outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,,1,1
 outcome,OUTCOME,outco_com,group,COMMUNITY OUTCOME,,,,,,,,,,1
 outcome,OUTCOME,outco_com_outcome,radio,Outcome (community),"1, Remains in community | 2, Currently in hospital | 3, Was admitted to hospital but now in community again | 4, Death | 5, Palliative care | 99, Unknown",,,,,[outco_recruitype]='2',,,,1
-outcome,OUTCOME,outco_com_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_outcome] = '1',,,,1
-outcome,OUTCOME,outco_com_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',,,,1
-outcome,OUTCOME,outco_com_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',,,,1
+outcome,OUTCOME,outco_com_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_com_outcome] = '1',,,,1
+outcome,OUTCOME,outco_com_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' or [outco_com_outcome]='2',,,,1
+outcome,OUTCOME,outco_com_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' or [outco_com_outcome]='2',,,,1
 outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge | 99, Unknown",,,,,,1,1,1,1
 outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_outcome] = '1',1,,1,1
 outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
