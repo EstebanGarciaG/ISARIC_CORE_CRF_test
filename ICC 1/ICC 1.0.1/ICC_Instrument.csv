@@ -4,7 +4,9 @@ presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following i
 presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_mpox,radio,Suspected of confirmed mpox,"1, Yes | 0, No",,,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_consent,radio,Participant has provided consent to participate in this study,"1, Yes | 0, No",,,,,,,,,1
+presentation,INCLUSION CRITERIA,inclu_consentdate,date_dmy,Date of consent:,,date_dmy,,today,,[inclu_consent]='1',,,,1
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,1,1,,1
+presentation,ONSET & ADMISSION,dates_hosp,text,Which hospital/community has the participant been enrolled at?,,,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(88)]='1',,,,1
@@ -12,7 +14,7 @@ presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0
 presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,1
 presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,time,,,,[dates_adm] = '1',,1,,
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No | 99, Unknown",,,,,[inclu_disease]='4',,,,1
-presentation,ONSET & ADMISSION,dates_mpoxknown,radio,Is date of contact with suspected or confirmed mpox case known?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,ONSET & ADMISSION,dates_mpoxknown,radio,Does participant know date of contact with suspected or confirmed case?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,Date of contact with suspected or confirmed mpox case,,date_dmy,,today,,[dates_mpoxknown]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -31,7 +33,7 @@ presentation,DEMOGRAPHICS,demog_weight_kg,number,Weight (kg),,number,0,800,,,1,1
 presentation,DEMOGRAPHICS,demog_weight_lb,number,Weight (lb),,number,0,1763,,,,,,
 presentation,DEMOGRAPHICS,demog_race,checkbox,Race (select all that apply),"1, Arab | 2, Black | 3, East Asian | 4, South Asian | 5, South-East Asian | 6, West Asian | 7, Latin American | 8, White | 9, Aboriginal/First Nations/Indigenous | 88, Other | 99, Unknown",,,,,,1,1,,1
 presentation,DEMOGRAPHICS,demog_race_other,text,Specify other race,,,,,,[demog_race(88)]='1',1,1,,1
-presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 88, Other",,,,,,,,,1
+presentation,DEMOGRAPHICS,demog_ethnic,checkbox,Ethnic group,"1, Yoruba | 2, Ibo | 3, Hausa | 4, Ikwere | 5, Ogoni | 88, Other",,,,,,,,,1
 presentation,DEMOGRAPHICS,demog_ethnicoth,text,Specify other ethnic group,,,,,,[demog_ethnic(88)]='1',,,,1
 presentation,DEMOGRAPHICS,demog_healthcare,radio,Employed as a healthcare worker,"1, Yes, patient facing | 2, Yes, laboratory | 3, Yes, no patients/laboratory | 0, No | 99, Unknown",,,,,,1,,,1
 presentation,DEMOGRAPHICS,demog_occupation,radio,Primary location of occupation,"1, Home-working or unemployed | 2, Indoors-office/health/education/hospitality/business/homes | 3, Indoors-factory | 4, Outdoors-agriculture/forestry/fisheries | 5, Outdoors-construction/industrial/mining | 6, Armed Forces | 7, Student | 88, Other | 99, Unknown",,,,,,,1,,
@@ -73,7 +75,9 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cpox,radio,Active chickenpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_rheumatolo,radio,Rheumatologic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-<500 | 3, 500 or more | 99, Unknown",,,,,[comor_aids] = '1',1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-<500 | 3, 500 or more | 99, Unknown",,,,,[comor_aids] = '1',1,1,,
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4v2,radio,Most recent CD4 count (cells/uL),"1, Less than 50 | 2, 50-99 | 3, 100-199 | 4, 200-499 | 5, 500 and over | 99, Unknown",,,,,[comor_aids] = '1',,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4date,date_dmy,CD4 count date:,,date_dmy,,today,,[comor_aids] = '1',,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c_mmolmol,number,HbA1C results within last 6 months (mmol/mol),,number,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',1,1,,1
@@ -100,7 +104,7 @@ presentation,MEDICAL HISTORY,medic_dengue,group,DENGUE,,,,,,,,1,,
 presentation,MEDICAL HISTORY,medic_dengue_occur,radio,Is the patient known to have had previous dengue infection(s),"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,MEDICAL HISTORY,medic_firstadm,radio,Was the patient ever hospitalised for a previous dengue infection,"1, Yes, admitted to hospital or ICU | 0, No | 99, Unknown",,,,,[medic_dengue_occur] = '1',,1,,
 presentation,MEDICAL HISTORY MPOX,medic_mpox,group,MPOX,,,,,,,,,,1
-presentation,MEDICAL HISTORY MPOX,medic_mpox_previnf,radio,"Before the current episode of mpox, has the participant ever been infected with the Mpox virus?","1, Yes | 0, No | 99, Unknown",,,,,,,,,1
+presentation,MEDICAL HISTORY MPOX,medic_mpox_previnf,radio,"Was the participant ever diagnosed with mpox in the past, before this current episode of mpox?","1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,MEDICAL HISTORY MPOX,medic_mpox_infstart,date_dmy,When did the previous episode of mpox begin?,,date_dmy,,today,,[medic_mpox_previnf]='1',,,,1
 presentation,MEDICAL HISTORY MPOX,medic_mpox_infend,date_dmy,When did the previous episode of mpox end?,,date_dmy,,today,,[medic_mpox_previnf]='1',,,,1
 presentation,MEDICAL HISTORY MPOX,medic_mpox_labtest,radio,Was the episode of mpox confirmed by laboratory testing?,"1, Yes | 0, No | 99, Unknown",,,,,[medic_mpox_previnf]='1',,,,1
@@ -270,10 +274,12 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic,radio,Other neurological abnormality,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_neurologic_other,text,Specify other neurological abnormality,,,,,,[adsym_neurologic] = '1',,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_unlisted_yn,list,Other sign(s) or abnormality,"1, Yes | 0, No | 99, Unknown",,,,conditions_Symptoms,,1,1,,
+daily,ASSESSMENT,daily_day,text,Clinical Visit Day:,,,,,,,,,,1
+daily,ASSESSMENT,daily_visityn,radio,Has this visit taken place?,"1, Yes | 0, No",,,,,,,,,1
 daily,ASSESSMENT,daily_date,date_dmy,DATE OF ASSESSMENT,,date_dmy,,today,,,,1,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datasympt,radio,Enter signs and symptoms data for this date?,"1, Yes | 0, No",,,,,,,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_feverplus,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fever,radio,Fever,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_feverplus,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_fever,radio,Fever,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sorethroat,radio,Sore throat,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_catarrh,radio,Catarrh,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -294,7 +300,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anosmia,radio,Loss of smell / anosmia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ageusia,radio,Loss of taste / ageusia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymph,radio,Lymphadenopathy,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 88, Other | 99, Unknown",,,,,[sympt_lymph]='1' and [daily_datasympt]='1',,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphspec,checkbox,Specify sites:,"1, Lymph nodes | 2, Axillary (arm pits) | 3, Cervical (neck) | 4, Inguinal (groin) | 88, Other | 99, Unknown",,,,,[sympt_lymph]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_lymphoth,text,Specify other site:,,,,,,[sympt_lymphspec(88)]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_confusion,radio,Altered consciousness / confusion,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_encephalitis,radio,Encephalitis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -324,7 +330,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_jaund,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anorexia,radio,Anorexia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_skinrash,radio,Skin rash,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other | 99, Unknown",,,,,[sympt_haemorrhag_yn] = '1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_other,text,Specify other bleeding / haemorrhage site(s),,,,,,[sympt_haemorrhag_site(88)]='1',,,,1
@@ -483,6 +489,22 @@ daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true betw
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted,radio,Other intervention(s) or procedure(s),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datatreat]='1',1,1,,
 daily,TREATMENTS & INTERVENTIONS: Record all interventions received or true between 00:00 to 24:00 on day of assessment,treat_unlisted_oth,text,Please specify other intervention(s) or procedure(s),,,,,,[treat_unlisted] = '1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_datalab,radio,Enter Laboratory Results data for this date?,"1, Yes | 0, No",,,,,,1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood,group,BLOOD TEST,,,,,,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_yn,radio,Has the participant had a blood test at this visit?,"1, Yes | 0, No",,,,,[daily_datalab]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_fbc,radio,FBC (Full Blood Count),"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_fbcspec,text,Reason Full Blood Count not done:,,,,,,[daily_blood_fbc]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_ue,radio,U&E (Renal profile),"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_uespec,text,Reason U&E not done:,,,,,,[daily_blood_ue]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_lft,radio,(LFT) Liver profile,"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_lftspec,text,Reason LFT not done:,,,,,,[daily_blood_lft]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_bone,radio,Bone profile,"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_bonespec,text,Reason Bone profile not done:,,,,,,[daily_blood_bone]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_gluc,radio,Blood glucose,"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_glucspec,text,Reason Blood glucose not done:,,,,,,[daily_blood_gluc]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_hiv,radio,HIV serology (only at admission),"1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_hivspec,text,Reason HIV serology not done:,,,,,,[daily_blood_hiv]='0',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_cd4,radio,"CD4 Count (if HIV positive, only at admission)","1, Yes | 0, Not done",,,,,[daily_blood_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,daily_blood_cd4spec,text,Reason CD4 Count not done:,,,,,,[daily_blood_cd4]='0',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo,,Haemoglobin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gdl,number,Haemoglobin (g/dL),,number,0,200,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemo_gl,number,Haemoglobin (g/L),,number,0,20,,[daily_datalab]='1',1,1,,1
@@ -508,16 +530,17 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_109l,number,Platelets (10^9/L),,number,0,1659,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_106l,number,Platelets (10^6/L),,number,0,1659000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelets_103ul,number,Platelets (10^3/uL),,number,0,1659,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time/APTT (sec),,number,20,300,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptr,number,APTR,,number,,,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptt,number,Activated Partial Thromboplastin Time/APTT (sec),,number,20,300,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_aptr,number,APTR,,number,,,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin,,Prothrombin Time/PT (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_sec,number,Prothrombin Time/PT (sec),,number,0,100,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_sec,number,Prothrombin Time/PT (sec),,number,0,100,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_prothrombin_ratio,number,Prothrombin Intl. Normalized Ratio,,number,0,14,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tqinr,number,TQ/INR,,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_altsgpt,number,ALT/SGPT (U/L),,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin,,Total Bilirubin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_umoll,number,Total Bilirubin (umol/L),,number,0,718,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_mgdl,number,Total Bilirubin (mg/dL),,number,0,42,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bilirubin_mgdl,number,Total Bilirubin (mg/dL),,number,0,42,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_alp,number,ALP (IU/L),,number,,,,[daily_datalab]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_astsgot,number,AST/SGOT (U/L),,number,,,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose,,Random glucose (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_mmoll,number,Random glucose (mmol/L),,number,0,148,,[daily_datalab]='1',1,1,,1
@@ -525,7 +548,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_glucose_gl,number,Random glucose (g/L),,number,0,26.56,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ggt,number,Gamma Glutamyl Transferase/GGT (U/L),,number,0,1220,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro,,Urea/BUN (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea/BUN (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mmoll,number,Urea/BUN (mmol/L),,number,0,89,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_mgdl,number,Urea/BUN (mg/dL),,number,0,250,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ureanitro_gl,number,Urea/BUN (g/L),,number,0,10,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lactate,number,Lactate (select units),,number,,,,[daily_datalab]='1',,,,
@@ -543,39 +566,39 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_potassium_meql,number,Potassium (mEq/L),,number,2,8,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_procalcito,,Procalcitonin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_procalcito_ugl,number,Procalcitonin (ug/L),,number,0.01,20,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_procalcito_ngml,number,Procalcitonin (ng/mL),,number,0.01,20,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_procalcito_ngml,number,Procalcitonin (ng/mL),,number,0.01,20,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp,,CRP (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgl,number,CRP (mg/L),,number,0,1000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgl,number,CRP (mg/L),,number,0,1000,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_crp_mgdl,number,CRP (mg/dL),,number,0,225,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh,,Lactate Dehydrogenase/LDH (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase/LDH (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_ul,number,Lactate Dehydrogenase/LDH (U/L),,number,0,14000,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ldh_iul,number,Lactate Dehydrogenase/LDH (IU/L),,number,0,16650,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki,,Creatine kinase (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_ul,number,Creatine kinase (U/L),,number,0,10000,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatineki_iul,number,Creatine kinase (IU/L),,number,0,10000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi,,Troponin I (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ugl,number,Troponin I (ug/L),,number,0,536,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngl,number,Troponin I (ng/L),,number,0,1113,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngl,number,Troponin I (ng/L),,number,0,1113,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngml,number,Troponin I (ng/mL),,number,0,,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_tropi_ngdl,number,Troponin I (ng/dL),,number,0,340,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin,,Troponin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngl,number,Troponin (ng/L),,number,0,726,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ngml,number,Troponin (ng/mL),,number,0,836,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_troponin_ugl,number,Troponin (ug/L),,number,0,1,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer,,D-Dimer (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer_mgl,number,D-Dimer (mg/L),,number,0,67,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer_mgl,number,D-Dimer (mg/L),,number,0,67,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer_ugl,number,D-Dimer (ug/L),,number,0,67000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ddimer_ngml,number,D-Dimer (ng/mL),,number,0,67000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin,,Ferritin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin_ugl,number,Ferritin (ug/L),,number,0,50000,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin_ngml,number,Ferritin (ng/mL),,number,0,150000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ferritin_ngml,number,Ferritin (ng/mL),,number,0,150000,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6,,IL-6 (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_pgml,number,IL-6 (pg/mL),,number,0,2526,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_pgml,number,IL-6 (pg/mL),,number,0,2526,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_ngl,number,IL-6 (ng/L),,number,0,2526,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_il6_ngml,number,IL-6 (ng/mL),,number,0,497,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen,,Fibrinogen (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen_gl,number,Fibrinogen (g/L),,number,0,15,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen_mgdl,number,Fibrinogen (mg/dL),,number,0,1000,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen_gl,number,Fibrinogen (g/L),,number,0,15,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_fibrinogen_mgdl,number,Fibrinogen (mg/dL),,number,0,1000,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_albumin,,Albumin (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_albumin_gdl,number,Albumin (g/dL),,number,2,5,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_albumin_mmoll,number,Albumin (mmol/L),,number,0,1000,,[daily_datalab]='1',,,,
@@ -584,13 +607,13 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gdl,number,Protein TP (g/dL),,number,5,15,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_protein_gl,number,Protein TP (g/L),,number,50,150,,[daily_datalab]='1',1,1,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2,,PaCO2 (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO2 (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO2 (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ph,number,pH,,number,6.8,7.8,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_mmhg,number,PaCO2 (mmHg),,number,10.3,79,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_paco2_kpa,number,PaCO2 (kPa),,number,1.37,12,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_ph,number,pH,,number,6.8,7.8,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hco3,,Bicarbonate/HCO3- (select units),,,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hco3_mmoll,number,Bicarbonate/HCO3- (mmol/L),,number,0,50,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hco3_meql,number,Bicarbonate/HCO3- (mEq/L),,number,0,50,,[daily_datalab]='1',1,1,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_baseexcess,number,Base Excess (mmol/L),,number,-9,16,,[daily_datalab]='1',1,1,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hco3_mmoll,number,Bicarbonate/HCO3- (mmol/L),,number,0,50,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hco3_meql,number,Bicarbonate/HCO3- (mEq/L),,number,0,50,,[daily_datalab]='1',1,1,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_baseexcess,number,Base Excess (mmol/L),,number,-9,16,,[daily_datalab]='1',1,1,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_leukocytes,,Leukocytes (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_leukocytes_109l,number,Leukocytes (10^9/L),,number,0,1115000,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_leukocytes_106l,number,Leukocytes (10^6/L),,number,0,24620,,[daily_datalab]='1',,,,
@@ -611,7 +634,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_lymphleuk,number,Lymphocytes/Leukocytes (%),,number,0,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_neutrleuk,number,Neutrophils/Leukocytes (%),,number,0,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_activatedp,number,Activated PTT/Standard ratio,,number,0.5,3.3,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_eosinophil,number,Eosinophils (10^9/L),,number,0,2,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_eosinophil,number,Eosinophils (10^9/L),,number,0,2,,[daily_datalab]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoga1c,,Haemoglobin A1C (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoga1c_pcnt,number,Haemoglobin A1C (%),,number,0,24,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_haemoga1c_mmolmo,number,Haemoglobin A1C (mmol/mol),,number,0,239,,[daily_datalab]='1',,,,
@@ -621,6 +644,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_mm3,number,CD4 (mm^3),,number,,,,[daily_datalab]='1',1,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_oxygensat,number,Oxygen Saturation (%),,number,20,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_alkalineph,number,Alkaline Phosphatase (U/L),,number,0,2940,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_phosphate,number,Phosphate,,number,,,,[daily_datalab]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cholest,number,Cholesterol (mmol/L),,number,0,15,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_magnesium,number,Magnesium (mmol/L),,number,0.5,2.9,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_monocytes,,Monocytes (select units),,,,,,[daily_datalab]='1',,,,
@@ -646,7 +670,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_thrombinti,number,Thrombin Time (sec),,number,0,36,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_platelethe,number,Platelet Hematocrit (%),,number,0,70,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_neutropseg,number,"Neutrophils, Segmented (10^6/L)",,number,,,,[daily_datalab]='1',,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_calcium,number,Calcium (mmol/L),,number,1.75,4,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_calcium,number,Calcium (mmol/L),,number,1.75,4,,[daily_datalab]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_erymeancorhgb,number,Ery. Mean Corpuscular HGB Concentration (g/L),,number,200,360,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_iron,number,Iron (umol/L),,number,0,36,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_directbili,number,Direct Bilirubin (umol/L),,number,0,257,,[daily_datalab]='1',,,,
@@ -668,6 +692,12 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol,,Cortisol (select units),,,,,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_ugdl,number,Cortisol (ug/dL),,number,0,100,,[daily_datalab]='1',,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_nmoll,number,Cortisol (nmol/L),,number,0,2500,,[daily_datalab]='1',,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hiv,number,HIV Serology (once only),,,,,,[daily_datalab]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria,group,MALARIA,,,,,,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_yn,radio,Malaria test performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datalab]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_date,date_dmy,Malaria test date,,date_dmy,,today,,[labs_malaria_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_test,radio,Malaria test type,"1, Rapide antigen test | 2, Malaria film",,,,,[labs_malaria_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_res,radio,Malaria test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[labs_malaria_yn]='1',,,,1
 daily,IMAGING,daily_dataimagi,radio,Enter Imaging data for this date?,"1, Yes | 0, No",,,,,,1,1,1,1
 daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi]='1',1,1,1,1
 daily,IMAGING,imagi_xray_yn,radio,Was a chest X-Ray performed?,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,1,1,1
@@ -675,10 +705,10 @@ daily,IMAGING,imagi_xray_date,date_dmy,Chest X-Ray date ,,date_dmy,,today,,[imag
 daily,IMAGING,imagi_xray_result,checkbox,Chest X-Ray result,"1, Normal | 2, Pulmonary oedema | 3, Pneumonia | 4, Pleural effusion | 88, Other",,,,,[imagi_xray_yn] = '1',1,1,1,1
 daily,IMAGING,imagi_xray_resultoth,text,Describe other chest X-Ray result,,,,,,[imagi_xray_result(88)]='1',1,1,1,1
 daily,IMAGING,imagi_xray_resultpleu,checkbox,Side(s) where pleural effusion identified ,"1, Right | 2, Left",,,,,[imagi_xray_result(4)]='1',1,1,1,1
-daily,IMAGING,imagi_ct,group,CT,,,,,,,1,,1,1
-daily,IMAGING,imagi_ct_yn,radio,CT performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,,1,1
-daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct_yn] = '1',1,,1,1
-daily,IMAGING,imagi_ct_infiltra,radio,Lung infiltrates present,"1, Yes | 0, No | 99, Unknown",,,,,[imagi_ct_yn] = '1',1,,1,1
+daily,IMAGING,imagi_ct,group,CT,,,,,,,1,,1,
+daily,IMAGING,imagi_ct_yn,radio,CT performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',1,,1,
+daily,IMAGING,imagi_ct_date,date_dmy,CT date ,,date_dmy,,today,,[imagi_ct_yn] = '1',1,,1,
+daily,IMAGING,imagi_ct_infiltra,radio,Lung infiltrates present,"1, Yes | 0, No | 99, Unknown",,,,,[imagi_ct_yn] = '1',1,,1,
 daily,IMAGING,imagi_ultrasound,group,ULTRASOUND,,,,,,,,1,,
 daily,IMAGING,imagi_ultrasound_yn,radio,Was an ultrasound performed?,"1, Yes | 0, No | 99, Unknown",,,,,[daily_dataimagi]='1',,1,,
 daily,IMAGING,imagi_ultrasound_date,date_dmy,Ultrasound date ,,date_dmy,,today,,[imagi_ultrasound_yn] = '1',,1,,
