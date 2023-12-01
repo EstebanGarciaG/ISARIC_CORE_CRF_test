@@ -124,30 +124,30 @@ Lassa virus,85944001,SNOMED,virus
 Leishmania,79357004,SNOMED,"parasite, protozoa"
 Leishmania braziliensis,83196002,SNOMED,"parasite, protozoa"
 Leishmania braziliensis complex,7400004,SNOMED,"parasite, protozoa"
-Leishmania donovani complex,,,"parasite, protozoa"
+Leishmania donovani complex,79781008,SNOMED,"parasite, protozoa"
 Leishmania Viannia,712933004,SNOMED,"parasite, protozoa"
 Lichthiemia,734206002,SNOMED,fungi
 Lomentospora prolificans,,,fungi
 Lujo virus,450622000,SNOMED,virus
-Lymphocytic choriomeningitis virus (LCMV),,,virus
+Lymphocytic choriomeningitis virus (LCMV),82518003,SNOMED,virus
 Machupo virus,71489006,SNOMED,virus
-Madurella,,,fungi
-Malassezia pachydermatis,,,fungi
-Measles morbillivirus,,,virus
+Madurella,23009007,SNOMED,fungi
+Malassezia pachydermatis,51257000,SNOMED,fungi
+Measles morbillivirus,52584002,SNOMED,virus
 MERS-CoV ,697932005,SNOMED,virus
 Metapneumovirus,407501006,SNOMED,virus
-Meyerozyma guilliermondii,,,fungi
-Microsporidia,,,"parasite, protozoa"
-Microsporum,,,fungi
+Meyerozyma guilliermondii,29812000,SNOMED,fungi
+Microsporidia,418382009,SNOMED,"parasite, protozoa"
+Microsporum,11983001,SNOMED,fungi
 Middle East Respiratory Syndrome Coronavirus,697932005,SNOMED,virus
 Monkeypox virus,59774002,SNOMED,virus
-Mucor,,,fungi
+Mucor,49782006,SNOMED,fungi
 Mumps virus,50384007,SNOMED,virus
-Necator americanus,,,"parasite, helminth"
+Necator americanus,43905006,SNOMED,"parasite, helminth"
 Nipah virus,115511007,SNOMED,virus
 Norovirus,407359000,SNOMED,virus
 Omicron,,,virus
-Onchocerca volvulus,,,"parasite, helminth"
+Onchocerca volvulus,52397001,SNOMED,"parasite, helminth"
 Orthomyxoviridae (influenza viruses),55014007,SNOMED,virus
 Papillomavirus,,,virus
 Papoviridae,,,virus
