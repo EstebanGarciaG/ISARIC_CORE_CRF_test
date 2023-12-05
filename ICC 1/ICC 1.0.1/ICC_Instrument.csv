@@ -1,22 +1,23 @@
 Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,List,Skip Logic,preset_Disease_Core,preset_Disease_Dengue,preset_Disease_Mpox,preset_Disease_Nigeria_Mpox
 presentation,,subjid,text,Participant Identification Number (PIN):,,,,,,,1,1,1,1
-presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following is the individual suspected/confirmed to have,,,,,inclusion_Diseases,,1,1,,1
+presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following is the individual suspected/confirmed to have,,,,,inclusion_Diseases,,1,1,,
 presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,
-presentation,INCLUSION CRITERIA,inclu_mpox,radio,Suspected of confirmed mpox,"1, Yes | 0, No",,,,,,,,,
+presentation,INCLUSION CRITERIA,inclu_mpox,radio,Suspected of confirmed mpox,"1, Yes | 0, No",,,,,,,,,1
 presentation,INCLUSION CRITERIA,inclu_consent,radio,Participant has provided consent to participate in this study,"1, Yes | 0, No",,,,,,,,,1
-presentation,INCLUSION CRITERIA,inclu_consentdate,date_dmy,Date of consent:,,date_dmy,,today,,[inclu_consent]='1',,,,1
+presentation,ONSET & ADMISSION,dates_consent,date_dmy,Date of consent:,,date_dmy,,today,,[inclu_consent]='1',,,,1
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_hosp,text,Which hospital/community has the participant been enrolled at?,,,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,1,1,,1
 presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,,,,,1
 presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(88)]='1',,,,1
 presentation,ONSET & ADMISSION,dates_adm,radio,Admitted to hospital?,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,1
+presentation,ONSET & ADMISSION,dates_admdate,date_dmy,Date of hospital admission,,date_dmy,,today,,[dates_adm] = '1',1,1,,
 presentation,ONSET & ADMISSION,dates_admtime,text,Time of hospital admission,,time,,,,[dates_adm] = '1',,1,,
+presentation,ONSET & ADMISSION,dates_recadm,date_dmy,Date of most recent hospital admission,,date_dmy,,today,,[dates_adm]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxhist,radio,History of contact with suspected or confirmed mpox case?,"1, Yes | 0, No | 99, Unknown",,,,,[inclu_disease]='4',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxknown,radio,Does participant know date of contact with suspected or confirmed case?,"1, Yes | 0, No | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
 presentation,ONSET & ADMISSION,dates_mpoxdate,date_dmy,"If YES, date of contact:",,date_dmy,,today,,[dates_mpoxknown]='1',,,,1
-presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 99, Unknown",,,,,[dates_mpoxhist]='1',,,,1
+presentation,ONSET & ADMISSION,dates_mpoxexpo,checkbox,Type of exposure,"1, Community contact | 2, Vertical transmission | 3, Healthcare worker exposure | 4, Not known",,,,,[dates_mpoxhist]='1',,,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevadm,radio,Was the patient admitted previously or transferred from any other facility during this illness episode?,"1, YES-admitted previously to this facility and discharged | 2, YES-admitted to other facility and discharged | 3, YES-admitted to another facility, then transferred to this facility | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_numprev,number,Total number of previous admissions for this infection,,number,1,,,[readm_prevadm] = '1' or [readm_prevadm]='2' or [readm_prevadm]='3' ,1,1,,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm_date,date_dmy,Date of earliest admission for this infection,,date_dmy,,today,,[readm_prevadm] = '1' or [readm_prevadm]='2' or [readm_prevadm]='3' ,1,1,,1
@@ -43,7 +44,7 @@ presentation,DEMOGRAPHICS,demog_residence_oth,text,Specify other region of resid
 presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outside of their home region in the past 14 days?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 presentation,TRAVEL HISTORY,travel_loc,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[travel_travel14d] = '1',,1,,
 presentation,PREGNANCY,preg_pregnant,radio,Pregnant,"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2' and [demog_age_units]='1',1,1,,1
-presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment at presentation (weeks),,number,,,,[preg_pregnant] = '1',1,1,,1
+presentation,PREGNANCY,preg_geswek,number,Gestational weeks assessment (weeks),,number,,,,[preg_pregnant] = '1',1,1,,1
 presentation,PREGNANCY,preg_postpartum,radio,Post-partum (within 6 weeks of delivery),"1, Yes | 0, No | 99, Unknown",,,,,[demog_sex]='2' and [preg_pregnant]<>1 and [demog_age_units]='1',1,1,,1
 presentation,PREGNANCY,preg_delvdt,date_dmy,Delivery date,,date_dmy,,today,,[preg_postpartum] = '1',1,,,1
 presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, Still birth | 3, Termination",,,,,[preg_postpartum]='1',1,1,,1
@@ -57,7 +58,7 @@ presentation,INFANT: less than 12 months old,infa_outcome,radio,Gestational outc
 presentation,INFANT: less than 12 months old,infa_brefed,radio,Breastfed,"1, Yes, currently breastfeeding | 2, Yes, breastfeeding discontinued | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,1
 presentation,INFANT: less than 12 months old,infa_aprvac,radio,Vaccinations appropriate for age/country,"1, Yes | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',1,,,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrcardiac,radio,Chronic cardiac disease (not hypertension),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hypertensi,radio,Hypertension,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hypertensi,radio,Hypertension (physician diagnosed),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrpulmona,radio,Chronic pulmonary disease (not asthma),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_asthma,radio,Asthma (physician diagnosed),"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrkidney,radio,Chronic kidney disease,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
@@ -76,7 +77,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_rheumatolo,radio,Rheumatologic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4,radio,Most recent CD4 count (cells/uL),"1, Less than 200 | 2, 200-<500 | 3, 500 or more | 99, Unknown",,,,,[comor_aids] = '1',1,1,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4v2,radio,Most recent CD4 count (cells/uL),"1, Less than 50 | 2, 50-99 | 3, 100-199 | 4, 200-499 | 5, 500 and over | 99, Unknown",,,,,[comor_aids] = '1',,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4v2,radio,CD4 count (cells/uL),"1, Less than 50 | 2, 50-99 | 3, 100-199 | 4, 200-499 | 5, 500 and over | 99, Unknown",,,,,[comor_aids] = '1' or [comor_aids] = '2',,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids_cd4date,date_dmy,CD4 count date:,,date_dmy,,today,,[comor_aids] = '1',,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_diabetes,radio,Diabetes Mellitus,"1, YES - Type 1 | 2, YES - Type 2 | 3, YES - Gestational | 0, NO | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hba1c,,HbA1C results within last 6 months (select units),,,,,,[comor_diabetes] = '1' or [comor_diabetes]='2' or [comor_diabetes]='3',,,,
@@ -86,7 +87,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_dementia,radio,Dementia,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_smoking,radio,Smoking tobacco,"1, Current smoker | 0, Never smoked | 3, Former smoker | 99, Unknown",,,,,,1,1,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_smoking,radio,Smoking,"1, Current smoker | 0, Never smoked | 3, Former smoker | 99, Unknown",,,,,,1,1,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_unlisted,list,Other relevant comorbidity(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Comorbidities,,1,1,,1
 presentation,MEDICAL HISTORY,medic_gastro,group,GASTROENTERITIS,,,,,,,,,,
 presentation,MEDICAL HISTORY,medic_gastro_yn,radio,Gastroenteritis illness (including diarrhoea or vomiting) in the past 3 months,"1, Yes | 0, No",,,,,,,,,
@@ -192,13 +193,13 @@ presentation,VACCINATION,vacci_mpox_agealt,radio,"If age or year not known, stat
 presentation,VACCINATION,vacci_mpox_scar,radio,Is a smallpox vaccination scar visible (usually on the upper arm if present)?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1',,,,1
 presentation,VACCINATION,vacci_mpox_recent,radio,Received vaccination more recently to protect against mpox (or smallpox)?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,VACCINATION,vacci_mpox_type,checkbox,Vaccine type:,"1, Imvanex/Imvamune/Jyneos (MVA-BN) | 2, ACAM2000 | 3, LC16m8 | 88, Other",,,,,[vacci_mpox_recent]='1',,,,1
-presentation,VACCINATION,vacci_mpox_other,text,Please specify other vaccine:,,,,,,[vacci_mpox_type(88)]='1',,,,1
+presentation,VACCINATION,vacci_mpox_other,text,"If other, state name of vaccine:",,,,,,[vacci_mpox_type(88)]='1',,,,1
 presentation,VACCINATION,vacci_mpox_d1,radio,Is first vaccine date known?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1' or [vacci_mpox_recent]='1',,,,1
 presentation,VACCINATION,vacci_mpox_d1dat,date_dmy,Date of first vaccine,,date_dmy,,today,,[vacci_mpox_d1]='1',,,,1
-presentation,VACCINATION,vacci_mpox_d1apr,text,"Approximate date of first vaccine (MM:YYYY or YYYY, if known)",,,,,,[vacci_mpox_d1]='0',,,,1
+presentation,VACCINATION,vacci_mpox_d1apr,text,"Approximate date of first vaccine (MM:YYYY or YYYY, if known)",,,,,,[vacci_mpox_d1]='0',,,,
 presentation,VACCINATION,vacci_mpox_d2,radio,Is second vaccine date known?,"1, Yes | 0, No | 99, Unknown",,,,,[vacci_mpox_1980]='1' and [vacci_mpox_recent]='1',,,,1
 presentation,VACCINATION,vacci_mpox_d2dat,date_dmy,Date of second vaccine,,date_dmy,,today,,[vacci_mpox_d2]='1',,,,1
-presentation,VACCINATION,vacci_mpox_d2apr,text,"Approximate date of second vaccine (MM:YYYY or YYYY, if known)",,,,,,[vacci_mpox_d2]='0',,,,1
+presentation,VACCINATION,vacci_mpox_d2apr,text,"Approximate date of second vaccine (MM:YYYY or YYYY, if known)",,,,,,[vacci_mpox_d2]='0',,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_feverplus,radio,Fever / chills / rigors,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_fever,radio,Fever,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,,1,1,,
@@ -697,7 +698,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria,group,MALARIA,,,,,,,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_yn,radio,Malaria test performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datalab]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_date,date_dmy,Malaria test date,,date_dmy,,today,,[labs_malaria_yn]='1',,,,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_test,radio,Malaria test type,"1, Rapide antigen test | 2, Malaria film",,,,,[labs_malaria_yn]='1',,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_test,radio,Malaria test type,"1, Rapid antigen test | 2, Malaria film",,,,,[labs_malaria_yn]='1',,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_res,radio,Malaria test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[labs_malaria_yn]='1',,,,1
 daily,IMAGING,daily_dataimagi,radio,Enter Imaging data for this date?,"1, Yes | 0, No",,,,,,1,1,1,1
 daily,IMAGING,imagi_xray,group,X-Ray,,,,,,[daily_dataimagi]='1',1,1,1,1
@@ -945,13 +946,13 @@ outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this a
 outcome,OUTCOME,outco_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (e.g. awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='2' or [outco_outcome]='3',1,1,1,1
 outcome_pathogen_testing,TEST,test_yn,radio,Were Clinical Pathogen samples taken on this day?,"1, Yes | 0, No",,,,,,,,,1
-outcome_pathogen_testing,TEST,test_reasno,text,"If NO, specify reason:",,,,,,[test_yn]='1',,,,1
+outcome_pathogen_testing,TEST,test_reasno,text,"If NO, specify reason:",,,,,,[test_yn]='0',,,,1
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,1,,1,1
 outcome_pathogen_testing,TEST,test_biospecimentype,radio,Biospecimen Type,"1, Nasal/NP swab | 2, Throat swab | 3, Combined nasal/NP + throat swab | 4, Sputum | 5, BAL | 6, ETA | 7, Lesion swab | 8, Urine | 9, Faeces/rectal swab | 10, Blood | 88, Other",,,,,,1,,1,1
 outcome_pathogen_testing,TEST,test_biospecimentypeoth,text,Please specify biospecimen type,,,,,,[test_biospecimentype]='88',1,,1,1
 outcome_pathogen_testing,TEST,test_labtestmethod,radio,Lab test method,"1, PCR | 2, IgG | 3, Culture | 4, IgM | 5, Antigen detection | 88, Other",,,,,,1,,1,1
 outcome_pathogen_testing,TEST,test_labtestmethodoth,text,Please specify other lab test method,,,,,,[test_labtestmethod]='88',1,,1,1
-outcome_pathogen_testing,TEST,test_result,list,Pathogen Tested/Detected,"1, Detected | 0, Not detected | 2, Equivocal | 99, Unknown",,,,pathogens_Bacteria,,1,,1,1
+outcome_pathogen_testing,TEST,test_result,list,Pathogen Tested/Detected,"1, Detected | 0, Not detected | 2, Equivocal | 99, Unknown",,,,pathogens_Other,,1,,1,1
 outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [test_labtestmethod]='1',1,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_date,date_dmy,Assessment Date,,date_dmy,,today,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_method,radio,Evaluation method,"1, In person | 2, Telephone",,,,,,,,1,1
