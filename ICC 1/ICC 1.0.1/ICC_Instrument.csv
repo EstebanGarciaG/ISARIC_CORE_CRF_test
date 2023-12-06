@@ -853,7 +853,8 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_focaln
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_meningitis,radio,Encephalitis / Meningitis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_sepsis,radio,Sepsis,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_coagulatio,radio,Coagulation disorder / DIC,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,1,1
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorgan,radio,Any other organ complications,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_othorganspec,text,Specify other organ complications,,,,,,[compl_othorgan]='1',,,,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_ards,radio,Acute Respiratory Distress Syndrome (ARDS),"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrhy,radio,Cardiac arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_cardiarrest,radio,Cardiac arrest,"1, Yes | 0, No | 99, Unknown",,,,,[compl_othorgan]='1',1,1,1,1
@@ -970,4 +971,4 @@ outcome_assessment,ASSESSMENT (Complete this section in full for each outcome as
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other type of skin damage,,,,,,[asse_skindamage_type(88)]='1',,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque,radio,Does the patient have any other complications or sequelae of mpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque_type,checkbox,Select all that apply,"1, Decreased vision | 2, Blindness | 3, Urethral stricture | 4, Vaginal stricture | 5, Rectal stricture |6, Dyspareunia | 7, Depression | 88, Other ",,,,,[asse_mpoxseque]='1',,,1,1
-outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_skindamage_other,notes,Specify other complications or sequelae,,,,,,[asse_mpoxseque_type(88)]='1',,,1,1
+outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque_other,notes,Specify other complications or sequelae,,,,,,[asse_mpoxseque_type(88)]='1',,,1,1

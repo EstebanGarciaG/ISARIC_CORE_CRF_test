@@ -45,7 +45,7 @@ Limb weakness / paralysis (Monoplegia),G83.3,ICD10
 Loss of appetite (Anorexia),R63.0,ICD10
 Loss of smell (Anosmia),R43.0,ICD10
 Loss of taste (Parageusia),R43.2,ICD10
-lymphadenitis,I88,ICD10
+Lymphadenitis,I88,ICD10
 Mouth ulcers (Recurrent oral aphthae),K12.0,ICD10
 Muscle aches (Myalgia),M79.1,ICD10
 Muscle weakness,M62.81,ICD10
@@ -56,7 +56,7 @@ Paresthesia of skin,R20.2,ICD10
 Visual disturbances,H53,ICD10
 Retention of urine,R33.9,ICD10
 Sleep disorder,F51.9,ICD10
-speech disturbances,R47.9,ICD10
+Speech disturbances,R47.9,ICD10
 Problems swallowing or chewing (Dysphagia),R13.10,ICD10
 Pruritus,L29,ICD10
 Rapid heart beat/Pulse (Tachycardia),R00.0,ICD10
