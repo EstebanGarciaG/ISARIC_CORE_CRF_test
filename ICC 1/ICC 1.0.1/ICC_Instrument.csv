@@ -952,9 +952,9 @@ outcome,OUTCOME,outco_date,date_dmy,Outcome date,,date_dmy,,today,,,1,1,1,1
 outcome,OUTCOME,outco_recruitype,radio,Site of participant recruitment,"1, Hospital | 2, Community",,,,,,,,1,1
 outcome,OUTCOME,outco_com,group,COMMUNITY OUTCOME,,,,,,,,,,1
 outcome,OUTCOME,outco_com_outcome,radio,Outcome (community),"1, Remains in community | 2, Currently in hospital | 3, Was admitted to hospital but now in community again | 4, Death | 5, Palliative care | 99, Unknown",,,,,[outco_recruitype]='2',,,,1
-outcome,OUTCOME,outco_com_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_com_outcome] = '1',,,,1
-outcome,OUTCOME,outco_com_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' or [outco_com_outcome]='2',,,,1
-outcome,OUTCOME,outco_com_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' or [outco_com_outcome]='2',,,,1
+outcome,OUTCOME,outco_com_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_com_outcome] = '1' OR [outco_com_outcome] = '2' OR [outco_com_outcome] = '3' OR [outco_com_outcome] = '5',,,,1
+outcome,OUTCOME,outco_com_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' OR [outco_com_outcome] = '2' OR [outco_com_outcome] = '3' OR [outco_com_outcome] = '5',,,,1
+outcome,OUTCOME,outco_com_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_com_outcome] = '1' OR [outco_com_outcome] = '2' OR [outco_com_outcome] = '3' OR [outco_com_outcome] = '5',,,,1
 outcome,OUTCOME,outco_outcome,radio,Outcome,"1, Discharged alive | 2, Still hospitalised | 6, Discharged against medical advice | 3, Transfer to other facility | 4, Death | 5, Palliative discharge | 99, Unknown",,,,,,1,1,1,1
 outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus before illness,"1, Same as before illness | 2, Worse | 3, Better | 99, Unknown",,,,,[outco_outcome] = '1',1,,1,1
 outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',1,1,1,1
@@ -969,7 +969,7 @@ outcome_pathogen_testing,TEST,test_labtestmethod,radio,Lab test method,"1, PCR |
 outcome_pathogen_testing,TEST,test_labtestmethodoth,text,Please specify other lab test method,,,,,,[test_labtestmethod]='88',1,,1,1
 outcome_pathogen_testing,TEST,test_result,list,Pathogen Tested/Detected,"1, Detected | 0, Not detected | 2, Equivocal | 99, Unknown",,,,pathogens_All,,1,,1,1
 outcome_pathogen_testing,TEST,test_ctvalue,text,CT Value,,,,,,[test_result]='1' and [test_labtestmethod]='1',1,,1,1
-outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_date,date_dmy,Assessment Date,,date_dmy,,today,,,,,1,1
+outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_date,date_dmy,Date of evaluation,,date_dmy,,today,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_method,radio,Evaluation method,"1, In person | 2, Telephone",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxpatoutco,radio,Assessment patient outcome,"1, All lesions are completely resolved and no serious complications | 2, All lesions are no longer active and no serious complications | 3, No lesions ever developed and no serious complications | 4, One or more lesion(s) are active and no serious complications | 5, Serious complication and/or hospitalisation due to monkeypox | 6, Death | 7, Early withdrawal | 8, Loss to follow-up",,,,,,,,1,1
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_nipahpatoutco,radio,Assessment patient outcome (_Under Revision),"1, Recovered  | 2, Serious complication and/or hospitalisation due to Nipah | 3, Death | 4, Loss to follow-up",,,,,,,,,
