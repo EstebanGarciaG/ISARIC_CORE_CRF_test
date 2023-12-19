@@ -170,10 +170,10 @@ presentation,MEDICATION PREVIOUS 21-DAYS: include all taken within 21 days prior
 presentation,MEDICATION PREVIOUS 21-DAYS: include all taken within 21 days prior to this most recent admission / presentation,drug21_hivprep,radio,HIV PREP/PEP,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1
 presentation,MEDICATION PREVIOUS 21-DAYS: include all taken within 21 days prior to this most recent admission / presentation,drug21_unlisted,list,Other pathogen-targeted medications,"1, Yes | 0, No | 99, Unknown",,,,drugs_Other,,1,,,1
 presentation,VACCINATION,vacci_covid19,group,COVID-19,,,,,,,,,,
-presentation,VACCINATION,vacci_covid19_yn,radio,Vaccinated for COVID-19 (ever),"1, Yes | 0, No | 99, Unknown",,,,,,,,,
+presentation,VACCINATION,vacci_covid19_yn,radio,Vaccinated for COVID-19 ever?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,VACCINATION,vacci_covid19_date,date_dmy,Date of most recent COVID-19 vaccine,,date_dmy,,today,,[vacci_covid19_yn] = '1',,,,
 presentation,VACCINATION,vacci_influenza,group,INFLUENZA,,,,,,,,,,
-presentation,VACCINATION,vacci_influenza_yn,radio,Vaccinated for influenza (ever),"1, Yes | 0, No | 99, Unknown",,,,,,,,,
+presentation,VACCINATION,vacci_influenza_yn,radio,Vaccinated for influenza ever?,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
 presentation,VACCINATION,vacci_influenza_date,date_dmy,Date of most recent influenza vaccine,,date_dmy,,today,,[vacci_influenza_yn] = '1',,,,
 presentation,VACCINATION,vacci_dengue,group,DENGUE,,,,,,,,1,,
 presentation,VACCINATION,vacci_dengue_yn,radio,Vaccinated for dengue?,"1, YES, once | 2, YES, twice | 3, YES, thrice | 0, No | 99, Unknown",,,,,,,1,,
@@ -205,7 +205,7 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sorethroat,radio,Sore throat,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_catarrh,radio,Catarrh,"1, Yes | 0, No | 99, Unknown",,,,,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_rhinorrhoea,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_wheezing,radio,Wheezing,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,,1,1,,
@@ -284,7 +284,7 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_cough,radio,Cough,"1, Yes, non-productive | 2, Yes, productive | 3, Yes, with haemoptysis | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_sorethroat,radio,Sore throat,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_catarrh,radio,Catarrh,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_rhinorrhoe,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_rhinorrhoea,radio,Runny nose (rhinorrhoea),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_wheezing,radio,Wheezing,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_shortbreat,radio,Shortness of breath ,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_headache,radio,Headache,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,1
@@ -378,10 +378,10 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_urineflow,number,Urine flow rate (mL/24 hours),,number,,,,[daily_datavital]='1',1,1,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox,group,MPOX,,,,,,,,,,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_care,radio,Current level of care:,"1, Outpatient | 2, Admitted to normal ward for isolation only | 3, Admitted to normal ward for clinical care | 4, Intensive care admission",,,,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rash,radio,Site where mpox rash first occurred,"1, Genital skin | 2, Non-genital skin | 3, Mouth | 4, Unknown| 88, Other",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rash,radio,Site where mpox rash first occurred,"1, Genital skin | 2, Non-genital skin | 3, Mouth | 99, Unknown| 88, Other",,,,,[daily_datavital]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rashoth,text,Specify first rash other location,,,,,,[vital_mpox_rash]='88',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_rashdate,date_dmy,Date first rash was observed by patient,,date_dmy,,today,,[daily_datavital]='1',,,,1
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_dist,radio,Rash distribution,"1, Generalised | 2, Localised around the genitals | 3, Centrifugal- more on the extremities | 4, Centripetal- more on the trunk | 5, Unknown distribution | 88, Other distribution",,,,,[daily_datavital]='1',,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_dist,radio,Rash distribution,"1, Generalised | 2, Localised around the genitals | 3, Centrifugal- more on the extremities | 4, Centripetal- more on the trunk | 99, Unknown distribution | 88, Other distribution",,,,,[daily_datavital]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_distoth,text,Specify other rash distribution:,,,,,,[vital_mpox_dist]='88',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_morph,radio,Rash morphology,"1, Mostly discrete lesions | 2, Semi-confluent lesions | 3, Confluent lesions | 4, Mixed morphology | 99, Unknown",,,,,[daily_datavital]='1',,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_morphsize,radio,Rash size (skin) - widest diameter of any lesion,"1, Less than 0.5cm | 2, 0.5-0.99cm | 3, 1-1.99cm | 4, 2+ cm",,,,,[daily_datavital]='1',,,,1
@@ -788,9 +788,9 @@ outcome_medication,MEDICATION,medi_mpox_freqoth,text,Specify lesion cleaning fre
 outcome_medication,MEDICATION,medi_mpox_lesiclean,radio,Lesion cleaning agent,"0, None | 99, Unknown | 2, Saline | 3, Antiseptic solution | 4, Honey | 88, Other",,,,,,,,,1
 outcome_medication,MEDICATION,medi_mpox_lesicleanot,text,Specify other cleaning agent:,,,,,,[medi_mpox_lesiclean]='88',,,,1
 outcome_medication,MEDICATION,medi_mpox_oth,text,"Other lesion care, including use of dressings (describe)",,,,,,,,,,1
-outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,1,,,
+outcome,DIAGNOSIS,diagn_covid,radio,SARS-CoV-2 (COVID-19),"1, Clinically assessed positive | 2, Lab confirmed | 0, Lab negative | 4, Not tested",,,,,,1,,,
 outcome,DIAGNOSIS,diagn_influenza,group,INFLUENZA,,,,,,,1,,,
-outcome,DIAGNOSIS,diagn_influenza_test,radio,Influenza,"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 4, Not tested",,,,,,1,,,
+outcome,DIAGNOSIS,diagn_influenza_test,radio,Influenza,"1, Clinically assessed positive | 2, Lab confirmed | 0, Lab negative | 4, Not tested",,,,,,1,,,
 outcome,DIAGNOSIS,diagn_influenza_type,radio,Influenza type,"1, A-not typed | 2, A/H3N2 | 3, A/H1N1pdm09 | 4, A/H7N9 | 5, A/H5N1 | 6, B | 88, Other",,,,,[diagn_influenza]='2',1,,,
 outcome,DIAGNOSIS,diagn_influenza_other,text,Specify other influenza type,,,,,,[diagn_influenza_type]='88',1,,,
 outcome,DIAGNOSIS,diagn_influenza_seq,radio,Sequencing done,"1, Yes | 0, No | 99, Unknown",,,,,[diagn_influenza]='2',1,,,
@@ -943,8 +943,7 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg2_date,date_dmy,Date of second surgery,,date_dmy,,today,,[inter_mpoxsurg2]='1',,,1,1
 outcome,OUTCOME,outco_denguediag,radio,Was the patient's MAIN diagnosis dengue?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,OUTCOME,outco_denguediag_main,text,What was the main diagnosis?,,,,,,[outco_denguediag]='0',,1,,
-outcome,OUTCOME,outco_denguediag_class,radio,"What was the final classification of dengue?
-","1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
+outcome,OUTCOME,outco_denguediag_class,radio,What was the final classification of dengue?,"1, Uncomplicated dengue | 2, Dengue with warning signs | 3, Severe dengue",,,,,[outco_denguediag] = '1',,1,,
 outcome,OUTCOME,outco_denguediag_compl,checkbox,Severe dengue complications:,"1, Dengue shock syndrome | 2, Severe bleeding | 3, Severe organ impairment",,,,,[outco_denguediag_class]='3',,1,,
 outcome,OUTCOME,outco_secondiag,radio,Was there any secondary diagnosis?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,
 outcome,OUTCOME,outco_secondiag_oth,text,Specify secondary diagnosis,,,,,,[outco_secondiag] = '1',,1,,
