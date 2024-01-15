@@ -1,0 +1,174 @@
+Microorganism,Code,Library
+Achromobacter,91620006,SNOMED
+Achromobacter xylosoxidans,413424009,SNOMED
+Acinetobacter,7757008,SNOMED
+Acinetobacter anitratus,82550008,SNOMED
+Acinetobacter baumannii,91288006,SNOMED
+Acinetobacter calcoaceticus,413398000,SNOMED
+Acinetobacter calcoaceticus-baumannii complex,113376007,SNOMED
+Acinetobacter johnsonii,252000,SNOMED
+Actinomyces israelii,46369004,SNOMED
+Aeromonas,88529008,SNOMED
+Aggregatibacter,441718002,SNOMED
+Anaerobic bacteria,59343002,SNOMED
+Bacillus,44762009,SNOMED
+Bacillus anthracis,21927003,SNOMED
+Bacillus cereus,84408007,SNOMED
+Bacteroides fragilis,55247009,SNOMED
+Bacteroides thetaiotaomicron,34236001,SNOMED
+Bordetella pertussis,5247005,SNOMED
+Burkholderia,414324002,SNOMED
+Burkholderia cenocepacia,416941006,SNOMED
+Burkholderia cepacia,113669008,SNOMED
+Burkholderia pseudomallei,116399000,SNOMED
+Campylobacter,35408001,SNOMED
+Chlamydia,16241000,SNOMED
+Chlamydophila pneumoniae,103514009,SNOMED
+Chryseobacterium indologenes,113549008,SNOMED
+Citrobacter,75972000,SNOMED
+Citrobacter braakii,114262000,SNOMED
+Citrobacter freundii,6265002,SNOMED
+Citrobacter koseri,114264004,SNOMED
+Clostridium botulinum,13080008,SNOMED
+Clostridium difficile,5933001,SNOMED
+Clostridium difficile (toxin positive),736050006,SNOMED
+Clostridium tetani,30917009,SNOMED
+Coagulase negative Staphylococcus,116197008,SNOMED
+Coliform bacteria,77309002,SNOMED
+Corynebacterium,77086004,SNOMED
+Corynebacterium amycolatum,113611002,SNOMED
+Corynebacterium pseudodiphtheriticum,12050008,SNOMED
+Corynebacterium pseudotuberculosis,55084001,SNOMED
+Corynebacterium striatum,63815007,SNOMED
+Corynebacterium ulcerans,103428000,SNOMED
+Corynebacterium xerosis,27101006,SNOMED
+Cryptococcus,17579001,SNOMED
+Cryptococcus neoformans,67168003,SNOMED
+Delftia,416493002,SNOMED
+Delftia acidovorans,20432002,SNOMED
+Dermabacter,413976002,SNOMED
+Diphtheroid,54642001,SNOMED
+Eggerthella,414075007,SNOMED
+Elizabethkingia,426244005,SNOMED
+Enteric bacteria,106544002,SNOMED
+Enterobacter,58683007,SNOMED
+Enterobacter aerogenes,62592009,SNOMED
+Enterobacter asburiae,33115003,SNOMED
+Enterobacter bugandensis,1.14E+14,SNOMED
+Enterobacter cloacae,14385002,SNOMED
+Enterobacter cloacae complex,414102007,SNOMED
+Enterobacter hormaechei,114454006,SNOMED
+Enterobacter kobei,114456008,SNOMED
+Enterobacteriaceae,106544002,SNOMED
+Enterococcus,2785000,SNOMED
+Enterococcus avium,87875008,SNOMED
+Enterococcus faecalis,78065002,SNOMED
+Enterococcus faecium,90272000,SNOMED
+Enterococcus raffinosus,103437000,SNOMED
+Escherichia,64735005,SNOMED
+Escherichia coli,112283007,SNOMED
+Francisella tularensis,51526001,SNOMED
+Fusobacterium nucleatum,32763000,SNOMED
+Gram-Negative Bacillus,87172008,SNOMED
+Gram-Positive Bacillus,83514008,SNOMED
+Gram-Positive Coccus,59206002,SNOMED
+Granulicatella adiacens,113713009,SNOMED
+Haemophilus,71268004,SNOMED
+Haemophilus ducreyi,64889004,SNOMED
+Haemophilus influenzae,44470000,SNOMED
+Haemophilus parainfluenzae,51593004,SNOMED
+Hafnia alvei,76694001,SNOMED
+Helicobacter pylori,80774000,SNOMED
+Klebsiella,75032006,SNOMED
+Klebsiella aerogenes,62592009,SNOMED
+Klebsiella oxytoca,40886007,SNOMED
+Klebsiella pneumoniae,56415008,SNOMED
+"Klebsiella pneumoniae, ESBL",409801009,SNOMED
+Klebsiella variicola,431976004,SNOMED
+Lacticaseibacillus rhamnosus,113798001,SNOMED
+Legionella,7527002,SNOMED
+Legionella pneumophila,80897008,SNOMED
+Leptospira interrogans,116401006,SNOMED
+Listeria monocytogenes,36094007,SNOMED
+Methicillin resistant Staphylococcus aureus,115329001,SNOMED
+Methicillin susceptible Staphylococcus aureus,417943000,SNOMED
+Micrococcus,52864008,SNOMED
+Micrococcus luteus,48299003,SNOMED
+Mirabilis,79589007,SNOMED
+Moraxella,36361003,SNOMED
+Moraxella catarrhalis,24226003,SNOMED
+Morganella,50713005,SNOMED
+Morganella morganii,243301005,SNOMED
+Mycobacterium,243368001,SNOMED
+Mycobacterium leprae,58242002,SNOMED
+Mycobacterium tuberculosis,113861009,SNOMED
+Mycoplasma agalactiae,16377009,SNOMED
+Mycoplasma pneumoniae,58720004,SNOMED
+Neisseria meningitidis,17872004,SNOMED
+Nocardia asteroides,30092002,SNOMED
+Nocardia brasiliensis,58970008,SNOMED
+Propionibacterium,34844008,SNOMED
+Propionibacterium acnes,39473003,SNOMED
+Proteus,50517009,SNOMED
+Proteus mirabilis,73457008,SNOMED
+Proteus vulgaris,45834001,SNOMED
+Providencia rettgeri,14196002,SNOMED
+Providencia stuartii,1445008,SNOMED
+Pseudomonas,57032008,SNOMED
+Pseudomonas aeruginosa,52499004,SNOMED
+Pseudomonas fluorescens,39289003,SNOMED
+Pseudomonas putida,68608003,SNOMED
+Raoultella,417468005,SNOMED
+Raoultella ornithinolytica,416832000,SNOMED
+Raoultella planticola,416264004,SNOMED
+Salmonella,27268008,SNOMED
+Salmonella hirschfeldii,32488009,SNOMED
+Serratia,42025004,SNOMED
+Serratia liquefaciens,23787004,SNOMED
+Serratia marcescens,33522002,SNOMED
+Serratia ureilytica,450416004,SNOMED
+Shigella,77352002,SNOMED
+Shigella boydii,55462008,SNOMED
+Shigella dysenteriae,43612004,SNOMED
+Shigella flexneri,85729005,SNOMED
+Shigella sonnei,4298009,SNOMED
+Sphingomonas paucimobilis,243350004,SNOMED
+Staphylococcus,65119002,SNOMED
+Staphylococcus aureus,3092008,SNOMED
+Staphylococcus capitis,40347003,SNOMED
+Staphylococcus caprae,76969000,SNOMED
+Staphylococcus cohnii,66872005,SNOMED
+Staphylococcus epidermidis,60875001,SNOMED
+Staphylococcus haemolyticus,83452006,SNOMED
+Staphylococcus hominis,44827007,SNOMED
+Staphylococcus hominis hominis,432505008,SNOMED
+Staphylococcus lugdunensis,103494005,SNOMED
+Staphylococcus pettenkoferi,428731005,SNOMED
+Staphylococcus saprophyticus,19743000,SNOMED
+Staphylococcus simulans,52122005,SNOMED
+Staphylococcus warneri,63550006,SNOMED
+Stenotrophomonas,115656007,SNOMED
+Stenotrophomonas maltophilia,113697002,SNOMED
+Streptococcus,58800005,SNOMED
+Streptococcus alpha-hemolytic,60631002,SNOMED
+Streptococcus anginosus,44304009,SNOMED
+Streptococcus anginosus group,415597009,SNOMED
+Streptococcus beta-hemolytic,53490009,SNOMED
+Streptococcus constellatus,76199005,SNOMED
+Streptococcus dysgalactiae,40812000,SNOMED
+Streptococcus gallolyticus,113985000,SNOMED
+Streptococcus intermedius,62170002,SNOMED
+Streptococcus mitis,57997003,SNOMED
+Streptococcus oralis,19870004,SNOMED
+Streptococcus parasanguinis,113990002,SNOMED
+Streptococcus pneumoniae,9861002,SNOMED
+Streptococcus pyogenes,80166006,SNOMED
+Streptococcus salivarius,39888004,SNOMED
+Streptococcus sanguinis,113993000,SNOMED
+Streptococcus viridans,31703004,SNOMED
+Streptococcus viridans group,31703004,SNOMED
+Vancomycin resistant Enterococcus,113727004,SNOMED
+Vibrio cholerae,75953000,SNOMED
+Vibrio parahaemolyticus,11736008,SNOMED
+Vibrio vulnificus,55905000,SNOMED
+Yersinia pestis,54365000,SNOMED

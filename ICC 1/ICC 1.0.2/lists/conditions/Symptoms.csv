@@ -1,0 +1,80 @@
+Condition,Code,Library
+Abdominal pain,R10.9,ICD10
+Alopecia (Nonscarring hair loss),L65.9,ICD10
+Altered consciousness / Confusion (Disorientation),R41.0,ICD10
+Anorexia,R63.0,ICD10
+Apnoea,R06.81,ICD10
+Cardiac arrhythmia,I49.9,ICD10
+Ascites,R18.8,ICD10
+Bleeding (Haemorrhage),R58,ICD10
+Bruising (Spontaneous ecchymoses),R23.3,ICD10
+Can't feel one side of the body or face (Hemiplegia),G81.9,ICD10
+Can't fully move or control movement (Paralytic syndrome),G83.9,ICD10
+Changes in menstruation (Irregular menstruation),N92.6,ICD10
+Chest pain,R07.9,ICD10
+Chills (without fever),R68.83,ICD10
+Cognitive impairment (Unspecified intellectual disabilities),F79,ICD10
+Conjunctivitis,H10.9,ICD10
+Constipation,K59.0,ICD10
+Cough,R05,ICD10
+Pallor,R23.1,ICD10
+Diarrhea,R19.7,ICD10
+Difficulty eating or drinking (Dysphagia),R13.10,ICD10
+Disturbance in attention (Altered mental status),R41.82,ICD10
+Dizziness/light headedness (Dizziness and giddiness),R42,ICD10
+Dry skin (Xerosis cutis),L85.3,ICD10
+Ear pain (Otalgia),H92.0,ICD10
+Erectile dysfunction,N52.9,ICD10
+Fecal incontinence,R15,ICD10
+Fainting / blackouts (Syncope and collapse),R55,ICD10
+Malaise and fatigue,R53,ICD10
+Fever,R50.9,ICD10
+Gastrointestinal bleeding (Gastrointestinal hemorrhage),K92.2,ICD10
+Headache,R51,ICD10
+Hepatomegaly,R16.0,ICD10
+Difficulty in walking,R26.2,ICD10
+Increased thirst (Polydipsia),R63.1,ICD10
+Increased urination (polyuria),R35.8,ICD10
+Pain during urination (Dysuria),R30.0,ICD10
+Feeding difficulty,R63.3,ICD10
+Irritability,R45.4,ICD10
+Jaundice,R17,ICD10
+Joint pain (Arthralgia),M25.5,ICD10
+Keratitis,H16.9,ICD10
+Limb weakness / paralysis (Monoplegia),G83.3,ICD10
+Loss of appetite (Anorexia),R63.0,ICD10
+Loss of smell (Anosmia),R43.0,ICD10
+Loss of taste (Parageusia),R43.2,ICD10
+Lymphadenitis,I88,ICD10
+Mouth ulcers (Recurrent oral aphthae),K12.0,ICD10
+Muscle aches (Myalgia),M79.1,ICD10
+Muscle weakness,M62.81,ICD10
+Nausea or vomiting,R11,ICD10
+Chest pain on breathing,R07.1,ICD10
+Palpitations,R00.2,ICD10
+Paresthesia of skin,R20.2,ICD10
+Visual disturbances,H53,ICD10
+Retention of urine,R33.9,ICD10
+Sleep disorder,F51.9,ICD10
+Speech disturbances,R47.9,ICD10
+Problems swallowing or chewing (Dysphagia),R13.10,ICD10
+Pruritus,L29,ICD10
+Rapid heart beat/Pulse (Tachycardia),R00.0,ICD10
+Rashes or skin lesions,R21,ICD10
+Disorders of nose and nasal sinuses,J34,ICD10
+Convulsions,R56.9,ICD10
+Shortness of breath (Dyspnea),R06.0,ICD10
+Nasal congestion,R09.81,ICD10
+Skin rash,R21,ICD10
+Changes in skin texture,R23.4,ICD10
+Sneezing,R06.7,ICD10
+Sore throat (Pain in throat),R07.0,ICD10
+Spontaneous bruising (Spontaneous ecchymoses),R23.3,ICD10
+Sweating (hyperhidrosis),R61,ICD10
+Localized edema,R60.0,ICD10
+Swollen lymph nodes (Enlarged lymph nodes),R59.9,ICD10
+Tinnitus,H93.1,ICD10
+Tremor,R25.1,ICD10
+Abnormal weight loss,R63.4,ICD10
+Urinary incontinence,R32,ICD10
+Wheezing,R06.2,ICD10
