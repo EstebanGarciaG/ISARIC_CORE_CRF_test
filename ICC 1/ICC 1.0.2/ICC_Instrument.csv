@@ -881,7 +881,7 @@ outcome_medication,MEDICATION,medi_antipruritic,radio,Antipruritic agent,"1, Hyd
 outcome_medication,MEDICATION,medi_antipruritic_route,radio,Antipruritic agent route,"1, Topical | 2, Oral | 3, IV | 4, IM ",,,,,[medi_medtype]='5',,,,1,1,1
 outcome_medication,MEDICATION,medi_medother,text,Specify other agent,,,,,,[medi_medtype]='88',,1,1,1,1,1
 outcome_medication,MEDICATION,medi_medstartdate,date_dmy,Date agent started / first dose,,date_dmy,,today,,,,1,1,1,1,1
-outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,,,1,1,1,1,1
+outcome_medication,MEDICATION,medi_medenddate,date_dmy,Date agent ended / last dose,,date_dmy,,today,,,,1,,1,1,1
 outcome_medication,MEDICATION,medi_numdays,number,Total number of days treatment given,,number,,,,,,1,1,1,1,1
 outcome_medication,MEDICATION,medi_frequency,text,Frequency,,,,,,[medi_medtype]='1',,,,1,1,1
 outcome_medication,MEDICATION,medi_dose,text,Dose,,number,,,,[medi_medtype] = '2' or [medi_medtype]='6',,,,1,1,1
@@ -1038,11 +1038,11 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt,group,BLOOD PRODUCT TRANSFUSION,,,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_yn,radio,Blood product tranfusion?,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_type,checkbox,Select all blood product transfusion that were administered,"1, Platelets | 2, Cryoprecipitate | 3, Whole blood/packed RBC | 4, Frozen fresh plasma | 5, Fibrinogen concentrate",,,,,[inter_bpt_yn] ='1',,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_plate,number,Total number of Platelets (mL/24 hours),,number,,,,[inter_bpt_type(1)] = '1',,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_cryo,number,Total number of Cryoprecipitate (mL/24 hours),,number,,,,[inter_bpt_type(2)]='1',,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_rbc,number,Total number of Whole blood/packed RBC (mL/24 hours),,number,,,,[inter_bpt_type(3)]='1',,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_ffp,number,Total number of Fresh Frozen Plasma (FFP) (mL/24 hours),,number,,,,[inter_bpt_type(4)]='1',,,1,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_fibrin,number,Total number of Fibrinogen concentrate (mL/24 hours),,number,,,,[inter_bpt_type(5)]='1',,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_plate,number,Total number of Platelets (units),,number,,,,[inter_bpt_type(1)] = '1',,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_cryo,number,Total number of Cryoprecipitate (units),,number,,,,[inter_bpt_type(2)]='1',,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_rbc,number,Total number of Whole blood/packed RBC (units),,number,,,,[inter_bpt_type(3)]='1',,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_ffp,number,Total number of Fresh Frozen Plasma (FFP) (units),,number,,,,[inter_bpt_type(4)]='1',,,1,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_bpt_fibrin,number,Total number of Fibrinogen concentrate (units),,number,,,,[inter_bpt_type(5)]='1',,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivimmunogl,radio,Intravenous Immunoglobulin?,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_diuretics,radio,Diuretics? ,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nacetylcys,radio,N-acetyl cysteine? ,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
