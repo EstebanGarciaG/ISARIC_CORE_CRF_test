@@ -2,23 +2,23 @@ Form,Section,Variable,Type,Question,Answer Options,Validation,Minimum,Maximum,Li
 presentation,,subjid,text,Participant Identification Number (PIN):,,,,,,,,1,1,1,1,1
 presentation,INCLUSION CRITERIA,inclu_disease,user_list,Which of the following is the individual suspected/confirmed to have,,,,,inclusion_Diseases,,,1,1,,,1
 presentation,INCLUSION CRITERIA,inclu_diseasenipah,checkbox,Which of the following is the individual suspected/confirmed to have (_Under revision),"1, Nipah | 2, JE | 3, HSV | 99, Other | 99, Unknown                                                             ",,,,,,,,,,,
-presentation,INCLUSION CRITERIA,inclu_ph,radio,Proven infection with pathogen of Public Health Interest,"1, Yes | 0, No",,,,,,1,,,,,
+presentation,INCLUSION CRITERIA,inclu_ph,radio,Proven infection with pathogen of Public Health Interest,"1, Yes | 0, No",,,,,,1,,,,,1
 presentation,INCLUSION CRITERIA,inclu_ph2,radio,"High suspicion of exposure to pathogen, noxious agent or harmful energy of Public Health Interest:
-<i>N.B. This does <u>not</u> relate to Covid-19 exposure. This does include children with hepatitis of unknown cause</i>","1, Yes | 0, No",,,,,,1,,,,,
+<i>N.B. This does <u>not</u> relate to Covid-19 exposure. This does include children with hepatitis of unknown cause</i>","1, Yes | 0, No",,,,,,1,,,,,1
 presentation,INCLUSION CRITERIA,inclu_mpox,radio,Suspected of confirmed mpox,"1, Yes | 0, No",,,,,,,,,,1,
 presentation,INCLUSION CRITERIA,inclu_cons,group,CONSENT,,,,,,,,,,,,
 presentation,INCLUSION CRITERIA,inclu_cons_gen,radio,Participant has provided consent to participate in this study,"1, Yes | 0, No",,,,,,,,,,1,
-presentation,INCLUSION CRITERIA,inclu_cons_gen2,radio,I agree to the use of my data,"1, Yes | 0, No",,,,,,1,,,,,
-presentation,INCLUSION CRITERIA,inclu_cons_data,radio,I agree to the use of my data and samples <u>including my DNA</u>,"1, Yes | 0, No",,,,,,1,,,,,
-presentation,INCLUSION CRITERIA,inclu_cons_dataops,radio,Consent options <u>(select all to which the patient agreed)</u>,"1, I agree that my <u>data may be used for other unrelated ethically approved research in the UK or elsewhere.</u> | 2, I agree that my data can be used to <u>manufacture tests, treatments or other products, including commercial products.</u> | 3, I agree that my de-identified data and results of analyses, <u>can be shared with other scientists, including those in other countries.</u> | 4, I agree to be <u>contacted by the investigators to be invited to participate in future work, including research studies</u>",,,,,,1,,,,,
+presentation,INCLUSION CRITERIA,inclu_cons_gen2,radio,I agree to the use of my data,"1, Yes | 0, No",,,,,,1,,,,,1
+presentation,INCLUSION CRITERIA,inclu_cons_data,radio,I agree to the use of my data and samples <u>including my DNA</u>,"1, Yes | 0, No",,,,,,1,,,,,1
+presentation,INCLUSION CRITERIA,inclu_cons_dataops,radio,Consent options <u>(select all to which the patient agreed)</u>,"1, I agree that my <u>data may be used for other unrelated ethically approved research in the UK or elsewhere.</u> | 2, I agree that my data can be used to <u>manufacture tests, treatments or other products, including commercial products.</u> | 3, I agree that my de-identified data and results of analyses, <u>can be shared with other scientists, including those in other countries.</u> | 4, I agree to be <u>contacted by the investigators to be invited to participate in future work, including research studies</u>",,,,,,1,,,,,1
 presentation,INCLUSION CRITERIA,inclu_cons_sni,radio,"In Scotland and Northern Ireland, I certify that consent has been obtained for collection of confidential data including personal identifiers:
-<i>N.B. Under Regulation 3 of The Health Service (Control of Patient Information) Regulations 2002 (COPI), consent is not required for the collection of confidential patient information with personal identifiers (data) in  <u>England and Wales</u>  during an event of public health interest or its aftermath. </i> ","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,INCLUSION CRITERIA,inclu_cons_uk,radio,"In all countries of the UK, consent has been obtained for the collection of samples including DNA:","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,INCLUSION CRITERIA,inclu_cons_ukops,radio,Consent options <u>(select all to which the patient agreed)</u>:,,,,,,,1,,,,,
+<i>N.B. Under Regulation 3 of The Health Service (Control of Patient Information) Regulations 2002 (COPI), consent is not required for the collection of confidential patient information with personal identifiers (data) in  <u>England and Wales</u>  during an event of public health interest or its aftermath. </i> ","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,INCLUSION CRITERIA,inclu_cons_uk,radio,"In all countries of the UK, consent has been obtained for the collection of samples including DNA:","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,INCLUSION CRITERIA,inclu_cons_ukops,radio,Consent options <u>(select all to which the patient agreed)</u>:,,,,,,,1,,,,,1
 presentation,ONSET & ADMISSION,dates_consent,date_dmy,Date of consent:,,date_dmy,,today,,[inclu_consent]='1',,,,,1,
 presentation,ONSET & ADMISSION,dates_enrolment,date_dmy,Date of enrolment / start of data collection,,date_dmy,,today,,,,1,1,,1,1
 presentation,ONSET & ADMISSION,dates_hosp,text,Which hospital/community has the participant been enrolled at?,,,,,,,,,,,1,
-presentation,ONSET & ADMISSION,dates_loc,text,Site location,,,,,,,1,,,,,
+presentation,ONSET & ADMISSION,dates_loc,text,Site location,,,,,,,1,,,,,1
 presentation,ONSET & ADMISSION,dates_onsetdate,date_dmy,Onset date of first / earliest symptom,,date_dmy,,today,,,,1,1,,1,1
 presentation,ONSET & ADMISSION,dates_firstsym,checkbox,First symptom (select multiple if occurred at same time),"1, Fever | 2, Skin rash | 3, Mucosal rash | 88, Other systemic symptoms | 99, Unknown",,,,,,,,,,1,
 presentation,ONSET & ADMISSION,dates_firstsymoth,text,Specify other symptom:,,,,,,[dates_firstsym(88)]='1',,,,,1,
@@ -36,10 +36,10 @@ presentation,RE-ADMISSION AND PREVIOUS PIN,readm_firstadm_date,date_dmy,Date of 
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_difpin,radio,Has the patient's data been previously collected under a different patient number? ,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
 presentation,RE-ADMISSION AND PREVIOUS PIN,readm_prevpin,text,Previous participant identification number (PIN),,,,,,[readm_difpin] = '1',,1,1,,1,1
 presentation,DEMOGRAPHICS,demog_sex,radio,Sex at Birth,"1, Male | 2, Female | 99, Not specified/Unknown",,,,,,,1,1,,1,1
-presentation,DEMOGRAPHICS,demog_dobknown,radio,Is birth date known?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,DEMOGRAPHICS,demog_dob,text,Birth date (has approval for entry),,,,,,,1,,,,,
+presentation,DEMOGRAPHICS,demog_dobknown,radio,Is birth date known?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,DEMOGRAPHICS,demog_dob,text,Birth date (has approval for entry),,,,,,,1,,,,,1
 presentation,DEMOGRAPHICS,demog_calcage,calc,"Calculated Age (comparing Date of birth with Date of enrolment) 
-May be inaccurate if a date of February 29 is used","rounddown(datediff([agedat], [dsstdat], ""y"", ""dmy"", true))",,,,,"[demog_dob]<>""""",1,,,,,
+May be inaccurate if a date of February 29 is used","rounddown(datediff([agedat], [dsstdat], ""y"", ""dmy"", true))",,,,,"[demog_dob]<>""""",1,,,,,1
 presentation,DEMOGRAPHICS,demog_age,text,Age,,number,,,,,,1,1,,1,1
 presentation,DEMOGRAPHICS,demog_age_units,radio,Age units,"1, Years | 2, Months | 3, Days",,,,,,,1,1,,1,1
 presentation,DEMOGRAPHICS,demog_height,,Height (select units),,,,,,,,,,,,
@@ -61,7 +61,7 @@ presentation,DEMOGRAPHICS,demog_mednum,group,MEDICAL NUMBER,,,,,,,,,,,,
 presentation,DEMOGRAPHICS,demog_mednum_nhc,text,National health care number,,,,,,,,,,,,
 presentation,DEMOGRAPHICS,demog_mednum_locmed,text,Local medical record number,,,,,,,,,,,,
 presentation,DEMOGRAPHICS,demog_mednum_nhschi,text,"England & Wales NHS number, Scotland CHI number (has approval for entry)
-NB Northern Ireland Health & Care Number is not being collected at this time",,,,,,,1,,,,,
+NB Northern Ireland Health & Care Number is not being collected at this time",,,,,,,1,,,,,1
 presentation,DEMOGRAPHICS,demog_postal,text,Postal code,,,,,,,,,,,,
 presentation,TRAVEL HISTORY,travel_travel14d,radio,Did the patient travel outside of their home region in the past 14 days?,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
 presentation,TRAVEL HISTORY,travel_loc,notes,Specify all city/cities or town(s) and region(s) of travel,,,,,,[travel_travel14d] = '1',,,1,,,
@@ -73,31 +73,31 @@ presentation,PREGNANCY,preg_bboutc,radio,Pregnancy outcome,"1, Live birth | 2, S
 presentation,PREGNANCY,preg_gesweekout,number,Gestational weeks at pregnancy outcome,,number,,,,[preg_postpartum] = '1',,,1,,,
 presentation,PREGNANCY,preg_bbtest,radio,Baby tested for Mother's infection/condition,"1, Yes | 0, No | 99, Unknown",,,,,[preg_postpartum] = '1',,1,,,1,1
 presentation,PREGNANCY,preg_bbresl,radio,Test result,"1, Positive | 0, Negative | 99, Unknown",,,,,[preg_bbtest] = '1',,1,,,1,1
-presentation,PREGNANCY,preg_delivery,radio,Delivery:,"1, Normal vaginal delivery | 2, Elective Caesarean Section | 3, Emergency Casesarean Section",,,,,,1,,,,,
-presentation,PREGNANCY,preg_prm,radio,Premature rupture of membranes?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,PREGNANCY,preg_prm_dur,text,"If yes, how long before delivery?",,,,,,[preg_prm]='1',1,,,,,
+presentation,PREGNANCY,preg_delivery,radio,Delivery:,"1, Normal vaginal delivery | 2, Elective Caesarean Section | 3, Emergency Casesarean Section",,,,,,1,,,,,1
+presentation,PREGNANCY,preg_prm,radio,Premature rupture of membranes?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,PREGNANCY,preg_prm_dur,text,"If yes, how long before delivery?",,,,,,[preg_prm]='1',1,,,,,1
 presentation,INFANT: less than 12 months old,infa_brtwei,,Birth weight (select units),,,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,,,,,1
 presentation,INFANT: less than 12 months old,infa_brtwei_kg,number,Birth weight (kg),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,1,,,1,1
 presentation,INFANT: less than 12 months old,infa_brtwei_lb,number,Birth weight (lb),,number,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,,,,,1
 presentation,INFANT: less than 12 months old,infa_outcome,radio,Gestational outcome,"1, Term birth (>=37wk GA) | 2, Preterm birth (< 37wk GA) | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,1,,,1,1
 presentation,INFANT: less than 12 months old,infa_brefed,radio,Breastfed,"1, Yes, currently breastfeeding | 2, Yes, breastfeeding discontinued | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,1,,,1,1
 presentation,INFANT: less than 12 months old,infa_aprvac,radio,Vaccinations appropriate for age/country,"1, Yes | 0, No | 99, Unknown",,,,,([demog_age] < 12 and [demog_age_units]='2') or [demog_age_units]='3',,1,,,,
-presentation,INFANT: less than 12 months old,infa_test,radio,Has infant(s) been tested for Mother's infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,INFANT: less than 12 months old,infa_test_yn,radio,If YES:,"1, Positive | 0, Negative | 99, Unknown",,,,,[infa_test]='1',1,,,,,
-presentation,INFANT: less than 12 months old,infa_apgar,text,Apgar at 10min:,,,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_infa,radio,Has mother been tested for infant's infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_infares,radio,Test result:,"1, Positive | 0, Negative",,,,,[mtrnl_infa]='1',1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_num,text,"Mother's England & Wales NHS, Scotland CHI, Northern Ireland Health & Care Number:",,,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_dobknown,radio,Is mother's date of birth known?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_dob,date_dmy,Mother's date of birth,,date_dmy,,,,[mtrnl_dobknown]='1',1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_age,text,Mother's age,,number,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_isaric,text,Mother's ISARIC CCP-UK Study ID:,,,,,,,1,,,,,
+presentation,INFANT: less than 12 months old,infa_test,radio,Has infant(s) been tested for Mother's infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,INFANT: less than 12 months old,infa_test_yn,radio,If YES:,"1, Positive | 0, Negative | 99, Unknown",,,,,[infa_test]='1',1,,,,,1
+presentation,INFANT: less than 12 months old,infa_apgar,text,Apgar at 10min:,,,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_infa,radio,Has mother been tested for infant's infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_infares,radio,Test result:,"1, Positive | 0, Negative",,,,,[mtrnl_infa]='1',1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_num,text,"Mother's England & Wales NHS, Scotland CHI, Northern Ireland Health & Care Number:",,,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_dobknown,radio,Is mother's date of birth known?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_dob,date_dmy,Mother's date of birth,,date_dmy,,,,[mtrnl_dobknown]='1',1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_age,text,Mother's age,,number,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_isaric,text,Mother's ISARIC CCP-UK Study ID:,,,,,,,1,,,,,1
 presentation,MATERNAL INFORMATION,mtrnl_house,group,HOUSEHOLD,,,,,,,,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_house_unwell,radio,Any unwell household members in the two weeks prior to the admission of case?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_house_syst,radio,If so which system(s) affected? (tick all that apply),"1, Respiratory | 2, Gastrointestinal | 3, Cardiovascular | 4, Central Nervous system | 5, Peripheral Nervous system | 6, Mucocutaneous | 7, Ocular | 88, Other | 99, Unknown",,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_house_systoth,text,Please specify:,,,,,,[mtrnl_house_syst]='88',1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_house_school,radio,Do any household members go to school/nursery?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,MATERNAL INFORMATION,mtrnl_house_contact,radio,Have any household members had any contact with a person with confirmed enteroviral infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
+presentation,MATERNAL INFORMATION,mtrnl_house_unwell,radio,Any unwell household members in the two weeks prior to the admission of case?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_house_syst,radio,If so which system(s) affected? (tick all that apply),"1, Respiratory | 2, Gastrointestinal | 3, Cardiovascular | 4, Central Nervous system | 5, Peripheral Nervous system | 6, Mucocutaneous | 7, Ocular | 88, Other | 99, Unknown",,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_house_systoth,text,Please specify:,,,,,,[mtrnl_house_syst]='88',1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_house_school,radio,Do any household members go to school/nursery?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,MATERNAL INFORMATION,mtrnl_house_contact,radio,Have any household members had any contact with a person with confirmed enteroviral infection?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrcardiac,radio,Chronic cardiac disease (not hypertension),"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_hypertensi,radio,Hypertension (physician diagnosed),"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrpulmona,radio,Chronic pulmonary disease (not asthma),"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
@@ -114,7 +114,7 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_malignantn,radio,Malignant neoplasm,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_chrhematol,radio,Chronic hematologic disease,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_sti,radio,Active sexually transmitted infection,"1, Yes | 0, No | 99, Unknown",,,,,,,,,,1,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_newsti,radio,"New STI diagnosis, post-baseline","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_newsti,radio,"New STI diagnosis, post-baseline","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cpox,radio,Active chickenpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,,,1,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_rheumatolo,radio,Rheumatologic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_aids,radio,AIDS / HIV,"1, YES-on ART | 2, YES-not on ART | 0, NO | 99, Unknown",,,,,,,1,1,,1,1
@@ -130,10 +130,10 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_tuberculos,radio,Tuberculosis,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_malnutriti,radio,Malnutrition,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,1,
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_smoking,radio,Smoking,"1, Current smoker | 0, Never smoked | 3, Former smoker | 99, Unknown",,,,,,,1,1,,1,1
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_gene,radio,Genetic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_gene_spec,text,Please specify:,,,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_vuln,radio,Clinically extremely vulnerable?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_orgtrans,radio,Solid organ transplant recipients:   ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_gene,radio,Genetic disorder,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_gene_spec,text,Please specify:,,,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_vuln,radio,Clinically extremely vulnerable?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_orgtrans,radio,Solid organ transplant recipients:   ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cancer,radio,"People with specific cancers:
 • people with cancer who are undergoing active chemotherapy
 • people with lung cancer who are undergoing radical radiotherapy
@@ -141,12 +141,12 @@ presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and on
 • people having immunotherapy or other continuing antibody treatments for cancer
 • people having other targeted cancer treatments which can affect the immune system, such as protein kinase inhibitors or PARP inhibitors
 • people who have had bone marrow or stem cell transplants in the last 6 months, or who are still taking immunosuppression drugs
-","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_copd,radio,"People with severe respiratory conditions including all cystic fibrosis, severe asthma requiring daily oral steroid or injectable maintenance therapy and severe chronic obstructive pulmonary requiring oxygen (COPD):","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_scid,radio,"People with rare diseases and inborn errors of metabolism that significantly increase the risk of infections (such as Severe combined immunodeficiency (SCID), homozygous sickle cell):   ","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_immuno,radio,People on immunosuppression therapies sufficient to significantly increase risk of infection: ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_pregheart,radio,"Women who are pregnant with significant heart disease, congenital or acquired:","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cfs,radio,Clinical frailty score:,"1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 99, Unknown",,,,,,1,,,,,
+","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_copd,radio,"People with severe respiratory conditions including all cystic fibrosis, severe asthma requiring daily oral steroid or injectable maintenance therapy and severe chronic obstructive pulmonary requiring oxygen (COPD):","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_scid,radio,"People with rare diseases and inborn errors of metabolism that significantly increase the risk of infections (such as Severe combined immunodeficiency (SCID), homozygous sickle cell):   ","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_immuno,radio,People on immunosuppression therapies sufficient to significantly increase risk of infection: ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_pregheart,radio,"Women who are pregnant with significant heart disease, congenital or acquired:","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_cfs,radio,Clinical frailty score:,"1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 99, Unknown",,,,,,1,,,,,1
 presentation,CO-MORBIDITIES AND RISK FACTORS: existing prior to admission and ongoing,comor_unlisted,list,Other relevant comorbidity(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Comorbidities,,,1,1,,1,1
 presentation,MEDICAL HISTORY,medic_gastro,group,GASTROENTERITIS,,,,,,,,,,,,1
 presentation,MEDICAL HISTORY,medic_gastro_yn,radio,Gastroenteritis illness (including diarrhoea or vomiting) in the past 3 months,"1, Yes | 0, No",,,,,,,,,,,1
@@ -311,25 +311,25 @@ presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of pr
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_jaund,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_anorexia,radio,Anorexia,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinrash,radio,Skin rash,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_earpain,radio,Ear pain,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_arrhyrth,radio,Arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_apnoea,radio,Apnoea,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_circfail,radio,Circulatory failure (Cardiac or other),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adysm_inffeed,radio,Infant with feeding difficulty,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_hepato,radio,Hepatomegaly,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_irritable,radio,Infant with irritability,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_limbpara,radio,Limb weakness/-paralysis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinulcer,radio,Skin ulcers,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_temp,text,Temperature,,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_hr,text,Heart rate (bpm),,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_rr,text,Respiratory rate,,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sysbp,text,Systolic BP (mmHg),,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_diabp,text,Diastolic BP (mmHg),,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sevdehy,radio,Severe dehydration,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_scr2,radio,Sternal capillary refill time >2 seconds?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_oxysat,text,Oxygen saturation,,,,,,,1,,,,,
-presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_oxysaton,radio,Oxygen saturation on:,"1, Room air| 2, Oxygen therapy| 99, Unknown",,,,,,1,,,,,
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_earpain,radio,Ear pain,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_arrhyrth,radio,Arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_apnoea,radio,Apnoea,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_circfail,radio,Circulatory failure (Cardiac or other),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adysm_inffeed,radio,Infant with feeding difficulty,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_hepato,radio,Hepatomegaly,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_irritable,radio,Infant with irritability,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_limbpara,radio,Limb weakness/-paralysis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_skinulcer,radio,Skin ulcers,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_temp,text,Temperature,,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_hr,text,Heart rate (bpm),,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_rr,text,Respiratory rate,,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sysbp,text,Systolic BP (mmHg),,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_diabp,text,Diastolic BP (mmHg),,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_sevdehy,radio,Severe dehydration,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_scr2,radio,Sternal capillary refill time >2 seconds?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_oxysat,text,Oxygen saturation,,,,,,,1,,,,,1
+presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_oxysaton,radio,Oxygen saturation on:,"1, Room air| 2, Oxygen therapy| 99, Unknown",,,,,,1,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag,group,Bleeding / Haemorrhage,,,,,,,,,,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_yn,radio,Bleeding / Haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
 presentation,"SIGNS AND SYMPTOMS ON ADMISSION: first data, within 24 hours of presentation / admission",adsym_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other",,,,,[adsym_haemorrhag_yn] = '1',,1,1,,,1
@@ -410,16 +410,16 @@ daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_jaund,radio,Jaundice,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,,1,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_anorexia,radio,Anorexia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,,,
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_skinrash,radio,Skin rash,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_earpain,radio,Ear pain,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_arrhyrth,radio,Arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_apnoea,radio,Apnoea,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_circfail,radio,Circulatory failure (Cardiac or other),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,adysm_inffeed,radio,Infant with feeding difficulty,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_hepato,radio,Hepatomegaly,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_irritable,radio,Infant with irritability,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_limbpara,radio,Limb weakness/-paralysis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
-daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_skinulcer,radio,Skin ulcers,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_earpain,radio,Ear pain,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_arrhyrth,radio,Arrhythmia,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_apnoea,radio,Apnoea,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_circfail,radio,Circulatory failure (Cardiac or other),"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,adysm_inffeed,radio,Infant with feeding difficulty,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_hepato,radio,Hepatomegaly,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_ascites,radio,Ascites,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_irritable,radio,Infant with irritability,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_limbpara,radio,Limb weakness/-paralysis,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
+daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_skinulcer,radio,Skin ulcers,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',1,,,,,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag,group,Bleeding / haemorrhage,,,,,,,,,,,1,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_yn,radio,Bleeding / haemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datasympt]='1',,,,,1,1
 daily,SIGNS AND SYMPTOMS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,sympt_haemorrhag_site,checkbox,Specify bleeding / haemorrhage site(s),"1, Skin | 2, Nose | 3, Gums |4, GI tract | 5, Urinary tract | 6, Vagina | 88, Other | 99, Unknown",,,,,[sympt_haemorrhag_yn] = '1',,,,,1,1
@@ -452,10 +452,10 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_systolicbp,number,Systolic BP (mmHg),,number,,,,[daily_datavital]='1',,1,1,,1,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_diastolicbp,number,Diastolic BP (mmHg),,number,,,,[daily_datavital]='1',,1,1,,1,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_meanbp,number,Mean Arterial Blood Pressure (mmHg),,number,,,,[daily_datavital]='1',,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2,,FiO2 (select units),,,,,,[daily_datavital]='1',1,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_02110,number,"FiO2 (Fraction, 0.21-1.0)",,number,,,,[daily_datavital]='1',1,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_pcnt,number,"FiO2 (%, 21-100)",,number,,,,[daily_datavital]='1',1,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_lmin,number,FiO2 (highest L/min),,number,,,,[daily_datavital]='1',1,,,,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2,,FiO2 (select units),,,,,,[daily_datavital]='1',1,,,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_02110,number,"FiO2 (Fraction, 0.21-1.0)",,number,,,,[daily_datavital]='1',1,,,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_pcnt,number,"FiO2 (%, 21-100)",,number,,,,[daily_datavital]='1',1,,,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2_lmin,number,FiO2 (highest L/min),,number,,,,[daily_datavital]='1',1,,,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_spo2,number,Lowest Oxygen saturation SpO2 (%),,number,,,,[daily_datavital]='1',,1,1,,1,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2low,radio,FiO2 measured at time of lowest SpO2 ,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datavital]='1',,1,1,,1,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_fio2spo2,,FiO2 at time of lowest SpO2 (select units),,,,,,[vital_fio2low] = '1',,1,,,,1
@@ -488,9 +488,9 @@ daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range bet
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_ulcer,radio,Ulcerated lesion,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',,,,,1,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_ulcer_loc,text,Location of lesions of this type,,,,,,[vital_mpox_ulcer]='1',,,,,1,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_ulcer_num,text,Number of lesions of this type,,number,,,,[vital_mpox_ulcer]='1',,,,,1,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab,radio,Crusted/scabbed mature lesion,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',1,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab_loc,text,Location of lesions of this type,,,,,,[vital_mpox_scab]='1',1,,,,,
-daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab_num,text,Number of lesions of this type,,,,,,[vital_mpox_scab]='1',1,,,,,
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab,radio,Crusted/scabbed mature lesion,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',1,,,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab_loc,text,Location of lesions of this type,,,,,,[vital_mpox_scab]='1',1,,,,,1
+daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_scab_num,text,Number of lesions of this type,,,,,,[vital_mpox_scab]='1',1,,,,,1
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_necro,radio,Necrotising lesion,"1, Yes | 0, No | 99, Unknown",,,,,[vital_mpox_skinles]='1',,,,,1,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_necro_loc,text,Location of lesions of this type,,,,,,[vital_mpox_necro]='1',,,,,1,
 daily,VITAL SIGNS & ASSESSMENTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,vital_mpox_necro_num,text,Number of lesions of this type,,number,,,,[vital_mpox_necro]='1',,,,,1,
@@ -656,9 +656,9 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatinine_umoll,number,Creatinine (umol/L),,number,0,4421,,[daily_datalab]='1',,1,1,,1,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_creatinine_mgdl,number,Creatinine (mg/dL),,number,0,50,,[daily_datalab]='1',,1,1,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c,number,HbA1c (select units),,number,,,,[daily_datalab]='1',1,1,,,1,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c_pcnt,number,HbA1c (%),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c_mmolmol,number,HbA1c (mmol/mol),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1cdate,date_dmy,HbA1c date,,date_dmy,,today,,[daily_datalab]='1',1,,,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c_pcnt,number,HbA1c (%),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1c_mmolmol,number,HbA1c (mmol/mol),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hba1cdate,date_dmy,HbA1c date,,date_dmy,,today,,[daily_datalab]='1',1,,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_sodium,,Sodium (select units),,,,,,[daily_datalab]='1',,1,,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_sodium_mmoll,number,Sodium (mmol/L),,number,98,255,,[daily_datalab]='1',,1,1,,1,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_sodium_meql,number,Sodium (mEq/L),,number,98,255,,[daily_datalab]='1',,1,,,,
@@ -743,7 +743,7 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4,,CD4 (select units),,,,,,[daily_datalab]='1',,1,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_106l,number,CD4 (10^6/L),,number,0,2000,,[daily_datalab]='1',,1,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4_mm3,number,CD4 (mm^3),,number,,,,[daily_datalab]='1',,1,,,1,1
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4date,date_dmy,CD4 date,,date_dmy,,today,,[daily_datalab]='1',1,,,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cd4date,date_dmy,CD4 date,,date_dmy,,today,,[daily_datalab]='1',1,,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_oxygensat,number,Oxygen Saturation (%),,number,20,100,,[daily_datalab]='1',,,,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_alkalineph,number,Alkaline Phosphatase (U/L),,number,0,2940,,[daily_datalab]='1',,,,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_phosphate,number,Phosphate,,number,,,,[daily_datalab]='1',,,,,1,
@@ -794,13 +794,13 @@ daily,LABORATORY RESULTS: Record the value furthest from normal range between 00
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol,,Cortisol (select units),,,,,,[daily_datalab]='1',,,,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_ugdl,number,Cortisol (ug/dL),,number,0,100,,[daily_datalab]='1',,,,,,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_cortisol_nmoll,number,Cortisol (nmol/L),,number,0,2500,,[daily_datalab]='1',,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp,number,BNP (select units),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp_pgl,number,BNP (pg/L),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp_pgml,number,BNP (pg/mL),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr,,eGFR (select units),,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_ckd,number,"eGFR (CKD-EPI, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_mdrd,number,"eGFR (MDRD, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,
-daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_cg,number,"eGFR (CG, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp,number,BNP (select units),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp_pgl,number,BNP (pg/L),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_bnp_pgml,number,BNP (pg/mL),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr,,eGFR (select units),,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_ckd,number,"eGFR (CKD-EPI, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_mdrd,number,"eGFR (MDRD, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,1
+daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_egfr_cg,number,"eGFR (CG, mL/min/1.73m^2)",,number,,,,[daily_datalab]='1',1,,,,,1
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_hiv,number,HIV Serology (once only),,,,,,[daily_datalab]='1',,,,,1,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria,group,MALARIA,,,,,,,,,,,1,
 daily,LABORATORY RESULTS: Record the value furthest from normal range between 00:00 to 24:00 on day of assessment,labs_malaria_yn,radio,Malaria test performed,"1, Yes | 0, No | 99, Unknown",,,,,[daily_datalab]='1',,,,,1,
@@ -928,32 +928,32 @@ outcome,DIAGNOSIS,diagn_dengue_iggss,radio,IgG ELISA second sample,"1, Positive 
 outcome,DIAGNOSIS,diagn_dengue_pcr,radio,Dengue PCR,"1, Positive | 0, Negative | 99, Not done",,,,,[diagn_dengue_test] = '1',,,1,,,
 outcome,DIAGNOSIS,diagn_dengue_pcrtyp,radio,Dengue virus type,"1, DENV1 | 2, DENV2 | 3, DENV3 | 4, DENV4",,,,,[diagn_dengue_pcr] = '1',,,1,,,
 outcome,DIAGNOSIS,diagn_bacte_occur,list,Bacterial infection,"1, Lab confirmed | 0, Lab negative | 2, Not done | 99, Unknown",,,,pathogens_Bacteria,,,1,1,1,1,
-outcome,DIAGNOSIS,diagn_entero,radio,Enterovirus,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_entero_type,text,"Please confirm type if known (e.g B3, D68):",,,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_poison,radio,Poisoning,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_poison_type,radio,"Poisoning, if YES, please confirm type","1, Paracetamol | 88, other",,,,,[diagn_poison]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_poison_oth,text,"Poisoning, if OTHER TYPE, please specify",,,,,,[diagn_poison_type]='88',1,,,,,
-outcome,DIAGNOSIS,diagn_parvob19,radio,Parvovirus B19,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,
+outcome,DIAGNOSIS,diagn_entero,radio,Enterovirus,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_entero_type,text,"Please confirm type if known (e.g B3, D68):",,,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_poison,radio,Poisoning,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_poison_type,radio,"Poisoning, if YES, please confirm type","1, Paracetamol | 88, other",,,,,[diagn_poison]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_poison_oth,text,"Poisoning, if OTHER TYPE, please specify",,,,,,[diagn_poison_type]='88',1,,,,,1
+outcome,DIAGNOSIS,diagn_parvob19,radio,Parvovirus B19,"1, Positive | 0, Negative | 99, Not done",,,,,,1,,,,,1
 outcome,DIAGNOSIS,diagn_encephali,radio,Select pathogen detected (_Under revision),"1, Nipah | 2, JE | 3, HSV",,,,,,,,,,,
 outcome,DIAGNOSIS,diagn_encephali_type,radio,Diagnostic method (_Under revision),"1, Clinically assessed positive | 2, Lab confirmed | 3, Lab negative | 99, Not tested",,,,,,,,,,,
 outcome,DIAGNOSIS,diagn_pathounlist,list,Other pathogen(s) detected,"1, Yes | 0, No | 99, Unknown",,,,pathogens_Other,,,1,1,1,1,1
-outcome,DIAGNOSIS,diagn_csf,group,CEREBROSPINAL FLUID (CSF),,,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_csf_yn,radio,Cerebrospinal fluid (CSF),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_csf_cell,text,CSF cell count (/mm^3),,number,,,,[diagn_csf_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_csf_prtn,text,Protein (g/L),,number,,,,[diagn_csf_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_csf_gluc,text,Glucose (mmol/L),,number,,,,[diagn_csf_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_csf_culture,radio,Culture,"1, Positive | 0, Negative",,,,,[diagn_csf_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_csf_org,text,Organism:,,,,,,[diagn_csf_culture]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_mri,radio,MRI Brain Scan,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_mrisum,text,"If yes, summary of findings:",,,,,,[diagn_mri]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_ecg,group,ELECTROCARDIOGRAM (ECG) ,,,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_ecg_yn,radio,Electrocardiogram (ECG) ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_ecg_res,radio,Normal?,"1, Yes | 0, No",,,,,[diagn_ecg_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_ecg_sum,text,"If no, summary of findings:",,,,,,[diagn_ecg_res]='0',1,,,,,
-outcome,DIAGNOSIS,diagn_echo,group,ECHOCARDIOGRAM (Echo),,,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_echo_yn,radio,Echocardiogram (Echo),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,DIAGNOSIS,diagn_echo_res,radio,Normal?,"1, Yes | 0, No",,,,,[diagn_echo_yn]='1',1,,,,,
-outcome,DIAGNOSIS,diagn_echo_sum,text,"If no, summary of findings:",,,,,,[diagn_echo_res]='0',1,,,,,
+outcome,DIAGNOSIS,diagn_csf,group,CEREBROSPINAL FLUID (CSF),,,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_yn,radio,Cerebrospinal fluid (CSF),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_cell,text,CSF cell count (/mm^3),,number,,,,[diagn_csf_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_prtn,text,Protein (g/L),,number,,,,[diagn_csf_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_gluc,text,Glucose (mmol/L),,number,,,,[diagn_csf_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_culture,radio,Culture,"1, Positive | 0, Negative",,,,,[diagn_csf_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_csf_org,text,Organism:,,,,,,[diagn_csf_culture]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_mri,radio,MRI Brain Scan,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_mrisum,text,"If yes, summary of findings:",,,,,,[diagn_mri]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_ecg,group,ELECTROCARDIOGRAM (ECG) ,,,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_ecg_yn,radio,Electrocardiogram (ECG) ,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_ecg_res,radio,Normal?,"1, Yes | 0, No",,,,,[diagn_ecg_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_ecg_sum,text,"If no, summary of findings:",,,,,,[diagn_ecg_res]='0',1,,,,,1
+outcome,DIAGNOSIS,diagn_echo,group,ECHOCARDIOGRAM (Echo),,,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_echo_yn,radio,Echocardiogram (Echo),"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,DIAGNOSIS,diagn_echo_res,radio,Normal?,"1, Yes | 0, No",,,,,[diagn_echo_yn]='1',1,,,,,1
+outcome,DIAGNOSIS,diagn_echo_sum,text,"If no, summary of findings:",,,,,,[diagn_echo_res]='0',1,,,,,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_viralpneum,radio,Viral pneumonia / pneumonitis,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_bacpneumo,radio,Bacterial pneumonia,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_pneumothor,radio,Pneumothorax,"1, Yes | 0, No | 99, Unknown",,,,,,,1,,1,1,1
@@ -1012,15 +1012,15 @@ outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_hepati
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_eschar,radio,Skin tissue loss or eschar,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1,1,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_liverdysfu,radio,Liver dysfunction,"1, Yes | 0, No | 99, Unknown",,,,,,,,,,,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_inr,radio,INR >= 1.5,"1, Yes | 0, No | 99, Unknown",,,,,[compl_severeliver] = '1',,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb,group,LIMB WEAKNESS/PARALYSIS,,,,,,,1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_yn,radio,Limb weakness/paralysis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_upp,radio,"If yes, affected upper limb?","1, Yes | 0, No | 99, Unknown",,,,,[compl_limb_yn]='1',1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_low,radio,"If yes, affected lower limb?","1, Yes | 0, No | 99, Unknown",,,,,[compl_limb_yn]='1',1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_neurooth,radio,Other neurological complication,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_neurooth_spec,text,"If yes, please specify other neurological complication:",,,,,,[compl_neurooth]='1',1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_uti,radio,Urinary tract infection,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_gastro,radio,Gastrointestinal hemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_skinab,radio,Skin abscess,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb,group,LIMB WEAKNESS/PARALYSIS,,,,,,,1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_yn,radio,Limb weakness/paralysis,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_upp,radio,"If yes, affected upper limb?","1, Yes | 0, No | 99, Unknown",,,,,[compl_limb_yn]='1',1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_limb_low,radio,"If yes, affected lower limb?","1, Yes | 0, No | 99, Unknown",,,,,[compl_limb_yn]='1',1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_neurooth,radio,Other neurological complication,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_neurooth_spec,text,"If yes, please specify other neurological complication:",,,,,,[compl_neurooth]='1',1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_uti,radio,Urinary tract infection,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_gastro,radio,Gastrointestinal hemorrhage,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_skinab,radio,Skin abscess,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
 outcome,COMPLICATIONS (experienced any time during hospitalisation),compl_unlisted,list,Other complication(s),"1, Yes | 0, No | 99, Unknown",,,,conditions_Complications,,,1,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid,group,PARENTERAL / IV FLUID ,,,,,,,,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ivfluid_occur,radio,Parenteral / IV fluid? ,"1, Yes | 0, No | 99, Unknown",,,,,,,,1,,,
@@ -1052,10 +1052,10 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_plasmadur,number,Days on plasma exchange support ,,number,,,,[inter_plasmaex] = '1',,,1,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_suppleo2,radio,Any supplemental oxygen during the observation,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_o2support_type,checkbox,Select ALL types of respiratory support the patient received,"1, Nasal prong | 2, Face mask | 3, High-flow nasal oxygen | 4, Non-invasive ventilation | 5, Invasive ventilation | 6, ECLS/ ECMO",,,,,[inter_suppleo2]='1',,1,1,,,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_invenyn,radio,Is the patient still on invasive ventilation?,"1, Yes | 0, No",,,,,[inter_o2support_type]='5',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_invendur,text,If yes to Invasive ventilation; confirm duration ,,,,,,[inter_o2support_type]='5',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmoyn,radio,Is the patient still on ECLS/ECMO?,,,,,,[inter_o2support_type]='6',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmodur,text,If yes to ECLS/ECMO; confirm duration,,,,,,[inter_o2support_type]='6',1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_invenyn,radio,Is the patient still on invasive ventilation?,"1, Yes | 0, No",,,,,[inter_o2support_type]='5',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_invendur,text,If yes to Invasive ventilation; confirm duration ,,,,,,[inter_o2support_type]='5',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmoyn,radio,Is the patient still on ECLS/ECMO?,,,,,,[inter_o2support_type]='6',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_ecmodur,text,If yes to ECLS/ECMO; confirm duration,,,,,,[inter_o2support_type]='6',1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio,,Highest FiO2 (select units),,,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,1,,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_02110,number,"Highest FiO2 (Fraction, 0.21-1.0)",,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,1,,,,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_highestfio_pcnt,number,"Highest FiO2 (%, 21-100)",,number,,,,[inter_o2support_type(4)]='1' or [inter_o2support_type(5)]='1' or [inter_o2support_type(6)]='1',,1,,,,
@@ -1069,41 +1069,41 @@ outcome,"INTERVENTIONS (While hospitalised, were any of the following administer
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_nitricoxid,radio,Inhaled Nitric Oxide?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_tracheosto,radio,Tracheostomy inserted? ,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt,radio,Renal replacement therapy (RRT) or dialysis?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt_active,radio,Is the patient still on RRT/dialysis?,"1, Yes | 0, No",,,,,[inter_rtt] = '1',1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt_active,radio,Is the patient still on RRT/dialysis?,"1, Yes | 0, No",,,,,[inter_rtt] = '1',1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_rtt_dur,text,Total RRT or dialysis duration during observation (days),,number,,,,[inter_rtt] = '1',,1,1,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv,radio,Inotropes/vasopressors?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,,,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv_active,radio,Is the patient still on intropes/vasopressors?,"1, Yes | 0, No",,,,,[inter_inotropesv] = '1',1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv_active,radio,Is the patient still on intropes/vasopressors?,"1, Yes | 0, No",,,,,[inter_inotropesv] = '1',1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_inotropesv_dur,text,Total Inotropes/vasopressor duration during observation (days),,,,,,[inter_inotropesv] = '1',,1,1,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu,radio,ICU/ITU/High Dependency Unit/Intermediate Care Unit admission ?,"1, Yes | 0, No | 99, Unknown",,,,,,,1,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_noreas,radio,If No to ICU or High Dependency Unit admission:,"1, Not indicated | 2, Not appropriate",,,,,[inter_icu]='0',1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_noreas,radio,If No to ICU or High Dependency Unit admission:,"1, Not indicated | 2, Not appropriate",,,,,[inter_icu]='0',1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_date,date_dmy,Date of first ICU admission,,date_dmy,,today,,[inter_icu] = '1',,1,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_dur,number,Duration of first ICU admission (days),,number,,,,[inter_icu] = '1',,1,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_dis,date_dmy,Date of first ICU discharge,,date_dmy,,today,,,1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu_dis,date_dmy,Date of first ICU discharge,,date_dmy,,today,,,1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icureadm,radio,Was the patient admitted to ICU more than once? ,"1, Yes | 0, No | 99, Unknown",,,,,[inter_icu] = '1',,1,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu2_date,date_dmy,Date of second ICU admission,,date_dmy,,today,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu2_dis,date_dmy,Date of second ICU discharge,,date_dmy,,today,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu3_date,date_dmy,Date of third ICU admission,,date_dmy,,today,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu3_dis,date_dmy,Date of third ICU discharge,,date_dmy,,today,,,1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu2_date,date_dmy,Date of second ICU admission,,date_dmy,,today,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu2_dis,date_dmy,Date of second ICU discharge,,date_dmy,,today,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu3_date,date_dmy,Date of third ICU admission,,date_dmy,,today,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icu3_dis,date_dmy,Date of third ICU discharge,,date_dmy,,today,,,1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuadminda,date_dmy,Date of final ICU admission,,date_dmy,,today,,[inter_icureadm] = '1',,1,1,1,1,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icudur,number,Duration of final ICU admission (days),,number,,,,[inter_icureadm] = '1',,1,1,1,1,1
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuremain,radio,Still in ICU,,,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuremainday,text,"If YES, total duration (days)",,number,,,,[inter_icuremain]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver,group,LIVER TRANSPLANT,,,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_yn,radio,Liver transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_dateyn,radio,Date of liver transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_liver_yn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_date,date_dmy,Date of liver transplant,,date_dmy,,today,,[inter_liver_dateyn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney,group,KIDNEY TRANSPLANT,,,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_yn,radio,Kidney transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_dateyn,radio,Date of kidney transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_kidney_yn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_date,date_dmy,Date of kidney transplant,,date_dmy,,today,,[inter_kidney_dateyn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint,group,CARDIAC INTERVENTION,,,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_yn,radio,"Cardiac intervention (valve, VAD, pace, drain)?","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_dateyn,radio,Date of cardiac intervention known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_carint_yn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_date,date_dmy,Date of cardiac intervention,,date_dmy,,,,[inter_carint_dateyn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran,group,CARDIAC TRANSPLANT,,,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_yn,radio,Cardiac transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_dateyn,radio,Date of cardiac transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_cartran_yn]='1',1,,,,,
-outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_date,date_dmy,Date of cardiac transplant,,date_dmy,,,,[inter_cartran_dateyn]='1',1,,,,,
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuremain,radio,Still in ICU,,,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_icuremainday,text,"If YES, total duration (days)",,number,,,,[inter_icuremain]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver,group,LIVER TRANSPLANT,,,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_yn,radio,Liver transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_dateyn,radio,Date of liver transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_liver_yn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_liver_date,date_dmy,Date of liver transplant,,date_dmy,,today,,[inter_liver_dateyn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney,group,KIDNEY TRANSPLANT,,,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_yn,radio,Kidney transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_dateyn,radio,Date of kidney transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_kidney_yn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_kidney_date,date_dmy,Date of kidney transplant,,date_dmy,,today,,[inter_kidney_dateyn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint,group,CARDIAC INTERVENTION,,,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_yn,radio,"Cardiac intervention (valve, VAD, pace, drain)?","1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_dateyn,radio,Date of cardiac intervention known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_carint_yn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_carint_date,date_dmy,Date of cardiac intervention,,date_dmy,,,,[inter_carint_dateyn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran,group,CARDIAC TRANSPLANT,,,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_yn,radio,Cardiac transplant?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_dateyn,radio,Date of cardiac transplant known?,"1, Yes | 0, No | 99, Unknown",,,,,[inter_cartran_yn]='1',1,,,,,1
+outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_cartran_date,date_dmy,Date of cardiac transplant,,date_dmy,,,,[inter_cartran_dateyn]='1',1,,,,,1
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg,radio,Any surgical intervention for mpox or complications of mpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1,1,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg_type,text,"What was the surgery (e.g., debridement of infected tissue)",,,,,,[inter_mpoxsurg]='1',,,,1,1,
 outcome,"INTERVENTIONS (While hospitalised, were any of the following administered/undertaken? )",inter_mpoxsurg_date,date_dmy,Date of first surgery,,date_dmy,,today,,[inter_mpoxsurg]='1',,,,1,1,
@@ -1129,25 +1129,25 @@ outcome,OUTCOME,outco_selfcare,radio,Ability to self-care at discharge versus be
 outcome,OUTCOME,outco_carerel,radio,Ongoing health care needs relating to this admission for pathogen,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',,1,1,1,1,1
 outcome,OUTCOME,outco_carenonrel,radio,Ongoing health care needs NOT related to pathogen episode,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome] = '1' or [outco_outcome]='2',,1,1,1,1,1
 outcome,OUTCOME,outco_carefordif,radio,"Medically fit for discharge (pathogen resolved) but remains in hospital for other reason (e.g. awaiting alternate care, resident in long term health care or mental health facility)","1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='2' or [outco_outcome]='3',,1,1,1,1,1
-outcome,OUTCOME,outco_sitename,text,If Transferred: Facility name,,,,,,[outco_outcome]='3',1,,,,,
-outcome,OUTCOME,outco_studysite,radio,If Transferred: Is the transfer facility a study site?,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='3',1,,,,,
-outcome,OUTCOME,outco_difpin,radio,Is the patient participant number different at the new facility?,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='3',1,,,,,
+outcome,OUTCOME,outco_sitename,text,If Transferred: Facility name,,,,,,[outco_outcome]='3',1,,,,,1
+outcome,OUTCOME,outco_studysite,radio,If Transferred: Is the transfer facility a study site?,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='3',1,,,,,1
+outcome,OUTCOME,outco_difpin,radio,Is the patient participant number different at the new facility?,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='3',1,,,,,1
 outcome,OUTCOME,outco_newpin,text,"If Different, Participant number at the new facility
-(CPMS Site code (hypen) four or five digit number patient number e.g Y0401-0001).",,,,,,[outco_difpin]='1',1,,,,,
-outcome,OUTCOME,outco_postmort,radio,Was a post mortem conducted:,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='4',1,,,,,
-outcome,STUDY PARTICIPATION,study_yn,radio,Is/Has the participant being recruited to another trial or multi-centre study during the period of their current illness (including initiation in the community and hospital)?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
+(CPMS Site code (hypen) four or five digit number patient number e.g Y0401-0001).",,,,,,[outco_difpin]='1',1,,,,,1
+outcome,OUTCOME,outco_postmort,radio,Was a post mortem conducted:,"1, Yes | 0, No | 99, Unknown",,,,,[outco_outcome]='4',1,,,,,1
+outcome,STUDY PARTICIPATION,study_yn,radio,Is/Has the participant being recruited to another trial or multi-centre study during the period of their current illness (including initiation in the community and hospital)?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
 outcome,STUDY PARTICIPATION,study_name1,text,"If YES, specify name of study: 
 
-",,,,,,[study_yn]='1',1,,,,,
+",,,,,,[study_yn]='1',1,,,,,1
 outcome,STUDY PARTICIPATION,study_id1,text,"Study Participant ID: 
 
-",,,,,,[study_yn]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_add2,radio,Add another study?,"1, Yes | 0, No",,,,,[study_yn]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_name2,text,"If YES, specify name of study: ",,,,,,[study_add2]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_id2,text,Study Participant ID: ,,,,,,[study_add2]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_add3,radio,Add another study? ,"1, Yes | 0, No",,,,,[study_add2]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_name3,text,"If YES, specify name of study: ",,,,,,[study_add3]='1',1,,,,,
-outcome,STUDY PARTICIPATION,study_id3,text,Study Participant ID: ,,,,,,[study_add3]='1',1,,,,,
+",,,,,,[study_yn]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_add2,radio,Add another study?,"1, Yes | 0, No",,,,,[study_yn]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_name2,text,"If YES, specify name of study: ",,,,,,[study_add2]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_id2,text,Study Participant ID: ,,,,,,[study_add2]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_add3,radio,Add another study? ,"1, Yes | 0, No",,,,,[study_add2]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_name3,text,"If YES, specify name of study: ",,,,,,[study_add3]='1',1,,,,,1
+outcome,STUDY PARTICIPATION,study_id3,text,Study Participant ID: ,,,,,,[study_add3]='1',1,,,,,1
 outcome_pathogen_testing,TEST,test_yn,radio,Were Clinical Pathogen samples taken on this day?,"1, Yes | 0, No",,,,,,,,,,1,
 outcome_pathogen_testing,TEST,test_reasno,text,"If NO, specify reason:",,,,,,[test_yn]='0',,,,,1,
 outcome_pathogen_testing,TEST,test_collectiondate,date_dmy,Collection Date,,date_dmy,,today,,,,1,,1,1,1
@@ -1173,10 +1173,10 @@ outcome_assessment,ASSESSMENT (Complete this section in full for each outcome as
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque,radio,Does the patient have any other complications or sequelae of mpox,"1, Yes | 0, No | 99, Unknown",,,,,,,,,1,1,
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque_type,checkbox,Select all that apply,"1, Decreased vision | 2, Blindness | 3, Urethral stricture | 4, Vaginal stricture | 5, Rectal stricture |6, Dyspareunia | 7, Depression | 88, Other ",,,,,[asse_mpoxseque]='1',,,,1,1,
 outcome_assessment,ASSESSMENT (Complete this section in full for each outcome assessment performed),asse_mpoxseque_other,notes,Specify other complications or sequelae,,,,,,[asse_mpoxseque_type(88)]='1',,,,1,1,
-withdrawal,WITHDRAWAL,withd_date,date_dmy,Date of withdrawal:,,date_dmy,,,,,1,,,,,
-withdrawal,WITHDRAWAL,withd_type,radio,Type of withdrawal:,"1, Withdrawal from samples only | 88, Other, Please specify:",,,,,,1,,,,,
-withdrawal,WITHDRAWAL,withd_type_oth,text,Other type of withdrawal:,,,,,,[withd_type]='88',1,,,,,
-withdrawal,WITHDRAWAL,withd_reas,text,Reason for withdrawal:,,,,,,,1,,,,,
-withdrawal,WITHDRAWAL,withd_sample,radio,Was a convalescent sample obtained?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,
-withdrawal,WITHDRAWAL,withd_kitnum,text,"If yes, please record the KIT number:",,,,,,[withd_sample]='1',1,,,,,
-withdrawal,WITHDRAWAL,withd_sampledate,date_dmy,Date sample obtained:,,date_dmy,,,,[withd_sample]='1',1,,,,,
+withdrawal,WITHDRAWAL,withd_date,date_dmy,Date of withdrawal:,,date_dmy,,,,,1,,,,,1
+withdrawal,WITHDRAWAL,withd_type,radio,Type of withdrawal:,"1, Withdrawal from samples only | 88, Other, Please specify:",,,,,,1,,,,,1
+withdrawal,WITHDRAWAL,withd_type_oth,text,Other type of withdrawal:,,,,,,[withd_type]='88',1,,,,,1
+withdrawal,WITHDRAWAL,withd_reas,text,Reason for withdrawal:,,,,,,,1,,,,,1
+withdrawal,WITHDRAWAL,withd_sample,radio,Was a convalescent sample obtained?,"1, Yes | 0, No | 99, Unknown",,,,,,1,,,,,1
+withdrawal,WITHDRAWAL,withd_kitnum,text,"If yes, please record the KIT number:",,,,,,[withd_sample]='1',1,,,,,1
+withdrawal,WITHDRAWAL,withd_sampledate,date_dmy,Date sample obtained:,,date_dmy,,,,[withd_sample]='1',1,,,,,1
